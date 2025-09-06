@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits" uri="imported/CityUnits.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras" uri="imported/TransportationInfrastructure.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/code" uri="imported/Code.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/activity" uri="imported/Activity.owl"/>
+    <uri id="User Entered Import Resolution" name="https://isotc204.org/25965/transport/transportnetwork#" uri="imported/transportnetwork.ofn"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code" uri="imported/Code.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology" uri="imported/Mereology.owl"/>
+    <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties" uri="imported/GenericProperties.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/1/SpatialLoc/" uri="imported/SpatialLoc.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/1/Time/" uri="imported/Time.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/Building/" uri="imported/Building.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/Contact/" uri="imported/Contact.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/LandUse/" uri="imported/LandUse.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/Person/" uri="imported/Person.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/Sensors/" uri="imported/Sensors.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/2/TransportationInfrastructure/" uri="imported/TransportationInfrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/5087/Time/" uri="imported/GenericProperties.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://ontology.eil.utoronto.ca/ISO21972/iso21972" uri="imported/iso21972.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://www.opengis.net/ont/geosparql" uri="imported/geosparql.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://www.w3.org/2002/07/owl" uri="imported/owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="http://www.w3.org/ns/time/gregorian" uri="imported/gregorian.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Activity/" uri="imported/Activity.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agent/" uri="imported/Agent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Agreement/" uri="imported/Agreement.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Change/" uri="imported/Change.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/" uri="imported/CityUnits.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology/" uri="imported/Mereology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/OrganizationStructure/" uri="imported/OrganizationStructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Prov/" uri="imported/Prov.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/RecurringEvent/" uri="imported/RecurringEvent.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Resource/" uri="imported/Resource.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Bylaw/" uri="imported/Bylaw.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/City/" uri="imported/City.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityResident/" uri="imported/CityResident.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/CityService/" uri="imported/CityService.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code/" uri="imported/Code.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Contract/" uri="imported/Contract.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Household/" uri="imported/Household.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Infrastructure/" uri="imported/Infrastructure.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1755961402358" name="https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Organization/" uri="imported/Organization.owl"/>
+    </group>
+</catalog>

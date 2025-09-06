@@ -1,0 +1,14 @@
+{
+  "MD033": {
+    "allowed_elements": [
+      "style",
+      "div"
+    ]
+  },
+  "MD013": false,
+  "MD024": false,
+  "MD041": false,
+  "MD046": false,
+  "require-heading-body": false,
+  "require-heading-annex": false
+}

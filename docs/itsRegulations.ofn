@@ -1,0 +1,735 @@
+Prefix(:=<https://isotc204.org/ontologies/its/regulations#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(geo:=<https://www.opengis.net/ont/geosparql#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(code:=<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(schema:=<https://schema.org/>)
+Prefix(genProp:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#>)
+Prefix(protege:=<http://protege.stanford.edu/ontologies/metadata#>)
+Prefix(cityunits:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/>)
+Prefix(data-view:=<http://www.w3.org/2003/g/data-view#>)
+Prefix(partwhole:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#>)
+Prefix(transportnetwork:=<https://isotc204.org/25965/transport/transportnetwork#>)
+
+
+Ontology(<https://isotc204.org/ontologies/its/regulations#>
+Import(<http://www.w3.org/2002/07/owl>)
+Import(<http://www.w3.org/2003/11/swrl>)
+Import(<http://www.w3.org/2003/11/swrlb>)
+Import(<http://www.w3.org/2006/time>)
+Import(<https://isotc204.org/25965/transport/transportnetwork#>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits/>)
+Import(<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code>)
+Import(<https://www.opengis.net/ont/geosparql>)
+Annotation(terms:description "This ontology defines concepts related to traffic regulations using concepts specified in ISO/IEC 5087-1 and ISO/IEC-5087-2.")
+Annotation(terms:title "Ontology for Traffic Regulations")
+
+Declaration(Class(:AreaDestination))
+Declaration(Class(:AreaLocation))
+Declaration(Class(:DaySelector))
+Declaration(Class(:Destination))
+Declaration(Class(:IndexedLocation))
+Declaration(Class(:InstanceOfDayWithinMonth))
+Declaration(Class(:Itinerary))
+Declaration(Class(:ItineraryByIndexedLocations))
+Declaration(Class(:JurisdictionalEntity))
+Declaration(Class(:LegalBasis))
+Declaration(Class(:LinearLocation))
+Declaration(Class(:Location))
+Declaration(Class(:LocationGroup))
+Declaration(Class(:LocationGroupByList))
+Declaration(Class(:LocationPattern))
+Declaration(Class(:LocationReference))
+Declaration(Class(:LocationThing))
+Declaration(Class(:NamedArea))
+Declaration(Class(:NetworkLocation))
+Declaration(Class(:OverallPeriod))
+Declaration(Class(:Period))
+Declaration(Class(:PointCoordinates))
+Declaration(Class(:PointDestination))
+Declaration(Class(:PointLocation))
+Declaration(Class(:PositionConfidenceEllipse))
+Declaration(Class(:PublicHoliday))
+Declaration(Class(:RuleMaker))
+Declaration(Class(:SpecialDay))
+Declaration(Class(:SupplementaryPositionalDescription))
+Declaration(Class(:TimePattern))
+Declaration(Class(:TimePeriodOfDay))
+Declaration(Class(:TimeThing))
+Declaration(Class(:TrafficRegulation))
+Declaration(Class(:TrafficRegulationOrder))
+Declaration(Class(:TroPattern))
+Declaration(Class(:TroThing))
+Declaration(Class(:Validity))
+Declaration(ObjectProperty(:LocationObjectProperty))
+Declaration(ObjectProperty(:RegulationObjectProperty))
+Declaration(ObjectProperty(:TimeObjectProperty))
+Declaration(ObjectProperty(:applicableDayOfWeek))
+Declaration(ObjectProperty(:applicableDays))
+Declaration(ObjectProperty(:areaLocation))
+Declaration(ObjectProperty(:areasAtWhichApplicable))
+Declaration(ObjectProperty(:coordinatesForDisplay))
+Declaration(ObjectProperty(:destination))
+Declaration(ObjectProperty(:directionPurpose))
+Declaration(ObjectProperty(:exceptionPeriod))
+Declaration(ObjectProperty(:externalLocationReference))
+Declaration(ObjectProperty(:externalReferences))
+Declaration(ObjectProperty(:geographicDescriptor))
+Declaration(ObjectProperty(:implementedLocation))
+Declaration(ObjectProperty(:implementedValidity))
+Declaration(ObjectProperty(:infrastructureDescriptor))
+Declaration(ObjectProperty(:issuingAuthority))
+Declaration(ObjectProperty(:legalBasis))
+Declaration(ObjectProperty(:lengthAffected))
+Declaration(ObjectProperty(:location))
+Declaration(ObjectProperty(:locationByOrder))
+Declaration(ObjectProperty(:locationContainedInGroup))
+Declaration(ObjectProperty(:locationContainedInItinerary))
+Declaration(ObjectProperty(:locationPrecision))
+Declaration(ObjectProperty(:networkLocation))
+Declaration(ObjectProperty(:pointLocation))
+Declaration(ObjectProperty(:positionConfidence))
+Declaration(ObjectProperty(:positionOnCarriageway))
+Declaration(ObjectProperty(:positionalDescription))
+Declaration(ObjectProperty(:publicEvent))
+Declaration(ObjectProperty(:reasonCode))
+Declaration(ObjectProperty(:recurringSpecialDay))
+Declaration(ObjectProperty(:recurringTimePeriodOfDay))
+Declaration(ObjectProperty(:routeDestination))
+Declaration(ObjectProperty(:specialDayType))
+Declaration(ObjectProperty(:status))
+Declaration(ObjectProperty(:trafficRegulation))
+Declaration(ObjectProperty(:validPeriod))
+Declaration(ObjectProperty(:validityByOrder))
+Declaration(ObjectProperty(:validityStatus))
+Declaration(ObjectProperty(:validityTimeSpecification))
+Declaration(DataProperty(:LocationDataProperty))
+Declaration(DataProperty(:TimeDataProperty))
+Declaration(DataProperty(:TroDataProperty))
+Declaration(DataProperty(:applicableDayOfMonth))
+Declaration(DataProperty(:applicableMonth))
+Declaration(DataProperty(:applicableWeekOfMonth))
+Declaration(DataProperty(:date))
+Declaration(DataProperty(:elevation))
+Declaration(DataProperty(:endOfPeriod))
+Declaration(DataProperty(:endTimeOfPeriod))
+Declaration(DataProperty(:index))
+Declaration(DataProperty(:intersectWithApplicableDays))
+Declaration(DataProperty(:latitude))
+Declaration(DataProperty(:locationDescription))
+Declaration(DataProperty(:longitude))
+Declaration(DataProperty(:overallEndTime))
+Declaration(DataProperty(:overallStartTime))
+Declaration(DataProperty(:overrunning))
+Declaration(DataProperty(:predefinedItineraryReference))
+Declaration(DataProperty(:predefinedLocationGroupReference))
+Declaration(DataProperty(:sequentialRampNumber))
+Declaration(DataProperty(:startOfPeriod))
+Declaration(DataProperty(:startTimeOfPeriod))
+Declaration(DataProperty(:version))
+Declaration(DataProperty(genProp:hasDescription))
+Declaration(DataProperty(genProp:hasIdentifier))
+Declaration(DataProperty(genProp:hasName))
+Declaration(AnnotationProperty(dc:description))
+Declaration(Datatype(xsd:date))
+Declaration(Datatype(xsd:gDay))
+Declaration(Datatype(xsd:gMonth))
+Declaration(Datatype(xsd:time))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :LocationObjectProperty (:LocationObjectProperty)
+
+SubObjectPropertyOf(:LocationObjectProperty transportnetwork:ITSObjectProperty)
+
+# Object Property: :RegulationObjectProperty (:RegulationObjectProperty)
+
+SubObjectPropertyOf(:RegulationObjectProperty transportnetwork:ITSObjectProperty)
+
+# Object Property: :TimeObjectProperty (:TimeObjectProperty)
+
+SubObjectPropertyOf(:TimeObjectProperty transportnetwork:ITSObjectProperty)
+
+# Object Property: :applicableDayOfWeek (:applicableDayOfWeek)
+
+SubObjectPropertyOf(:applicableDayOfWeek :TimeObjectProperty)
+
+# Object Property: :applicableDays (:applicableDays)
+
+SubObjectPropertyOf(:applicableDays :TimeObjectProperty)
+
+# Object Property: :areaLocation (:areaLocation)
+
+AnnotationAssertion(terms:description :areaLocation "location defined by an area covering the surface (or near-surface) of the Earth")
+SubObjectPropertyOf(:areaLocation :LocationObjectProperty)
+ObjectPropertyRange(:areaLocation ObjectAllValuesFrom(:areaLocation :AreaLocation))
+
+# Object Property: :areasAtWhichApplicable (:areasAtWhichApplicable)
+
+SubObjectPropertyOf(:areasAtWhichApplicable :LocationObjectProperty)
+
+# Object Property: :coordinatesForDisplay (:coordinatesForDisplay)
+
+SubObjectPropertyOf(:coordinatesForDisplay :LocationObjectProperty)
+
+# Object Property: :destination (:destination)
+
+SubObjectPropertyOf(:destination :LocationObjectProperty)
+ObjectPropertyRange(:destination ObjectAllValuesFrom(:destination :Destination))
+
+# Object Property: :directionPurpose (:directionPurpose)
+
+SubObjectPropertyOf(:directionPurpose :LocationObjectProperty)
+
+# Object Property: :exceptionPeriod (:exceptionPeriod)
+
+SubObjectPropertyOf(:exceptionPeriod :TimeObjectProperty)
+
+# Object Property: :externalLocationReference (:externalLocationReference)
+
+SubObjectPropertyOf(:externalLocationReference :LocationObjectProperty)
+ObjectPropertyDomain(:externalLocationReference ObjectAllValuesFrom(:externalLocationReference code:Code))
+
+# Object Property: :externalReferences (:externalReferences)
+
+SubObjectPropertyOf(:externalReferences :RegulationObjectProperty)
+
+# Object Property: :geographicDescriptor (:geographicDescriptor)
+
+SubObjectPropertyOf(:geographicDescriptor :LocationObjectProperty)
+
+# Object Property: :implementedLocation (:implementedLocation)
+
+SubObjectPropertyOf(:implementedLocation :RegulationObjectProperty)
+
+# Object Property: :implementedValidity (:implementedValidity)
+
+SubObjectPropertyOf(:implementedValidity :RegulationObjectProperty)
+
+# Object Property: :infrastructureDescriptor (:infrastructureDescriptor)
+
+SubObjectPropertyOf(:infrastructureDescriptor :LocationObjectProperty)
+
+# Object Property: :issuingAuthority (:issuingAuthority)
+
+AnnotationAssertion(dc:description :issuingAuthority "The entity that issued the instance of the containing class")
+SubObjectPropertyOf(:issuingAuthority :RegulationObjectProperty)
+
+# Object Property: :legalBasis (:legalBasis)
+
+AnnotationAssertion(terms:description :legalBasis "formal authority within the law (e.g., statute, ordinance, administrative rule, constitutional provision) that empowers an entity to create, adopt, or enforce a regulation")
+SubObjectPropertyOf(:legalBasis :RegulationObjectProperty)
+
+# Object Property: :lengthAffected (:lengthAffected)
+
+SubObjectPropertyOf(:lengthAffected :LocationObjectProperty)
+
+# Object Property: :location (:location)
+
+SubObjectPropertyOf(:location :LocationObjectProperty)
+
+# Object Property: :locationByOrder (:locationByOrder)
+
+SubObjectPropertyOf(:locationByOrder :RegulationObjectProperty)
+
+# Object Property: :locationContainedInGroup (:locationContainedInGroup)
+
+SubObjectPropertyOf(:locationContainedInGroup :LocationObjectProperty)
+
+# Object Property: :locationContainedInItinerary (:locationContainedInItinerary)
+
+SubObjectPropertyOf(:locationContainedInItinerary :LocationObjectProperty)
+ObjectPropertyDomain(:locationContainedInItinerary :ItineraryByIndexedLocations)
+ObjectPropertyRange(:locationContainedInItinerary :IndexedLocation)
+
+# Object Property: :locationPrecision (:locationPrecision)
+
+SubObjectPropertyOf(:locationPrecision :LocationObjectProperty)
+
+# Object Property: :networkLocation (:networkLocation)
+
+SubObjectPropertyOf(:networkLocation :RegulationObjectProperty)
+
+# Object Property: :pointLocation (:pointLocation)
+
+SubObjectPropertyOf(:pointLocation :LocationObjectProperty)
+
+# Object Property: :positionConfidence (:positionConfidence)
+
+SubObjectPropertyOf(:positionConfidence :LocationObjectProperty)
+
+# Object Property: :positionOnCarriageway (:positionOnCarriageway)
+
+SubObjectPropertyOf(:positionOnCarriageway :LocationObjectProperty)
+
+# Object Property: :positionalDescription (:positionalDescription)
+
+SubObjectPropertyOf(:positionalDescription :LocationObjectProperty)
+
+# Object Property: :publicEvent (:publicEvent)
+
+SubObjectPropertyOf(:publicEvent :TimeObjectProperty)
+
+# Object Property: :reasonCode (:reasonCode)
+
+AnnotationAssertion(dc:description :reasonCode "A reason justifying the existence of the instance of the class")
+SubObjectPropertyOf(:reasonCode :RegulationObjectProperty)
+
+# Object Property: :recurringSpecialDay (:recurringSpecialDay)
+
+SubObjectPropertyOf(:recurringSpecialDay :TimeObjectProperty)
+
+# Object Property: :recurringTimePeriodOfDay (:recurringTimePeriodOfDay)
+
+SubObjectPropertyOf(:recurringTimePeriodOfDay :TimeObjectProperty)
+
+# Object Property: :routeDestination (:routeDestination)
+
+SubObjectPropertyOf(:routeDestination :TimeObjectProperty)
+
+# Object Property: :specialDayType (:specialDayType)
+
+SubObjectPropertyOf(:specialDayType :TimeObjectProperty)
+
+# Object Property: :status (:status)
+
+AnnotationAssertion(dc:description :status "The status of the instance of the containing class")
+SubObjectPropertyOf(:status :RegulationObjectProperty)
+
+# Object Property: :trafficRegulation (:trafficRegulation)
+
+SubObjectPropertyOf(:trafficRegulation :RegulationObjectProperty)
+
+# Object Property: :validPeriod (:validPeriod)
+
+SubObjectPropertyOf(:validPeriod :TimeObjectProperty)
+
+# Object Property: :validityByOrder (:validityByOrder)
+
+SubObjectPropertyOf(:validityByOrder :RegulationObjectProperty)
+
+# Object Property: :validityStatus (:validityStatus)
+
+SubObjectPropertyOf(:validityStatus :TimeObjectProperty)
+
+# Object Property: :validityTimeSpecification (:validityTimeSpecification)
+
+SubObjectPropertyOf(:validityTimeSpecification :RegulationObjectProperty)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :LocationDataProperty (:LocationDataProperty)
+
+SubDataPropertyOf(:LocationDataProperty transportnetwork:ITSDataProperty)
+
+# Data Property: :TimeDataProperty (:TimeDataProperty)
+
+SubDataPropertyOf(:TimeDataProperty transportnetwork:ITSDataProperty)
+
+# Data Property: :TroDataProperty (:TroDataProperty)
+
+SubDataPropertyOf(:TroDataProperty transportnetwork:ITSDataProperty)
+
+# Data Property: :applicableDayOfMonth (:applicableDayOfMonth)
+
+SubDataPropertyOf(:applicableDayOfMonth :TroDataProperty)
+
+# Data Property: :applicableMonth (:applicableMonth)
+
+SubDataPropertyOf(:applicableMonth :TroDataProperty)
+
+# Data Property: :applicableWeekOfMonth (:applicableWeekOfMonth)
+
+SubDataPropertyOf(:applicableWeekOfMonth :TroDataProperty)
+
+# Data Property: :date (:date)
+
+SubDataPropertyOf(:date :TroDataProperty)
+
+# Data Property: :elevation (:elevation)
+
+SubDataPropertyOf(:elevation :LocationDataProperty)
+
+# Data Property: :endOfPeriod (:endOfPeriod)
+
+SubDataPropertyOf(:endOfPeriod :TroDataProperty)
+
+# Data Property: :endTimeOfPeriod (:endTimeOfPeriod)
+
+SubDataPropertyOf(:endTimeOfPeriod :TroDataProperty)
+
+# Data Property: :index (:index)
+
+SubDataPropertyOf(:index transportnetwork:ITSDataProperty)
+
+# Data Property: :intersectWithApplicableDays (:intersectWithApplicableDays)
+
+SubDataPropertyOf(:intersectWithApplicableDays :TroDataProperty)
+
+# Data Property: :latitude (:latitude)
+
+SubDataPropertyOf(:latitude :LocationDataProperty)
+
+# Data Property: :locationDescription (:locationDescription)
+
+SubDataPropertyOf(:locationDescription :LocationDataProperty)
+
+# Data Property: :longitude (:longitude)
+
+SubDataPropertyOf(:longitude :LocationDataProperty)
+
+# Data Property: :overallEndTime (:overallEndTime)
+
+SubDataPropertyOf(:overallEndTime :TroDataProperty)
+
+# Data Property: :overallStartTime (:overallStartTime)
+
+SubDataPropertyOf(:overallStartTime :TroDataProperty)
+
+# Data Property: :overrunning (:overrunning)
+
+SubDataPropertyOf(:overrunning :TroDataProperty)
+
+# Data Property: :predefinedItineraryReference (:predefinedItineraryReference)
+
+SubDataPropertyOf(:predefinedItineraryReference :TroDataProperty)
+
+# Data Property: :predefinedLocationGroupReference (:predefinedLocationGroupReference)
+
+SubDataPropertyOf(:predefinedLocationGroupReference :TroDataProperty)
+
+# Data Property: :sequentialRampNumber (:sequentialRampNumber)
+
+SubDataPropertyOf(:sequentialRampNumber :LocationDataProperty)
+
+# Data Property: :startOfPeriod (:startOfPeriod)
+
+SubDataPropertyOf(:startOfPeriod :TroDataProperty)
+
+# Data Property: :startTimeOfPeriod (:startTimeOfPeriod)
+
+SubDataPropertyOf(:startTimeOfPeriod :TroDataProperty)
+
+# Data Property: :version (:version)
+
+SubDataPropertyOf(:version :TroDataProperty)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :AreaDestination (:AreaDestination)
+
+AnnotationAssertion(xsd:pattern :AreaDestination "LocationPattern")
+SubClassOf(:AreaDestination :Destination)
+SubClassOf(:AreaDestination ObjectExactCardinality(1 :areaLocation :AreaLocation))
+
+# Class: :AreaLocation (:AreaLocation)
+
+AnnotationAssertion(xsd:pattern :AreaLocation "LocationPattern")
+SubClassOf(:AreaLocation :Location)
+SubClassOf(:AreaLocation ObjectAllValuesFrom(:areasAtWhichApplicable code:Code))
+SubClassOf(:AreaLocation ObjectMaxCardinality(1 :areasAtWhichApplicable code:Code))
+
+# Class: :DaySelector (:DaySelector)
+
+AnnotationAssertion(xsd:pattern :DaySelector "TimePattern")
+SubClassOf(:DaySelector :TimeThing)
+SubClassOf(:DaySelector ObjectAllValuesFrom(:applicableDayOfWeek time:DayOfWeek))
+SubClassOf(:DaySelector ObjectMaxCardinality(6 :applicableDayOfWeek time:DayOfWeek))
+SubClassOf(:DaySelector DataAllValuesFrom(:applicableDayOfMonth xsd:gDay))
+SubClassOf(:DaySelector DataAllValuesFrom(:applicableMonth xsd:gMonth))
+SubClassOf(:DaySelector DataMaxCardinality(30 :applicableDayOfMonth xsd:gDay))
+SubClassOf(:DaySelector DataMaxCardinality(11 :applicableMonth xsd:gMonth))
+
+# Class: :Destination (:Destination)
+
+AnnotationAssertion(xsd:pattern :Destination "LocationPattern")
+SubClassOf(:Destination :LocationThing)
+
+# Class: :IndexedLocation (:IndexedLocation)
+
+AnnotationAssertion(xsd:pattern :IndexedLocation "LocationPattern")
+SubClassOf(:IndexedLocation :LocationReference)
+SubClassOf(:IndexedLocation ObjectAllValuesFrom(:location :Location))
+SubClassOf(:IndexedLocation ObjectExactCardinality(1 :location :Location))
+SubClassOf(:IndexedLocation DataAllValuesFrom(:index xsd:integer))
+SubClassOf(:IndexedLocation DataExactCardinality(1 :index xsd:integer))
+
+# Class: :InstanceOfDayWithinMonth (:InstanceOfDayWithinMonth)
+
+AnnotationAssertion(xsd:pattern :InstanceOfDayWithinMonth "TimePattern")
+SubClassOf(:InstanceOfDayWithinMonth :TimeThing)
+
+# Class: :Itinerary (:Itinerary)
+
+AnnotationAssertion(xsd:pattern :Itinerary "LocationPattern")
+SubClassOf(:Itinerary :LocationReference)
+SubClassOf(:Itinerary ObjectAllValuesFrom(:routeDestination :Destination))
+
+# Class: :ItineraryByIndexedLocations (:ItineraryByIndexedLocations)
+
+AnnotationAssertion(xsd:pattern :ItineraryByIndexedLocations "LocationPattern")
+SubClassOf(:ItineraryByIndexedLocations :Itinerary)
+SubClassOf(:ItineraryByIndexedLocations ObjectAllValuesFrom(:locationContainedInItinerary :IndexedLocation))
+
+# Class: :JurisdictionalEntity (:JurisdictionalEntity)
+
+AnnotationAssertion(xsd:pattern :JurisdictionalEntity "LocationPattern")
+SubClassOf(:JurisdictionalEntity :LocationThing)
+
+# Class: :LegalBasis (:LegalBasis)
+
+AnnotationAssertion(terms:description :LegalBasis "A legal basis provides references to the legal documents that authorize an entity to issue the types of regulations covered by a traffic regulation order.")
+AnnotationAssertion(xsd:pattern :LegalBasis "TroPattern")
+SubClassOf(:LegalBasis :TroThing)
+SubClassOf(:LegalBasis DataAllValuesFrom(:date xsd:date))
+SubClassOf(:LegalBasis DataAllValuesFrom(:version xsd:string))
+SubClassOf(:LegalBasis DataAllValuesFrom(genProp:hasName xsd:string))
+SubClassOf(:LegalBasis DataExactCardinality(1 genProp:hasName xsd:string))
+SubClassOf(:LegalBasis DataMaxCardinality(1 :date xsd:date))
+SubClassOf(:LegalBasis DataMaxCardinality(1 :version xsd:string))
+
+# Class: :LinearLocation (:LinearLocation)
+
+AnnotationAssertion(xsd:pattern :LinearLocation "LocationPattern")
+SubClassOf(:LinearLocation :NetworkLocation)
+
+# Class: :Location (:Location)
+
+AnnotationAssertion(xsd:pattern :Location "LocationPattern")
+SubClassOf(:Location :LocationReference)
+SubClassOf(:Location ObjectAllValuesFrom(:coordinatesForDisplay :PointCoordinates))
+SubClassOf(:Location ObjectAllValuesFrom(:externalLocationReference code:Code))
+SubClassOf(:Location ObjectMaxCardinality(1 :coordinatesForDisplay :PointCoordinates))
+
+# Class: :LocationGroup (:LocationGroup)
+
+AnnotationAssertion(xsd:pattern :LocationGroup "LocationPattern")
+SubClassOf(:LocationGroup :LocationReference)
+
+# Class: :LocationGroupByList (:LocationGroupByList)
+
+AnnotationAssertion(xsd:pattern :LocationGroupByList "LocationPattern")
+SubClassOf(:LocationGroupByList :LocationGroup)
+SubClassOf(:LocationGroupByList ObjectAllValuesFrom(:locationContainedInGroup :Location))
+SubClassOf(:LocationGroupByList ObjectMinCardinality(2 :locationContainedInGroup :Location))
+
+# Class: :LocationPattern (:LocationPattern)
+
+SubClassOf(:LocationPattern transportnetwork:ITSPattern)
+
+# Class: :LocationReference (:LocationReference)
+
+AnnotationAssertion(xsd:pattern :LocationReference "LocationPattern")
+SubClassOf(:LocationReference :LocationThing)
+
+# Class: :LocationThing (:LocationThing)
+
+AnnotationAssertion(xsd:pattern :LocationThing "LocationPattern")
+SubClassOf(:LocationThing transportnetwork:ITSThing)
+
+# Class: :NamedArea (:NamedArea)
+
+AnnotationAssertion(xsd:pattern :NamedArea "LocationPattern")
+SubClassOf(:NamedArea :LocationThing)
+
+# Class: :NetworkLocation (:NetworkLocation)
+
+AnnotationAssertion(xsd:pattern :NetworkLocation "LocationPattern")
+SubClassOf(:NetworkLocation :Location)
+SubClassOf(:NetworkLocation ObjectAllValuesFrom(:positionalDescription :SupplementaryPositionalDescription))
+SubClassOf(:NetworkLocation ObjectMaxCardinality(1 :destination :Destination))
+SubClassOf(:NetworkLocation ObjectMaxCardinality(1 :positionalDescription :SupplementaryPositionalDescription))
+
+# Class: :OverallPeriod (:OverallPeriod)
+
+AnnotationAssertion(xsd:pattern :OverallPeriod "TimePattern")
+SubClassOf(:OverallPeriod :TimeThing)
+SubClassOf(:OverallPeriod ObjectAllValuesFrom(:exceptionPeriod :Period))
+SubClassOf(:OverallPeriod ObjectAllValuesFrom(:validPeriod :Period))
+SubClassOf(:OverallPeriod DataAllValuesFrom(:overallEndTime xsd:dateTime))
+SubClassOf(:OverallPeriod DataAllValuesFrom(:overallStartTime xsd:dateTime))
+SubClassOf(:OverallPeriod DataExactCardinality(1 :overallStartTime xsd:dateTime))
+SubClassOf(:OverallPeriod DataMaxCardinality(1 :overallEndTime xsd:dateTime))
+
+# Class: :Period (:Period)
+
+AnnotationAssertion(xsd:pattern :Period "TimePattern")
+SubClassOf(:Period :TimeThing)
+SubClassOf(:Period ObjectAllValuesFrom(:applicableDays :DaySelector))
+SubClassOf(:Period ObjectAllValuesFrom(:recurringSpecialDay :SpecialDay))
+SubClassOf(:Period ObjectAllValuesFrom(:recurringTimePeriodOfDay :TimePeriodOfDay))
+SubClassOf(:Period DataAllValuesFrom(:endOfPeriod xsd:dateTime))
+SubClassOf(:Period DataAllValuesFrom(:startOfPeriod xsd:dateTime))
+SubClassOf(:Period DataAllValuesFrom(genProp:hasName xsd:string))
+SubClassOf(:Period DataMaxCardinality(1 :endOfPeriod xsd:dateTime))
+SubClassOf(:Period DataMaxCardinality(1 :startOfPeriod xsd:dateTime))
+SubClassOf(:Period DataMaxCardinality(1 genProp:hasName xsd:string))
+
+# Class: :PointCoordinates (:PointCoordinates)
+
+AnnotationAssertion(xsd:pattern :PointCoordinates "LocationPattern")
+SubClassOf(:PointCoordinates :LocationThing)
+SubClassOf(:PointCoordinates ObjectAllValuesFrom(:positionConfidence :PositionConfidenceEllipse))
+SubClassOf(:PointCoordinates ObjectMaxCardinality(1 :positionConfidence :PositionConfidenceEllipse))
+SubClassOf(:PointCoordinates DataAllValuesFrom(:elevation xsd:float))
+SubClassOf(:PointCoordinates DataAllValuesFrom(:latitude xsd:float))
+SubClassOf(:PointCoordinates DataAllValuesFrom(:longitude xsd:float))
+SubClassOf(:PointCoordinates DataAllValuesFrom(genProp:hasIdentifier xsd:string))
+SubClassOf(:PointCoordinates DataExactCardinality(1 :latitude xsd:float))
+SubClassOf(:PointCoordinates DataExactCardinality(1 :longitude xsd:float))
+SubClassOf(:PointCoordinates DataMaxCardinality(1 :elevation xsd:float))
+SubClassOf(:PointCoordinates DataMaxCardinality(1 genProp:hasIdentifier xsd:string))
+
+# Class: :PointDestination (:PointDestination)
+
+AnnotationAssertion(xsd:pattern :PointDestination "LocationPattern")
+SubClassOf(:PointDestination :Destination)
+SubClassOf(:PointDestination ObjectAllValuesFrom(:pointLocation :PointLocation))
+SubClassOf(:PointDestination ObjectExactCardinality(1 :pointLocation :PointLocation))
+
+# Class: :PointLocation (:PointLocation)
+
+AnnotationAssertion(xsd:pattern :PointLocation "LocationPattern")
+SubClassOf(:PointLocation :NetworkLocation)
+
+# Class: :PositionConfidenceEllipse (:PositionConfidenceEllipse)
+
+AnnotationAssertion(xsd:pattern :PositionConfidenceEllipse "LocationPattern")
+SubClassOf(:PositionConfidenceEllipse :LocationThing)
+
+# Class: :PublicHoliday (:PublicHoliday)
+
+AnnotationAssertion(xsd:pattern :PublicHoliday "TimePattern")
+SubClassOf(:PublicHoliday :SpecialDay)
+SubClassOf(:PublicHoliday DataAllValuesFrom(genProp:hasName xsd:string))
+SubClassOf(:PublicHoliday DataExactCardinality(1 genProp:hasName xsd:string))
+
+# Class: :RuleMaker (:RuleMaker)
+
+AnnotationAssertion(terms:description :RuleMaker "A rule maker is an entity that has the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity.")
+AnnotationAssertion(xsd:pattern :RuleMaker "TroPattern")
+SubClassOf(:RuleMaker :TroThing)
+
+# Class: :SpecialDay (:SpecialDay)
+
+AnnotationAssertion(xsd:pattern :SpecialDay "TimePattern")
+SubClassOf(:SpecialDay :TimeThing)
+SubClassOf(:SpecialDay ObjectAllValuesFrom(:publicEvent code:Code))
+SubClassOf(:SpecialDay ObjectAllValuesFrom(:specialDayType code:Code))
+SubClassOf(:SpecialDay ObjectExactCardinality(1 :specialDayType code:Code))
+SubClassOf(:SpecialDay ObjectMaxCardinality(1 :publicEvent code:Code))
+SubClassOf(:SpecialDay DataAllValuesFrom(:intersectWithApplicableDays xsd:boolean))
+SubClassOf(:SpecialDay DataExactCardinality(1 :intersectWithApplicableDays xsd:boolean))
+
+# Class: :SupplementaryPositionalDescription (:SupplementaryPositionalDescription)
+
+AnnotationAssertion(xsd:pattern :SupplementaryPositionalDescription "LocationPattern")
+SubClassOf(:SupplementaryPositionalDescription :LocationThing)
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:directionPurpose code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:geographicDescriptor code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:infrastructureDescriptor code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:lengthAffected cityunits:Length))
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:locationPrecision cityunits:Length))
+SubClassOf(:SupplementaryPositionalDescription ObjectAllValuesFrom(:positionOnCarriageway code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :directionPurpose code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :geographicDescriptor code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :infrastructureDescriptor code:Code))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :lengthAffected cityunits:Length))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :locationPrecision cityunits:Length))
+SubClassOf(:SupplementaryPositionalDescription ObjectMaxCardinality(1 :positionOnCarriageway code:Code))
+SubClassOf(:SupplementaryPositionalDescription DataAllValuesFrom(:locationDescription xsd:string))
+SubClassOf(:SupplementaryPositionalDescription DataAllValuesFrom(:sequentialRampNumber xsd:integer))
+SubClassOf(:SupplementaryPositionalDescription DataMaxCardinality(1 :locationDescription xsd:string))
+SubClassOf(:SupplementaryPositionalDescription DataMaxCardinality(1 :sequentialRampNumber xsd:integer))
+
+# Class: :TimePattern (:TimePattern)
+
+SubClassOf(:TimePattern transportnetwork:ITSPattern)
+
+# Class: :TimePeriodOfDay (:TimePeriodOfDay)
+
+AnnotationAssertion(xsd:pattern :TimePeriodOfDay "TimePattern")
+SubClassOf(:TimePeriodOfDay :TimeThing)
+SubClassOf(:TimePeriodOfDay DataAllValuesFrom(:endTimeOfPeriod xsd:time))
+SubClassOf(:TimePeriodOfDay DataAllValuesFrom(:startTimeOfPeriod xsd:time))
+SubClassOf(:TimePeriodOfDay DataExactCardinality(1 :endTimeOfPeriod xsd:time))
+SubClassOf(:TimePeriodOfDay DataExactCardinality(1 :startTimeOfPeriod xsd:time))
+
+# Class: :TimeThing (:TimeThing)
+
+AnnotationAssertion(xsd:pattern :TimeThing "TimePattern")
+SubClassOf(:TimeThing transportnetwork:ITSThing)
+
+# Class: :TrafficRegulation (:TrafficRegulation)
+
+AnnotationAssertion(terms:description :TrafficRegulation "A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order.")
+AnnotationAssertion(xsd:pattern :TrafficRegulation "TroPattern")
+SubClassOf(:TrafficRegulation :TroThing)
+
+# Class: :TrafficRegulationOrder (:TrafficRegulationOrder)
+
+AnnotationAssertion(terms:description :TrafficRegulationOrder "A TrafficRegulation Order is a legally recognised document that specifies one or more traffic regulations.")
+AnnotationAssertion(xsd:pattern :TrafficRegulationOrder "TroPattern")
+SubClassOf(:TrafficRegulationOrder :TroThing)
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:implementedValidity :Validity))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:issuingAuthority :RuleMaker))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:legalBasis :LegalBasis))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:reasonCode code:Code))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:status code:Code))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:trafficRegulation :TrafficRegulation))
+SubClassOf(:TrafficRegulationOrder ObjectAllValuesFrom(:validityByOrder :Validity))
+SubClassOf(:TrafficRegulationOrder ObjectMinCardinality(1 :trafficRegulation :TrafficRegulation))
+SubClassOf(:TrafficRegulationOrder ObjectExactCardinality(1 :issuingAuthority :RuleMaker))
+SubClassOf(:TrafficRegulationOrder ObjectExactCardinality(1 :status code:Code))
+SubClassOf(:TrafficRegulationOrder ObjectMaxCardinality(1 :implementedValidity :Validity))
+SubClassOf(:TrafficRegulationOrder ObjectMaxCardinality(1 :legalBasis :LegalBasis))
+SubClassOf(:TrafficRegulationOrder ObjectMaxCardinality(1 :validityByOrder :Validity))
+SubClassOf(:TrafficRegulationOrder DataAllValuesFrom(genProp:hasDescription xsd:string))
+SubClassOf(:TrafficRegulationOrder DataAllValuesFrom(genProp:hasIdentifier xsd:string))
+SubClassOf(:TrafficRegulationOrder DataExactCardinality(1 genProp:hasIdentifier xsd:string))
+SubClassOf(:TrafficRegulationOrder DataMaxCardinality(1 genProp:hasDescription xsd:string))
+
+# Class: :TroPattern (:TroPattern)
+
+SubClassOf(:TroPattern transportnetwork:ITSPattern)
+
+# Class: :TroThing (:TroThing)
+
+AnnotationAssertion(xsd:pattern :TroThing "TroPattern")
+SubClassOf(:TroThing transportnetwork:ITSThing)
+
+# Class: :Validity (:Validity)
+
+AnnotationAssertion(xsd:pattern :Validity "TimePattern")
+SubClassOf(:Validity :TimeThing)
+SubClassOf(:Validity ObjectAllValuesFrom(:validityStatus code:Code))
+SubClassOf(:Validity ObjectAllValuesFrom(:validityTimeSpecification :OverallPeriod))
+SubClassOf(:Validity ObjectExactCardinality(1 :validityStatus code:Code))
+SubClassOf(:Validity ObjectExactCardinality(1 :validityTimeSpecification :OverallPeriod))
+SubClassOf(:Validity DataAllValuesFrom(:overrunning xsd:boolean))
+SubClassOf(:Validity DataMaxCardinality(1 :overrunning xsd:boolean))
+
+
+DLSafeRule(Annotation(rdfs:comment "Enforces unique indices for IndexedLocations within an ItineraryByIndexedLocations (violation causes inconsistency)") Body(DifferentIndividualsAtom(Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc1>) Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc2>)) ClassAtom(:ItineraryByIndexedLocations Variable(<https://isotc204.org/ontologies/its/regulations##itinerary>)) ObjectPropertyAtom(:locationContainedInItinerary Variable(<https://isotc204.org/ontologies/its/regulations##itinerary>) Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc2>)) ObjectPropertyAtom(:locationContainedInItinerary Variable(<https://isotc204.org/ontologies/its/regulations##itinerary>) Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc1>)) DataPropertyAtom(:index Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc1>) Variable(<https://isotc204.org/ontologies/its/regulations##indexVal>)) DataPropertyAtom(:index Variable(<https://isotc204.org/ontologies/its/regulations##indexedLoc2>) Variable(<https://isotc204.org/ontologies/its/regulations##indexVal>)))Head(ClassAtom(owl:Nothing Variable(<https://isotc204.org/ontologies/its/regulations##itinerary>))))
+)

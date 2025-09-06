@@ -1,0 +1,83 @@
+name: Deploy MkDocs site to GitHub Pages with Release Number
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Fetch full history for git-revision-date-localized-plugin
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          sudo apt install -y weasyprint
+          pip install mkdocs-material pymdown-extensions
+          pip install mkdocs-git-revision-date-localized-plugin
+          pip install mkdocs-to-pdf
+          pip install mike pymdown-extensions mkdocs-mermaid2-plugin
+          npm install -g @mermaid-js/mermaid-cli
+
+      # Step 4: Get release tag, fall back to current date and time if no tag exists
+      - name: Get release tag or use date
+        id: get_version
+        run: |
+          if [ -z "${{ github.event.release.tag_name }}" ]; then
+            DATE=$(date +"%Y-%m-%d_%H-%M-%S")
+            echo "RELEASE_TAG=$DATE" >> $GITHUB_ENV
+          else
+            echo "RELEASE_TAG=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+          fi
+
+      # Step 5: Replace placeholders in mkdocs.yml, docs, and css
+      - name: Replace placeholders in files
+        run: |
+          RELEASE_TAG=${{ env.RELEASE_TAG }}
+
+          # Replace in mkdocs.yml
+          sed -i "s/{{ release_number }}/$RELEASE_TAG/g" mkdocs.yml
+
+          # Replace in Markdown files
+          sed -i "s/{{ release_number }}/$RELEASE_TAG/g" docs/index.md
+
+          # Replace in CSS for PDF -- PDF not generated for this site
+          # sed -i "s/{{ release_number }}/$RELEASE_TAG/g" docs/stylesheets/pdf.css
+
+      # Step 6: Run the glossary processing script
+#      - name: Generate glossary annex
+#        run: |
+#          python process_glossary.py
+
+      # Step 7: Set EXPORT_PDF environment variable
+      - name: Set EXPORT_PDF environment variable
+        run: echo "EXPORT_PDF=1" >> $GITHUB_ENV
+
+      # Step 8: Build the site (this will generate the PDF if EXPORT_PDF is set)
+      - name: Build the site
+        run: |
+          RELEASE_TAG=${{ env.RELEASE_TAG }}
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          mike set-default --push latest --allow-undefined
+          mike deploy --branch=gh-pages --push --update-aliases $RELEASE_TAG latest
+
+      # Step 9: Deploy the site to GitHub Pages (gh-pages branch)
+      #- name: Deploy to GitHub Pages
+      #  run: |
+      #    mkdocs gh-deploy --force --verbose

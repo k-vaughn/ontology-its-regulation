@@ -1,0 +1,20 @@
+// Diagram for DaySelector
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	TimeThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TimeThing</TD></TR></TABLE>> URL="../classes/TimeThing.md" margin=0]
+	{
+		rank=max
+		DaySelector [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">DaySelector</TD></TR><TR><TD ALIGN="LEFT">applicableDayOfMonth: string «max 30, only»</TD></TR><TR><TD ALIGN="LEFT">applicableMonth: string «max 11, only»</TD></TR></TABLE>> URL="../classes/DaySelector.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		time_DayOfWeek [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">time:DayOfWeek</TD></TR></TABLE>> margin=0]
+	}
+	DaySelector -> TimeThing [arrowhead=onormal style=solid]
+	DaySelector -> Invis [style=invis]
+	Invis -> time_DayOfWeek [style=invis]
+	DaySelector -> time_DayOfWeek [label="«max 6, only» applicableDayOfWeek" arrowhead=normal style=solid]
+}

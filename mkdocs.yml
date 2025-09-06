@@ -1,0 +1,119 @@
+site_name: METR - Ontology
+site_description: A registry for documenting the ontology of traffic regulation terms
+repo_url: https://github.com/k-vaughn/ontology-its-regulation
+nav:
+- Home: index.md
+- Location Pattern:
+  - Overview: classes/LocationPattern.md
+  - Area Destination: classes/AreaDestination.md
+  - Area Location: classes/AreaLocation.md
+  - Destination: classes/Destination.md
+  - Indexed Location: classes/IndexedLocation.md
+  - Itinerary: classes/Itinerary.md
+  - Itinerary By Indexed Locations: classes/ItineraryByIndexedLocations.md
+  - Jurisdictional Entity: classes/JurisdictionalEntity.md
+  - Linear Location: classes/LinearLocation.md
+  - Location: classes/Location.md
+  - Location Group: classes/LocationGroup.md
+  - Location Group By List: classes/LocationGroupByList.md
+  - Location Reference: classes/LocationReference.md
+  - Location Thing: classes/LocationThing.md
+  - Named Area: classes/NamedArea.md
+  - Network Location: classes/NetworkLocation.md
+  - Point Coordinates: classes/PointCoordinates.md
+  - Point Destination: classes/PointDestination.md
+  - Point Location: classes/PointLocation.md
+  - Position Confidence Ellipse: classes/PositionConfidenceEllipse.md
+  - Supplementary Positional Description: classes/SupplementaryPositionalDescription.md
+- Time Pattern:
+  - Overview: classes/TimePattern.md
+  - Day Selector: classes/DaySelector.md
+  - Instance Of Day Within Month: classes/InstanceOfDayWithinMonth.md
+  - Overall Period: classes/OverallPeriod.md
+  - Period: classes/Period.md
+  - Public Holiday: classes/PublicHoliday.md
+  - Special Day: classes/SpecialDay.md
+  - Time Period Of Day: classes/TimePeriodOfDay.md
+  - Time Thing: classes/TimeThing.md
+  - Validity: classes/Validity.md
+- Tro Pattern:
+  - Overview: classes/TroPattern.md
+  - Legal Basis: classes/LegalBasis.md
+  - Traffic Regulation: classes/TrafficRegulation.md
+  - Traffic Regulation Order: classes/TrafficRegulationOrder.md
+  - Tro Thing: classes/TroThing.md
+site_url: https://github.com/k-vaughn/ontology-its-regulation
+copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+  <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
+  rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+  style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+  alt=""></a></p>
+theme:
+  name: material
+  features:
+  - content.code.copy
+  - content.status
+  - content.tooltips
+  - icons
+  - navigation.path
+  - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      question: fontawesome/solid/comments
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+extra_css:
+- stylesheets/extra.css
+extra_javascript:
+- https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+- javascripts/tablesort.js
+plugins:
+- search
+- git-revision-date-localized:
+    type: date
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- def_list
+- md_in_html
+- meta
+- footnotes
+- pymdownx.blocks.caption
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+    use_pygments: true
+- pymdownx.inlinehilite
+- pymdownx.snippets:
+    base_path: docs
+    check_paths: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: ''
+- pymdownx.tabbed:
+    alternate_style: true
+- toc:
+    permalink: true
+extra:
+  search:
+    highlight: true
+  hide:
+  - title
+  version:
+    provider: mike
+    alias: true
+    default: latest
