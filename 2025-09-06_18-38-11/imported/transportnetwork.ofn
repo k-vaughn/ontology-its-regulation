@@ -1,0 +1,917 @@
+Prefix(:=<https://isotc204.org/25965/transport/transportnetwork#>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(geo:=<https://www.opengis.net/ont/geosparql#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(code:=<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(time:=<https://www.w3.org/2006/time#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(schema:=<https://schema.org/>)
+Prefix(genProp:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties#>)
+Prefix(protege:=<http://protege.stanford.edu/ontologies/metadata#>)
+Prefix(activity:=<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/activity#>)
+Prefix(cityunits:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits#>)
+Prefix(data-view:=<http://www.w3.org/2003/g/data-view#>)
+Prefix(partwhole:=<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology#>)
+Prefix(transinfras:=<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras#>)
+Prefix(transportnetwork:=<https://isotc204.org/25965/transport/transportnetwork#>)
+
+
+Ontology(<https://isotc204.org/25965/transport/transportnetwork#>
+Import(<http://www.w3.org/2002/07/owl>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/activity>)
+Import(<https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/CityUnits>)
+Import(<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/Code>)
+Import(<https://standards.iso.org/iso-iec/5087/-2/ed-1/en/ontology/transinfras>)
+Import(<https://www.opengis.net/ont/geosparql>)
+Import(<https://www.w3.org/2006/time>)
+
+Declaration(Class(transportnetwork:Alert))
+Declaration(Class(transportnetwork:Footpath))
+Declaration(Class(transportnetwork:FootpathLane))
+Declaration(Class(transportnetwork:FootpathLink))
+Declaration(Class(transportnetwork:FootpathNetwork))
+Declaration(Class(transportnetwork:FootpathSection))
+Declaration(Class(transportnetwork:FootpathSegment))
+Declaration(Class(transportnetwork:GroupOfLines))
+Declaration(Class(transportnetwork:ITSPattern))
+Declaration(Class(transportnetwork:ITSThing))
+Declaration(Class(transportnetwork:Junction))
+Declaration(Class(transportnetwork:MicromobilityLane))
+Declaration(Class(transportnetwork:MicromobilityLink))
+Declaration(Class(transportnetwork:MicromobilityNetwork))
+Declaration(Class(transportnetwork:MicromobilityNetworkPattern))
+Declaration(Class(transportnetwork:MicromobilityPath))
+Declaration(Class(transportnetwork:MicromobilityPathSection))
+Declaration(Class(transportnetwork:MicromobilityPathSegment))
+Declaration(Class(transportnetwork:NetworkElement))
+Declaration(Class(transportnetwork:PedestrianNetworkPattern))
+Declaration(Class(transportnetwork:PublicTransportLine))
+Declaration(Class(transportnetwork:PublicTransportRoute))
+Declaration(Class(transportnetwork:PublicTransportSystem))
+Declaration(Class(transportnetwork:PublicTransportSystemPattern))
+Declaration(Class(transportnetwork:RailCorridor))
+Declaration(Class(transportnetwork:RailNetwork))
+Declaration(Class(transportnetwork:RailNetworkPattern))
+Declaration(Class(transportnetwork:RailSection))
+Declaration(Class(transportnetwork:Road))
+Declaration(Class(transportnetwork:RoadLane))
+Declaration(Class(transportnetwork:RoadLink))
+Declaration(Class(transportnetwork:RoadLinkUserType))
+Declaration(Class(transportnetwork:RoadNetwork))
+Declaration(Class(transportnetwork:RoadNetworkPattern))
+Declaration(Class(transportnetwork:RoadSection))
+Declaration(Class(transportnetwork:RoadSegment))
+Declaration(Class(transportnetwork:Status))
+Declaration(Class(transportnetwork:TrackLink))
+Declaration(Class(transportnetwork:TrackSegment))
+Declaration(Class(transportnetwork:TransportAlert))
+Declaration(Class(transportnetwork:TransportAlertPattern))
+Declaration(Class(transportnetwork:TransportNetwork))
+Declaration(Class(transportnetwork:TransportNetworkPattern))
+Declaration(Class(transportnetwork:TransportNode))
+Declaration(Class(transportnetwork:TravelCorridor))
+Declaration(Class(transportnetwork:TravelCorridorLink))
+Declaration(Class(transportnetwork:TravelCorridorPattern))
+Declaration(Class(transportnetwork:TravelCorridorSegment))
+Declaration(Class(transportnetwork:TravelledWay))
+Declaration(Class(transportnetwork:TravelledWayLane))
+Declaration(Class(transportnetwork:TravelledWayLink))
+Declaration(Class(transportnetwork:TravelledWaySection))
+Declaration(Class(transportnetwork:TravelledWaySegment))
+Declaration(Class(cityunits:Duration))
+Declaration(Class(cityunits:Speed))
+Declaration(Class(activity:Activity))
+Declaration(Class(code:Code))
+Declaration(Class(transinfras:Road))
+Declaration(Class(transinfras:RoadLink))
+Declaration(Class(transinfras:RoadSegment))
+Declaration(Class(transinfras:TravelledWay))
+Declaration(Class(transinfras:TravelledWayLink))
+Declaration(Class(transinfras:TravelledWaySegment))
+Declaration(Class(geo:Feature))
+Declaration(Class(geo:Geometry))
+Declaration(Class(time:DateTimeInterval))
+Declaration(Class(time:Instant))
+Declaration(ObjectProperty(owl:unionOf))
+Declaration(ObjectProperty(transportnetwork:AlertObjectProperty))
+Declaration(ObjectProperty(transportnetwork:ITSObjectProperty))
+Declaration(ObjectProperty(transportnetwork:TransportNetworkObjectProperty))
+Declaration(ObjectProperty(transportnetwork:activities))
+Declaration(ObjectProperty(transportnetwork:affects))
+Declaration(ObjectProperty(transportnetwork:allowedDirections))
+Declaration(ObjectProperty(transportnetwork:beginTime))
+Declaration(ObjectProperty(transportnetwork:category))
+Declaration(ObjectProperty(transportnetwork:cause))
+Declaration(ObjectProperty(transportnetwork:certainty))
+Declaration(ObjectProperty(transportnetwork:code))
+Declaration(ObjectProperty(transportnetwork:corridorElement))
+Declaration(ObjectProperty(transportnetwork:creationTime))
+Declaration(ObjectProperty(transportnetwork:direction))
+Declaration(ObjectProperty(transportnetwork:distribution))
+Declaration(ObjectProperty(transportnetwork:effect))
+Declaration(ObjectProperty(transportnetwork:egress))
+Declaration(ObjectProperty(transportnetwork:endTime))
+Declaration(ObjectProperty(transportnetwork:expiryTime))
+Declaration(ObjectProperty(transportnetwork:from))
+Declaration(ObjectProperty(transportnetwork:ingress))
+Declaration(ObjectProperty(transportnetwork:lastUpdateTime))
+Declaration(ObjectProperty(transportnetwork:location))
+Declaration(ObjectProperty(transportnetwork:next))
+Declaration(ObjectProperty(transportnetwork:pavementType))
+Declaration(ObjectProperty(transportnetwork:previous))
+Declaration(ObjectProperty(transportnetwork:primaryUser))
+Declaration(ObjectProperty(transportnetwork:recommendation))
+Declaration(ObjectProperty(transportnetwork:referencedAlert))
+Declaration(ObjectProperty(transportnetwork:severity))
+Declaration(ObjectProperty(transportnetwork:speedLimit))
+Declaration(ObjectProperty(transportnetwork:status))
+Declaration(ObjectProperty(transportnetwork:timeInterval))
+Declaration(ObjectProperty(transportnetwork:to))
+Declaration(ObjectProperty(transportnetwork:travelCorridorSegment))
+Declaration(ObjectProperty(transportnetwork:travelTime))
+Declaration(ObjectProperty(transportnetwork:urgency))
+Declaration(ObjectProperty(transportnetwork:usedBy))
+Declaration(ObjectProperty(transportnetwork:userCategory))
+Declaration(ObjectProperty(transportnetwork:uses))
+Declaration(ObjectProperty(partwhole:hasProperPart))
+Declaration(ObjectProperty(partwhole:properPartOf))
+Declaration(DataProperty(transportnetwork:AlertDataProperty))
+Declaration(DataProperty(transportnetwork:ITSDataProperty))
+Declaration(DataProperty(transportnetwork:TransportNetworkDataProperty))
+Declaration(DataProperty(transportnetwork:capacity))
+Declaration(DataProperty(transportnetwork:designator))
+Declaration(DataProperty(transportnetwork:headline))
+Declaration(DataProperty(transportnetwork:issuer))
+Declaration(DataProperty(transportnetwork:maxLanes))
+Declaration(DataProperty(transportnetwork:numLanes))
+Declaration(DataProperty(transportnetwork:resources))
+Declaration(DataProperty(transportnetwork:website))
+Declaration(DataProperty(transportnetwork:width))
+Declaration(DataProperty(genProp:hasDescription))
+Declaration(DataProperty(genProp:hasIdentifier))
+Declaration(AnnotationProperty(protege:abstract))
+Declaration(AnnotationProperty(xsd:pattern))
+Declaration(AnnotationProperty(owl:minQualifiedCardinality))
+Declaration(AnnotationProperty(owl:qualifiedCardinality))
+Declaration(AnnotationProperty(skos:note))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: transportnetwork:AlertObjectProperty (transportnetwork:AlertObjectProperty)
+
+SubObjectPropertyOf(transportnetwork:AlertObjectProperty transportnetwork:ITSObjectProperty)
+
+# Object Property: transportnetwork:TransportNetworkObjectProperty (transportnetwork:TransportNetworkObjectProperty)
+
+SubObjectPropertyOf(transportnetwork:TransportNetworkObjectProperty transportnetwork:ITSObjectProperty)
+
+# Object Property: transportnetwork:activities (transportnetwork:activities)
+
+SubObjectPropertyOf(transportnetwork:activities transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:affects (transportnetwork:affects)
+
+SubObjectPropertyOf(transportnetwork:affects transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:allowedDirections (transportnetwork:allowedDirections)
+
+SubObjectPropertyOf(transportnetwork:allowedDirections transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:beginTime (transportnetwork:beginTime)
+
+SubObjectPropertyOf(transportnetwork:beginTime transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:category (transportnetwork:category)
+
+SubObjectPropertyOf(transportnetwork:category transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:cause (transportnetwork:cause)
+
+SubObjectPropertyOf(transportnetwork:cause transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:certainty (transportnetwork:certainty)
+
+SubObjectPropertyOf(transportnetwork:certainty transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:code (transportnetwork:code)
+
+SubObjectPropertyOf(transportnetwork:code transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:corridorElement (transportnetwork:corridorElement)
+
+SubObjectPropertyOf(transportnetwork:corridorElement transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:creationTime (transportnetwork:creationTime)
+
+SubObjectPropertyOf(transportnetwork:creationTime transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:direction (transportnetwork:direction)
+
+SubObjectPropertyOf(transportnetwork:direction transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:distribution (transportnetwork:distribution)
+
+SubObjectPropertyOf(transportnetwork:distribution transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:effect (transportnetwork:effect)
+
+SubObjectPropertyOf(transportnetwork:effect transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:egress (transportnetwork:egress)
+
+SubObjectPropertyOf(transportnetwork:egress transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:endTime (transportnetwork:endTime)
+
+SubObjectPropertyOf(transportnetwork:endTime transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:expiryTime (transportnetwork:expiryTime)
+
+SubObjectPropertyOf(transportnetwork:expiryTime transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:from (transportnetwork:from)
+
+SubObjectPropertyOf(transportnetwork:from transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:ingress (transportnetwork:ingress)
+
+SubObjectPropertyOf(transportnetwork:ingress transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:lastUpdateTime (transportnetwork:lastUpdateTime)
+
+SubObjectPropertyOf(transportnetwork:lastUpdateTime transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:location (transportnetwork:location)
+
+SubObjectPropertyOf(transportnetwork:location transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:next (transportnetwork:next)
+
+SubObjectPropertyOf(transportnetwork:next transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:pavementType (transportnetwork:pavementType)
+
+SubObjectPropertyOf(transportnetwork:pavementType transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:previous (transportnetwork:previous)
+
+SubObjectPropertyOf(transportnetwork:previous transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:primaryUser (transportnetwork:primaryUser)
+
+SubObjectPropertyOf(transportnetwork:primaryUser transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:recommendation (transportnetwork:recommendation)
+
+SubObjectPropertyOf(transportnetwork:recommendation transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:referencedAlert (transportnetwork:referencedAlert)
+
+SubObjectPropertyOf(transportnetwork:referencedAlert transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:severity (transportnetwork:severity)
+
+SubObjectPropertyOf(transportnetwork:severity transportnetwork:AlertObjectProperty)
+
+# Object Property: transportnetwork:speedLimit (transportnetwork:speedLimit)
+
+SubObjectPropertyOf(transportnetwork:speedLimit transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:status (transportnetwork:status)
+
+SubObjectPropertyOf(transportnetwork:status transportnetwork:TransportNetworkObjectProperty)
+
+# Object Property: transportnetwork:timeInterval (transportnetwork:timeInterval)
+
+SubObjectPropertyOf(transportnetwork:timeInterval transportnetwork:status)
+
+# Object Property: transportnetwork:to (transportnetwork:to)
+
+SubObjectPropertyOf(transportnetwork:to transportnetwork:status)
+
+# Object Property: transportnetwork:travelCorridorSegment (transportnetwork:travelCorridorSegment)
+
+SubObjectPropertyOf(transportnetwork:travelCorridorSegment transportnetwork:status)
+
+# Object Property: transportnetwork:travelTime (transportnetwork:travelTime)
+
+SubObjectPropertyOf(transportnetwork:travelTime transportnetwork:status)
+
+# Object Property: transportnetwork:urgency (transportnetwork:urgency)
+
+SubObjectPropertyOf(transportnetwork:urgency transportnetwork:status)
+
+# Object Property: transportnetwork:usedBy (transportnetwork:usedBy)
+
+SubObjectPropertyOf(transportnetwork:usedBy transportnetwork:status)
+
+# Object Property: transportnetwork:userCategory (transportnetwork:userCategory)
+
+SubObjectPropertyOf(transportnetwork:userCategory transportnetwork:to)
+
+# Object Property: transportnetwork:uses (transportnetwork:uses)
+
+SubObjectPropertyOf(transportnetwork:uses transportnetwork:to)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: transportnetwork:AlertDataProperty (transportnetwork:AlertDataProperty)
+
+SubDataPropertyOf(transportnetwork:AlertDataProperty transportnetwork:ITSDataProperty)
+
+# Data Property: transportnetwork:TransportNetworkDataProperty (transportnetwork:TransportNetworkDataProperty)
+
+SubDataPropertyOf(transportnetwork:TransportNetworkDataProperty transportnetwork:ITSDataProperty)
+
+# Data Property: transportnetwork:capacity (transportnetwork:capacity)
+
+SubDataPropertyOf(transportnetwork:capacity transportnetwork:TransportNetworkDataProperty)
+DataPropertyRange(transportnetwork:capacity xsd:nonNegativeInteger)
+
+# Data Property: transportnetwork:designator (transportnetwork:designator)
+
+SubDataPropertyOf(transportnetwork:designator transportnetwork:TransportNetworkDataProperty)
+DataPropertyRange(transportnetwork:designator xsd:string)
+
+# Data Property: transportnetwork:headline (transportnetwork:headline)
+
+SubDataPropertyOf(transportnetwork:headline transportnetwork:AlertDataProperty)
+DataPropertyRange(transportnetwork:headline xsd:string)
+
+# Data Property: transportnetwork:issuer (transportnetwork:issuer)
+
+SubDataPropertyOf(transportnetwork:issuer transportnetwork:AlertDataProperty)
+DataPropertyRange(transportnetwork:issuer xsd:nonNegativeInteger)
+
+# Data Property: transportnetwork:maxLanes (transportnetwork:maxLanes)
+
+SubDataPropertyOf(transportnetwork:maxLanes transportnetwork:TransportNetworkDataProperty)
+DataPropertyRange(transportnetwork:maxLanes xsd:nonNegativeInteger)
+
+# Data Property: transportnetwork:numLanes (transportnetwork:numLanes)
+
+SubDataPropertyOf(transportnetwork:numLanes transportnetwork:TransportNetworkDataProperty)
+DataPropertyRange(transportnetwork:numLanes xsd:nonNegativeInteger)
+
+# Data Property: transportnetwork:resources (transportnetwork:resources)
+
+SubDataPropertyOf(transportnetwork:resources transportnetwork:AlertDataProperty)
+
+# Data Property: transportnetwork:website (transportnetwork:website)
+
+SubDataPropertyOf(transportnetwork:website transportnetwork:AlertDataProperty)
+DataPropertyRange(transportnetwork:website xsd:anyURI)
+
+# Data Property: transportnetwork:width (transportnetwork:width)
+
+SubDataPropertyOf(transportnetwork:width transportnetwork:TransportNetworkDataProperty)
+DataPropertyRange(transportnetwork:width xsd:nonNegativeInteger)
+
+# Data Property: genProp:hasDescription (genProp:hasDescription)
+
+DataPropertyRange(genProp:hasDescription xsd:string)
+
+# Data Property: genProp:hasIdentifier (genProp:hasIdentifier)
+
+DataPropertyRange(genProp:hasIdentifier xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: transportnetwork:Alert (transportnetwork:Alert)
+
+AnnotationAssertion(terms:description transportnetwork:Alert "An Alert can be used to notify people of important information.")
+AnnotationAssertion(xsd:pattern transportnetwork:Alert "TransportAlertPattern")
+SubClassOf(transportnetwork:Alert transportnetwork:ITSThing)
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:activities activity:Activity))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:beginTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:category code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:cause code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:certainty code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:creationTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:distribution code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:effect code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:endTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:expiryTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:lastUpdateTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:location geo:Geometry))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:recommendation code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:referencedAlert transportnetwork:Alert))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:severity code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:status code:Code))
+SubClassOf(transportnetwork:Alert ObjectAllValuesFrom(transportnetwork:urgency code:Code))
+SubClassOf(transportnetwork:Alert ObjectExactCardinality(1 transportnetwork:category code:Code))
+SubClassOf(transportnetwork:Alert ObjectExactCardinality(1 transportnetwork:creationTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectExactCardinality(1 transportnetwork:distribution code:Code))
+SubClassOf(transportnetwork:Alert ObjectExactCardinality(1 transportnetwork:lastUpdateTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectExactCardinality(1 transportnetwork:status code:Code))
+SubClassOf(transportnetwork:Alert ObjectMaxCardinality(1 transportnetwork:beginTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectMaxCardinality(1 transportnetwork:certainty code:Code))
+SubClassOf(transportnetwork:Alert ObjectMaxCardinality(1 transportnetwork:endTime time:Instant))
+SubClassOf(transportnetwork:Alert ObjectMaxCardinality(1 transportnetwork:severity code:Code))
+SubClassOf(transportnetwork:Alert ObjectMaxCardinality(1 transportnetwork:urgency code:Code))
+SubClassOf(transportnetwork:Alert DataAllValuesFrom(transportnetwork:headline xsd:string))
+SubClassOf(transportnetwork:Alert DataAllValuesFrom(transportnetwork:issuer xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:Alert DataAllValuesFrom(transportnetwork:resources xsd:anyURI))
+SubClassOf(transportnetwork:Alert DataAllValuesFrom(transportnetwork:website xsd:anyURI))
+SubClassOf(transportnetwork:Alert DataAllValuesFrom(genProp:hasDescription xsd:string))
+SubClassOf(transportnetwork:Alert DataExactCardinality(1 transportnetwork:headline xsd:string))
+SubClassOf(transportnetwork:Alert DataExactCardinality(1 transportnetwork:issuer xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:Alert DataExactCardinality(1 genProp:hasDescription xsd:string))
+
+# Class: transportnetwork:Footpath (transportnetwork:Footpath)
+
+AnnotationAssertion(terms:description transportnetwork:Footpath "A Footpath is a type of TravelledWay that is made up of FootpathLinks.")
+AnnotationAssertion(xsd:pattern transportnetwork:Footpath "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:Footpath transportnetwork:TravelledWay)
+SubClassOf(transportnetwork:Footpath ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:FootpathLink))
+SubClassOf(transportnetwork:Footpath ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:FootpathNetwork))
+SubClassOf(transportnetwork:Footpath ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:FootpathLink))
+
+# Class: transportnetwork:FootpathLane (transportnetwork:FootpathLane)
+
+AnnotationAssertion(terms:description transportnetwork:FootpathLane "A FootpathLane is a type of TravelledWayLane that forms part of a FootpathSegment.")
+AnnotationAssertion(xsd:pattern transportnetwork:FootpathLane "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:FootpathLane transportnetwork:TravelledWayLane)
+SubClassOf(transportnetwork:FootpathLane ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:FootpathSegment))
+SubClassOf(transportnetwork:FootpathLane ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:FootpathSegment))
+
+# Class: transportnetwork:FootpathLink (transportnetwork:FootpathLink)
+
+AnnotationAssertion(terms:description transportnetwork:FootpathLink "A Footpath Link is a type of TravelledWayLink designed for pedestrians.")
+AnnotationAssertion(xsd:pattern transportnetwork:FootpathLink "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:FootpathLink transportnetwork:TravelledWayLink)
+SubClassOf(transportnetwork:FootpathLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:FootpathSegment))
+SubClassOf(transportnetwork:FootpathLink ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:Footpath transportnetwork:FootpathNetwork transportnetwork:FootpathSection)))
+SubClassOf(transportnetwork:FootpathLink ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:FootpathSegment))
+
+# Class: transportnetwork:FootpathNetwork (transportnetwork:FootpathNetwork)
+
+AnnotationAssertion(terms:description transportnetwork:FootpathNetwork "A FootpathNetwork is a type of TransportNetwork designed for the use of pedestrians but may be used by others as well.")
+AnnotationAssertion(xsd:pattern transportnetwork:FootpathNetwork "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:FootpathNetwork transportnetwork:TransportNetwork)
+SubClassOf(transportnetwork:FootpathNetwork ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:Footpath transportnetwork:FootpathLink transportnetwork:FootpathSection)))
+SubClassOf(transportnetwork:FootpathNetwork ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:FootpathLink))
+
+# Class: transportnetwork:FootpathSection (transportnetwork:FootpathSection)
+
+AnnotationAssertion(terms:description transportnetwork:FootpathSection "A FootpathSection is a type of TravelledWaySection that groups FootpathLinks and FootpathSegments for a useful operational purpose.")
+AnnotationAssertion(xsd:pattern transportnetwork:FootpathSection "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:FootpathSection transportnetwork:TravelledWaySection)
+SubClassOf(transportnetwork:FootpathSection ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:FootpathLink transportnetwork:FootpathSegment)))
+SubClassOf(transportnetwork:FootpathSection ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:FootpathNetwork))
+
+# Class: transportnetwork:FootpathSegment (transportnetwork:FootpathSegment)
+
+AnnotationAssertion(terms:description transportnetwork:FootpathSegment "A FootpathSegment is a type of TravelledWaySegment that represents a portion of a FootpathLink with common physical characteristics.")
+AnnotationAssertion(rdfs:comment transportnetwork:FootpathSegment "A FootpathSegment can be defined to be a part of a FootpathSection, especially when the FootpathSection does not span an entire FootpathLink.")
+AnnotationAssertion(xsd:pattern transportnetwork:FootpathSegment "PedestrianNetworkPattern")
+SubClassOf(transportnetwork:FootpathSegment transportnetwork:TravelledWaySegment)
+SubClassOf(transportnetwork:FootpathSegment ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:FootpathLane))
+SubClassOf(transportnetwork:FootpathSegment ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:FootpathLink transportnetwork:FootpathSection)))
+SubClassOf(transportnetwork:FootpathSegment ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:FootpathLane))
+SubClassOf(transportnetwork:FootpathSegment ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:FootpathLink))
+
+# Class: transportnetwork:GroupOfLines (transportnetwork:GroupOfLines)
+
+AnnotationAssertion(terms:description transportnetwork:GroupOfLines "A GroupOfLines is a logical grouping of PublicTransportLines for any useful purpose.")
+AnnotationAssertion(xsd:pattern transportnetwork:GroupOfLines "PublicTransportSystemPattern")
+SubClassOf(transportnetwork:GroupOfLines transportnetwork:ITSThing)
+SubClassOf(transportnetwork:GroupOfLines ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:PublicTransportLine))
+SubClassOf(transportnetwork:GroupOfLines ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:PublicTransportSystem))
+SubClassOf(transportnetwork:GroupOfLines ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:PublicTransportLine))
+
+# Class: transportnetwork:ITSPattern (transportnetwork:ITSPattern)
+
+SubClassOf(transportnetwork:ITSPattern transportnetwork:ITSThing)
+
+# Class: transportnetwork:Junction (transportnetwork:Junction)
+
+AnnotationAssertion(terms:description transportnetwork:Junction "A Junction is a TransportNode that allows a traveller to connect from one TravelledWayLink to another.")
+AnnotationAssertion(xsd:pattern transportnetwork:Junction "TransportNetworkPattern")
+SubClassOf(transportnetwork:Junction transportnetwork:TransportNode)
+
+# Class: transportnetwork:MicromobilityLane (transportnetwork:MicromobilityLane)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityLane "A MicromobilityLane is a type of RoadLane that forms part of a MicromobilityPathSegment.")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityLane "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityLane transportnetwork:RoadLane)
+SubClassOf(transportnetwork:MicromobilityLane ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:MicromobilityPathSegment))
+SubClassOf(transportnetwork:MicromobilityLane ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:MicromobilityPathSegment))
+
+# Class: transportnetwork:MicromobilityLink (transportnetwork:MicromobilityLink)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityLink "A MicromobilityLink is a type of RoadLink designed for micromobility vehicles.")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityLink "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityLink transportnetwork:RoadLink)
+SubClassOf(transportnetwork:MicromobilityLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:MicromobilityPathSegment))
+SubClassOf(transportnetwork:MicromobilityLink ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:MicromobilityNetwork transportnetwork:MicromobilityPath transportnetwork:MicromobilityPathSection)))
+SubClassOf(transportnetwork:MicromobilityLink ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:MicromobilityPathSegment))
+
+# Class: transportnetwork:MicromobilityNetwork (transportnetwork:MicromobilityNetwork)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityNetwork "A MicromobilityNetwork is a type of RoadNetwork designed for the use of micromobility vehicles, which have more limited performance characteristics than motor vehicles.")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityNetwork "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityNetwork transportnetwork:RoadNetwork)
+SubClassOf(transportnetwork:MicromobilityNetwork ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:MicromobilityLink transportnetwork:MicromobilityPath transportnetwork:MicromobilityPathSection)))
+SubClassOf(transportnetwork:MicromobilityNetwork ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:MicromobilityLink))
+
+# Class: transportnetwork:MicromobilityNetworkPattern (transportnetwork:MicromobilityNetworkPattern)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityNetworkPattern "The micromobility network pattern specializes the road network pattern to address the needs for the travel of micromobility vehicles.")
+SubClassOf(transportnetwork:MicromobilityNetworkPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:MicromobilityPath (transportnetwork:MicromobilityPath)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityPath "A MicromobilityPath is a type of Road that is made up of MicromobilityPathLinks.")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityPath "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityPath transportnetwork:Road)
+SubClassOf(transportnetwork:MicromobilityPath ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:MicromobilityLink))
+SubClassOf(transportnetwork:MicromobilityPath ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:MicromobilityNetwork))
+SubClassOf(transportnetwork:MicromobilityPath ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:MicromobilityLink))
+
+# Class: transportnetwork:MicromobilityPathSection (transportnetwork:MicromobilityPathSection)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityPathSection "A MicromobilityPathSections is a type of RoadSection that groups MicromobilityLinks and MicromobilityPathSegments for a useful operational purpose (e.g., assigning a speed limit, designating areas of shared use).")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityPathSection "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityPathSection transportnetwork:RoadSection)
+SubClassOf(transportnetwork:MicromobilityPathSection ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:MicromobilityLink transportnetwork:MicromobilityPathSegment)))
+SubClassOf(transportnetwork:MicromobilityPathSection ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:MicromobilityNetwork))
+
+# Class: transportnetwork:MicromobilityPathSegment (transportnetwork:MicromobilityPathSegment)
+
+AnnotationAssertion(terms:description transportnetwork:MicromobilityPathSegment "A MicromobilityPathSegment is a type of RoadSegment that represents a portion of a MicromobilityLink with common physical characteristics.")
+AnnotationAssertion(rdfs:comment transportnetwork:MicromobilityPathSegment "A MicromobilityPathSegment can be defined to be a part of a MicromobilityPathSection, especially when the MicromobilityPathSection does not span an entire MicromobilityLink.")
+AnnotationAssertion(xsd:pattern transportnetwork:MicromobilityPathSegment "MicromobilityNetworkPattern")
+SubClassOf(transportnetwork:MicromobilityPathSegment transportnetwork:RoadSegment)
+SubClassOf(transportnetwork:MicromobilityPathSegment ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:MicromobilityLane))
+SubClassOf(transportnetwork:MicromobilityPathSegment ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:MicromobilityLink transportnetwork:MicromobilityPathSection)))
+SubClassOf(transportnetwork:MicromobilityPathSegment ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:MicromobilityLane))
+SubClassOf(transportnetwork:MicromobilityPathSegment ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:MicromobilityLink))
+
+# Class: transportnetwork:NetworkElement (transportnetwork:NetworkElement)
+
+AnnotationAssertion(protege:abstract transportnetwork:NetworkElement "true"^^xsd:boolean)
+AnnotationAssertion(terms:description transportnetwork:NetworkElement "A NetworkElement represents any element of a transport network. It can be a part of another NetworkElement and can be decomposed into smaller NetworkElements.")
+AnnotationAssertion(xsd:pattern transportnetwork:NetworkElement "TransportNetworkPattern")
+SubClassOf(transportnetwork:NetworkElement transportnetwork:ITSThing)
+SubClassOf(transportnetwork:NetworkElement geo:Feature)
+SubClassOf(transportnetwork:NetworkElement ObjectAllValuesFrom(transportnetwork:status transportnetwork:Status))
+SubClassOf(transportnetwork:NetworkElement ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:NetworkElement))
+SubClassOf(transportnetwork:NetworkElement ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:NetworkElement))
+SubClassOf(transportnetwork:NetworkElement DataAllValuesFrom(genProp:hasIdentifier xsd:string))
+SubClassOf(transportnetwork:NetworkElement DataExactCardinality(1 genProp:hasIdentifier xsd:string))
+
+# Class: transportnetwork:PedestrianNetworkPattern (transportnetwork:PedestrianNetworkPattern)
+
+AnnotationAssertion(terms:description transportnetwork:PedestrianNetworkPattern "The pedestrian network pattern specializes the transport network pattern to address the needs for pedestrian travel.")
+SubClassOf(transportnetwork:PedestrianNetworkPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:PublicTransportLine (transportnetwork:PublicTransportLine)
+
+AnnotationAssertion(terms:description transportnetwork:PublicTransportLine "A PublicTransportLine is one or more routes used by public transport vehicles to transport passengers to and from designated locations.")
+AnnotationAssertion(xsd:pattern transportnetwork:PublicTransportLine "PublicTransportSystemPattern")
+SubClassOf(transportnetwork:PublicTransportLine transportnetwork:ITSThing)
+SubClassOf(transportnetwork:PublicTransportLine ObjectAllValuesFrom(transportnetwork:allowedDirections code:Code))
+SubClassOf(transportnetwork:PublicTransportLine ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:PublicTransportRoute))
+SubClassOf(transportnetwork:PublicTransportLine ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:GroupOfLines transportnetwork:PublicTransportSystem)))
+SubClassOf(transportnetwork:PublicTransportLine ObjectMinCardinality(1 transportnetwork:allowedDirections code:Code))
+SubClassOf(transportnetwork:PublicTransportLine ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:PublicTransportRoute))
+
+# Class: transportnetwork:PublicTransportRoute (transportnetwork:PublicTransportRoute)
+
+AnnotationAssertion(terms:description transportnetwork:PublicTransportRoute "A PublicTransportRoute represents one specific path used by a public transport vehicle to transport passengers to and from designated locations.")
+AnnotationAssertion(xsd:pattern transportnetwork:PublicTransportRoute "PublicTransportSystemPattern")
+AnnotationAssertion(skos:note transportnetwork:PublicTransportRoute "For example, a PublicTransportLine might use an alternate PublicTransportRoute to reach its next stop during periods of congestion.")
+SubClassOf(transportnetwork:PublicTransportRoute transportnetwork:ITSThing)
+SubClassOf(transportnetwork:PublicTransportRoute ObjectAllValuesFrom(transportnetwork:direction code:Code))
+SubClassOf(transportnetwork:PublicTransportRoute ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:PublicTransportLine))
+SubClassOf(transportnetwork:PublicTransportRoute ObjectMinCardinality(1 transportnetwork:direction code:Code))
+SubClassOf(transportnetwork:PublicTransportRoute ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:PublicTransportLine))
+
+# Class: transportnetwork:PublicTransportSystem (transportnetwork:PublicTransportSystem)
+
+AnnotationAssertion(terms:description transportnetwork:PublicTransportSystem "A PublicTransportSystem provides transport services to members of the public.")
+AnnotationAssertion(xsd:pattern transportnetwork:PublicTransportSystem "PublicTransportSystemPattern")
+SubClassOf(transportnetwork:PublicTransportSystem transportnetwork:ITSThing)
+SubClassOf(transportnetwork:PublicTransportSystem ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:GroupOfLines transportnetwork:PublicTransportLine)))
+
+# Class: transportnetwork:PublicTransportSystemPattern (transportnetwork:PublicTransportSystemPattern)
+
+AnnotationAssertion(terms:description transportnetwork:PublicTransportSystemPattern "The public transport system pattern specializes the transport network pattern to address the needs for public transport travel. Whereas the transport network pattern focuses on infrastructure, the public transport system pattern focuses on the operations that rely on the infrastructure provided by the transport networks.")
+SubClassOf(transportnetwork:PublicTransportSystemPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:RailCorridor (transportnetwork:RailCorridor)
+
+AnnotationAssertion(terms:description transportnetwork:RailCorridor "A RailCorridor is a type of TravelledWay that is made up of TrackLinks.")
+AnnotationAssertion(xsd:pattern transportnetwork:RailCorridor "RailNetworkPattern")
+SubClassOf(transportnetwork:RailCorridor transportnetwork:TravelledWay)
+SubClassOf(transportnetwork:RailCorridor ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TrackLink))
+SubClassOf(transportnetwork:RailCorridor ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:RailNetwork))
+SubClassOf(transportnetwork:RailCorridor ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:TrackLink))
+
+# Class: transportnetwork:RailNetwork (transportnetwork:RailNetwork)
+
+AnnotationAssertion(terms:description transportnetwork:RailNetwork "A RailNetwork is a type of TransportNetwork using rails on a stabilized base.")
+AnnotationAssertion(xsd:pattern transportnetwork:RailNetwork "RailNetworkPattern")
+SubClassOf(transportnetwork:RailNetwork transportnetwork:TransportNetwork)
+SubClassOf(transportnetwork:RailNetwork ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:RailCorridor transportnetwork:RailSection transportnetwork:TrackLink)))
+SubClassOf(transportnetwork:RailNetwork ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:TrackLink))
+
+# Class: transportnetwork:RailNetworkPattern (transportnetwork:RailNetworkPattern)
+
+AnnotationAssertion(terms:description transportnetwork:RailNetworkPattern "The rail network pattern specializes the transport network pattern to address the needs for travel of rail vehicles (e.g., trains, subways, trams).")
+SubClassOf(transportnetwork:RailNetworkPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:RailSection (transportnetwork:RailSection)
+
+AnnotationAssertion(terms:description transportnetwork:RailSection "A RailSection is a type of TravelledWaySection that groups TrackLinks and TrackSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme).")
+AnnotationAssertion(xsd:pattern transportnetwork:RailSection "RailNetworkPattern")
+SubClassOf(transportnetwork:RailSection transportnetwork:TravelledWaySection)
+SubClassOf(transportnetwork:RailSection ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:TrackLink transportnetwork:TrackSegment)))
+SubClassOf(transportnetwork:RailSection ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:RailNetwork))
+
+# Class: transportnetwork:Road (transportnetwork:Road)
+
+AnnotationAssertion(terms:description transportnetwork:Road "A Road is a type of TravelledWay and transinfras:Road that is made up of RoadLinks. Roads form a proper part of RoadNetworks.")
+AnnotationAssertion(xsd:pattern transportnetwork:Road "RoadNetworkPattern")
+SubClassOf(transportnetwork:Road transportnetwork:TravelledWay)
+SubClassOf(transportnetwork:Road transinfras:Road)
+SubClassOf(transportnetwork:Road ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:RoadLink))
+SubClassOf(transportnetwork:Road ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:RoadNetwork))
+SubClassOf(transportnetwork:Road ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:RoadLink))
+
+# Class: transportnetwork:RoadLane (transportnetwork:RoadLane)
+
+AnnotationAssertion(terms:description transportnetwork:RoadLane "A RoadLane is a type of TravelledWayLane that forms part of a RoadSegment.")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadLane "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadLane transportnetwork:TravelledWayLane)
+SubClassOf(transportnetwork:RoadLane ObjectAllValuesFrom(transportnetwork:next transportnetwork:RoadLane))
+SubClassOf(transportnetwork:RoadLane ObjectAllValuesFrom(transportnetwork:previous transportnetwork:RoadLane))
+SubClassOf(transportnetwork:RoadLane ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:RoadSegment))
+SubClassOf(transportnetwork:RoadLane ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:RoadSegment))
+SubClassOf(transportnetwork:RoadLane DataAllValuesFrom(transportnetwork:width xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadLane DataExactCardinality(1 transportnetwork:width xsd:nonNegativeInteger))
+
+# Class: transportnetwork:RoadLink (transportnetwork:RoadLink)
+
+AnnotationAssertion(terms:description transportnetwork:RoadLink "A RoadLink is a type of TravelledWayLink and transinfras:RoadLink using a stabilized base designed for the movement of vehicles that conform to a specified set of requirements but may be used by others as well.")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadLink "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadLink transportnetwork:TravelledWayLink)
+SubClassOf(transportnetwork:RoadLink transinfras:RoadLink)
+SubClassOf(transportnetwork:RoadLink ObjectAllValuesFrom(transportnetwork:primaryUser transportnetwork:RoadLinkUserType))
+SubClassOf(transportnetwork:RoadLink ObjectAllValuesFrom(transportnetwork:travelTime cityunits:Duration))
+SubClassOf(transportnetwork:RoadLink ObjectAllValuesFrom(transportnetwork:usedBy transportnetwork:RoadLinkUserType))
+SubClassOf(transportnetwork:RoadLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:RoadSegment))
+SubClassOf(transportnetwork:RoadLink ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:Road transportnetwork:RoadNetwork transportnetwork:RoadSection)))
+SubClassOf(transportnetwork:RoadLink ObjectMaxCardinality(1 transportnetwork:travelTime cityunits:Duration))
+SubClassOf(transportnetwork:RoadLink DataAllValuesFrom(transportnetwork:capacity xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadLink DataAllValuesFrom(transportnetwork:maxLanes xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadLink DataExactCardinality(1 transportnetwork:capacity xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadLink DataExactCardinality(1 transportnetwork:maxLanes xsd:nonNegativeInteger))
+
+# Class: transportnetwork:RoadLinkUserType (transportnetwork:RoadLinkUserType)
+
+AnnotationAssertion(terms:description transportnetwork:RoadLinkUserType "A RoadLinkUserType represents the unique combination of a RoadLink and a UserType such that speed limits and other characteristics can be defined to apply to specific user types when operating along a particular road link.")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadLinkUserType "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadLinkUserType transportnetwork:ITSThing)
+SubClassOf(transportnetwork:RoadLinkUserType ObjectAllValuesFrom(transportnetwork:speedLimit cityunits:Speed))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectAllValuesFrom(transportnetwork:travelTime cityunits:Duration))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectAllValuesFrom(transportnetwork:userCategory code:Code))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectAllValuesFrom(transportnetwork:uses transportnetwork:RoadLink))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectExactCardinality(1 transportnetwork:userCategory code:Code))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectMaxCardinality(1 transportnetwork:speedLimit cityunits:Speed))
+SubClassOf(transportnetwork:RoadLinkUserType ObjectMaxCardinality(1 transportnetwork:travelTime cityunits:Duration))
+
+# Class: transportnetwork:RoadNetwork (transportnetwork:RoadNetwork)
+
+AnnotationAssertion(terms:description transportnetwork:RoadNetwork "A RoadNetwork is a type of TransportNetwork using a stabilized base designed for the movement of vehicles, other than rail or air vehicles, that conform to a specified set of requirements but may be used by others as well.")
+AnnotationAssertion(rdfs:comment transportnetwork:RoadNetwork "Roads are most commonly associated with motor vehicles, but can be designed for other types of vehicles (e.g., micromobility vehicles).")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadNetwork "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadNetwork transportnetwork:TransportNetwork)
+SubClassOf(transportnetwork:RoadNetwork ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:Road transportnetwork:RoadLink transportnetwork:RoadSection)))
+SubClassOf(transportnetwork:RoadNetwork ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:RoadLink))
+
+# Class: transportnetwork:RoadNetworkPattern (transportnetwork:RoadNetworkPattern)
+
+AnnotationAssertion(terms:description transportnetwork:RoadNetworkPattern "The road network pattern specializes the transport network pattern to address the needs for vehicular travel. Road networks that are primarily designed for the movement of micromobility vehicles should generally be defined using the micromobility network pattern, which is a specialization of this pattern.")
+SubClassOf(transportnetwork:RoadNetworkPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:RoadSection (transportnetwork:RoadSection)
+
+AnnotationAssertion(terms:description transportnetwork:RoadSection "A RoadSection is a type of TravelledWaySection that groups RoadLinks and RoadSegments for a useful operational purpose (e.g., assigning a speed limit, designating a traffic control scheme).")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadSection "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadSection transportnetwork:TravelledWaySection)
+SubClassOf(transportnetwork:RoadSection ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:RoadLink transportnetwork:RoadSegment)))
+SubClassOf(transportnetwork:RoadSection ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:RoadNetwork))
+
+# Class: transportnetwork:RoadSegment (transportnetwork:RoadSegment)
+
+AnnotationAssertion(terms:description transportnetwork:RoadSegment "A RoadSegment is a type of TravelledWaySegment and transinfas:RoadSegment that represents a portion of a RoadLink with common physical characteristics.")
+AnnotationAssertion(rdfs:comment transportnetwork:RoadSegment "A RoadSegment can be defined to be a part of a RoadSection, for example, when the RoadSection does not span an entire RoadLink.")
+AnnotationAssertion(xsd:pattern transportnetwork:RoadSegment "RoadNetworkPattern")
+SubClassOf(transportnetwork:RoadSegment transportnetwork:TravelledWaySegment)
+SubClassOf(transportnetwork:RoadSegment transinfras:RoadSegment)
+SubClassOf(transportnetwork:RoadSegment ObjectAllValuesFrom(transportnetwork:pavementType code:Code))
+SubClassOf(transportnetwork:RoadSegment ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:RoadLane))
+SubClassOf(transportnetwork:RoadSegment ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:RoadLink transportnetwork:RoadSection)))
+SubClassOf(transportnetwork:RoadSegment ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:RoadLane))
+SubClassOf(transportnetwork:RoadSegment ObjectExactCardinality(1 partwhole:properPartOf transportnetwork:RoadLink))
+SubClassOf(transportnetwork:RoadSegment ObjectMaxCardinality(1 transportnetwork:pavementType code:Code))
+SubClassOf(transportnetwork:RoadSegment DataAllValuesFrom(transportnetwork:numLanes xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadSegment DataAllValuesFrom(transportnetwork:width xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadSegment DataExactCardinality(1 transportnetwork:numLanes xsd:nonNegativeInteger))
+SubClassOf(transportnetwork:RoadSegment DataExactCardinality(1 transportnetwork:width xsd:nonNegativeInteger))
+
+# Class: transportnetwork:Status (transportnetwork:Status)
+
+AnnotationAssertion(terms:description transportnetwork:Status "The operational status of an entity, e.g., open or closed.")
+AnnotationAssertion(xsd:pattern transportnetwork:Status "TransportNetworkPattern")
+SubClassOf(transportnetwork:Status transportnetwork:ITSThing)
+SubClassOf(transportnetwork:Status ObjectAllValuesFrom(transportnetwork:code code:Code))
+SubClassOf(transportnetwork:Status ObjectAllValuesFrom(transportnetwork:timeInterval time:DateTimeInterval))
+SubClassOf(transportnetwork:Status ObjectExactCardinality(1 transportnetwork:timeInterval time:DateTimeInterval))
+
+# Class: transportnetwork:TrackLink (transportnetwork:TrackLink)
+
+AnnotationAssertion(terms:description transportnetwork:TrackLink "A TrackLink is a type of TravelledWayLink that uses rails on a stabilized base.")
+AnnotationAssertion(rdfs:comment transportnetwork:TrackLink "Due to the nature of rail, each TrackLink consists of a single lane, but multiple TrackLinks can exist along the same RailCorridor.")
+AnnotationAssertion(xsd:pattern transportnetwork:TrackLink "RailNetworkPattern")
+SubClassOf(transportnetwork:TrackLink transportnetwork:TravelledWayLink)
+SubClassOf(transportnetwork:TrackLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TrackSegment))
+SubClassOf(transportnetwork:TrackLink ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:RailCorridor transportnetwork:RailNetwork transportnetwork:RailSection)))
+
+# Class: transportnetwork:TrackSegment (transportnetwork:TrackSegment)
+
+AnnotationAssertion(terms:description transportnetwork:TrackSegment "A TrackSegment is a type of TravelledWaySegment that represents a portion of a TrackLink with common physical characteristics.")
+AnnotationAssertion(xsd:pattern transportnetwork:TrackSegment "RailNetworkPattern")
+SubClassOf(transportnetwork:TrackSegment transportnetwork:TravelledWaySegment)
+SubClassOf(transportnetwork:TrackSegment ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:RailSection transportnetwork:TrackLink)))
+SubClassOf(transportnetwork:TrackSegment ObjectExactCardinality(1 partwhole:properPartOf transportnetwork:TrackLink))
+
+# Class: transportnetwork:TransportAlert (transportnetwork:TransportAlert)
+
+AnnotationAssertion(terms:description transportnetwork:TransportAlert "A TransportAlert is a type of alert that can be used to notify people of important transport information.")
+AnnotationAssertion(xsd:pattern transportnetwork:TransportAlert "TransportAlertPattern")
+SubClassOf(transportnetwork:TransportAlert transportnetwork:Alert)
+SubClassOf(transportnetwork:TransportAlert ObjectAllValuesFrom(transportnetwork:affects transportnetwork:NetworkElement))
+
+# Class: transportnetwork:TransportAlertPattern (transportnetwork:TransportAlertPattern)
+
+AnnotationAssertion(terms:description transportnetwork:TransportAlertPattern "The transport alert pattern addresses the need for public agencies to alert groups to unusual transport-related conditions. Most of the features of the transport alert pattern can also be used for other types of alerts (e.g., meteorological events) and as such, its design includes the definition of a generalized alert.")
+AnnotationAssertion(skos:note transportnetwork:TransportAlertPattern "It is expected that the definition of the generalized Alert will migrate to ISO/IEC 5087-1 or ISO/IEC 5087-2 at some point in the future.")
+SubClassOf(transportnetwork:TransportAlertPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:TransportNetwork (transportnetwork:TransportNetwork)
+
+AnnotationAssertion(terms:description transportnetwork:TransportNetwork "A TransportNetwork is a NetworkElement that is a collection of other network elements that jointly represent a network of paths along which entities (e.g., vehicles, pedestrians) of a specified mode can operate.")
+AnnotationAssertion(xsd:pattern transportnetwork:TransportNetwork "TransportNetworkPattern")
+SubClassOf(transportnetwork:TransportNetwork transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TransportNetwork ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:TransportNetwork transportnetwork:TransportNode transportnetwork:TravelledWay transportnetwork:TravelledWayLink transportnetwork:TravelledWaySection)))
+SubClassOf(transportnetwork:TransportNetwork ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TransportNetwork))
+
+# Class: transportnetwork:TransportNetworkPattern (transportnetwork:TransportNetworkPattern)
+
+AnnotationAssertion(terms:description transportnetwork:TransportNetworkPattern "The Transport Network Pattern models the core concepts involved in describing a transport network. This includes an identification of both physical and administrative characteristics. The most general class is that of the NetworkElement, which can be further classified as one of several types of NetworkElements.
+
+A key feature of this pattern is the formalization of the hasProperPart relationship from a NetworkElement to another NetworkElement. This allows for a representation of networks at multiple levels of detail. For example, at one level, a motorway interchange can be modelled as a single Node. But that node is a NetworkElement that can be defined to consist of an entire TransportNetwork that has a node for each junction within the interchange.")
+SubClassOf(transportnetwork:TransportNetworkPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:TransportNode (transportnetwork:TransportNode)
+
+AnnotationAssertion(terms:description transportnetwork:TransportNode "A TransportNode is a NetworkElement that represents a node on the transport network that can be used to designate an end to a link or to join links.")
+AnnotationAssertion(xsd:pattern transportnetwork:TransportNode "TransportNetworkPattern")
+SubClassOf(transportnetwork:TransportNode transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TransportNode ObjectAllValuesFrom(transportnetwork:egress transportnetwork:TravelledWayLink))
+SubClassOf(transportnetwork:TransportNode ObjectAllValuesFrom(transportnetwork:ingress transportnetwork:TravelledWayLink))
+SubClassOf(transportnetwork:TransportNode ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TransportNetwork))
+SubClassOf(transportnetwork:TransportNode ObjectMinCardinality(1 transportnetwork:egress transportnetwork:TravelledWayLink))
+SubClassOf(transportnetwork:TransportNode ObjectMinCardinality(1 transportnetwork:ingress transportnetwork:TravelledWayLink))
+SubClassOf(transportnetwork:TransportNode ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TransportNetwork))
+
+# Class: transportnetwork:TravelCorridor (transportnetwork:TravelCorridor)
+
+AnnotationAssertion(terms:description transportnetwork:TravelCorridor "A TravelCorridor is a type of TravelledWay that is made up of TravelCorridorLinks.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelCorridor "TravelCorridorPattern")
+AnnotationAssertion(skos:note transportnetwork:TravelCorridor "The extent of a TravelCorridor is defined by the extent of the path that shares the designator assigned to the TravelCorridor.")
+SubClassOf(transportnetwork:TravelCorridor transportnetwork:TravelledWay)
+SubClassOf(transportnetwork:TravelCorridor ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TravelCorridorLink))
+SubClassOf(transportnetwork:TravelCorridor ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:TravelCorridorLink))
+
+# Class: transportnetwork:TravelCorridorLink (transportnetwork:TravelCorridorLink)
+
+AnnotationAssertion(terms:description transportnetwork:TravelCorridorLink "A TravelCorridorLink is a type of TravelledWayLink that is made up of TravelCorridorSegments.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelCorridorLink "TravelCorridorPattern")
+SubClassOf(transportnetwork:TravelCorridorLink transportnetwork:TravelledWayLink)
+SubClassOf(transportnetwork:TravelCorridorLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TravelCorridorSegment))
+SubClassOf(transportnetwork:TravelCorridorLink ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TravelCorridor))
+SubClassOf(transportnetwork:TravelCorridorLink ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:TravelCorridorSegment))
+
+# Class: transportnetwork:TravelCorridorPattern (transportnetwork:TravelCorridorPattern)
+
+AnnotationAssertion(terms:description transportnetwork:TravelCorridorPattern "The travel corridor pattern specializes the transport network pattern to address the needs for a more holistic travel view.")
+SubClassOf(transportnetwork:TravelCorridorPattern transportnetwork:ITSPattern)
+
+# Class: transportnetwork:TravelCorridorSegment (transportnetwork:TravelCorridorSegment)
+
+AnnotationAssertion(terms:description transportnetwork:TravelCorridorSegment "A TravelCorridorSegment is a type of TravelledWaySegment that logically groups multiple TravelledWaySegments together as being co-located or side-by-side.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelCorridorSegment "TravelCorridorPattern")
+SubClassOf(transportnetwork:TravelCorridorSegment transportnetwork:TravelledWaySegment)
+SubClassOf(transportnetwork:TravelCorridorSegment ObjectAllValuesFrom(transportnetwork:corridorElement transportnetwork:TravelledWaySegment))
+SubClassOf(transportnetwork:TravelCorridorSegment ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TravelCorridorLink))
+SubClassOf(transportnetwork:TravelCorridorSegment ObjectMinCardinality(1 transportnetwork:corridorElement transportnetwork:TravelledWaySegment))
+
+# Class: transportnetwork:TravelledWay (transportnetwork:TravelledWay)
+
+AnnotationAssertion(terms:description transportnetwork:TravelledWay "A TravelledWay is a type of NetworkElement and transinfras:TravelledWay that represents the curvilinear length of a transport route that is identified by a specific designator.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelledWay "TransportNetworkPattern")
+SubClassOf(transportnetwork:TravelledWay transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TravelledWay transinfras:TravelledWay)
+SubClassOf(transportnetwork:TravelledWay ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TravelledWayLink))
+SubClassOf(transportnetwork:TravelledWay ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TransportNetwork))
+SubClassOf(transportnetwork:TravelledWay ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TransportNetwork))
+SubClassOf(transportnetwork:TravelledWay DataAllValuesFrom(transportnetwork:designator xsd:string))
+SubClassOf(transportnetwork:TravelledWay DataExactCardinality(1 transportnetwork:designator xsd:string))
+
+# Class: transportnetwork:TravelledWayLane (transportnetwork:TravelledWayLane)
+
+AnnotationAssertion(terms:description transportnetwork:TravelledWayLane "A TravelledWayLane is a NetworkElement that is a portion of TravelledWaySegment intended to accommodate a single line of moving material entities (e.g., vehicles) along its length.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelledWayLane "TransportNetworkPattern")
+SubClassOf(transportnetwork:TravelledWayLane transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TravelledWayLane ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TravelledWaySegment))
+SubClassOf(transportnetwork:TravelledWayLane ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TravelledWaySegment))
+
+# Class: transportnetwork:TravelledWayLink (transportnetwork:TravelledWayLink)
+
+AnnotationAssertion(terms:description transportnetwork:TravelledWayLink "A TravelledWayLink is a type of NetworkElement and transinfras:TravelledWayLink. It represents a contiguous length of a TravelledWay between two TransportNodes of operational or managerial significance.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelledWayLink "TransportNetworkPattern")
+SubClassOf(transportnetwork:TravelledWayLink transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TravelledWayLink transinfras:TravelledWayLink)
+SubClassOf(transportnetwork:TravelledWayLink ObjectAllValuesFrom(transportnetwork:allowedDirections code:Code))
+SubClassOf(transportnetwork:TravelledWayLink ObjectAllValuesFrom(transportnetwork:from transportnetwork:TransportNode))
+SubClassOf(transportnetwork:TravelledWayLink ObjectAllValuesFrom(transportnetwork:to transportnetwork:TransportNode))
+SubClassOf(transportnetwork:TravelledWayLink ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TravelledWaySegment))
+SubClassOf(transportnetwork:TravelledWayLink ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:TransportNetwork transportnetwork:TravelledWay transportnetwork:TravelledWaySection)))
+SubClassOf(transportnetwork:TravelledWayLink ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TransportNetwork))
+SubClassOf(transportnetwork:TravelledWayLink ObjectExactCardinality(1 transportnetwork:from transportnetwork:TransportNode))
+SubClassOf(transportnetwork:TravelledWayLink ObjectExactCardinality(1 transportnetwork:to transportnetwork:TransportNode))
+SubClassOf(transportnetwork:TravelledWayLink ObjectMaxCardinality(1 transportnetwork:allowedDirections code:Code))
+
+# Class: transportnetwork:TravelledWaySection (transportnetwork:TravelledWaySection)
+
+AnnotationAssertion(terms:description transportnetwork:TravelledWaySection "A TravelledWaySection is a type of NetworkElement that represents an aggregation of TravelledWayLinks and TravelledWaySegments that jointly represent a contiguous length of a path that shares the same management and operational strategies (within the scope of interest of the implementation).")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelledWaySection "TransportNetworkPattern")
+SubClassOf(transportnetwork:TravelledWaySection transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TravelledWaySection ObjectAllValuesFrom(partwhole:hasProperPart ObjectUnionOf(transportnetwork:TravelledWayLink transportnetwork:TravelledWaySegment)))
+SubClassOf(transportnetwork:TravelledWaySection ObjectAllValuesFrom(partwhole:properPartOf transportnetwork:TransportNetwork))
+SubClassOf(transportnetwork:TravelledWaySection ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TransportNetwork))
+
+# Class: transportnetwork:TravelledWaySegment (transportnetwork:TravelledWaySegment)
+
+AnnotationAssertion(terms:description transportnetwork:TravelledWaySegment "A TravelledWaySegment is a type of a transinfras:TravelledWaySegment and NetworkElement that represents a contiguous length of a TravelledWayLink characterized by the same physical characteristics.")
+AnnotationAssertion(xsd:pattern transportnetwork:TravelledWaySegment "TransportNetworkPattern")
+SubClassOf(transportnetwork:TravelledWaySegment transportnetwork:NetworkElement)
+SubClassOf(transportnetwork:TravelledWaySegment transinfras:TravelledWaySegment)
+SubClassOf(transportnetwork:TravelledWaySegment ObjectAllValuesFrom(transportnetwork:travelCorridorSegment transportnetwork:TravelCorridorSegment))
+SubClassOf(transportnetwork:TravelledWaySegment ObjectAllValuesFrom(partwhole:hasProperPart transportnetwork:TravelledWayLane))
+SubClassOf(transportnetwork:TravelledWaySegment ObjectAllValuesFrom(partwhole:properPartOf ObjectUnionOf(transportnetwork:TravelledWayLink transportnetwork:TravelledWaySection)))
+SubClassOf(transportnetwork:TravelledWaySegment ObjectMinCardinality(1 partwhole:hasProperPart transportnetwork:TravelledWayLane))
+SubClassOf(transportnetwork:TravelledWaySegment ObjectMinCardinality(1 partwhole:properPartOf transportnetwork:TravelledWayLink))
+
+
+ObjectPropertyAssertion(owl:unionOf _:genid2147483687 _:genid2147483688)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483689 _:genid2147483690)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483691 _:genid2147483692)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483693 _:genid2147483694)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483695 _:genid2147483696)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483697 _:genid2147483698)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483699 _:genid2147483700)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483701 _:genid2147483702)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483703 _:genid2147483704)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483705 _:genid2147483706)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483707 _:genid2147483708)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483709 _:genid2147483710)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483711 _:genid2147483712)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483713 _:genid2147483714)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483715 _:genid2147483716)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483717 _:genid2147483718)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483719 _:genid2147483720)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483721 _:genid2147483722)
+ObjectPropertyAssertion(owl:unionOf _:genid2147483723 _:genid2147483724)
+)
