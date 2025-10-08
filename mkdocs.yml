@@ -1,47 +1,24 @@
-site_name: METR - Ontology
-site_description: A registry for documenting the ontology of traffic regulation terms
+site_name: ITS Ontology - Traffic Regulations
+site_description: A registry for documenting the ontology of traffic regulation concepts
 repo_url: https://github.com/k-vaughn/ontology-its-regulation
 nav:
 - Home: index.md
-- Location Pattern:
-  - Overview: classes/LocationPattern.md
-  - Area Destination: classes/AreaDestination.md
-  - Area Location: classes/AreaLocation.md
-  - Destination: classes/Destination.md
-  - Indexed Location: classes/IndexedLocation.md
-  - Itinerary: classes/Itinerary.md
-  - Itinerary By Indexed Locations: classes/ItineraryByIndexedLocations.md
-  - Jurisdictional Entity: classes/JurisdictionalEntity.md
-  - Linear Location: classes/LinearLocation.md
-  - Location: classes/Location.md
-  - Location Group: classes/LocationGroup.md
-  - Location Group By List: classes/LocationGroupByList.md
-  - Location Reference: classes/LocationReference.md
-  - Location Thing: classes/LocationThing.md
-  - Named Area: classes/NamedArea.md
-  - Network Location: classes/NetworkLocation.md
-  - Point Coordinates: classes/PointCoordinates.md
-  - Point Destination: classes/PointDestination.md
-  - Point Location: classes/PointLocation.md
-  - Position Confidence Ellipse: classes/PositionConfidenceEllipse.md
-  - Supplementary Positional Description: classes/SupplementaryPositionalDescription.md
-- Time Pattern:
-  - Overview: classes/TimePattern.md
-  - Day Selector: classes/DaySelector.md
-  - Instance Of Day Within Month: classes/InstanceOfDayWithinMonth.md
-  - Overall Period: classes/OverallPeriod.md
-  - Period: classes/Period.md
-  - Public Holiday: classes/PublicHoliday.md
-  - Special Day: classes/SpecialDay.md
-  - Time Period Of Day: classes/TimePeriodOfDay.md
-  - Time Thing: classes/TimeThing.md
-  - Validity: classes/Validity.md
 - Tro Pattern:
   - Overview: classes/TroPattern.md
+  - Access Control Device: classes/AccessControlDevice.md
+  - Channelization Device: classes/ChannelizationDevice.md
   - Legal Basis: classes/LegalBasis.md
+  - Pavement Marking: classes/PavementMarking.md
+  - Road Sign: classes/RoadSign.md
+  - Road Surface Feature: classes/RoadSurfaceFeature.md
+  - Rule Maker: classes/RuleMaker.md
+  - Traffic Control Device: classes/TrafficControlDevice.md
   - Traffic Regulation: classes/TrafficRegulation.md
   - Traffic Regulation Order: classes/TrafficRegulationOrder.md
+  - Traffic Signal: classes/TrafficSignal.md
+  - Traffic Signal Device: classes/TrafficSignalDevice.md
   - Tro Thing: classes/TroThing.md
+  - Warning Beacon: classes/WarningBeacon.md
 site_url: https://github.com/k-vaughn/ontology-its-regulation
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
