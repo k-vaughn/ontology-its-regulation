@@ -3,22 +3,12 @@ site_description: A registry for documenting the ontology of traffic regulation 
 repo_url: https://github.com/k-vaughn/ontology-its-regulation
 nav:
 - Home: index.md
-- Tro Pattern:
-  - Overview: classes/TroPattern.md
-  - Access Control Device: classes/AccessControlDevice.md
-  - Channelization Device: classes/ChannelizationDevice.md
-  - Legal Basis: classes/LegalBasis.md
-  - Pavement Marking: classes/PavementMarking.md
-  - Road Sign: classes/RoadSign.md
-  - Road Surface Feature: classes/RoadSurfaceFeature.md
-  - Rule Maker: classes/RuleMaker.md
-  - Traffic Control Device: classes/TrafficControlDevice.md
-  - Traffic Regulation: classes/TrafficRegulation.md
-  - Traffic Regulation Order: classes/TrafficRegulationOrder.md
-  - Traffic Signal: classes/TrafficSignal.md
-  - Traffic Signal Device: classes/TrafficSignalDevice.md
-  - Tro Thing: classes/TroThing.md
-  - Warning Beacon: classes/WarningBeacon.md
+- Tro Pattern (itsRegulation):
+  - Legal Basis: classes/itsRegulation__LegalBasis.md
+  - Rule Maker: classes/itsRegulation__RuleMaker.md
+  - Traffic Regulation: classes/itsRegulation__TrafficRegulation.md
+  - Traffic Regulation Order: classes/itsRegulation__TrafficRegulationOrder.md
+  - Tro Thing: classes/itsRegulation__TroThing.md
 site_url: https://github.com/k-vaughn/ontology-its-regulation
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
