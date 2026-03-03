@@ -1,3 +1,5 @@
+![Draft for review only](/assets/img/draft_for_review.svg)
+
 # LegalBasis
 
 A legal basis provides references to the legal documents that authorize an entity to issue the types of regulations covered by a traffic regulation order.
@@ -10,10 +12,10 @@ A legal basis provides references to the legal documents that authorize an entit
 
 | Property | Constraint |
 |----------|------------|
+| cdm1::hasName | all xsd::string |
+| cdm1::hasName | exactly 1 owl::Thing |
 | date | all xsd::date |
 | date | max 1 owl::Thing |
-| genProp::hasName | exactly 1 owl::Thing |
-| genProp::hasName | all xsd::string |
 | subClassOf | TroThing |
 | version | all xsd::string |
 | version | max 1 owl::Thing |

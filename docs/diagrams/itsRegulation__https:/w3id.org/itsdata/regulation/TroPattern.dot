@@ -1,16 +1,16 @@
-// Diagram for TroPattern
+// Diagram for https://w3id.org/itsdata/regulation/TroPattern
 digraph {
 	graph [overlap=false rankdir=TB splines=true]
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
 		rank=max
-		TroPattern [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TroPattern</TD></TR></TABLE>> URL="../classes/itsRegulation__TroPattern.md" margin=0]
+		"https_//w3id.org/itsdata/regulation/TroPattern" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">https://w3id.org/itsdata/regulation/TroPattern</TD></TR></TABLE>> URL="../classes/itsRegulation__https://w3id.org/itsdata/regulation/TroPattern.md" margin=0]
 	}
 	"its-core__ITSPattern" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core::ITSPattern</TD></TR></TABLE>> margin=0]
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
 	}
-	TroPattern -> "its-core__ITSPattern" [arrowhead=onormal style=solid]
+	"https_//w3id.org/itsdata/regulation/TroPattern" -> "its-core__ITSPattern" [arrowhead=onormal style=solid]
 }

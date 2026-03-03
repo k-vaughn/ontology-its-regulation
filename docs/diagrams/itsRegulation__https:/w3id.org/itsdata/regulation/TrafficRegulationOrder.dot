@@ -1,11 +1,11 @@
-// Diagram for TrafficRegulationOrder
+// Diagram for https://w3id.org/itsdata/regulation/TrafficRegulationOrder
 digraph {
 	graph [overlap=false rankdir=TB splines=true]
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
 	{
 		rank=max
-		TrafficRegulationOrder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrafficRegulationOrder</TD></TR></TABLE>> URL="../classes/itsRegulation__TrafficRegulationOrder.md" margin=0]
+		"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">https://w3id.org/itsdata/regulation/TrafficRegulationOrder</TD></TR></TABLE>> URL="../classes/itsRegulation__https://w3id.org/itsdata/regulation/TrafficRegulationOrder.md" margin=0]
 	}
 	TroThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TroThing</TD></TR></TABLE>> URL="../_counters/itsRegulation__TroThing.md" margin=0]
 	subgraph cluster_associated {
@@ -18,35 +18,35 @@ digraph {
 		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../_counters/itsRegulation__TrafficRegulation.md" margin=0]
 		xsd__string [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">xsd::string</TD></TR></TABLE>> margin=0]
 	}
-	TrafficRegulationOrder -> TroThing [arrowhead=onormal style=solid]
-	TrafficRegulationOrder -> Invis [style=invis]
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> TroThing [arrowhead=onormal style=solid]
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> Invis [style=invis]
 	Invis -> cdm2__Code [style=invis]
 	cdm2__Code -> "its-time__Validity" [style=invis]
 	"its-time__Validity" -> LegalBasis [style=invis]
 	LegalBasis -> RuleMaker [style=invis]
 	RuleMaker -> TrafficRegulation [style=invis]
 	TrafficRegulation -> xsd__string [style=invis]
-	TrafficRegulationOrder -> "its-time__Validity" [label=" implementedValidity 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> "its-time__Validity" [label=" implementedValidity 
  «max 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> RuleMaker [label=" issuingAuthority 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> RuleMaker [label=" issuingAuthority 
  «exactly 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> LegalBasis [label=" legalBasis 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> LegalBasis [label=" legalBasis 
  «max 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> cdm2__Code [label=" reasonCode 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> cdm2__Code [label=" reasonCode 
  «only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> cdm2__Code [label=" status 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> cdm2__Code [label=" status 
  «exactly 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> TrafficRegulation [label=" trafficRegulation 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> TrafficRegulation [label=" trafficRegulation 
  «min 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> "its-time__Validity" [label=" validityByOrder 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> "its-time__Validity" [label=" validityByOrder 
  «max 1, only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> xsd__string [label=" cdm1::hasDescription 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> xsd__string [label=" cdm1::hasDescription 
  «only»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> xsd__string [label=" cdm1::hasIdentifier 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> xsd__string [label=" cdm1::hasIdentifier 
  «only»  " arrowhead=normal style=solid]
 	owl__Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl::Thing</TD></TR></TABLE>> margin=0]
-	TrafficRegulationOrder -> owl__Thing [label=" cdm1::hasIdentifier 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> owl__Thing [label=" cdm1::hasIdentifier 
  «exactly 1»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> owl__Thing [label=" cdm1::hasDescription 
+	"https_//w3id.org/itsdata/regulation/TrafficRegulationOrder" -> owl__Thing [label=" cdm1::hasDescription 
  «max 1»  " arrowhead=normal style=solid]
 }

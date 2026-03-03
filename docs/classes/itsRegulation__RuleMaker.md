@@ -1,6 +1,8 @@
+![Draft for review only](/assets/img/draft_for_review.svg)
+
 # RuleMaker
 
-A rule maker is an entity that has the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity.
+An entity that has the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity.
 
 ![RuleMaker Diagram](../diagrams/itsRegulation__RuleMaker.dot.svg)
 

@@ -1,3 +1,5 @@
+![Draft for review only](/assets/img/draft_for_review.svg)
+
 # TrafficRegulation
 
 A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order.

@@ -1,6 +1,8 @@
-# Ontology for Traffic Regulations
+![Draft for review only](/assets/img/draft_for_review.svg)
 
-A reason justifying the existence of the instance of the class
+# Untitled Ontology
+
+This ontology defines concepts related to traffic regulations.
 
 This ontology consists of the following patterns:
 
@@ -10,4 +12,4 @@ The ontology also contains the following classes that are not assigned to any pa
 
 - [Tro Pattern (itsRegulation)](classes/itsRegulation__TroPattern.md)
 
-The formal definition of these patterns is available in [TTL Syntax](itsRegulation.ttl).
+The formal definition of these patterns is available in [OWL Syntax](itsRegulation.owl).
