@@ -1,0 +1,23 @@
+// Diagram for Agent
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=max
+		Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Agent</TD></TR></TABLE>> URL="../Agent.md" margin=0]
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		default1_Role [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">default1:Role</TD></TR></TABLE>> margin=0]
+	}
+	cdm1_Agent [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Agent</TD></TR></TABLE>> margin=0]
+	Agent -> cdm1_Agent [arrowhead=onormal style=solid]
+	default1_ITSAgentThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">default1:ITSAgentThing</TD></TR></TABLE>> margin=0]
+	Agent -> default1_ITSAgentThing [arrowhead=onormal style=solid]
+	Agent -> Invis [style=invis]
+	Invis -> default1_Role [style=invis]
+	Agent -> default1_Role [label=" default1:playsRole 
+ «only»  " arrowhead=normal style=solid]
+}

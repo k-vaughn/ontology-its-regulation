@@ -21,6 +21,7 @@
     <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/Mereology" uri="../../ontologies/docs/imported/Mereology.owl"/>
     <uri id="User Entered Import Resolution" name="https://standards.iso.org/iso-iec/5087/-1/ed-1/en/ontology/GenericProperties" uri="../../ontologies/docs/imported/GenericProperties.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1766676728494" name="https://w3id.org/itsdata/regulation/" uri="itsRegulation.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1772663055682" name="https://w3id.org/itsdata/regulation/" uri="itsRegulation.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1772663055682" name="https://w3id.org/itsdata/regulation/v1/" uri="itsRegulation.owl"/>
     </group>
 </catalog>

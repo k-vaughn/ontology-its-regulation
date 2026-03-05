@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/itsdata/regulation/v1/"
+     xml:base="https://w3id.org/itsdata/regulation/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:i72="https://w3id.org/citydata/21972/v1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/"
+     xmlns:cdm3="https://w3id.org/citydata/part3/v1/"
+     xmlns:its-core="https://w3id.org/itsdata/core/v1/"
+     xmlns:its-time="https://w3id.org/itsdata/time/v1/"
+     xmlns:its-location="https://w3id.org/itsdata/location/v1/">
+    <owl:Ontology rdf:about="https://w3id.org/itsdata/regulation/v1/">
+    	<!-- Identity -->
+    	<dcterms:title>Traffic Regulation Ontology</dcterms:title>
+    	<skos:definition>This ontology defines concepts related to traffic regulations.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/itsdata/regulation/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>its-regulation</vann:preferredNamespacePrefix>
+        <cdm1:mainModule>true</cdm1:mainModule>
+        <its-core:draft>true</its-core:draft>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:created>Draft</dcterms:created>
+        <!-- Prior release -->
+        <owl:priorVersion rdf:resource="https://w3id.org/itsdata/regulation/v1/r0.1"/>
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</dcterms:modified>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/itsdata/regulation/v1/r0.2"/>
+        <!-- TODO: I need to make sure that the above IRIs will work, in particular, the w3id redirect needs to be able to recognize that the r#.# extension is a release and not a class or property. -->
+        
+        <!-- License -->
+        <dcterms:license>http://creativecommons.org/licenses/by/4.0/</dcterms:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/citydata/part1/v1/"/>
+        <owl:imports rdf:resource="https://w3id.org/itsdata/core/v1/"/>
+        <owl:imports rdf:resource="https://w3id.org/itsdata/agent/v1/"/>
+        <owl:imports rdf:resource="https://w3id.org/itsdata/location/v1/"/>
+        <owl:imports rdf:resource="https://w3id.org/itsdata/time/v1/"/>
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty">
+    		<skos:definition>An object property to organize all object properties defined in the Traffic Regulation Ontology.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/associatedTrafficControlDevice -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/associatedTrafficControlDevice">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>A traffic control device associated with the instance of the traffic regulation order.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder"/>
+        <rdfs:range rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/condition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/condition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>A condition associated with the instance of the traffic regulation order.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulation"/>
+        <rdfs:range rdf:resource="https://w3id.org/itsdata/regulation/v1/Condition"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/implementedLocation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/implementedLocation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>The location where the instance of the traffic regulation order is implemented.</skos:definition>
+        <rdfs:domain rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder"/>
+        <rdfs:range rdf:resource="https://w3id.org/itsdata/location/v1/LocationReference"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/locationByOrder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/locationByOrder">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>The location associated with the traffic regulation order.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/implementedValidity -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/implementedValidity">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>The validity period during which the instance of the traffic regulation order is implemented.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+<!-- https://w3id.org/itsdata/regulation/v1/issuedTro -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/issuingAuthority -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/issuingAuthority">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <dcterms:description>The entity that issued the instance of the traffic regulation order</dcterms:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/legalBasis -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/legalBasis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <dcterms:description>formal authority within the law (e.g., statute, ordinance, administrative rule, constitutional provision) that empowers an entity to create, adopt, or enforce a regulation</dcterms:description>
+    </owl:ObjectProperty>
+    
+<!-- https://w3id.org/itsdata/regulation/v1/permitInformation -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/reasonCode -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/reasonCode">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <dcterms:description>A reason justifying the existence of the instance of the traffic regulation order</dcterms:description>
+    </owl:ObjectProperty>
+    
+
+<!-- https://w3id.org/itsdata/regulation/v1/regulatoryScope -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/status -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/implementationStatus">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <dcterms:description>The current lifecycle status of the instance of the containing class</dcterms:description>
+        <skos:example>The current lifecycle status of the traffic regulation order</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/trafficRegulations -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/trafficRegulations">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>The set of traffic regulations enacted by the traffic regulation order.</skos:definition>
+    </owl:ObjectProperty>
+    
+<!-- https://w3id.org/itsdata/regulation/v1/typeOfRegulation -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/validityByOrder -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/validityByOrder">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <skos:definition>The validity period as defined by the traffic regulation order.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSDataProperty"/>
+        <skos:definition>A data property to organize all data properties defined in the Traffic Regulation Ontology.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/itsdata/time/v1/approvalDate -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/itsdata/time/v1/approvalDate">
+        <skos:definition>The date on which the object was approved.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/time/v1/TimeDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationThing -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSThing"/>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/Condition -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/Condition">
+        <skos:definition>A boolean condition that must evaluate to true for the regulation to currently apply. Even if the condition is true, it is not active if it is currently overridden. The condition may be multi-part.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/LegalBasis -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/LegalBasis">
+        <skos:definition>A legal basis provides references to the legal documents that authorize an entity to issue the types of regulations covered by a traffic regulation order.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II uses a MultiString, this allows multiple strings. Do we need to define MultiString?</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasName"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/core/v1/version"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/time/v1/approvalDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/PermitInformation -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/PermitInformation">
+        <skos:definition>Information about any permits that are associated with the regulation.</skos:definition>
+        <skos:example>If a parking permit is required for a specific area, this class would contain details about that permit, such as how to obtain and what other permits are acceptable.</skos:example>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RuleMakerRole -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RuleMakerRole">
+        <skos:definition>A Role that includes the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/agent/v1/Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/issuedTro"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/core/v1/jurisdiction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/JurisdictionalArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/regulatoryScope"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficControlDevice -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice">
+        <skos:definition></skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/AccessControlDevice -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/AccessControlDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ChannelizationDevice -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/ChannelizationDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/PavementMarking -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/PavementMarking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadSign -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadSign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadSurfaceFeature -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadSurfaceFeature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficSignal -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficSignal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/WarningBeacon -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/WarningBeacon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficRegulation -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficRegulation">
+        <skos:definition>A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/core/v1/activationStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+                <skos:editorsNote>DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database.</skos:editorsNote>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/typeOfRegulation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/TypeOfRegulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/associatedTrafficControlDevice"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/condition"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/permitInformation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/PermitInformation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder">
+        <skos:definition>A legally recognized document or publication issued to enact a specific traffic regulation or regulations by a competent authority.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates max 1 MultiString. Does a description always conceptually exist (in which case, min 1, regardless of whether DATEX presents it)? Do we need to define MultiString or should we just allow multiples of string?</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>Changed from a simple string to a pointer to a RuleMakerRole (i.e., a Role that a Agent (person, organization, software agent, or group) can assume).</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/issuingAuthority"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/RuleMakerRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/issuingAuthority"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/RuleMakerRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/reasonCode"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/troStatus"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/implementationStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/legalBasis"/>
+                <skos:editorsNote>DATEX II indicates this is optional at the TRO and TR level. Does this really describe the TRO or just the regulation? Recommend deletion for TRO?</skos:editorsNote>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/LegalBasis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/implementedLocation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/LocationReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/locationByOrder"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/LocationReference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/implementedValidity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/time/v1/Validity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/validityByOrder"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/time/v1/Validity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/trafficRegulations"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/TypeOfRegulation -->
+    <!-- TODO -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TypeOfRegulation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <xsd:pattern>TroPattern</xsd:pattern>
+    </owl:Class>
+    
+
+</rdf:RDF>
