@@ -1,13 +1,8 @@
-# Ontology for Traffic Regulations
+# Traffic Regulation Ontology
 
-A reason justifying the existence of the instance of the class
+![Draft for review only](/assets/img/draft_for_review.svg)
 
-This ontology consists of the following patterns:
+The Traffic Regulation Ontology ontology consists of the following:
 
-- [Tro Pattern (itsRegulation)](classes/itsRegulation__TroPattern.md)
-
-The ontology also contains the following classes that are not assigned to any pattern:
-
-- [Tro Pattern (itsRegulation)](classes/itsRegulation__TroPattern.md)
-
-The formal definition of these patterns is available in [TTL Syntax](itsRegulation.ttl).
+- [ITS Agent Pattern](ITSAgentPattern.md)
+- [ITS Regulation Pattern](ITSRegulationPattern.md)
