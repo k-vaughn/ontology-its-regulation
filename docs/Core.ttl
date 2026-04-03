@@ -1,0 +1,38 @@
+BASE   <https://w3id.org/itsdata/regulation/v1/>
+PREFIX : <https://w3id.org/itsdata/regulation/v1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+
+<Core/>  rdf:type                      owl:Ontology;
+        dcterms:title                  "Core definitions of the Traffic Regulation Ontology";
+        skos:definition                "This document defines the core concepts related to traffic regulations.";
+        vann:preferredNamespaceUri     "https://w3id.org/itsdata/regulation/v1/";
+        vann:preferredNamespacePrefix  "its-regulation";
+        its-core:draft                 "true";
+        dcterms:creator                "Kenneth Vaughn";
+        dcterms:created                "Draft";
+        dcterms:modified               "2026-03-20"^^xsd:date;
+        owl:versionInfo                "0.0.2";
+        owl:versionIRI                 <Core/r0.2>;
+        dcterms:license                "http://creativecommons.org/licenses/by/4.0/";
+        owl:imports                    its-core: .
+
+:RegulationObjectProperty
+        rdf:type            owl:ObjectProperty;
+        skos:definition     "An object property to organize all object properties defined in the Traffic Regulation Ontology.";
+        rdfs:subPropertyOf  its-core:ITSObjectProperty .
+
+:RegulationDataProperty
+        rdf:type            owl:DatatypeProperty;
+        rdfs:subPropertyOf  its-core:ITSDataProperty;
+        skos:definition     "A data property to organize all data properties defined in the Traffic Regulation Ontology." .
+
+:RegulationThing  rdf:type  owl:Class;
+        rdfs:subClassOf  its-core:ITSThing .

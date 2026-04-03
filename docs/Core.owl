@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/itsdata/regulation/v1/"
+     xml:base="https://w3id.org/itsdata/regulation/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:i72="https://w3id.org/citydata/21972/v1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/"
+     xmlns:cdm3="https://w3id.org/citydata/part3/v1/"
+     xmlns:its-agent="https://w3id.org/itsdata/agent/v1/"
+     xmlns:its-core="https://w3id.org/itsdata/core/v1/"
+     xmlns:its-time="https://w3id.org/itsdata/time/v1/"
+     xmlns:its-location="https://w3id.org/itsdata/location/v1/">
+    <owl:Ontology rdf:about="https://w3id.org/itsdata/regulation/v1/Core/">
+    	<!-- Identity -->
+    	<dcterms:title>Core definitions of the Traffic Regulation Ontology</dcterms:title>
+    	<skos:definition>This document defines the core concepts related to traffic regulations.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/itsdata/regulation/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>its-regulation</vann:preferredNamespacePrefix>
+        <its-core:draft>true</its-core:draft>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:created>Draft</dcterms:created>
+        <!-- Prior release - None -->
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-20</dcterms:modified>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/itsdata/regulation/v1/Core/r0.2"/>
+        <!-- TODO: I need to make sure that the above IRIs will work, in particular, the w3id redirect needs to be able to recognize that the r#.# extension is a release and not a class or property. -->
+        
+        <!-- License -->
+        <dcterms:license>http://creativecommons.org/licenses/by/4.0/</dcterms:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/itsdata/core/v1/"/>
+        <!-- which includes the following cascade of imports:
+            LandUsePattern
+                CodePattern
+                    Core(cdm2)
+                    OrganizationStructurePattern
+                        AgentPattern
+                            GenericPropertiesPattern
+                            ResourcePattern
+                                ActivityPattern
+                                    ChangePattern
+                                    SpatialLocPattern
+                                        MereologyPattern
+                                CityUnitsPattern
+                                    ISO21972
+                                    Core (cdm1)
+                                        Time (W3C)
+         -->
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty">
+    		<skos:definition>An object property to organize all object properties defined in the Traffic Regulation Ontology.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSObjectProperty"/>
+    </owl:ObjectProperty>
+
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationDataProperty">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSDataProperty"/>
+        <skos:definition>A data property to organize all data properties defined in the Traffic Regulation Ontology.</skos:definition>
+    </owl:DatatypeProperty>    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RegulationThing -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RegulationThing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/core/v1/ITSThing"/>
+    </owl:Class>
+
+
+</rdf:RDF>

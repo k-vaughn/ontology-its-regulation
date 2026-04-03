@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/itsdata/regulation/v1/"
+     xml:base="https://w3id.org/itsdata/regulation/v1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dash="http://datashapes.org/dash#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:i72="https://w3id.org/citydata/21972/v1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:cdm1="https://w3id.org/citydata/part1/v1/"
+     xmlns:cdm2="https://w3id.org/citydata/part2/v1/"
+     xmlns:cdm3="https://w3id.org/citydata/part3/v1/"
+     xmlns:its-agent="https://w3id.org/itsdata/agent/v1/"
+     xmlns:its-core="https://w3id.org/itsdata/core/v1/"
+     xmlns:its-time="https://w3id.org/itsdata/time/v1/"
+     xmlns:its-location="https://w3id.org/itsdata/location/v1/">
+    <owl:Ontology rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficControlDevicePattern/">
+    	<!-- Identity -->
+    	<dcterms:title>Traffic Regulation Ontology</dcterms:title>
+    	<skos:definition>This ontology defines concepts related to traffic regulations.</skos:definition>
+    	<vann:preferredNamespaceUri>https://w3id.org/itsdata/regulation/v1/</vann:preferredNamespaceUri>
+    	<vann:preferredNamespacePrefix>its-regulation</vann:preferredNamespacePrefix>
+        <cdm1:mainModule>true</cdm1:mainModule>
+        <its-core:draft>true</its-core:draft>
+    		
+    	<!-- Provenance -->
+    	<dcterms:creator>Kenneth Vaughn</dcterms:creator>
+        <dcterms:created>Draft</dcterms:created>
+        <!-- Prior release -->
+        <owl:priorVersion rdf:resource="https://w3id.org/itsdata/regulation/v1/r0.1"/>
+        <!-- This release -->
+		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-03</dcterms:modified>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionIRI rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevicePattern/r0.2"/>
+        <!-- TODO: I need to make sure that the above IRIs will work, in particular, the w3id redirect needs to be able to recognize that the r#.# extension is a release and not a class or property. -->
+        
+        <!-- License -->
+        <dcterms:license>http://creativecommons.org/licenses/by/4.0/</dcterms:license>
+        
+        <!-- Imports -->
+        <owl:imports rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulationPattern"/>
+        <!-- which includes the following cascade of imports:
+            ITS Regulation Core
+                ITS Core
+                    LandUsePattern
+                        CodePattern
+                            Core(cdm2)
+                            OrganizationStructurePattern
+                                AgentPattern
+                                    GenericPropertiesPattern
+                                    ResourcePattern
+                                        ActivityPattern
+                                            ChangePattern
+                                            SpatialLocPattern
+                                                MereologyPattern
+                                        CityUnitsPattern
+                                            ISO21972
+                                            Core (cdm1)
+                                                Time (W3C)
+                ITS Agent Pattern
+                ITS Location Pattern
+                ITS Time Pattern
+         -->
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/associatedTrafficControlDevice -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/itsdata/regulation/v1/associatedTrafficControlDevice">
+        <skos:definition>A traffic control device associated with the instance of the traffic regulation order.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationObjectProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder"/>
+        <rdfs:range rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficControlDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice">
+        <skos:definition>A device that is used to control traffic, such as a road sign, traffic signal, or pavement marking.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <dash:abstract>true</dash:abstract>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II uses a MultiString, this allows multiple strings. Do we need to define MultiString?</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasDescription"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasIdentifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/core/v1/url"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/core/v1/image"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/AccessControlDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/AccessControlDevice">
+        <skos:definition>A traffic control device that is used to control access to a specific area, such as a gate or barrier.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ChannelizationDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/ChannelizationDevice">
+        <skos:definition>A traffic control device that is used to guide or direct traffic, such as cones, barrels, or barricades.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/PavementMarking -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/PavementMarking">
+        <skos:definition>A traffic control device that is used to mark the pavement, such as lines, symbols, or text.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/InternationalSign -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/InternationalSign">
+        <skos:definition>A traffic control device that is used to convey information to road users, such as regulatory, warning, or guide signs.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+        <dash:abstract>true</dash:abstract>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II breaks this down into the category code and service category, but this keeps the full depth of GDD v2 to allow for local specializations.</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/pictogram"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/itsdata/core/v1/oidstring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/CompositeSign -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/CompositeSign">
+        <skos:definition>A traffic control device that combines multiple signs into a single unit.</skos:definition>
+        <skos:editorsNote>Not in DATEX II; taken from GDD v2</skos:editorsNote>
+        <skos:editorsNote>GDD defines as a SimpleSign, but presumably, the intent was for a SEQUENCE OF SimpleSign</skos:editorsNote>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/InternationalSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/componentSign"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/SimpleSign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/SimpleSign -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/SimpleSign">
+        <skos:definition>A traffic control device that consists of a single sign.</skos:definition>
+        <skos:editorsNote>Not in DATEX II; taken from GDD v2</skos:editorsNote>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/InternationalSign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/attribute"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/InternationalSignAttribute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadSurfaceFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadSurfaceFeature">
+        <skos:definition>A traffic control device that is used to indicate features on the road surface, such as rumble strips or speed bumps.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficSignal -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficSignal">
+        <skos:definition>A traffic control device that is used to control traffic flow at intersections or pedestrian crossings using lights.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice">
+        <skos:definition>A traffic control device that is used to control traffic signals, including traffic lights and warning beacons.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/WarningBeacon -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/WarningBeacon">
+        <skos:definition>A traffic control device that is used to warn road users of potential hazards or to draw attention to specific conditions using lights or signals.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficSignalDevice"/>
+    </owl:Class>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Road Sign Attribute Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadSignAttribute -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute">
+        <skos:definition>An attribute that provides additional information about a road sign, such as applicable period, applicability, or specific conditions.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/TrafficControlDevice"/>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ApplicablePeriod -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/ApplicablePeriod">
+         <skos:definition>A road sign attribute that indicates the period during which the road sign is applicable.</skos:definition>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/time/v1/OverallPeriod"/>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ExemptedPeriod -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/ExemptedPeriod">
+        <skos:definition>A road sign attribute that indicates a period during which the road sign is not applicable.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/time/v1/OverallPeriod"/>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/TextComposite -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/TextComposite">
+        <skos:definition>A road sign attribute that consists of text (multi-lingual string) on the default area of the main pictogram.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/compositeText"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ApplicableVehicleDimensions -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/ApplicableVehicleDimensions">
+        <skos:definition>A road sign attribute that indicates the vehicle dimensions for which the road sign is applicable.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minHeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxHeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minWidth"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxWidth"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minLength"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxLength"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minMass"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxMass"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minAxleMass"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxAxleMass"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Mass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/SpeedLimits -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/SpeedLimits">
+        <skos:definition>A road sign attribute that indicates the speed limits for which the road sign is applicable.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/minSpeedLimit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Speed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/maxSpeedLimit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>     
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Speed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RateOfIncline -->
+     <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RateOfIncline">
+        <skos:definition>A road sign attribute that indicates the rate of incline indicated on the road sign.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/percentage"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/VehicleHeadway -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/VehicleHeadway">
+        <skos:definition>A road sign attribute that indicates the required headway between vehicles indicated on the road sign.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/headway"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationInfo -->
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationInfo">
+        <skos:definition>A road sign attribute that indicates destination information, such as distance to destination or direction to destination.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/junctionDirection"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/DirectionCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/roundaboutDirection"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/DirectionCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/SignDestination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/Section -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/Section">
+        <skos:definition>A description of a carrigeway section within which the International Sign takes effect.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadSignAttribute"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/distance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/includedRoadUser -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/excludedRoadUser -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/numberOfLane -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/LaneInformation -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ConditionDetected -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/Destination -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/SignDestination">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationPlace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/location/v1/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationRoad"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationRoad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationHorizon"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/arrowDirection"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/DirectionCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/divergeRoute"/>
+                <owl:allValuesFrom rdf:resource=""/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/divergeName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/divergeHorizon"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+  arrowDirection      DestinationConnector-arrowDirection,
+  route               SEQUENCE (SIZE (1..4)) OF DestinationConnector-route OPTIONAL,	
+  name                SEQUENCE (SIZE (1..4)) OF DestinationConnector-name OPTIONAL,
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationRoad -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationRoad">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/roadType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadTypeCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/routeIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II uses a MultiString, this allows multiple strings. Do we need to define MultiString?</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadTypeCode -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadTypeCode">
+         <skos:definition>A code that indicates the type of road, such as motorway, primary road, or residential street.</skos:definition>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:Class>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizon -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <dash:abstract>true</dash:abstract>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizonDistance -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizonDistance">
+         <skos:definition>A destination horizon that indicates the distance to the destination.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/distance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizonTime -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizonTime">
+         <skos:definition>A destination horizon that indicates the time to the destination.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/time"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+</rdf:RDF>

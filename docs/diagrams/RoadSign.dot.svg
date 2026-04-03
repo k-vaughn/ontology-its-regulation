@@ -14,28 +14,28 @@
 <!-- RoadSign -->
 <g id="node1" class="node">
 <title>RoadSign</title>
-<g id="a_node1"><a xlink:href="../RoadSign.md" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="28.38,-25.88 28.38,-42.12 84.38,-42.12 84.38,-25.88 28.38,-25.88"/>
-<text xml:space="preserve" text-anchor="start" x="29.38" y="-29.73" font-family="Arial" font-size="12.00">RoadSign</text>
-<polygon fill="none" stroke="black" points="27.38,-24.88 27.38,-43.12 85.38,-43.12 85.38,-24.88 27.38,-24.88"/>
+<g id="a_node1"><a xlink:href="../RoadSign" xlink:title="&lt;TABLE&gt;">
+<polygon fill="lightgray" stroke="none" points="28.38,-81.88 28.38,-98.12 84.38,-98.12 84.38,-81.88 28.38,-81.88"/>
+<text xml:space="preserve" text-anchor="start" x="29.38" y="-85.72" font-family="Arial" font-size="12.00">RoadSign</text>
+<polygon fill="none" stroke="black" points="27.38,-80.88 27.38,-99.12 85.38,-99.12 85.38,-80.88 27.38,-80.88"/>
 </a>
 </g>
 </g>
 <!-- TrafficControlDevice -->
 <g id="node3" class="node">
 <title>TrafficControlDevice</title>
-<g id="a_node3"><a xlink:href="../TrafficControlDevice.md" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="1,-97.88 1,-114.12 111.75,-114.12 111.75,-97.88 1,-97.88"/>
-<text xml:space="preserve" text-anchor="start" x="2" y="-101.72" font-family="Arial" font-size="12.00">TrafficControlDevice</text>
-<polygon fill="none" stroke="black" points="0,-96.88 0,-115.12 112.75,-115.12 112.75,-96.88 0,-96.88"/>
+<g id="a_node3"><a xlink:href="../TrafficControlDevice" xlink:title="&lt;TABLE&gt;">
+<polygon fill="lightgray" stroke="none" points="1,-9.88 1,-26.12 111.75,-26.12 111.75,-9.88 1,-9.88"/>
+<text xml:space="preserve" text-anchor="start" x="2" y="-13.72" font-family="Arial" font-size="12.00">TrafficControlDevice</text>
+<polygon fill="none" stroke="black" points="0,-8.88 0,-27.12 112.75,-27.12 112.75,-8.88 0,-8.88"/>
 </a>
 </g>
 </g>
 <!-- RoadSign&#45;&gt;TrafficControlDevice -->
 <g id="edge1" class="edge">
 <title>RoadSign&#45;&gt;TrafficControlDevice</title>
-<path fill="none" stroke="black" d="M56.38,-51.79C56.38,-59.25 56.38,-68.24 56.38,-76.69"/>
-<polygon fill="none" stroke="black" points="52.88,-76.54 56.38,-86.54 59.88,-76.54 52.88,-76.54"/>
+<path fill="none" stroke="black" d="M56.38,-72.05C56.38,-64.57 56.38,-55.58 56.38,-47.14"/>
+<polygon fill="none" stroke="black" points="59.88,-47.3 56.38,-37.3 52.88,-47.3 59.88,-47.3"/>
 </g>
 <!-- Invis -->
 </g>

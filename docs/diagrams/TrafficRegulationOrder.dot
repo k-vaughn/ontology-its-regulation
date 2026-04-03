@@ -3,21 +3,20 @@ digraph {
 	graph [overlap=false rankdir=TB splines=true]
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
+	TrafficRegulationOrder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulationOrder</TD></TR></TABLE>> URL="../TrafficRegulationOrder" margin=0]
 	{
 		rank=max
-		TrafficRegulationOrder [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">TrafficRegulationOrder</TD></TR></TABLE>> URL="../TrafficRegulationOrder.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> margin=0]
-		"its-location_LocationReference" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:LocationReference</TD></TR></TABLE>> margin=0]
-		"its-time_Validity" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Validity</TD></TR></TABLE>> margin=0]
-		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../LegalBasis.md" margin=0]
-		RuleMakerRole [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RuleMakerRole</TD></TR></TABLE>> URL="../RuleMakerRole.md" margin=0]
-		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation.md" margin=0]
+		cdm2_Code [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:Code</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/Code" margin=0]
+		"its-location_LocationReference" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:LocationReference</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/LocationReference" margin=0]
+		"its-time_Validity" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Validity</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Validity" margin=0]
+		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../LegalBasis" margin=0]
+		RuleMakerRole [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RuleMakerRole</TD></TR></TABLE>> URL="../RuleMakerRole" margin=0]
 	}
-	RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing.md" margin=0]
+	RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	TrafficRegulationOrder -> RegulationThing [arrowhead=onormal style=solid]
 	TrafficRegulationOrder -> Invis [style=invis]
 	Invis -> cdm2_Code [style=invis]
@@ -25,13 +24,12 @@ digraph {
 	"its-location_LocationReference" -> "its-time_Validity" [style=invis]
 	"its-time_Validity" -> LegalBasis [style=invis]
 	LegalBasis -> RuleMakerRole [style=invis]
-	RuleMakerRole -> TrafficRegulation [style=invis]
 	TrafficRegulationOrder -> RuleMakerRole [label=" issuingAuthority 
  «exactly 1, only»  " arrowhead=normal style=solid]
 	TrafficRegulationOrder -> cdm2_Code [label=" reasonCode 
  «only»  " arrowhead=normal style=solid]
 	TrafficRegulationOrder -> cdm2_Code [label=" implementationStatus 
- «exactly 1»  " arrowhead=normal style=solid]
+ «exactly 1, only»  " arrowhead=normal style=solid]
 	TrafficRegulationOrder -> LegalBasis [label=" legalBasis 
  «max 1»  " arrowhead=normal style=solid]
 	TrafficRegulationOrder -> "its-location_LocationReference" [label=" implementedLocation 
@@ -42,6 +40,4 @@ digraph {
  «max 1»  " arrowhead=normal style=solid]
 	TrafficRegulationOrder -> "its-time_Validity" [label=" validityByOrder 
  «max 1»  " arrowhead=normal style=solid]
-	TrafficRegulationOrder -> TrafficRegulation [label=" trafficRegulations 
- «min 1»  " arrowhead=normal style=solid]
 }

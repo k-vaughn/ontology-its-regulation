@@ -3,14 +3,14 @@ digraph {
 	graph [overlap=false rankdir=TB splines=true]
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
+	Condition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Condition</TD></TR></TABLE>> URL="../Condition" margin=0]
 	{
 		rank=max
-		Condition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">Condition</TD></TR></TABLE>> URL="../Condition.md" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
 	}
-	RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing.md" margin=0]
+	RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	Condition -> RegulationThing [arrowhead=onormal style=solid]
 }

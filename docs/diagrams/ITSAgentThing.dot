@@ -5,7 +5,7 @@ digraph {
 	edge [fontname=Arial fontsize=11]
 	{
 		rank=max
-		ITSAgentThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ITSAgentThing</TD></TR></TABLE>> URL="../ITSAgentThing.md" margin=0]
+		ITSAgentThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER" PORT="e">ITSAgentThing</TD></TR></TABLE>> URL="../ITSAgentThing" margin=0]
 	}
 	subgraph cluster_associated {
 		label="" style=invis

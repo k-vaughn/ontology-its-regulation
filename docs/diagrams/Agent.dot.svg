@@ -14,7 +14,7 @@
 <!-- Agent -->
 <g id="node1" class="node">
 <title>Agent</title>
-<g id="a_node1"><a xlink:href="../Agent.md" xlink:title="&lt;TABLE&gt;">
+<g id="a_node1"><a xlink:href="../Agent" xlink:title="&lt;TABLE&gt;">
 <polygon fill="lightgray" stroke="none" points="122.25,-124.88 122.25,-141.12 155.75,-141.12 155.75,-124.88 122.25,-124.88"/>
 <text xml:space="preserve" text-anchor="start" x="123.25" y="-128.72" font-family="Arial" font-size="12.00">Agent</text>
 <polygon fill="none" stroke="black" points="121.25,-123.88 121.25,-142.12 156.75,-142.12 156.75,-123.88 121.25,-123.88"/>

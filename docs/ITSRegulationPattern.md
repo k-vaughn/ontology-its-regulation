@@ -4,13 +4,13 @@
 
 This ontology defines concepts related to traffic regulations.
 
-This pattern imports the following patterns:
+This pattern imports the following files:
 
-- v1
-- v1
-- v1
-- v1
-- v1
+- [https://w3id.org/citydata/part1/v1/](https://w3id.org/citydata/part1/v1/)
+- [https://w3id.org/itsdata/agent/v1/](https://w3id.org/itsdata/agent/v1/)
+- [https://w3id.org/itsdata/core/v1/](https://w3id.org/itsdata/core/v1/)
+- [https://w3id.org/itsdata/location/v1/](https://w3id.org/itsdata/location/v1/)
+- [https://w3id.org/itsdata/time/v1/](https://w3id.org/itsdata/time/v1/)
 
 This pattern consists of the following classes:
 

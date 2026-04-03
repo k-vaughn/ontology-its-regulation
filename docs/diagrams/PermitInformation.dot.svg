@@ -14,28 +14,28 @@
 <!-- PermitInformation -->
 <g id="node1" class="node">
 <title>PermitInformation</title>
-<g id="a_node1"><a xlink:href="../PermitInformation.md" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="1,-25.88 1,-42.12 96.75,-42.12 96.75,-25.88 1,-25.88"/>
-<text xml:space="preserve" text-anchor="start" x="2" y="-29.73" font-family="Arial" font-size="12.00">PermitInformation</text>
-<polygon fill="none" stroke="black" points="0,-24.88 0,-43.12 97.75,-43.12 97.75,-24.88 0,-24.88"/>
+<g id="a_node1"><a xlink:href="../PermitInformation" xlink:title="&lt;TABLE&gt;">
+<polygon fill="lightgray" stroke="none" points="1,-81.88 1,-98.12 96.75,-98.12 96.75,-81.88 1,-81.88"/>
+<text xml:space="preserve" text-anchor="start" x="2" y="-85.72" font-family="Arial" font-size="12.00">PermitInformation</text>
+<polygon fill="none" stroke="black" points="0,-80.88 0,-99.12 97.75,-99.12 97.75,-80.88 0,-80.88"/>
 </a>
 </g>
 </g>
 <!-- RegulationThing -->
 <g id="node3" class="node">
 <title>RegulationThing</title>
-<g id="a_node3"><a xlink:href="../RegulationThing.md" xlink:title="&lt;TABLE&gt;">
-<polygon fill="lightgray" stroke="none" points="3.25,-97.88 3.25,-114.12 94.5,-114.12 94.5,-97.88 3.25,-97.88"/>
-<text xml:space="preserve" text-anchor="start" x="4.25" y="-101.72" font-family="Arial" font-size="12.00">RegulationThing</text>
-<polygon fill="none" stroke="black" points="2.25,-96.88 2.25,-115.12 95.5,-115.12 95.5,-96.88 2.25,-96.88"/>
+<g id="a_node3"><a xlink:href="../RegulationThing" xlink:title="&lt;TABLE&gt;">
+<polygon fill="lightgray" stroke="none" points="3.25,-9.88 3.25,-26.12 94.5,-26.12 94.5,-9.88 3.25,-9.88"/>
+<text xml:space="preserve" text-anchor="start" x="4.25" y="-13.72" font-family="Arial" font-size="12.00">RegulationThing</text>
+<polygon fill="none" stroke="black" points="2.25,-8.88 2.25,-27.12 95.5,-27.12 95.5,-8.88 2.25,-8.88"/>
 </a>
 </g>
 </g>
 <!-- PermitInformation&#45;&gt;RegulationThing -->
 <g id="edge1" class="edge">
 <title>PermitInformation&#45;&gt;RegulationThing</title>
-<path fill="none" stroke="black" d="M48.88,-51.79C48.88,-59.25 48.88,-68.24 48.88,-76.69"/>
-<polygon fill="none" stroke="black" points="45.38,-76.54 48.88,-86.54 52.38,-76.54 45.38,-76.54"/>
+<path fill="none" stroke="black" d="M48.88,-72.05C48.88,-64.57 48.88,-55.58 48.88,-47.14"/>
+<polygon fill="none" stroke="black" points="52.38,-47.3 48.88,-37.3 45.38,-47.3 52.38,-47.3"/>
 </g>
 <!-- Invis -->
 </g>

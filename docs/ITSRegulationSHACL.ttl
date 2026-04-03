@@ -1,0 +1,131 @@
+BASE <https://w3id.org/itsdata/regulation/v1/>
+PREFIX : <https://w3id.org/itsdata/regulation/v1/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+
+:LegalBasisShape a sh:NodeShape ;
+    sh:targetClass :LegalBasis ;
+    sh:property [
+        sh:path cdm1:hasName ;
+        sh:minCount 1 ;                  # from original minQualifiedCardinality on hasName
+        sh:datatype xsd:string ;         # or rdf:langString if multilingual
+    ] ;
+    sh:property [
+        sh:path its-core:version ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path its-time:approvalDate ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+    ] .
+
+:RuleMakerRoleShape a sh:NodeShape ;
+    sh:targetClass :RuleMakerRole ;
+    sh:property [
+        sh:path :issuedTro ;
+        sh:nodeKind sh:IRI ;             # or sh:class :TrafficRegulationOrder if stricter
+    ] ;
+    sh:property [
+        sh:path its-core:jurisdiction ;
+        sh:minCount 1 ;
+        sh:class cdm2:JurisdictionalArea ;
+    ] ;
+    sh:property [
+        sh:path :regulatoryScope ;
+        sh:minCount 1 ;
+        sh:class :RegulatoryScopeCode ;
+    ] .
+
+:TrafficRegulationShape a sh:NodeShape ;
+    sh:targetClass :TrafficRegulation ;
+    sh:property [
+        sh:path its-core:activationStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class its-core:ActivationStatusCode ;
+    ] ;
+    sh:property [
+        sh:path :typeOfRegulation ;
+        sh:minCount 1 ;
+        sh:class :TypeOfRegulation ;
+    ] ;
+    sh:property [
+        sh:path :associatedTrafficControlDevice ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path :condition ;
+        sh:maxCount 1 ;
+        sh:class :Condition ;
+    ] ;
+    sh:property [
+        sh:path :permitInformation ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+:TrafficRegulationOrderShape a sh:NodeShape ;
+    sh:targetClass :TrafficRegulationOrder ;
+    sh:property [
+        sh:path cdm1:hasDescription ;
+        sh:maxCount 1 ;                  # original had max 1 on string; adjust if MultiString needed
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :issuingAuthority ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class :RuleMakerRole ;
+    ] ;
+    sh:property [
+        sh:path :reasonCode ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path cdm1:hasIdentifier ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :implementationStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class :ImplementationStatusCode ;
+    ] ;
+    sh:property [
+        sh:path :legalBasis ;
+        sh:maxCount 1 ;
+        sh:class :LegalBasis ;
+    ] ;
+    sh:property [
+        sh:path :implementedLocation ;
+        sh:maxCount 1 ;
+        sh:class its-location:LocationReference ;
+    ] ;
+    sh:property [
+        sh:path :locationByOrder ;
+        sh:maxCount 1 ;
+        sh:class its-location:LocationReference ;
+    ] ;
+    sh:property [
+        sh:path :implementedValidity ;
+        sh:maxCount 1 ;
+        sh:class its-time:Validity ;     # note: original used Validity, not Schedule in some places
+    ] ;
+    sh:property [
+        sh:path :validityByOrder ;
+        sh:maxCount 1 ;
+        sh:class its-time:Validity ;
+    ] ;
+    sh:property [
+        sh:path :trafficRegulation ;
+        sh:minCount 1 ;
+        sh:class :TrafficRegulation ;
+    ] .
