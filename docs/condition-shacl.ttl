@@ -1,0 +1,160 @@
+BASE <https://w3id.org/itsdata/regulation/v1/>
+PREFIX : <https://w3id.org/itsdata/regulation/v1/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX its-sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+
+:ConditionShape a sh:NodeShape ;
+    sh:targetClass :Condition ;
+    sh:property [
+        sh:path :isActive ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :hasLegalBasis ;
+        sh:node its-core:ExactlyOneShape;
+        sh:nodeKind :LegalBasis ;
+        skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
+    ] ;
+    sh:property [
+        sh:path cdm1:negate ;
+        sh:node its-core:ExactlyOneShape;
+        sh:datatype xsd:boolean ;
+    ] .
+
+:LegalBasisShape a sh:NodeShape ;
+    sh:targetClass :LegalBasis ;
+    sh:property [
+        sh:path cdm1:hasName ;
+        sh:node its-core:MinOneMultiLingualStringShape ;
+    ] ;
+    sh:property [
+        sh:path its-core:version ;
+        sh:node its-core:MaxOneShape ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path its-time:approvalDate ;
+        sh:node its-core:MaxOneShape ;
+        sh:datatype xsd:date ;
+    ] .
+
+:PermitInformationShape a sh:NodeShape ;
+    sh:targetClass :PermitInformation ;
+    sh:property [
+        sh:path :applicationRequired ;
+        sh:node its-core:MaxOneShape;
+        sh:nodeKind :LegalBasis ;
+        skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
+    ] ;
+    sh:property [
+        sh:path :displayType ;
+        sh:node its-core:ExactlyOneShape;
+        sh:datatype :PermitDisplayTypeCode ;
+    ] ;
+    sh:property [
+        sh:path :grantsPermission ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype :PermissionTypeCode ;
+        skos:editorialNote "DATEX II has a boolean for disabledParkingPermit; this allows a broader set of general permits."@en ;
+    ] ;
+    sh:property [
+        sh:path cdm1:hasDescription ;
+        sh:node its-core:MaxOneMultiLingualStringShape;
+    ] ;
+    sh:property [
+        sh:path :hasAssociatedFee ;
+        sh:class :PermitFee ;
+        skos:editorialNote "DATEX II indicates max 1; but it seems as if there could be different fees for different durations."@en ;
+    ] ;
+    sh:property [
+        sh:path :hasRegistrationMachine ;
+        sh:class :RegistrationMachine ;
+    ] ;
+    sh:property [
+        sh:path :howToObtainPermit ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype its-core:MaxOneMultiLingualStringShape ;
+    ] ;
+    sh:property [
+        sh:path :isLocationSpecific ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :maximumDurationOfPermit ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype its-time:Duration ;
+    ] ;
+    sh:property [
+        sh:path :minimumTimeToNextEntry ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype its-time:Duration ;
+    ] ;
+    sh:property [
+        sh:path :permittedEntityType ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype :permittedEntityTypeCode ;
+    ] ;
+    sh:property [
+        sh:path :urlForInformation ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path :urlForApplication ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path :contactInformation ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype cdm2:ContactInformation ;
+    ] .
+
+:TextCompositeShape a sh:NodeShape ;
+    sh:targetClass :TextComposite ;
+    sh:property [
+        sh:path :compositeText ;
+        sh:node its-core:ExactlyOneMultiLingualStringShape ;
+    ] .
+
+:SignDestinationShape a sh:NodeShape ;
+    sh:targetClass :SignDestination ;
+    sh:property [
+        sh:path :destinationPlace ;
+        sh:class :DestinationPlace ;
+    ] ;
+    sh:property [
+        sh:path :destinationRoad ;
+        sh:class :DestinationRoad ;
+    ] ;
+    sh:property [
+        sh:path :destinationHorizon ;
+        sh:node its-core:MaxOneShape ;
+        sh:class :Horizon ;
+    ] ;
+    sh:property [
+        sh:path :arrowDirection ; #The direction of the arrow as it appears on the sign, which represents the direction of the egress roadway
+        sh:class :OrdinalDirectionCode ;
+    ] ;
+    sh:property [
+        sh:path :divergeRoute ;
+        sh:datatype rdf:langString ;
+    ] ;
+    sh:property [
+        sh:path :divergeName ;
+        sh:datatype rdf:langString ;
+    ] ;
+    sh:property [
+        sh:path :divergeHorizon ; #The distance between the junction and the point of interest (e.g., destination or current location for direction 0)
+        sh:class cdm1:Length ;
+    ] .    

@@ -1,0 +1,39 @@
+@prefix : <https://w3id.org/itsdata/regulation/v1/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+
+:CorePattern
+    dcterms:creator               "Kenneth Vaughn" ;
+    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified              "2026-05-06T18:31:44Z"^^xsd:dateTime ;
+    dcterms:title                 "ITS Ontology - Traffic Regulation Topic Area - Core Pattern" ;
+    its-core:draft                true ;
+    owl:imports                   its-core: ;
+    rdf:type                      owl:Ontology ;
+    skos:definition               "This document defines the core concepts related to the Traffic Regulation topic area of the ITS Ontology." .
+
+:RegulationThing
+    rdf:type        owl:Class ;
+    dash:abstract   true ;
+    rdfs:subClassOf its-core:ITSThing ;
+    skos:definition    "A class to organize all classes defined in the Traffic Regulation topic area of the ITS Ontology." .
+
+:RegulationObjectProperty
+    rdf:type           owl:ObjectProperty ;
+    dash:abstract      true ;
+    rdfs:subPropertyOf its-core:ITSObjectProperty ;
+    skos:definition    "An object property to organize all object properties defined in the Traffic Regulation topic area of the ITS Ontology." .
+
+:RegulationDataProperty
+    rdf:type           owl:DatatypeProperty ;
+    dash:abstract      true ;
+    rdfs:subPropertyOf its-core:ITSDataProperty ;
+    skos:definition    "A data property to organize all data properties defined in the Traffic Regulation topic area of the ITS Ontology." .
+
+

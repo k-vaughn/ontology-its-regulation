@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+
+    <!-- https://w3id.org/itsdata/regulation/v1/includedRoadUser -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/excludedRoadUser -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/numberOfLane -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/LaneInformation -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/ConditionDetected -->
+
+    <!-- https://w3id.org/itsdata/regulation/v1/Destination -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/SignDestination">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationPlace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/location/v1/Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationRoad"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationRoad"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/destinationHorizon"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/arrowDirection"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/location/v1/DirectionCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/divergeRoute"/>
+                <owl:allValuesFrom rdf:resource=""/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/divergeName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/divergeHorizon"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+  arrowDirection      DestinationConnector-arrowDirection,
+  route               SEQUENCE (SIZE (1..4)) OF DestinationConnector-route OPTIONAL,	
+  name                SEQUENCE (SIZE (1..4)) OF DestinationConnector-name OPTIONAL,
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationRoad -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationRoad">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/roadType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/itsdata/regulation/v1/RoadTypeCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/routeIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <skos:editorsNote>DATEX II uses a MultiString, this allows multiple strings. Do we need to define MultiString?</skos:editorsNote>
+                <owl:onProperty rdf:resource="https://w3id.org/citydata/part1/v1/hasName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- https://w3id.org/itsdata/regulation/v1/RoadTypeCode -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/RoadTypeCode">
+         <skos:definition>A code that indicates the type of road, such as motorway, primary road, or residential street.</skos:definition>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+         <rdfs:subClassOf rdf:resource="https://w3id.org/citydata/part2/v1/Code"/>
+    </owl:Class>
+    
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizon -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/RegulationThing"/>
+        <dash:abstract>true</dash:abstract>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizonDistance -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizonDistance">
+         <skos:definition>A destination horizon that indicates the distance to the destination.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/distance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Length"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <!-- https://w3id.org/itsdata/regulation/v1/DestinationHorizonTime -->
+
+    <owl:Class rdf:about="https://w3id.org/itsdata/regulation/v1/DestinationHorizonTime">
+         <skos:definition>A destination horizon that indicates the time to the destination.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/itsdata/regulation/v1/DestinationHorizon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/itsdata/regulation/v1/time"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/citydata/part1/v1/Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,45 @@
+// Diagram for SignDestination
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
+	}
+	SignDestination [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SignDestination</TD></TR></TABLE>> URL="../SignDestination" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cdm1_Length [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Length</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Length" margin=0]
+		DestinationPlace [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">DestinationPlace</TD></TR></TABLE>> URL="../DestinationPlace" margin=0]
+		DestinationRoad [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">DestinationRoad</TD></TR></TABLE>> URL="../DestinationRoad" margin=0]
+		Horizon [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Horizon</TD></TR></TABLE>> URL="../Horizon" margin=0]
+		OrdinalDirectionCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OrdinalDirectionCode</TD></TR></TABLE>> URL="../OrdinalDirectionCode" margin=0]
+		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+	}
+	SignDestination -> RegulationThing [arrowhead=onormal style=solid]
+	SignDestination -> Invis [style=invis]
+	Invis -> cdm1_Length [style=invis]
+	cdm1_Length -> DestinationPlace [style=invis]
+	DestinationPlace -> DestinationRoad [style=invis]
+	DestinationRoad -> Horizon [style=invis]
+	Horizon -> OrdinalDirectionCode [style=invis]
+	OrdinalDirectionCode -> owl_Thing [style=invis]
+	DestinationPlace [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">DestinationPlace</TD></TR></TABLE>> URL="../DestinationPlace" margin=0]
+	SignDestination -> DestinationPlace [label=destinationPlace arrowhead=normal style=solid]
+	DestinationRoad [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">DestinationRoad</TD></TR></TABLE>> URL="../DestinationRoad" margin=0]
+	SignDestination -> DestinationRoad [label=destinationRoad arrowhead=normal style=solid]
+	Horizon [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Horizon</TD></TR></TABLE>> URL="../Horizon" margin=0]
+	SignDestination -> Horizon [label=destinationHorizon arrowhead=normal style=solid]
+	OrdinalDirectionCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OrdinalDirectionCode</TD></TR></TABLE>> URL="../OrdinalDirectionCode" margin=0]
+	SignDestination -> OrdinalDirectionCode [label=arrowDirection arrowhead=normal style=solid]
+	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
+	SignDestination -> owl_Thing [label=divergeRoute arrowhead=normal style=solid]
+	SignDestination -> owl_Thing [label=divergeName arrowhead=normal style=solid]
+	cdm1_Length [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Length</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Length" margin=0]
+	SignDestination -> cdm1_Length [label=divergeHorizon arrowhead=normal style=solid]
+}

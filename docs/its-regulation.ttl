@@ -1,0 +1,24 @@
+@prefix : <https://w3id.org/itsdata/regulation/v1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+<https://w3id.org/itsdata/regulation/v1/ITSRegulation/>
+    rdf:type                      owl:Ontology ;
+    dcterms:creator               "Kenneth Vaughn" ;
+    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified              "2026-05-06T19:42:06Z"^^xsd:dateTime ;
+    dcterms:title                 "ITS Ontology - Traffic Regulation Topic Area" ;
+    its-core:draft                true ;
+    owl:imports                   :Core ;
+    owl:imports                   : ;
+    owl:imports                   <https://w3id.org/itsdata/regulation/v1/TrafficRegulationPattern/> ;
+    owl:versionIRI                <https://w3id.org/itsdata/regulation/v1/ITSRegulation/r0.2> ;
+    owl:versionInfo               "0.0.2" ;
+    skos:definition               "This ontology imports the Traffic Regulation topic area modules (core, patterns, and constraints)." ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .

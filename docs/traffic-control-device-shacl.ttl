@@ -1,0 +1,156 @@
+BASE <https://w3id.org/itsdata/regulation/v1/>
+PREFIX : <https://w3id.org/itsdata/regulation/v1/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-sh: <http://www.w3.org/ns/shacl#>
+PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+:TrafficControlDeviceShape a sh:NodeShape ;
+    sh:targetClass :TrafficControlDevice ;
+    sh:property [
+        sh:path cdm1:hasDescription ;
+        sh:node its-core:MaxOneMultiLingualStringShape ;
+    ] ;
+    sh:property [
+        sh:path cdm1:hasIdentifier ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :url ;
+        sh:node its-core:MaxOneShape ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path :image ;
+        sh:node its-core:MaxOneShape ;
+        sh:datatype xsd:base64Binary ;
+    ] .
+
+:AccessControlDeviceShape a sh:NodeShape ;
+    sh:targetClass :AccessControlDevice ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:PointFeatureShape ) ;
+    sh:property [
+        sh:path :accessControlType ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :AccessControlTypeCode ;
+    ] .
+
+:ChannelizationDeviceShape a sh:NodeShape ;
+    sh:targetClass :ChannelizationDevice ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:LinearFeatureShape ) ;
+    sh:property [
+        sh:path :channelizationType ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :ChannelizationTypeCode ;
+    ] .
+
+:InternationalSignShape a sh:NodeShape ;
+    sh:targetClass :InternationalSign ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:PointFeatureShape ) ;
+    sh:property [
+        sh:path :pictogram ;
+        sh:node its-sh:ExactlyOneShape ;
+        sh:datatype its-core:oidstring ;
+    ] ;
+    sh:property [
+        sh:path :nationalSignId ;
+        sh:node its-sh:MaxOneShape ;
+        sh:datatype xsd:string ;
+    ] .
+
+:CompositeSignShape a sh:NodeShape ;
+    sh:targetClass :CompositeSign ;
+    sh:and ( :InternationalSignShape ) ;
+    sh:property [
+        sh:path :simpleSignList ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:node :CompositeSignListShape ;
+        skos:note "The first SimpleSign is the main sign, the rest are an ordered list of supplemental signs."@en ;
+        skos:editorsNote "GDD defines as a SimpleSign, but presumably, the intent was for a SEQUENCE OF SimpleSign"@en ;
+    ] .
+
+:CompositeSignListShape a sh:NodeShape ;
+    skos:definition "An rdf:List whose every rdf:first is a SimpleSign and whose chain ends at rdf:nil (non-empty list)."@en ;
+    sh:property [
+        sh:path rdf:first ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :SimpleSign ;
+        sh:message "Each list cell must have exactly one SimpleSign as rdf:first."@en ;
+    ] ;
+    sh:xone (
+        [
+            sh:property [
+                sh:path rdf:rest ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue rdf:nil ;
+            ]
+        ]
+        [
+            sh:property [
+                sh:path rdf:rest ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:node :CompositeSignListShape ;
+                sh:message "rdf:rest must be rdf:nil or another non-empty SimpleSign list cell."@en ;
+            ]
+        ]
+    ) .
+
+:SimpleSignShape a sh:NodeShape ;
+    sh:targetClass :SimpleSign ;
+    sh:and ( :InternationalSignShape ) ;
+    sh:property [
+        sh:path :hasDetails ;
+        sh:node its-core:MinOneShape ;
+        sh:class :TypeOfRegulation ;
+    ] ;
+    sh:property [
+        sh:path :hasCondition ;
+        sh:node its-core:MaxOneShape ;
+        sh:class :Condition ;
+    ] .
+
+:PavementMarkingShape a sh:NodeShape ;
+    sh:targetClass :PavementMarking ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:LinearFeatureShape ) ;
+    sh:property [
+        sh:path :pavementMarkingType ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :PavementMarkingTypeCode ;
+    ] .
+
+:RoadSurfaceFeatureShape a sh:NodeShape ;
+    sh:targetClass :RoadSurfaceFeature ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:LinearFeatureShape ) ;
+    sh:property [
+        sh:path :roadSurfaceFeatureType ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :RoadSurfaceFeatureTypeCode ;
+    ] .
+
+:TrafficSignalDeviceShape a sh:NodeShape ;
+    sh:targetClass :TrafficSignalDevice ;
+    sh:and ( :TrafficControlDeviceShape ) ;
+    sh:and ( its-location:PointFeatureShape ) .
+
+:TrafficSignalShape a sh:NodeShape ;
+    sh:targetClass :TrafficSignal ;
+    sh:and ( :TrafficSignalDeviceShape ) .
+
+:WarningBeaconShape a sh:NodeShape ;
+    sh:targetClass :WarningBeacon ;
+    sh:and ( :TrafficSignalDeviceShape ) .
