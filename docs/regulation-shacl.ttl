@@ -1,0 +1,120 @@
+BASE <https://w3id.org/itsdata/regulation/v1/>
+PREFIX : <https://w3id.org/itsdata/regulation/v1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
+PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
+PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
+PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+PREFIX its-sh: <http://www.w3.org/ns/shacl#>
+
+:RuleMakerRoleShape a sh:NodeShape ;
+    sh:targetClass :RuleMakerRole ;
+    sh:property [
+        sh:path :issuedTro ;
+        sh:class :TrafficRegulationOrder
+    ] ;
+    sh:property [
+        sh:path its-core:jurisdiction ;
+        sh:node its-core:MinOneShape ;
+        sh:class cdm2:JurisdictionalArea ;
+    ] ;
+    sh:property [
+        sh:path :regulatoryScope ;
+        sh:node its-core:MinOneShape ;
+        sh:class :RegulatoryScopeCode ;
+    ] .
+
+:TrafficRegulationShape a sh:NodeShape ;
+    sh:targetClass :TrafficRegulation ;
+    sh:property [
+        sh:path its-core:activationStatus ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class its-core:ActivationStatusCode ;
+        skos:editorsNote "DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database."@en
+    ] ;
+    sh:property [
+        sh:path :hasDetails ;
+        sh:node its-core:MinOneShape ;
+        sh:class :TypeOfRegulation ;
+    ] ;
+    sh:property [
+        sh:path :associatedTrafficControlDevice ;
+        sh:class :TrafficControlDevice;
+    ] ;
+    sh:property [
+        sh:path :hasCondition ;
+        sh:node its-core:MaxOneShape ;
+        skos:editorsNote "DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1."@en ;
+        sh:class :Condition ;
+    ] ;
+    sh:property [
+        sh:path :permitInformation ;
+        sh:class :PermitInformation ;
+    ] .
+
+:TrafficRegulationOrderShape a sh:NodeShape ;
+    sh:targetClass :TrafficRegulationOrder ;
+    sh:property [
+        sh:path cdm1:hasDescription ;
+        sh:node its-core:MaxOneMultiLingualStringShape ;
+    ] ;
+    sh:property [
+        sh:path :issuingAuthority ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :RuleMakerRole ;
+        skos:editorsNote "Changed from a simple string to a pointer to a RuleMakerRole (i.e., a Role that a Agent (person, organization, software agent, or group) can assume)."@en ;
+    ] ;
+    sh:property [
+        sh:path :reasonCode ;
+        sh:class :ReasonCode ;
+    ] ;
+    sh:property [
+        sh:path cdm1:hasIdentifier ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :implementationStatus ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :ImplementationStatusCode ;
+    ] ;
+    sh:property [
+        sh:path :legalBasis ;
+        sh:node its-core:MaxOneShape ;
+        sh:class :LegalBasis ;
+        skos:editorsNote "DATEX II indicates this is optional at the TRO and TR level. Does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
+    ] ;
+    sh:property [
+        sh:path :implementedLocation ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-location:LocationReference ;
+        skos:editorsNote "DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO."@en ;
+    ] ;
+    sh:property [
+        sh:path :locationByOrder ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-location:LocationReference ;
+        skos:editorsNote "DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO."@en ;
+    ] ;
+    sh:property [
+        sh:path :implementedValidity ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-time:Validity ;
+        skos:editorsNote "DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO."@en ;
+    ] ;
+    sh:property [
+        sh:path :validityByOrder ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-time:Validity ;
+        skos:editorsNote "DATEX II indicates this is optional and if not present, it must be defined for each traffic regulation. Does this really describe the TRO or just the regulation? Recommend deletion for TRO."@en ;
+    ] ;
+    sh:property [
+        sh:path :memberTrafficRegulation ;
+        sh:node its-core:MinOneShape ;
+        sh:class :TrafficRegulation ;
+        skos:editorsNote "What is the preferred naming convention for properties with multiples allowed? Should we use a singular or plural name?"@en ;
+    ] .

@@ -3,6 +3,11 @@ digraph {
 	graph [overlap=false rankdir=TB splines=true]
 	node [fontname=Arial fontsize=12 margin=0 shape=none]
 	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		"its-location_LinearFeature" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:LinearFeature</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/LinearFeature" margin=0]
+		TrafficControlDevice [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficControlDevice</TD></TR></TABLE>> URL="../TrafficControlDevice" margin=0]
+	}
 	RoadSurfaceFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSurfaceFeature</TD></TR></TABLE>> URL="../RoadSurfaceFeature" margin=0]
 	{
 		rank=max
@@ -10,7 +15,12 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		RoadSurfaceFeatureTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSurfaceFeatureTypeCode</TD></TR></TABLE>> URL="../RoadSurfaceFeatureTypeCode" margin=0]
 	}
-	TrafficControlDevice [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficControlDevice</TD></TR></TABLE>> URL="../TrafficControlDevice" margin=0]
+	RoadSurfaceFeature -> "its-location_LinearFeature" [arrowhead=onormal style=solid]
 	RoadSurfaceFeature -> TrafficControlDevice [arrowhead=onormal style=solid]
+	RoadSurfaceFeature -> Invis [style=invis]
+	Invis -> RoadSurfaceFeatureTypeCode [style=invis]
+	RoadSurfaceFeatureTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RoadSurfaceFeatureTypeCode</TD></TR></TABLE>> URL="../RoadSurfaceFeatureTypeCode" margin=0]
+	RoadSurfaceFeature -> RoadSurfaceFeatureTypeCode [label=roadSurfaceFeatureType arrowhead=normal style=solid]
 }

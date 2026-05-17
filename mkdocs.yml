@@ -3,23 +3,100 @@ site_description: A registry for documenting the ontology of traffic regulation 
 repo_url: https://github.com/ISO-TC204/ontology-its-regulation
 nav:
 - Home: index.md
-- Access Control Device: AccessControlDevice.md
-- Channelization Device: ChannelizationDevice.md
-- Condition: Condition.md
-- Legal Basis: LegalBasis.md
-- Pavement Marking: PavementMarking.md
-- Permit Information: PermitInformation.md
-- Regulation Thing: RegulationThing.md
-- Road Sign: RoadSign.md
-- Road Surface Feature: RoadSurfaceFeature.md
-- Rule Maker Role: RuleMakerRole.md
-- Traffic Control Device: TrafficControlDevice.md
-- Traffic Regulation: TrafficRegulation.md
-- Traffic Regulation Order: TrafficRegulationOrder.md
-- Traffic Signal: TrafficSignal.md
-- Traffic Signal Device: TrafficSignalDevice.md
-- Type Of Regulation: TypeOfRegulation.md
-- Warning Beacon: WarningBeacon.md
+- Condition Pattern:
+  - Condition Pattern Overview: classes/ConditionPattern.md
+  - Classes:
+    - Condition: classes/Condition.md
+    - Destination Info: classes/DestinationInfo.md
+    - Legal Basis: classes/LegalBasis.md
+    - Permit Information: classes/PermitInformation.md
+    - Sign Destination: classes/SignDestination.md
+    - Text Composite: classes/TextComposite.md
+  - Properties:
+    - arrowDirection: properties/arrowDirection.md
+    - destinationHorizon: properties/destinationHorizon.md
+    - destinationPlace: properties/destinationPlace.md
+    - destinationRoad: properties/destinationRoad.md
+    - displayType: properties/displayType.md
+    - divergeHorizon: properties/divergeHorizon.md
+    - divergeName: properties/divergeName.md
+    - divergeRoute: properties/divergeRoute.md
+    - grantsPermission: properties/grantsPermission.md
+    - hasAssociatedFee: properties/hasAssociatedFee.md
+    - hasCondition: properties/hasCondition.md
+    - hasContactInformation: properties/hasContactInformation.md
+    - hasLegalBasis: properties/hasLegalBasis.md
+    - hasRegistrationMachine: properties/hasRegistrationMachine.md
+    - howToObtainPermit: properties/howToObtainPermit.md
+    - isActive: properties/isActive.md
+    - isLocationSpecific: properties/isLocationSpecific.md
+    - legalBasis: properties/legalBasis.md
+    - maximumDurationOfPermit: properties/maximumDurationOfPermit.md
+    - minimumTimeToNextEntry: properties/minimumTimeToNextEntry.md
+    - permitCondition: properties/permitCondition.md
+    - permitInformation: properties/permitInformation.md
+    - permittedEntityType: properties/permittedEntityType.md
+    - urlForApplication: properties/urlForApplication.md
+    - urlForInformation: properties/urlForInformation.md
+- Core Pattern:
+  - Core Pattern Overview: classes/CorePattern.md
+  - Classes:
+    - Regulation Thing: classes/RegulationThing.md
+  - Properties:
+    - RegulationDataProperty: properties/RegulationDataProperty.md
+    - RegulationObjectProperty: properties/RegulationObjectProperty.md
+- Regulation Pattern:
+  - Regulation Pattern Overview: classes/TrafficRegulationPattern.md
+  - Classes:
+    - Implementation Status Code: classes/ImplementationStatusCode.md
+    - Reason Code: classes/ReasonCode.md
+    - Regulatory Scope Code: classes/RegulatoryScopeCode.md
+    - Rule Maker Role: classes/RuleMakerRole.md
+    - Traffic Regulation: classes/TrafficRegulation.md
+    - Traffic Regulation Order: classes/TrafficRegulationOrder.md
+    - Type Of Regulation: classes/TypeOfRegulation.md
+  - Properties:
+    - associatedTrafficControlDevice: properties/associatedTrafficControlDevice.md
+    - authorizingTrafficRegulation: properties/authorizingTrafficRegulation.md
+    - hasDetails: properties/hasDetails.md
+    - implementationStatus: properties/implementationStatus.md
+    - implementedLocation: properties/implementedLocation.md
+    - implementedValidity: properties/implementedValidity.md
+    - issuedTro: properties/issuedTro.md
+    - issuingAuthority: properties/issuingAuthority.md
+    - locationByOrder: properties/locationByOrder.md
+    - memberTrafficRegulation: properties/memberTrafficRegulation.md
+    - reasonCode: properties/reasonCode.md
+    - regulatoryScope: properties/regulatoryScope.md
+    - validityByOrder: properties/validityByOrder.md
+- Traffic Control Device Pattern:
+  - Traffic Control Device Pattern Overview: classes/TrafficControlDevicePattern.md
+  - Classes:
+    - Access Control Device: classes/AccessControlDevice.md
+    - Access Control Type Code: classes/AccessControlTypeCode.md
+    - Channelization Device: classes/ChannelizationDevice.md
+    - Channelization Type Code: classes/ChannelizationTypeCode.md
+    - Composite Sign: classes/CompositeSign.md
+    - International Sign: classes/InternationalSign.md
+    - Pavement Marking: classes/PavementMarking.md
+    - Pavement Marking Type Code: classes/PavementMarkingTypeCode.md
+    - Road Surface Feature: classes/RoadSurfaceFeature.md
+    - Road Surface Feature Type Code: classes/RoadSurfaceFeatureTypeCode.md
+    - Simple Sign: classes/SimpleSign.md
+    - Traffic Control Device: classes/TrafficControlDevice.md
+    - Traffic Signal: classes/TrafficSignal.md
+    - Traffic Signal Device: classes/TrafficSignalDevice.md
+    - Warning Beacon: classes/WarningBeacon.md
+  - Properties:
+    - accessControlType: properties/accessControlType.md
+    - channelizationType: properties/channelizationType.md
+    - image: properties/image.md
+    - nationalSignId: properties/nationalSignId.md
+    - pavementMarkingType: properties/pavementMarkingType.md
+    - pictogram: properties/pictogram.md
+    - roadSurfaceFeatureType: properties/roadSurfaceFeatureType.md
+    - simpleSignList: properties/simpleSignList.md
+    - url: properties/url.md
 site_url: https://github.com/ISO-TC204/ontology-its-regulation
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"

@@ -1,34 +1,14 @@
-# ITS Regulation Pattern
+# ITS Ontology - Traffic Regulation Topic Area
 
-This ontology defines concepts related to traffic regulations.
+![Draft for review only](https://isotc204.org/assets/img/draft_for_review.svg)
 
-This pattern imports the following files:
+This ontology imports the Traffic Regulation topic area modules (core, patterns, and constraints).
 
-- [https://w3id.org/citydata/part1/v1/](https://w3id.org/citydata/part1/v1/)
-- [https://w3id.org/itsdata/agent/v1/](https://w3id.org/itsdata/agent/v1/)
-- [https://w3id.org/itsdata/core/v1/](https://w3id.org/itsdata/core/v1/)
-- [https://w3id.org/itsdata/location/v1/](https://w3id.org/itsdata/location/v1/)
-- [https://w3id.org/itsdata/time/v1/](https://w3id.org/itsdata/time/v1/)
+The ITS Ontology - Traffic Regulation Topic Area consists of the following patterns:
 
-This pattern consists of the following classes:
+- [Condition](classes/ConditionPattern.md)
+- [Core](classes/CorePattern.md)
+- [Regulation](classes/TrafficRegulationPattern.md)
+- [Traffic Control Device](classes/TrafficControlDevicePattern.md)
 
-- [Access Control Device](AccessControlDevice.md)
-- [Channelization Device](ChannelizationDevice.md)
-- [Condition](Condition.md)
-- [Legal Basis](LegalBasis.md)
-- [Pavement Marking](PavementMarking.md)
-- [Permit Information](PermitInformation.md)
-- [Regulation Thing](RegulationThing.md)
-- [Road Sign](RoadSign.md)
-- [Road Surface Feature](RoadSurfaceFeature.md)
-- [Rule Maker Role](RuleMakerRole.md)
-- [Traffic Control Device](TrafficControlDevice.md)
-- [Traffic Regulation](TrafficRegulation.md)
-- [Traffic Regulation Order](TrafficRegulationOrder.md)
-- [Traffic Signal](TrafficSignal.md)
-- [Traffic Signal Device](TrafficSignalDevice.md)
-- [Type Of Regulation](TypeOfRegulation.md)
-- [Warning Beacon](WarningBeacon.md)
-
-The formal definition of this pattern is available in [OWL Syntax](ITSRegulationPattern.owl).
-
+The formal definition of this ontology is available in [TURTLE Syntax](its-regulation.ttl).

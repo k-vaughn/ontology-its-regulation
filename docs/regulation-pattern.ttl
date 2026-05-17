@@ -1,0 +1,160 @@
+@prefix : <https://w3id.org/itsdata/regulation/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
+@prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
+@prefix its-agent: <https://w3id.org/itsdata/agent/v1/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix its-location: <https://w3id.org/itsdata/location/v1/> .
+@prefix its-time: <https://w3id.org/itsdata/time/v1/> .
+
+:TrafficRegulationPattern
+    dcterms:creator               "Kenneth Vaughn" ;
+    dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified              "2026-05-06T19:57:16Z"^^xsd:dateTime ;
+    dcterms:title                 "The Traffic Regulation Pattern of the Traffic Regulation Ontology" ;
+    its-core:draft                true ;
+    owl:imports                   :Core ;
+    owl:imports                   :ConditionPattern ;
+    rdf:type                      owl:Ontology ;
+    skos:definition               "This ontology defines concepts related to traffic regulations." .
+
+:ImplementationStatusCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf cdm2:Code ;
+    skos:definition "A code indicating the implementation status of an object" ;
+    skos:example    "active, beingSetUp, beingShutDown, inactive, scheduled" .
+
+:ReasonCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf cdm2:Code ;
+    skos:definition "A code indicating the reason for the traffic regulation order." ;
+    skos:example    "construction, maintenance, special event, emergency, weather" .
+
+:RegulatoryScopeCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf cdm2:Code ;
+    skos:definition "A code indicating the regulatory scope of a rule maker role." ;
+    skos:example    "general traffic regulations, parking regulations, commercial vehicle regulations, special event regulations" .
+
+:RuleMakerRole
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-agent:Role ;
+    skos:definition "A Role that includes the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity." .
+
+:TrafficRegulation
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order." .
+
+:TrafficRegulationOrder
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A legally recognized document or publication issued to enact a specific traffic regulation or regulations by a competent authority." .
+
+:TypeOfRegulation
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf cdm2:Code .
+
+:hasCondition 
+    schema:domainIncludes :TrafficRegulation .
+
+:implementationStatus
+    dcterms:description "The current lifecycle status of the instance of the containing class" ;
+    rdf:type            owl:ObjectProperty ;
+    rdfs:domain         :TrafficRegulationOrder ;
+    rdfs:range          :ImplementationStatusCode ;
+    rdfs:subPropertyOf  :RegulationObjectProperty ;
+    skos:example        "The current lifecycle status of the traffic regulation order" .
+
+:implementedLocation
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :TrafficRegulationOrder ;
+    schema:rangeIncludes         its-location:LocationReference ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The location where the instance of an object is implemented." .
+
+:implementedValidity
+    rdf:type           owl:ObjectProperty ;
+    rdfs:range         its-time:Schedule ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The validity period during which the instance of the traffic regulation order is implemented." .
+
+:issuedTro
+    dcterms:description "A traffic regulation order issued by the entity." ;
+    rdf:type            owl:ObjectProperty ;
+    rdfs:range          :TrafficRegulationOrder ;
+    rdfs:subPropertyOf  :RegulationObjectProperty .
+
+:issuingAuthority
+    dcterms:description "The entity that issued the instance of the traffic regulation order" ;
+    rdf:type            owl:ObjectProperty ;
+    rdfs:subPropertyOf  :RegulationObjectProperty .
+
+:locationByOrder
+    rdf:type           owl:ObjectProperty ;
+    rdfs:range         its-location:LocationReference ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The location legally defined for the object (e.g. traffic regulation order, traffic control device)." .
+
+:reasonCode
+    dcterms:description "A reason justifying the existence of the instance of the traffic regulation order" ;
+    rdf:type            owl:ObjectProperty ;
+    rdfs:range          :ReasonCode ;
+    rdfs:subPropertyOf  :RegulationObjectProperty .
+
+:regulatoryScope
+    dcterms:description "Indication of the types of regulations that can be enacted by the rule maker." ;
+    rdf:type            owl:ObjectProperty ;
+    rdfs:range          :RegulatoryScopeCode ;
+    rdfs:subPropertyOf  :RegulationObjectProperty .
+
+:memberTrafficRegulation
+    rdf:type           owl:ObjectProperty ;
+    rdfs:domain        :TrafficRegulationOrder ;
+    rdfs:range         :TrafficRegulation ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "A traffic regulation enacted by the traffic regulation order." .
+
+:hasDetails
+    rdf:type           owl:ObjectProperty ;
+    rdfs:domain        :TrafficRegulationOrder ;
+    rdfs:range         :TypeOfRegulation ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The details of the regulation enacted by the traffic regulation order." .
+
+:validityByOrder
+    rdf:type           owl:ObjectProperty ;
+    rdfs:range         its-time:Schedule ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The validity period for the object as defined by the traffic regulation order." .
+
+its-time:approvalDate
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:range         xsd:date ;
+    rdfs:subPropertyOf its-time:TimeDataProperty ;
+    skos:definition    "The date on which the object was approved." .
+
+:associatedTrafficControlDevice
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "A traffic control device associated with the instance of the traffic regulation." ;
+    schema:rangeIncludes         :TrafficControlDevice .
+
+:authorizingTrafficRegulation
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    rdfs:inverseOf :associatedTrafficControlDevice ;
+    schema:domainIncludes        :TrafficControlDevice ;
+    schema:rangeIncludes         :TrafficRegulation ;
+    skos:definition    "A traffic regulation that authorizes the instance of the traffic control device." .
