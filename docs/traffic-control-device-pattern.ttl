@@ -12,145 +12,197 @@
 @prefix its-location: <https://w3id.org/itsdata/location/v1/> .
 
 :TrafficControlDevicePattern
-    dcterms:creator               "Kenneth Vaughn" ;
+    dcterms:creator               "Kenneth Vaughn"@en ;
     dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
     dcterms:modified              "2026-05-06T19:57:16Z"^^xsd:dateTime ;
-    dcterms:title                 "The Traffic Control Device Pattern of the Traffic Regulation Ontology" ;
+    dcterms:title                 "The Traffic Control Device Pattern of the Traffic Regulation Ontology"@en ;
     its-core:draft                true ;
     owl:imports                   :CorePattern ;
     rdf:type                      owl:Ontology ;
-    skos:definition               "This ontology defines concepts related to traffic control devices." .
+    skos:definition               "This ontology defines concepts related to traffic control devices."@en .
 
 :TrafficControlDevice
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
-    dash:abstract "true" ;
-    skos:definition "A device that is used to control traffic, such as a road sign, traffic signal, or pavement marking." .
+    rdfs:subClassOf its-location:Feature ;
+    dash:abstract true ;
+    skos:definition "A device that is used to control traffic, such as a road sign, traffic signal, or pavement marking."@en .
 
-:image
-    rdf:type        owl:ObjectProperty ;
-    rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition "An image that is associated with the traffic control device." .
-    
 :nationalSignId
     rdf:type        owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition "The national sign identifier for the traffic control device." .
+    skos:definition "The national sign identifier for the traffic control device."@en .
     
 :pictogram
     rdf:type        owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition "The pictogram that is associated with the traffic control device." .
+    skos:definition "The pictogram that is associated with the traffic control device."@en .
 
-:url
-    rdf:type        owl:ObjectProperty ;
-    rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition "The URL that is associated with the traffic control device." .
-    
 :AccessControlDevice
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:PointFeature ;
-    skos:definition "A device that is used to control access to a specific area, such as a gate or barrier." .
+    skos:definition "A device that is used to control access to a specific area, such as a gate or barrier."@en .
 
 :ChannelizationDevice
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:LinearFeature ;
-    skos:definition "A device that is used to guide or direct traffic, such as a curb or a series of cones, barrels, or barricades." .
+    skos:definition "A device that is used to guide or direct traffic, such as a curb or a series of cones, barrels, or barricades."@en .
 
 :InternationalSign
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:PointFeature ;
-    dash:abstract "true" ;
-    skos:definition "A traffic control device that is used to convey information to road users, such as regulatory, warning, or guide signs." .
+    dash:abstract true ;
+    skos:definition "A traffic control device that is used to convey information to road users, such as regulatory, warning, or guide signs."@en .
 
 :CompositeSign
     rdf:type        owl:Class ;
     rdfs:subClassOf :InternationalSign ;
-    skos:definition "A single traffic-control unit whose content is an ordered sequence of one or more SimpleSigns, represented as an rdf:List: rdf:first is the main sign, and each rdf:rest step is the next panel in order (for example supplemental signs)." .
+    skos:definition "A single traffic-control unit whose content is an ordered sequence of one or more SimpleSigns, represented as an rdf:List: rdf:first is the main sign, and each rdf:rest step is the next panel in order (for example supplemental signs)."@en .
 
 :simpleSignList
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     rdfs:domain        :CompositeSign ;
-    skos:definition    "The rdf:List whose ordered members are SimpleSigns for this composite: list head is the main sign, and each rdf:rest continues the sequence." .
+    skos:definition    "The rdf:List whose ordered members are SimpleSigns for this composite: list head is the main sign, and each rdf:rest continues the sequence."@en .
 
 :SimpleSign
     rdf:type        owl:Class ;
     rdfs:subClassOf :InternationalSign ;
-    skos:definition "A traffic control device that consists of a single message conveyed by a single pictogram." .
+    skos:definition "A traffic control device that consists of a single message conveyed by a single pictogram."@en .
 
 :PavementMarking
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:LinearFeature ;
-    skos:definition "A device that is used to mark the pavement, such as lines, symbols, or text." .
+    skos:definition "A device that is used to mark the pavement, such as lines, symbols, or text."@en .
 
 :RoadSurfaceFeature
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:LinearFeature ;
-    skos:definition "A traffic control device that changes the nature of the road surface, such as rumble strips or speed bumps." .
+    skos:definition "A traffic control device that changes the nature of the road surface, such as rumble strips or speed bumps."@en .
 
 :TrafficSignalDevice
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficControlDevice ;
     rdfs:subClassOf its-location:PointFeature ;
-    dash:abstract "true" ;
-    skos:definition "A device that is used to control traffic signals, including traffic lights and warning beacons." .
+    dash:abstract true ;
+    skos:definition "A device that is used to control traffic signals, including traffic lights and warning beacons."@en .
 
 :TrafficSignal
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficSignalDevice ;
-    skos:definition "A traffic control device that is used to control traffic flow at intersections or pedestrian crossings using lights." .
+    skos:definition "A traffic control device that is used to control traffic flow at intersections or pedestrian crossings using lights."@en .
 
 :WarningBeacon
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficSignalDevice ;
-    skos:definition "A device that is used to warn road users of potential hazards or to draw attention to specific conditions using lights or signals." .
+    skos:definition "A device that is used to warn road users of potential hazards or to draw attention to specific conditions using lights or signals."@en .
 
 :AccessControlTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf its-core:Code ;
-    skos:definition "A code that indicates the type of access control device." .
+    skos:definition "A code that indicates the type of access control device."@en .
 
 :accessControlType
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition    "A code that indicates the type of access control device." ;
+    skos:definition    "A code that indicates the type of access control device."@en ;
     schema:rangeIncludes         :AccessControlTypeCode .
 
 :ChannelizationTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf its-core:Code ;
-    skos:definition "A code that indicates the type of channelization device." .
+    skos:definition "A code that indicates the type of channelization device."@en .
 
 :channelizationType
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition    "A code that indicates the type of channelization device." ;
+    skos:definition    "A code that indicates the type of channelization device."@en ;
     schema:rangeIncludes         :ChannelizationTypeCode .
 
 :PavementMarkingTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf its-core:Code ;
-    skos:definition "A code that indicates the type of pavement marking device." .
+    skos:definition "A code that indicates the type of pavement marking device."@en .
 
 :pavementMarkingType
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition    "A code that indicates the type of pavement marking device." ;
+    skos:definition    "A code that indicates the type of pavement marking device."@en ;
     schema:rangeIncludes         :PavementMarkingTypeCode .
 
 :RoadSurfaceFeatureTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf its-core:Code ;
-    skos:definition "A code that indicates the type of road surface feature." .
+    skos:definition "A code that indicates the type of road surface feature."@en .
 
 :roadSurfaceFeatureType
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition    "A code that indicates the type of road surface feature." ;
+    skos:definition    "A code that indicates the type of road surface feature."@en ;
     schema:rangeIncludes         :RoadSurfaceFeatureTypeCode .
+
+:TextComposite
+    rdf:type        owl:Class ;
+    skos:definition "An attribute that consists of text (multi-lingual string) on the default area of the main pictogram."@en .
+
+:DestinationInfo
+    rdf:type        owl:Class ;
+    skos:definition "An attribute that indicates destination information, such as distance to destination or direction to destination."@en .
+
+:SignDestination
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A destination that is indicated on the road sign."@en .
+
+:arrowDirection
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "A direction that is indicated on the road sign."@en .
+
+:destinationHorizon
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The distance to the destination or the time to the destination."@en .
+
+:destinationPlace
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The place to which the road sign is pointing."@en .
+
+:destinationRoad
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The road to which the road sign is pointing."@en .
+
+:divergeHorizon
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The distance between the sign and the junction or diverge point that leads to the point of interest."@en .
+
+:divergeName
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The name of the point of interest (e.g., destination or current location for direction 0)."@en .
+
+:divergeRoute
+    rdf:type        owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition "The route to which the road sign is pointing."@en .
+
+:image
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:range xsd:base64Binary ;
+    skos:definition "An image that is associated with the traffic control device."@en .
+    
+:url
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:range xsd:anyURI ;
+    skos:definition "The URL that is associated with the traffic control device."@en .
+    

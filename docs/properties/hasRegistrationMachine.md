@@ -8,6 +8,6 @@ A registration machine that is associated with the instance of the traffic regul
 
 | Class |
 |-------|
-| [PermitInformation](../classes/PermitInformation.md) |
+| [PermitApplicationInformation](../classes/PermitApplicationInformation.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasRegistrationMachine`

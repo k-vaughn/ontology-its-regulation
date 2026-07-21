@@ -22,5 +22,5 @@ digraph {
 	ChannelizationDevice -> Invis [style=invis]
 	Invis -> ChannelizationTypeCode [style=invis]
 	ChannelizationTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ChannelizationTypeCode</TD></TR></TABLE>> URL="../ChannelizationTypeCode" margin=0]
-	ChannelizationDevice -> ChannelizationTypeCode [label=channelizationType arrowhead=normal style=solid]
+	ChannelizationDevice -> ChannelizationTypeCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">channelizationType</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

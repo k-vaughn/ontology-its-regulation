@@ -1,0 +1,24 @@
+// Diagram for CodedRegulation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
+	}
+	CodedRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodedRegulation</TD></TR></TABLE>> URL="../CodedRegulation" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		StandAloneRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">StandAloneRegulationCode</TD></TR></TABLE>> URL="../StandAloneRegulationCode" margin=0]
+	}
+	CodedRegulation -> TrafficRegulation [arrowhead=onormal style=solid]
+	CodedRegulation -> Invis [style=invis]
+	Invis -> StandAloneRegulationCode [style=invis]
+	StandAloneRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">StandAloneRegulationCode</TD></TR></TABLE>> URL="../StandAloneRegulationCode" margin=0]
+	CodedRegulation -> StandAloneRegulationCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRegulation</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

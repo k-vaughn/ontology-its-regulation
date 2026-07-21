@@ -1,0 +1,28 @@
+// Diagram for CodedPairRegulation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
+	}
+	CodedPairRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodedPairRegulation</TD></TR></TABLE>> URL="../CodedPairRegulation" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		CodePairRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodePairRegulationCode</TD></TR></TABLE>> URL="../CodePairRegulationCode" margin=0]
+		ContextRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContextRegulationCode</TD></TR></TABLE>> URL="../ContextRegulationCode" margin=0]
+	}
+	CodedPairRegulation -> TrafficRegulation [arrowhead=onormal style=solid]
+	CodedPairRegulation -> Invis [style=invis]
+	Invis -> CodePairRegulationCode [style=invis]
+	CodePairRegulationCode -> ContextRegulationCode [style=invis]
+	ContextRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ContextRegulationCode</TD></TR></TABLE>> URL="../ContextRegulationCode" margin=0]
+	CodedPairRegulation -> ContextRegulationCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasContext</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	CodePairRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodePairRegulationCode</TD></TR></TABLE>> URL="../CodePairRegulationCode" margin=0]
+	CodedPairRegulation -> CodePairRegulationCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRegulation</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

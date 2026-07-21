@@ -9,31 +9,31 @@
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 
 :CorePattern
-    dcterms:creator               "Kenneth Vaughn" ;
+    dcterms:creator               "Kenneth Vaughn"@en ;
     dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
     dcterms:modified              "2026-05-06T18:31:44Z"^^xsd:dateTime ;
-    dcterms:title                 "ITS Ontology - Traffic Regulation Topic Area - Core Pattern" ;
+    dcterms:title                 "ITS Ontology - Traffic Regulation Topic Area - Core Pattern"@en ;
     its-core:draft                true ;
     owl:imports                   its-core: ;
     rdf:type                      owl:Ontology ;
-    skos:definition               "This document defines the core concepts related to the Traffic Regulation topic area of the ITS Ontology." .
+    skos:definition               "This document defines the core concepts related to the Traffic Regulation topic area of the ITS Ontology."@en .
 
 :RegulationThing
     rdf:type        owl:Class ;
     dash:abstract   true ;
     rdfs:subClassOf its-core:ITSThing ;
-    skos:definition    "A class to organize all classes defined in the Traffic Regulation topic area of the ITS Ontology." .
+    skos:definition    "A class to organize all classes defined in the Traffic Regulation topic area of the ITS Ontology."@en .
 
 :RegulationObjectProperty
     rdf:type           owl:ObjectProperty ;
     dash:abstract      true ;
     rdfs:subPropertyOf its-core:ITSObjectProperty ;
-    skos:definition    "An object property to organize all object properties defined in the Traffic Regulation topic area of the ITS Ontology." .
+    skos:definition    "An object property to organize all object properties defined in the Traffic Regulation topic area of the ITS Ontology."@en .
 
 :RegulationDataProperty
     rdf:type           owl:DatatypeProperty ;
     dash:abstract      true ;
     rdfs:subPropertyOf its-core:ITSDataProperty ;
-    skos:definition    "A data property to organize all data properties defined in the Traffic Regulation topic area of the ITS Ontology." .
+    skos:definition    "A data property to organize all data properties defined in the Traffic Regulation topic area of the ITS Ontology."@en .
 
 

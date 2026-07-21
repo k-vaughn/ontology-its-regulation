@@ -15,13 +15,16 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		"its-core_oidstring" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core:oidstring</TD></TR></TABLE>> URL="https://w3id.org/itsdata/core/v1/oidstring" margin=0]
 		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
 	}
 	InternationalSign -> "its-location_PointFeature" [arrowhead=onormal style=solid]
 	InternationalSign -> TrafficControlDevice [arrowhead=onormal style=solid]
 	InternationalSign -> Invis [style=invis]
-	Invis -> owl_Thing [style=invis]
+	Invis -> "its-core_oidstring" [style=invis]
+	"its-core_oidstring" -> owl_Thing [style=invis]
+	"its-core_oidstring" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core:oidstring</TD></TR></TABLE>> URL="https://w3id.org/itsdata/core/v1/oidstring" margin=0]
+	InternationalSign -> "its-core_oidstring" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">pictogram</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
-	InternationalSign -> owl_Thing [label=pictogram arrowhead=normal style=solid]
-	InternationalSign -> owl_Thing [label=nationalSignId arrowhead=normal style=solid]
+	InternationalSign -> owl_Thing [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">nationalSignId</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

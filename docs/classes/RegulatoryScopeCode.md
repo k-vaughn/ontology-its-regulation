@@ -79,5 +79,5 @@ EXAMPLE: general traffic regulations, parking regulations, commercial vehicle re
 | Property | Constraint |
 |----------|------------|
 | subClassOf | [RegulationThing](RegulationThing.md) |
-| subClassOf | [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
+| subClassOf | [cdm2:Code](cdm2:Code.md) |
 

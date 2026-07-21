@@ -2,7 +2,7 @@
 
 # implementedValidity
 
-The validity period during which the instance of the traffic regulation order is implemented.
+The validity period for the condition as implemented.
 
 **Range**: [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule)
 
@@ -10,6 +10,7 @@ The validity period during which the instance of the traffic regulation order is
 
 | Class |
 |-------|
+| [TimeValidityCondition](../classes/TimeValidityCondition.md) |
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/implementedValidity`

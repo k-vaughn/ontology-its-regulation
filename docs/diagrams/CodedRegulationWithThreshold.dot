@@ -1,0 +1,28 @@
+// Diagram for CodedRegulationWithThreshold
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
+	}
+	CodedRegulationWithThreshold [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodedRegulationWithThreshold</TD></TR></TABLE>> URL="../CodedRegulationWithThreshold" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure" margin=0]
+		ThresholdRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ThresholdRegulationCode</TD></TR></TABLE>> URL="../ThresholdRegulationCode" margin=0]
+	}
+	CodedRegulationWithThreshold -> TrafficRegulation [arrowhead=onormal style=solid]
+	CodedRegulationWithThreshold -> Invis [style=invis]
+	Invis -> Measure [style=invis]
+	Measure -> ThresholdRegulationCode [style=invis]
+	ThresholdRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ThresholdRegulationCode</TD></TR></TABLE>> URL="../ThresholdRegulationCode" margin=0]
+	CodedRegulationWithThreshold -> ThresholdRegulationCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRegulation</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	Measure [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Measure</TD></TR></TABLE>> URL="../Measure" margin=0]
+	CodedRegulationWithThreshold -> Measure [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasThreshold</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

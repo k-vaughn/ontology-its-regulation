@@ -1,0 +1,34 @@
+// Diagram for PermitApplicationInformation
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
+	}
+	PermitApplicationInformation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitApplicationInformation</TD></TR><TR><TD ALIGN="LEFT">hasApplicationInstructions : rdf:langString [0..*]¹</TD></TR><TR><TD ALIGN="LEFT">hasApplicationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">hasInformationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">isApplicationRequired [0..1]</TD></TR></TABLE>> URL="../PermitApplicationInformation" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		cdm2_ContactInformation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:ContactInformation</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/ContactInformation" margin=0]
+		PermitFee [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitFee</TD></TR></TABLE>> URL="../PermitFee" margin=0]
+		RegistrationMachine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegistrationMachine</TD></TR></TABLE>> URL="../RegistrationMachine" margin=0]
+	}
+	PermitApplicationInformation -> RegulationThing [arrowhead=onormal style=solid]
+	PermitApplicationInformation -> Invis [style=invis]
+	Invis -> cdm2_ContactInformation [style=invis]
+	cdm2_ContactInformation -> PermitFee [style=invis]
+	PermitFee -> RegistrationMachine [style=invis]
+	PermitFee [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitFee</TD></TR></TABLE>> URL="../PermitFee" margin=0]
+	PermitApplicationInformation -> PermitFee [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasAssociatedFee</TD></TR></TABLE>> arrowhead=normal style=solid]
+	RegistrationMachine [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegistrationMachine</TD></TR></TABLE>> URL="../RegistrationMachine" margin=0]
+	PermitApplicationInformation -> RegistrationMachine [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRegistrationMachine</TD></TR></TABLE>> arrowhead=normal style=solid]
+	cdm2_ContactInformation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm2:ContactInformation</TD></TR></TABLE>> URL="https://w3id.org/citydata/part2/v1/ContactInformation" margin=0]
+	PermitApplicationInformation -> cdm2_ContactInformation [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasContactInformation</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	PermitApplicationInformation_uniqueLang_note [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="2"><TR><TD ALIGN="LEFT"><I>¹ Limited to one rdf:langString value per language</I></TD></TR></TABLE>> margin=0]
+	RegistrationMachine -> PermitApplicationInformation_uniqueLang_note [style=invis]
+}

@@ -1,0 +1,28 @@
+// Diagram for CodedRegulationWithFee
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
+	}
+	CodedRegulationWithFee [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodedRegulationWithFee</TD></TR></TABLE>> URL="../CodedRegulationWithFee" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		FeeRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FeeRegulationCode</TD></TR></TABLE>> URL="../FeeRegulationCode" margin=0]
+		FeeSchedule [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FeeSchedule</TD></TR></TABLE>> URL="../FeeSchedule" margin=0]
+	}
+	CodedRegulationWithFee -> TrafficRegulation [arrowhead=onormal style=solid]
+	CodedRegulationWithFee -> Invis [style=invis]
+	Invis -> FeeRegulationCode [style=invis]
+	FeeRegulationCode -> FeeSchedule [style=invis]
+	FeeRegulationCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FeeRegulationCode</TD></TR></TABLE>> URL="../FeeRegulationCode" margin=0]
+	CodedRegulationWithFee -> FeeRegulationCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRegulation</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	FeeSchedule [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FeeSchedule</TD></TR></TABLE>> URL="../FeeSchedule" margin=0]
+	CodedRegulationWithFee -> FeeSchedule [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasFeeSchedule</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

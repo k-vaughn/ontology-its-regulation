@@ -60,5 +60,5 @@ A code that indicates the type of pavement marking device.
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
+| subClassOf | [its-core:Code](its-core:Code.md) |
 

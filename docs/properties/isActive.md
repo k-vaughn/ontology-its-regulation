@@ -2,7 +2,9 @@
 
 # isActive
 
-A condition that must be met for the traffic regulation to be in effect.
+Indicates whether the condition is currently active.
+
+**Range**: [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean)
 
 ## Used in classes
 
