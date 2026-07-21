@@ -2,14 +2,15 @@
 
 # locationByOrder
 
-The location legally defined for the object (e.g. traffic regulation order, traffic control device).
+The location where the regulation is defined to apply per the traffic regulation order.
 
-**Range**: [its-location:LocationReference](https://w3id.org/itsdata/location/v1/LocationReference)
+**Range**: [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature)
 
 ## Used in classes
 
 | Class |
 |-------|
+| [LocationCondition](../classes/LocationCondition.md) |
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/locationByOrder`

@@ -22,5 +22,5 @@ digraph {
 	AccessControlDevice -> Invis [style=invis]
 	Invis -> AccessControlTypeCode [style=invis]
 	AccessControlTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AccessControlTypeCode</TD></TR></TABLE>> URL="../AccessControlTypeCode" margin=0]
-	AccessControlDevice -> AccessControlTypeCode [label=accessControlType arrowhead=normal style=solid]
+	AccessControlDevice -> AccessControlTypeCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">accessControlType</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

@@ -4,6 +4,8 @@
 
 The URL that is associated with the traffic control device.
 
+**Range**: [xsd:anyURI](https://w3id.org/citydata/imported/xsd/anyURI)
+
 ## Used in classes
 
 | Class |

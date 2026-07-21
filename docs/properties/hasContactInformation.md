@@ -4,4 +4,10 @@
 
 Contact information for the entity that is responsible for the traffic regulation.
 
+## Used in classes
+
+| Class |
+|-------|
+| [PermitApplicationInformation](../classes/PermitApplicationInformation.md) |
+
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasContactInformation`

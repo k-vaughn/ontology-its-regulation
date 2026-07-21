@@ -1,0 +1,26 @@
+// Diagram for ConditionSet
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		Condition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Condition</TD></TR></TABLE>> URL="../Condition" margin=0]
+	}
+	ConditionSet [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">ConditionSet</TD></TR></TABLE>> URL="../ConditionSet" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		LogicalOperatorCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LogicalOperatorCode</TD></TR></TABLE>> URL="../LogicalOperatorCode" margin=0]
+	}
+	ConditionSet -> Condition [arrowhead=onormal style=solid]
+	ConditionSet -> Invis [style=invis]
+	Invis -> LogicalOperatorCode [style=invis]
+	Condition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Condition</TD></TR></TABLE>> URL="../Condition" margin=0]
+	ConditionSet:e -> Condition:e [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">cdm1:hasComponent</TD></TR><TR><TD ALIGN="CENTER">2..*</TD></TR></TABLE>> arrowhead=normal constraint=false style=solid]
+	LogicalOperatorCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LogicalOperatorCode</TD></TR></TABLE>> URL="../LogicalOperatorCode" margin=0]
+	ConditionSet -> LogicalOperatorCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">logicalOperator</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+}

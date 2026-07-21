@@ -5,21 +5,19 @@ digraph {
 	edge [fontname=Arial fontsize=11]
 	{
 		rank=source
+		"its-location_Feature" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:Feature</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/Feature" margin=0]
 		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	}
-	TrafficControlDevice [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficControlDevice</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasIdentifier : xsd:string</TD></TR></TABLE>> URL="../TrafficControlDevice" margin=0]
+	TrafficControlDevice [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficControlDevice</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasDescription : rdf:langString [0..*]¹</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasIdentifier : xsd:string [1]</TD></TR><TR><TD ALIGN="LEFT">image : xsd:base64Binary [0..1]</TD></TR><TR><TD ALIGN="LEFT">url : xsd:anyURI [0..1]</TD></TR></TABLE>> URL="../TrafficControlDevice" margin=0]
 	{
 		rank=max
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
 	}
+	TrafficControlDevice -> "its-location_Feature" [arrowhead=onormal style=solid]
 	TrafficControlDevice -> RegulationThing [arrowhead=onormal style=solid]
-	TrafficControlDevice -> Invis [style=invis]
-	Invis -> owl_Thing [style=invis]
-	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
-	TrafficControlDevice -> owl_Thing [label=url arrowhead=normal style=solid]
-	TrafficControlDevice -> owl_Thing [label=image arrowhead=normal style=solid]
+	TrafficControlDevice_uniqueLang_note [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="2"><TR><TD ALIGN="LEFT"><I>¹ Limited to one rdf:langString value per language</I></TD></TR></TABLE>> margin=0]
+	TrafficControlDevice -> TrafficControlDevice_uniqueLang_note [style=invis]
 }

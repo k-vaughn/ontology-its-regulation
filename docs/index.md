@@ -8,6 +8,7 @@ The ITS Ontology - Traffic Regulation Topic Area consists of the following patte
 
 - [Condition](classes/ConditionPattern.md)
 - [Core](classes/CorePattern.md)
+- [Permit](classes/PermitPattern.md)
 - [Regulation](classes/TrafficRegulationPattern.md)
 - [Traffic Control Device](classes/TrafficControlDevicePattern.md)
 

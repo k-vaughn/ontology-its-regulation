@@ -9,7 +9,13 @@ PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
 PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
 PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
-PREFIX its-sh: <http://www.w3.org/ns/shacl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+:RegulationSHACL a owl:Ontology ;
+    dcterms:title "SHACL constraints for the Traffic Regulation pattern"@en ;
+    skos:definition "Validation shapes for traffic regulation concepts."@en ;
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
 
 :RuleMakerRoleShape a sh:NodeShape ;
     sh:targetClass :RuleMakerRole ;
@@ -31,15 +37,9 @@ PREFIX its-sh: <http://www.w3.org/ns/shacl#>
 :TrafficRegulationShape a sh:NodeShape ;
     sh:targetClass :TrafficRegulation ;
     sh:property [
-        sh:path its-core:activationStatus ;
+        sh:path its-core:hasActivationStatus ;
         sh:node its-core:ExactlyOneShape ;
         sh:class its-core:ActivationStatusCode ;
-        skos:editorsNote "DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database."@en
-    ] ;
-    sh:property [
-        sh:path :hasDetails ;
-        sh:node its-core:MinOneShape ;
-        sh:class :TypeOfRegulation ;
     ] ;
     sh:property [
         sh:path :associatedTrafficControlDevice ;
@@ -52,15 +52,21 @@ PREFIX its-sh: <http://www.w3.org/ns/shacl#>
         sh:class :Condition ;
     ] ;
     sh:property [
-        sh:path :permitInformation ;
-        sh:class :PermitInformation ;
+        sh:path :hasPermitType ;
+        sh:class :PermitType ;
+    ] ;
+    sh:property [
+        sh:path :hasAssociatedRestriction ;
+        sh:node its-core:MaxOneShape ;
+        sh:class :TrafficRegulation ;
+        skos:editorsNote "DATEX II does not have this concept, rather it embeds related restrictions as attributes (e.g., respectBicycle)."@en ;
     ] .
 
 :TrafficRegulationOrderShape a sh:NodeShape ;
     sh:targetClass :TrafficRegulationOrder ;
     sh:property [
         sh:path cdm1:hasDescription ;
-        sh:node its-core:MaxOneMultiLingualStringShape ;
+        sh:node its-core:MaxOneMultilingualShape ;
     ] ;
     sh:property [
         sh:path :issuingAuthority ;
@@ -78,12 +84,12 @@ PREFIX its-sh: <http://www.w3.org/ns/shacl#>
         sh:datatype xsd:string ;
     ] ;
     sh:property [
-        sh:path :implementationStatus ;
+        sh:path :troStatus ;
         sh:node its-core:ExactlyOneShape ;
-        sh:class :ImplementationStatusCode ;
+        sh:class :TroStatusCode ;
     ] ;
     sh:property [
-        sh:path :legalBasis ;
+        sh:path :hasLegalBasis ;
         sh:node its-core:MaxOneShape ;
         sh:class :LegalBasis ;
         skos:editorsNote "DATEX II indicates this is optional at the TRO and TR level. Does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;

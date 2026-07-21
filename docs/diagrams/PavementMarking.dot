@@ -22,5 +22,5 @@ digraph {
 	PavementMarking -> Invis [style=invis]
 	Invis -> PavementMarkingTypeCode [style=invis]
 	PavementMarkingTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PavementMarkingTypeCode</TD></TR></TABLE>> URL="../PavementMarkingTypeCode" margin=0]
-	PavementMarking -> PavementMarkingTypeCode [label=pavementMarkingType arrowhead=normal style=solid]
+	PavementMarking -> PavementMarkingTypeCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">pavementMarkingType</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

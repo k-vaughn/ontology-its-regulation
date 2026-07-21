@@ -5,18 +5,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
-PREFIX its-sh: <http://www.w3.org/ns/shacl#>
 PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
 PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+:TrafficControlDeviceSHACL a owl:Ontology ;
+    dcterms:title "SHACL constraints for the Traffic Control Device pattern"@en ;
+    skos:definition "Validation shapes for traffic control device concepts."@en ;
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
 
 :TrafficControlDeviceShape a sh:NodeShape ;
     sh:targetClass :TrafficControlDevice ;
     sh:property [
         sh:path cdm1:hasDescription ;
-        sh:node its-core:MaxOneMultiLingualStringShape ;
+        sh:node its-core:MaxOneMultilingualShape ;
     ] ;
     sh:property [
         sh:path cdm1:hasIdentifier ;
@@ -60,12 +66,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:and ( its-location:PointFeatureShape ) ;
     sh:property [
         sh:path :pictogram ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:datatype its-core:oidstring ;
     ] ;
     sh:property [
         sh:path :nationalSignId ;
-        sh:node its-sh:MaxOneShape ;
+        sh:node its-core:MaxOneShape ;
         sh:datatype xsd:string ;
     ] .
 
@@ -142,6 +148,45 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         sh:class :RoadSurfaceFeatureTypeCode ;
     ] .
 
+:SignDestinationShape a sh:NodeShape ;
+    sh:targetClass :SignDestination ;
+    sh:property [
+        sh:path :destinationPlace ;
+        sh:class :DestinationPlace ;
+    ] ;
+    sh:property [
+        sh:path :destinationRoad ;
+        sh:class :DestinationRoad ;
+    ] ;
+    sh:property [
+        sh:path :destinationHorizon ;
+        sh:node its-core:MaxOneShape ;
+        sh:class :Horizon ;
+    ] ;
+    sh:property [
+        sh:path :arrowDirection ; #The direction of the arrow as it appears on the sign, which represents the direction of the egress roadway
+        sh:class :OrdinalDirectionCode ;
+    ] ;
+    sh:property [
+        sh:path :divergeRoute ;
+        sh:datatype rdf:langString ;
+    ] ;
+    sh:property [
+        sh:path :divergeName ;
+        sh:datatype rdf:langString ;
+    ] ;
+    sh:property [
+        sh:path :divergeHorizon ; #The distance between the junction and the point of interest (e.g., destination or current location for direction 0)
+        sh:class cdm1:Length ;
+    ] .    
+
+:TextCompositeShape a sh:NodeShape ;
+    sh:targetClass :TextComposite ;
+    sh:property [
+        sh:path :compositeText ;
+        sh:node its-core:ExactlyOneMultilingualShape ;
+    ] .
+
 :TrafficSignalDeviceShape a sh:NodeShape ;
     sh:targetClass :TrafficSignalDevice ;
     sh:and ( :TrafficControlDeviceShape ) ;
@@ -154,3 +199,4 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 :WarningBeaconShape a sh:NodeShape ;
     sh:targetClass :WarningBeacon ;
     sh:and ( :TrafficSignalDeviceShape ) .
+

@@ -4,10 +4,6 @@
 
 Indicates whether the permit is location specific.
 
-## Used in classes
-
-| Class |
-|-------|
-| [PermitInformation](../classes/PermitInformation.md) |
+**Range**: [xsd:boolean](https://w3id.org/citydata/imported/xsd/boolean)
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/isLocationSpecific`

@@ -6,38 +6,54 @@ nav:
 - Condition Pattern:
   - Condition Pattern Overview: classes/ConditionPattern.md
   - Classes:
+    - Access Category Code: classes/AccessCategoryCode.md
     - Condition: classes/Condition.md
-    - Destination Info: classes/DestinationInfo.md
+    - Condition Code: classes/ConditionCode.md
+    - Condition Set: classes/ConditionSet.md
+    - Driver Category Code: classes/DriverCategoryCode.md
+    - Enumerated Condition: classes/EnumeratedCondition.md
     - Legal Basis: classes/LegalBasis.md
-    - Permit Information: classes/PermitInformation.md
-    - Sign Destination: classes/SignDestination.md
-    - Text Composite: classes/TextComposite.md
+    - Location Condition: classes/LocationCondition.md
+    - Logical Operator Code: classes/LogicalOperatorCode.md
+    - Measurable Condition: classes/MeasurableCondition.md
+    - Measurable Condition Code: classes/MeasurableConditionCode.md
+    - Non Vehicular Road User Code: classes/NonVehicularRoadUserCode.md
+    - Permit Required Condition: classes/PermitRequiredCondition.md
+    - Road Type Code: classes/RoadTypeCode.md
+    - Road Weather Condition Code: classes/RoadWeatherConditionCode.md
+    - Standing Or Parking Category Code: classes/StandingOrParkingCategoryCode.md
+    - Time Validity Condition: classes/TimeValidityCondition.md
+    - Tunnel Category Code: classes/TunnelCategoryCode.md
+    - Versioned Condition: classes/VersionedCondition.md
   - Properties:
-    - arrowDirection: properties/arrowDirection.md
-    - destinationHorizon: properties/destinationHorizon.md
-    - destinationPlace: properties/destinationPlace.md
-    - destinationRoad: properties/destinationRoad.md
-    - displayType: properties/displayType.md
-    - divergeHorizon: properties/divergeHorizon.md
-    - divergeName: properties/divergeName.md
-    - divergeRoute: properties/divergeRoute.md
-    - grantsPermission: properties/grantsPermission.md
-    - hasAssociatedFee: properties/hasAssociatedFee.md
+    - applicableLocation: properties/applicableLocation.md
+    - comparisonOperator: properties/comparisonOperator.md
+    - forAccessCategory: properties/forAccessCategory.md
+    - forEnumeratedCondition: properties/forEnumeratedCondition.md
+    - forMeasurableCondition: properties/forMeasurableCondition.md
+    - forNonVehicularRoadUserType: properties/forNonVehicularRoadUserType.md
+    - forRoadType: properties/forRoadType.md
+    - forStandingOrParkingCategory: properties/forStandingOrParkingCategory.md
+    - forTunnelCategory: properties/forTunnelCategory.md
+    - forWeatherConditionType: properties/forWeatherConditionType.md
     - hasCondition: properties/hasCondition.md
-    - hasContactInformation: properties/hasContactInformation.md
     - hasLegalBasis: properties/hasLegalBasis.md
-    - hasRegistrationMachine: properties/hasRegistrationMachine.md
-    - howToObtainPermit: properties/howToObtainPermit.md
+    - implementedLocation: properties/implementedLocation.md
+    - implementedValidity: properties/implementedValidity.md
     - isActive: properties/isActive.md
-    - isLocationSpecific: properties/isLocationSpecific.md
-    - legalBasis: properties/legalBasis.md
-    - maximumDurationOfPermit: properties/maximumDurationOfPermit.md
-    - minimumTimeToNextEntry: properties/minimumTimeToNextEntry.md
-    - permitCondition: properties/permitCondition.md
-    - permitInformation: properties/permitInformation.md
-    - permittedEntityType: properties/permittedEntityType.md
-    - urlForApplication: properties/urlForApplication.md
-    - urlForInformation: properties/urlForInformation.md
+    - locationByOrder: properties/locationByOrder.md
+    - logicalOperator: properties/logicalOperator.md
+    - negate: properties/negate.md
+    - otherCondition: properties/otherCondition.md
+    - requiredDesignation: properties/requiredDesignation.md
+    - requiredDisplayType: properties/requiredDisplayType.md
+    - requiredGrantor: properties/requiredGrantor.md
+    - requiredGrantorType: properties/requiredGrantorType.md
+    - requiredPermitIdentifier: properties/requiredPermitIdentifier.md
+    - trafficImpactLocation: properties/trafficImpactLocation.md
+    - validityByOrder: properties/validityByOrder.md
+    - valueToCompare: properties/valueToCompare.md
+    - version: properties/version.md
 - Core Pattern:
   - Core Pattern Overview: classes/CorePattern.md
   - Classes:
@@ -45,30 +61,76 @@ nav:
   - Properties:
     - RegulationDataProperty: properties/RegulationDataProperty.md
     - RegulationObjectProperty: properties/RegulationObjectProperty.md
+- Permit Pattern:
+  - Permit Pattern Overview: classes/PermitPattern.md
+  - Classes:
+    - Permit: classes/Permit.md
+    - Permit Application Information: classes/PermitApplicationInformation.md
+    - Permit Designation Code: classes/PermitDesignationCode.md
+    - Permit Display Type Code: classes/PermitDisplayTypeCode.md
+    - Permit Grantee Type Code: classes/PermitGranteeTypeCode.md
+    - Permit Grantor Type Code: classes/PermitGrantorTypeCode.md
+    - Permit Type: classes/PermitType.md
+    - Registration Machine: classes/RegistrationMachine.md
+  - Properties:
+    - grantsDesignation: properties/grantsDesignation.md
+    - hasApplicableLocation: properties/hasApplicableLocation.md
+    - hasApplicationInformation: properties/hasApplicationInformation.md
+    - hasApplicationInstructions: properties/hasApplicationInstructions.md
+    - hasApplicationUrl: properties/hasApplicationUrl.md
+    - hasAssociatedFee: properties/hasAssociatedFee.md
+    - hasContactInformation: properties/hasContactInformation.md
+    - hasDefaultDurationLimit: properties/hasDefaultDurationLimit.md
+    - hasDefaultLocation: properties/hasDefaultLocation.md
+    - hasDefaultRepeatInterval: properties/hasDefaultRepeatInterval.md
+    - hasDisplayType: properties/hasDisplayType.md
+    - hasDurationLimit: properties/hasDurationLimit.md
+    - hasGrantee: properties/hasGrantee.md
+    - hasGranteeType: properties/hasGranteeType.md
+    - hasGrantor: properties/hasGrantor.md
+    - hasInformationUrl: properties/hasInformationUrl.md
+    - hasPermitType: properties/hasPermitType.md
+    - hasRegistrationMachine: properties/hasRegistrationMachine.md
+    - hasRepeatInterval: properties/hasRepeatInterval.md
+    - hasValidityPeriod: properties/hasValidityPeriod.md
+    - isApplicationRequired: properties/isApplicationRequired.md
+    - isLocationSpecific: properties/isLocationSpecific.md
+    - issued: properties/issued.md
+    - permitInformation: properties/permitInformation.md
+    - permittedEntityType: properties/permittedEntityType.md
 - Regulation Pattern:
   - Regulation Pattern Overview: classes/TrafficRegulationPattern.md
   - Classes:
-    - Implementation Status Code: classes/ImplementationStatusCode.md
+    - Activation Status Code: classes/ActivationStatusCode.md
+    - Coded Pair Regulation: classes/CodedPairRegulation.md
+    - Coded Regulation: classes/CodedRegulation.md
+    - Coded Regulation With Fee: classes/CodedRegulationWithFee.md
+    - Coded Regulation With Threshold: classes/CodedRegulationWithThreshold.md
+    - Code Pair Regulation Code: classes/CodePairRegulationCode.md
+    - Context Regulation Code: classes/ContextRegulationCode.md
+    - Fee Regulation Code: classes/FeeRegulationCode.md
     - Reason Code: classes/ReasonCode.md
+    - Regulation Code: classes/RegulationCode.md
     - Regulatory Scope Code: classes/RegulatoryScopeCode.md
     - Rule Maker Role: classes/RuleMakerRole.md
+    - Stand Alone Regulation Code: classes/StandAloneRegulationCode.md
+    - Textual Regulation: classes/TextualRegulation.md
+    - Threshold Regulation Code: classes/ThresholdRegulationCode.md
     - Traffic Regulation: classes/TrafficRegulation.md
     - Traffic Regulation Order: classes/TrafficRegulationOrder.md
-    - Type Of Regulation: classes/TypeOfRegulation.md
+    - Tro Status Code: classes/TroStatusCode.md
   - Properties:
     - associatedTrafficControlDevice: properties/associatedTrafficControlDevice.md
     - authorizingTrafficRegulation: properties/authorizingTrafficRegulation.md
-    - hasDetails: properties/hasDetails.md
-    - implementationStatus: properties/implementationStatus.md
-    - implementedLocation: properties/implementedLocation.md
-    - implementedValidity: properties/implementedValidity.md
+    - hasActivationStatus: properties/hasActivationStatus.md
+    - hasAssociatedRestriction: properties/hasAssociatedRestriction.md
+    - hasPermitType: properties/hasPermitType.md
     - issuedTro: properties/issuedTro.md
     - issuingAuthority: properties/issuingAuthority.md
-    - locationByOrder: properties/locationByOrder.md
     - memberTrafficRegulation: properties/memberTrafficRegulation.md
     - reasonCode: properties/reasonCode.md
     - regulatoryScope: properties/regulatoryScope.md
-    - validityByOrder: properties/validityByOrder.md
+    - troStatus: properties/troStatus.md
 - Traffic Control Device Pattern:
   - Traffic Control Device Pattern Overview: classes/TrafficControlDevicePattern.md
   - Classes:
@@ -77,19 +139,29 @@ nav:
     - Channelization Device: classes/ChannelizationDevice.md
     - Channelization Type Code: classes/ChannelizationTypeCode.md
     - Composite Sign: classes/CompositeSign.md
+    - Destination Info: classes/DestinationInfo.md
     - International Sign: classes/InternationalSign.md
     - Pavement Marking: classes/PavementMarking.md
     - Pavement Marking Type Code: classes/PavementMarkingTypeCode.md
     - Road Surface Feature: classes/RoadSurfaceFeature.md
     - Road Surface Feature Type Code: classes/RoadSurfaceFeatureTypeCode.md
+    - Sign Destination: classes/SignDestination.md
     - Simple Sign: classes/SimpleSign.md
+    - Text Composite: classes/TextComposite.md
     - Traffic Control Device: classes/TrafficControlDevice.md
     - Traffic Signal: classes/TrafficSignal.md
     - Traffic Signal Device: classes/TrafficSignalDevice.md
     - Warning Beacon: classes/WarningBeacon.md
   - Properties:
     - accessControlType: properties/accessControlType.md
+    - arrowDirection: properties/arrowDirection.md
     - channelizationType: properties/channelizationType.md
+    - destinationHorizon: properties/destinationHorizon.md
+    - destinationPlace: properties/destinationPlace.md
+    - destinationRoad: properties/destinationRoad.md
+    - divergeHorizon: properties/divergeHorizon.md
+    - divergeName: properties/divergeName.md
+    - divergeRoute: properties/divergeRoute.md
     - image: properties/image.md
     - nationalSignId: properties/nationalSignId.md
     - pavementMarkingType: properties/pavementMarkingType.md

@@ -4,10 +4,4 @@
 
 Information about any permits that are associated with the regulation.
 
-## Used in classes
-
-| Class |
-|-------|
-| [TrafficRegulation](../classes/TrafficRegulation.md) |
-
 **IRI**: `https://w3id.org/itsdata/regulation/v1/permitInformation`

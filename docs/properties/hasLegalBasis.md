@@ -11,5 +11,6 @@ formal authority within the law (e.g., statute, ordinance, administrative rule, 
 | Class |
 |-------|
 | [Condition](../classes/Condition.md) |
+| [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasLegalBasis`

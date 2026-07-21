@@ -4,6 +4,8 @@
 
 An image that is associated with the traffic control device.
 
+**Range**: [xsd:base64Binary](https://w3id.org/citydata/imported/xsd/base64Binary)
+
 ## Used in classes
 
 | Class |

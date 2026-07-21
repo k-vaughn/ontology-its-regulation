@@ -2,7 +2,7 @@
 
 # hasCondition
 
-A condition associated with the instance of the traffic regulation or ConditionSet.
+A condition associated with the instance (for example a traffic regulation); not used for the part-whole composition of a ConditionSet, which uses cdm1:hasComponent.
 
 **Range**: [Condition](../classes/Condition.md)
 

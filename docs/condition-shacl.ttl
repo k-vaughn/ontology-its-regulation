@@ -2,7 +2,7 @@ BASE <https://w3id.org/itsdata/regulation/v1/>
 PREFIX : <https://w3id.org/itsdata/regulation/v1/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX its-sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -10,31 +10,50 @@ PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
 PREFIX its-time: <https://w3id.org/itsdata/time/v1/>
 PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+:ConditionSHACL a owl:Ontology ;
+    dcterms:title "SHACL constraints for the Condition pattern"@en ;
+    skos:definition "Validation shapes for traffic regulation condition concepts."@en ;
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
 
 :ConditionShape a sh:NodeShape ;
     sh:targetClass :Condition ;
     sh:property [
-        sh:path :isActive ;
-        sh:node its-core:ExactlyOneShape ;
-        sh:class xsd:boolean ;
-    ] ;
-    sh:property [
         sh:path :hasLegalBasis ;
         sh:node its-core:ExactlyOneShape;
-        sh:nodeKind :LegalBasis ;
+        sh:class :LegalBasis ;
         skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
     ] ;
     sh:property [
-        sh:path cdm1:negate ;
+        sh:path :isActive ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:datatype xsd:boolean ;
+    ] ;
+    sh:property [
+        sh:path :negate ;
         sh:node its-core:ExactlyOneShape;
         sh:datatype xsd:boolean ;
+    ] .
+
+:EnumeratedConditionShape a sh:NodeShape ;
+    sh:targetClass :EnumeratedCondition ;
+    sh:property [
+        sh:path :forEnumeratedCondition ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :ConditionCode ;
+    ] ;
+    sh:property [
+        sh:path :otherCondition ;
+        sh:node its-core:MaxOneMultilingualShape ;
     ] .
 
 :LegalBasisShape a sh:NodeShape ;
     sh:targetClass :LegalBasis ;
     sh:property [
         sh:path cdm1:hasName ;
-        sh:node its-core:MinOneMultiLingualStringShape ;
+        sh:node its-core:MinOneMultilingualShape ;
     ] ;
     sh:property [
         sh:path its-core:version ;
@@ -42,119 +61,91 @@ PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
         sh:datatype xsd:string ;
     ] ;
     sh:property [
-        sh:path its-time:approvalDate ;
+        sh:path its-time:approvedOn ;
         sh:node its-core:MaxOneShape ;
         sh:datatype xsd:date ;
     ] .
 
-:PermitInformationShape a sh:NodeShape ;
-    sh:targetClass :PermitInformation ;
+:LocationConditionShape a sh:NodeShape ;
+    sh:targetClass :LocationCondition ;
     sh:property [
-        sh:path :applicationRequired ;
-        sh:node its-core:MaxOneShape;
-        sh:nodeKind :LegalBasis ;
-        skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
-    ] ;
-    sh:property [
-        sh:path :displayType ;
-        sh:node its-core:ExactlyOneShape;
-        sh:datatype :PermitDisplayTypeCode ;
-    ] ;
-    sh:property [
-        sh:path :grantsPermission ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype :PermissionTypeCode ;
-        skos:editorialNote "DATEX II has a boolean for disabledParkingPermit; this allows a broader set of general permits."@en ;
-    ] ;
-    sh:property [
-        sh:path cdm1:hasDescription ;
-        sh:node its-core:MaxOneMultiLingualStringShape;
-    ] ;
-    sh:property [
-        sh:path :hasAssociatedFee ;
-        sh:class :PermitFee ;
-        skos:editorialNote "DATEX II indicates max 1; but it seems as if there could be different fees for different durations."@en ;
-    ] ;
-    sh:property [
-        sh:path :hasRegistrationMachine ;
-        sh:class :RegistrationMachine ;
-    ] ;
-    sh:property [
-        sh:path :howToObtainPermit ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype its-core:MaxOneMultiLingualStringShape ;
-    ] ;
-    sh:property [
-        sh:path :isLocationSpecific ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype xsd:boolean ;
-    ] ;
-    sh:property [
-        sh:path :maximumDurationOfPermit ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
-    ] ;
-    sh:property [
-        sh:path :minimumTimeToNextEntry ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
-    ] ;
-    sh:property [
-        sh:path :permittedEntityType ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype :permittedEntityTypeCode ;
-    ] ;
-    sh:property [
-        sh:path :urlForInformation ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype xsd:anyURI ;
-    ] ;
-    sh:property [
-        sh:path :urlForApplication ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype xsd:anyURI ;
-    ] ;
-    sh:property [
-        sh:path :contactInformation ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype cdm2:ContactInformation ;
-    ] .
-
-:TextCompositeShape a sh:NodeShape ;
-    sh:targetClass :TextComposite ;
-    sh:property [
-        sh:path :compositeText ;
-        sh:node its-core:ExactlyOneMultiLingualStringShape ;
-    ] .
-
-:SignDestinationShape a sh:NodeShape ;
-    sh:targetClass :SignDestination ;
-    sh:property [
-        sh:path :destinationPlace ;
-        sh:class :DestinationPlace ;
-    ] ;
-    sh:property [
-        sh:path :destinationRoad ;
-        sh:class :DestinationRoad ;
-    ] ;
-    sh:property [
-        sh:path :destinationHorizon ;
+        sh:path :implementedLocation ;
         sh:node its-core:MaxOneShape ;
-        sh:class :Horizon ;
+        sh:class its-location:Feature ;
     ] ;
     sh:property [
-        sh:path :arrowDirection ; #The direction of the arrow as it appears on the sign, which represents the direction of the egress roadway
-        sh:class :OrdinalDirectionCode ;
+        sh:path :locationByOrder ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class its-location:Feature ;
     ] ;
     sh:property [
-        sh:path :divergeRoute ;
-        sh:datatype rdf:langString ;
+        sh:path :trafficImpactLocation ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-location:Feature ;
+    ] .
+
+:MeasurableConditionShape a sh:NodeShape ;
+    sh:targetClass :MeasurableCondition ;
+    sh:property [
+        sh:path :forMeasurableCondition ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class :MeasurableConditionCode ;
     ] ;
     sh:property [
-        sh:path :divergeName ;
-        sh:datatype rdf:langString ;
+        sh:path :comparisonOperator ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class its-core:ComparisonOperatorCode ;
     ] ;
     sh:property [
-        sh:path :divergeHorizon ; #The distance between the junction and the point of interest (e.g., destination or current location for direction 0)
-        sh:class cdm1:Length ;
-    ] .    
+        sh:path :valueToCompare ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class cdm1:Measure ;
+    ] .
+
+:PermitRequiredConditionShape a sh:NodeShape ;
+    sh:targetClass :PermitRequiredCondition ;
+    sh:property [
+        sh:path :requiredDesignation ;
+        sh:node its-core:ExactlyOneShape;
+        sh:class :PermitDesignationCode ;
+        rdfs:seeAlso "DATEX-II PermitInformation.disabledParkingPermit" ;
+        skos:editorialNote "DATEX II has a boolean for disabledParkingPermit; this allows a broader set of general permits and focuses on the designation rather than the permission. For example, rather than disabledParkingPermit, it would be a disability permit and potentially provide facility access privileges in addition to parking."@en ;
+    ] ;
+    sh:property [
+        sh:path :requiredDisplayType ;
+        sh:node its-core:MaxOneShape;
+        sh:class :PermitDisplayTypeCode ;
+        rdfs:seeAlso "DATEX-II permitType"
+    ] ;
+    sh:property [
+        sh:path :requiredGrantor ;
+        sh:node its-core:MaxOneShape;
+        sh:class cdm2:Organization ;
+        rdfs:seeAlso "DATEX-II issuingAuthority"
+    ] ;
+    sh:property [
+        sh:path :requiredGrantorType ;
+        sh:node its-core:MaxOneShape;
+        sh:class :PermitGrantorTypeCode ;
+        skos:editorialNote "A regulation can accept permits issued by any grantor, by any type of grantor (e.g., government agency), or by a specific grantor (e.g., a parking permit specific to a particular parking facility)."@en ;
+    ] ;
+    sh:property [
+        sh:path :requiredPermitIdentifier ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:datatype xsd:string ;
+        rdfs:seeAlso "DATEX-II identifier"
+    ] .
+
+:TimeValidityConditionShape a sh:NodeShape ;
+    sh:targetClass :TimeValidityCondition ;
+    sh:property [
+        sh:path :validityByOrder ;
+        sh:node its-core:ExactlyOneShape ;
+        sh:class its-time:Schedule ;
+    ] ;
+    sh:property [
+        sh:path :implementedValidity ;
+        sh:node its-core:MaxOneShape ;
+        sh:class its-time:Schedule ;
+    ] .
+
