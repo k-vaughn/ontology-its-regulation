@@ -28,7 +28,7 @@
     vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 # ================================================
-#                Code Classes
+#                 Code Classes
 # ================================================
 
 :ActivationStatusCode
@@ -66,13 +66,6 @@
     skos:definition "A code indicating the reason for the traffic regulation order."@en ;
     skos:example    "construction, maintenance, special event, emergency, weather"@en .
 
-:RegulatoryScopeCode
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :RegulationThing ;
-    rdfs:subClassOf cdm2:Code ;
-    skos:definition "A code indicating the regulatory scope of a rule maker role."@en ;
-    skos:example    "general traffic regulations, parking regulations, commercial vehicle regulations, special event regulations"@en .
-
 :RegulationCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
@@ -88,6 +81,13 @@
         owl:onClass                 :RegulationCode;
     ] ;
     skos:definition "A list of rule categories that are defined by an authority." .
+
+:RegulatoryScopeCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf cdm2:Code ;
+    skos:definition "A code indicating the regulatory scope of a rule maker role."@en ;
+    skos:example    "general traffic regulations, parking regulations, commercial vehicle regulations, special event regulations"@en .
 
 :StandAloneRegulationCode
     rdf:type        owl:Class ;
@@ -110,21 +110,8 @@
     skos:example    "madeAndImplemented, madeAndPartiallyImplemented, madeAndNotImplemented"@en .
 
 # ================================================
-#                Regulation Classes
+#                 Regulation Classes
 # ================================================
-
-:TrafficRegulationOrder
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :RegulationThing ;
-    rdfs:subClassOf its-core:OfficialThing ;
-    rdfs:subClassOf its-core:VersionedThing ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :memberTrafficRegulation ;
-        owl:onClass                 :TrafficRegulation ;
-        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    skos:definition "A legally recognized document or publication issued to enact a specific traffic regulation or regulations by a competent authority."@en .
 
 :TrafficRegulation
     rdf:type        owl:Class ;
@@ -138,55 +125,6 @@
     skos:definition "A traffic regulation is a rule having the force of law that is established by a regulator through a traffic regulation order."@en ;
     skos:editorialNote "The latest release of DATEX-II assigns a legalBasis to each condition rather than to the regulation. This seems odd; I have added a link for both in this model."@en ;
     skos:editorsNote "It is unclear if PermitInformation needs to be associated directly with TrafficRegulation and why. It seems as if PermitCondition is a more appropriate way to describe the association."@en .
-
-:CodedRegulation
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :TrafficRegulation ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasRegulation ;
-        owl:onClass                 :StandAloneRegulationCode ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    skos:definition "A restriction defined by a code."@en ;
-    rdfs:seeAlso "DATEX-II RushHourLaneRestriction, HardShoulderRunningRestriction, AccessRestriction, DirectionRestriction, WalkingSpeed, MandatoryRoadOrCarriagewayOrLaneUsage, ProhibitionOfOvertaking, PriorityRule, StandingOrParkingControl, TrafficAhead, RoadWarning, AmbientWarning"@en ;
-    skos:editorsNote "DATEX-II also has attributes for respect bicycle, motorized personal transport devices, and pedestrians. These can be handled with associated traffic regulations."@en .
-
-:CodedRegulationWithThreshold
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :TrafficRegulation ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasRegulation ;
-        owl:onClass                 :ThresholdRegulationCode ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasThreshold ;
-        owl:onClass                 :Measure ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    skos:definition "A restriction defined by a code coupled with a threshold value."@en ;
-    rdfs:seeAlso "DATEX-II MinimumDistanceRestriction, NumericalSpeedValue, StandingOrParkingControl (for durations), SteepHill"@en .
-
-:CodedRegulationWithFee
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :TrafficRegulation ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasRegulation ;
-        owl:onClass                 :FeeRegulationCode ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    rdfs:subClassOf [
-        rdf:type                    owl:Restriction ;
-        owl:onProperty              :hasFeeSchedule ;
-        owl:onClass                 :FeeSchedule ;
-        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ] ;
-    skos:definition "A condition defined by a code."@en ;
-    rdfs:seeAlso "DATEX-II StandingOrParkingControl (for fees)"@en .
 
 :CodedPairRegulation
     rdf:type        owl:Class ;
@@ -207,6 +145,55 @@
     rdfs:seeAlso "DATEX-II AlternateRoadOrCarriagewayOrLaneLayout"@en ;
     skos:editorsNote "The type of temporary markings and locations are defined by the associated traffic control devices."@en .
 
+:CodedRegulation
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :TrafficRegulation ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :hasRegulation ;
+        owl:onClass                 :StandAloneRegulationCode ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    skos:definition "A restriction defined by a code."@en ;
+    rdfs:seeAlso "DATEX-II RushHourLaneRestriction, HardShoulderRunningRestriction, AccessRestriction, DirectionRestriction, WalkingSpeed, MandatoryRoadOrCarriagewayOrLaneUsage, ProhibitionOfOvertaking, PriorityRule, StandingOrParkingControl, TrafficAhead, RoadWarning, AmbientWarning"@en ;
+    skos:editorsNote "DATEX-II also has attributes for respect bicycle, motorized personal transport devices, and pedestrians. These can be handled with associated traffic regulations."@en .
+
+:CodedRegulationWithFee
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :TrafficRegulation ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :hasRegulation ;
+        owl:onClass                 :FeeRegulationCode ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :hasFeeSchedule ;
+        owl:onClass                 :FeeSchedule ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    skos:definition "A condition defined by a code."@en ;
+    rdfs:seeAlso "DATEX-II StandingOrParkingControl (for fees)"@en .
+
+:CodedRegulationWithThreshold
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :TrafficRegulation ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :hasRegulation ;
+        owl:onClass                 :ThresholdRegulationCode ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :hasThreshold ;
+        owl:onClass                 :Measure ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    skos:definition "A restriction defined by a code coupled with a threshold value."@en ;
+    rdfs:seeAlso "DATEX-II MinimumDistanceRestriction, NumericalSpeedValue, StandingOrParkingControl (for durations), SteepHill"@en .
+
 :TextualRegulation
     rdf:type        owl:Class ;
     rdfs:subClassOf :TrafficRegulation ;
@@ -219,8 +206,21 @@
     skos:definition "A textual regulation is a rule having the force of law that is established by a regulator through a traffic regulation order."@en ;
     rdfs:seeAlso "DATEX-II TextualRegulation"@en .
 
+:TrafficRegulationOrder
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:OfficialThing ;
+    rdfs:subClassOf its-core:VersionedThing ;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction ;
+        owl:onProperty              :memberTrafficRegulation ;
+        owl:onClass                 :TrafficRegulation ;
+        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+    skos:definition "A legally recognized document or publication issued to enact a specific traffic regulation or regulations by a competent authority."@en .
+
 # ================================================
-#                Other Classes
+#                 Other Classes
 # ================================================
 
 :RuleMakerRole
@@ -254,8 +254,8 @@
     rdfs:range         :ActivationStatusCode ;
     skos:definition    "A code indicating the activation status of the traffic regulation."@en ;
     rdfs:seeAlso "DATEX II TrafficRegulation.status"@en ;
-    skos:editorsNote "DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database."@en
-.
+    skos:editorsNote "DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database."@en .
+
 :hasAssociatedRestriction
     rdf:type           owl:ObjectProperty ;
     rdfs:domain        :TrafficRegulation ;
@@ -304,8 +304,3 @@
     rdfs:range          :TroStatusCode ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
     rdfs:seeAlso        "DATEX-II TrafficRegulationOrder.status" .
-
-# ================================================
-#                 Datatype properties
-# ================================================
-

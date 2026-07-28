@@ -2,6 +2,10 @@
 
 # compositeText
 
+The text that is displayed with the traffic control device.
+
+**Range**: [rdf:langString](https://w3id.org/citydata/imported/rdf/langString)
+
 ## Used in classes
 
 | Class |

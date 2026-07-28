@@ -21,17 +21,24 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     vann:preferredNamespacePrefix "its-regulation" ;
     vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
+# ================================================
+#                 Permit Classes
+# ================================================
+
 :PermitShape a sh:NodeShape ;
     sh:targetClass :Permit ;
+
     sh:property [
         sh:path :hasApplicableLocation ;
         sh:datatype its-location:Feature ;
     ] ;
+
     sh:property [
         sh:path :hasDurationLimit ;
         sh:node its-core:MaxOneShape;
         sh:datatype its-time:Duration ;
     ] ;
+
     sh:property [
         sh:path :hasGrantee ;
         sh:node its-core:ExactlyOneShape ;
@@ -41,114 +48,134 @@ PREFIX vann: <http://purl.org/vocab/vann/>
             [ sh:class its-vehicle:Vehicle ]
         ) ;
     ] ;
+
     sh:property [
         sh:path cdm1:hasIdentifier ;
         sh:node its-core:ExactlyOneShape ;
         sh:datatype xsd:string ;
     ] ;
+
     sh:property [
         sh:path :hasPermitType ;
         sh:node its-core:MaxOneShape;
         sh:datatype :PermitType ;
     ] ;
+
     sh:property [
         sh:path :hasRepeatInterval ;
         sh:node its-core:MaxOneShape;
         sh:datatype its-time:Duration ;
     ] ;
+
     sh:property [
         sh:path :hasValidityPeriod ;
         sh:node its-core:MaxOneShape;
         sh:datatype its-time:Schedule ;
     ] ;
+
     sh:property [
         sh:path :issued ;
         sh:node its-core:ExactlyOneShape;
         sh:datatype xsd:dateTime ;
     ] .
 
+:PermitApplicationInformationShape a sh:NodeShape ;
+    sh:targetClass :PermitApplicationInformation ;
+
+    sh:property [
+        sh:path :hasApplicationInstructions ;
+        sh:node its-core:MaxOneMultilingualShape ;
+    ] ;
+
+    sh:property [
+        sh:path :hasApplicationUrl ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype xsd:anyURI ;
+    ] ;
+
+    sh:property [
+        sh:path :hasAssociatedFee ;
+        sh:class :PermitFee ;
+        skos:editorialNote "DATEX II indicates max 1; but it seems as if there could be different fees for different durations."@en ;
+    ] ;
+
+    sh:property [
+        sh:path :hasContactInformation ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype cdm2:ContactInformation ;
+    ] ;
+
+    sh:property [
+        sh:path :hasInformationUrl ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype xsd:anyURI ;
+    ] ;
+
+    sh:property [
+        sh:path :hasRegistrationMachine ;
+        sh:class :RegistrationMachine ;
+    ] ;
+
+    sh:property [
+        sh:path :isApplicationRequired ;
+        sh:node its-core:MaxOneShape;
+        sh:nodeKind :LegalBasis ;
+        skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
+    ] .
+
 :PermitTypeShape a sh:NodeShape ;
     sh:targetClass :PermitType ;
+
     sh:property [
         sh:path :grantsDesignation ;
         sh:node its-core:MaxOneShape;
         sh:datatype :PermitDesignationCode ;
         skos:editorialNote "DATEX II has a boolean for disabledParkingPermit; this allows a broader set of general permits."@en ;
     ] ;
+
     sh:property [
         sh:path :hasApplicationInformation ;
         sh:node its-core:MaxOneShape;
         sh:datatype :PermitApplicationInformation ;
     ] ;
-    sh:property [
-        sh:path :hasGrantor ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype cdm2:Organization ;
-    ] ;
-    sh:property [
-        sh:path :hasGranteeType ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype :PermitGranteeTypeCode ;
-    ] ;
-    sh:property [
-        sh:path :hasDefaultLocation ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype its-location:Feature ;
-    ] ;
-    sh:property [
-        sh:path :hasDisplayType ;
-        sh:node its-core:ExactlyOneShape;
-        sh:datatype :PermitDisplayTypeCode ;
-    ] ;
-    sh:property [
-        sh:path cdm1:hasDescription ;
-        sh:node its-core:MaxOneMultilingualShape;
-    ] ;
+
     sh:property [
         sh:path :hasDefaultDurationLimit ;
         sh:node its-core:MaxOneShape;
         sh:datatype its-time:Duration ;
     ] ;
+
+    sh:property [
+        sh:path :hasDefaultLocation ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype its-location:Feature ;
+    ] ;
+
     sh:property [
         sh:path :hasDefaultRepeatInterval ;
         sh:node its-core:MaxOneShape;
         sh:datatype its-time:Duration ;
-    ] .
+    ] ;
 
-:PermitApplicationInformationShape a sh:NodeShape ;
-    sh:targetClass :PermitApplicationInformation ;
     sh:property [
-        sh:path :isApplicationRequired ;
-        sh:node its-core:MaxOneShape;
-        sh:nodeKind :LegalBasis ;
-        skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
+        sh:path cdm1:hasDescription ;
+        sh:node its-core:MaxOneMultilingualShape;
     ] ;
-    sh:property [
-        sh:path :hasApplicationInstructions ;
-        sh:node its-core:MaxOneMultilingualShape ;
-    ] ;
-    sh:property [
-        sh:path :hasAssociatedFee ;
-        sh:class :PermitFee ;
-        skos:editorialNote "DATEX II indicates max 1; but it seems as if there could be different fees for different durations."@en ;
-    ] ;
-    sh:property [
-        sh:path :hasRegistrationMachine ;
-        sh:class :RegistrationMachine ;
-    ] ;
-    sh:property [
-        sh:path :hasInformationUrl ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype xsd:anyURI ;
-    ] ;
-    sh:property [
-        sh:path :hasApplicationUrl ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype xsd:anyURI ;
-    ] ;
-    sh:property [
-        sh:path :hasContactInformation ;
-        sh:node its-core:MaxOneShape;
-        sh:datatype cdm2:ContactInformation ;
-    ] .
 
+    sh:property [
+        sh:path :hasDisplayType ;
+        sh:node its-core:ExactlyOneShape;
+        sh:datatype :PermitDisplayTypeCode ;
+    ] ;
+
+    sh:property [
+        sh:path :hasGranteeType ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype :PermitGranteeTypeCode ;
+    ] ;
+
+    sh:property [
+        sh:path :hasGrantor ;
+        sh:node its-core:MaxOneShape;
+        sh:datatype cdm2:Organization ;
+    ] .

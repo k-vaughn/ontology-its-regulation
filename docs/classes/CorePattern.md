@@ -17,4 +17,4 @@ This module defines the following properties:
 - [RegulationObjectProperty](../properties/RegulationObjectProperty.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../CorePattern.ttl) and the SHACL [restrictions](../CoreSHACL.ttl).
+The formal definition of this pattern is available in [TURTLE Syntax](../CorePattern.ttl).

@@ -1,0 +1,9 @@
+name: Validate VERSION
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  validate-version:
+    uses: ISO-TC204/ontology-shared-scripts/.github/workflows/validate-version.yml@main

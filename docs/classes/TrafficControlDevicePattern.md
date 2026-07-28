@@ -33,6 +33,7 @@ This module defines the following properties:
 - [accessControlType](../properties/accessControlType.md)
 - [arrowDirection](../properties/arrowDirection.md)
 - [channelizationType](../properties/channelizationType.md)
+- [compositeText](../properties/compositeText.md)
 - [destinationHorizon](../properties/destinationHorizon.md)
 - [destinationPlace](../properties/destinationPlace.md)
 - [destinationRoad](../properties/destinationRoad.md)
