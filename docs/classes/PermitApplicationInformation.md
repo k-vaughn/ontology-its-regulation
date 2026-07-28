@@ -130,10 +130,11 @@ Details about the application of the permit.
 | Property | Constraint |
 |----------|------------|
 | [hasApplicationInstructions](../properties/hasApplicationInstructions.md) | 0..* rdf:langString (one per language) |
-| [hasApplicationUrl](../properties/hasApplicationUrl.md) | datatype xsd:anyURI |
+| [hasApplicationUrl](../properties/hasApplicationUrl.md) | max 1 xsd:anyURI |
 | [hasAssociatedFee](../properties/hasAssociatedFee.md) | only [PermitFee](https://w3id.org/itsdata/regulation/v1/PermitFee) |
-| [hasContactInformation](../properties/hasContactInformation.md) | datatype cdm2:ContactInformation |
-| [hasInformationUrl](../properties/hasInformationUrl.md) | datatype xsd:anyURI |
+| [hasContactInformation](../properties/hasContactInformation.md) | max 1 cdm2:ContactInformation |
+| [hasInformationUrl](../properties/hasInformationUrl.md) | max 1 xsd:anyURI |
 | [hasRegistrationMachine](../properties/hasRegistrationMachine.md) | only [RegistrationMachine](https://w3id.org/itsdata/regulation/v1/RegistrationMachine) |
+| [isApplicationRequired](../properties/isApplicationRequired.md) | max 1 |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

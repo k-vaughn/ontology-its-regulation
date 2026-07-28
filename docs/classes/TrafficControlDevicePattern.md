@@ -48,4 +48,4 @@ This module defines the following properties:
 - [url](../properties/url.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../traffic-control-device-pattern.ttl) and the SHACL [restrictions](../traffic-control-device-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TrafficControlDevicePattern.ttl) and the SHACL [restrictions](../TrafficControlDeviceSHACL.ttl).

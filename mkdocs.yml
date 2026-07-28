@@ -98,39 +98,6 @@ nav:
     - issued: properties/issued.md
     - permitInformation: properties/permitInformation.md
     - permittedEntityType: properties/permittedEntityType.md
-- Regulation Pattern:
-  - Regulation Pattern Overview: classes/TrafficRegulationPattern.md
-  - Classes:
-    - Activation Status Code: classes/ActivationStatusCode.md
-    - Coded Pair Regulation: classes/CodedPairRegulation.md
-    - Coded Regulation: classes/CodedRegulation.md
-    - Coded Regulation With Fee: classes/CodedRegulationWithFee.md
-    - Coded Regulation With Threshold: classes/CodedRegulationWithThreshold.md
-    - Code Pair Regulation Code: classes/CodePairRegulationCode.md
-    - Context Regulation Code: classes/ContextRegulationCode.md
-    - Fee Regulation Code: classes/FeeRegulationCode.md
-    - Reason Code: classes/ReasonCode.md
-    - Regulation Code: classes/RegulationCode.md
-    - Regulatory Scope Code: classes/RegulatoryScopeCode.md
-    - Rule Maker Role: classes/RuleMakerRole.md
-    - Stand Alone Regulation Code: classes/StandAloneRegulationCode.md
-    - Textual Regulation: classes/TextualRegulation.md
-    - Threshold Regulation Code: classes/ThresholdRegulationCode.md
-    - Traffic Regulation: classes/TrafficRegulation.md
-    - Traffic Regulation Order: classes/TrafficRegulationOrder.md
-    - Tro Status Code: classes/TroStatusCode.md
-  - Properties:
-    - associatedTrafficControlDevice: properties/associatedTrafficControlDevice.md
-    - authorizingTrafficRegulation: properties/authorizingTrafficRegulation.md
-    - hasActivationStatus: properties/hasActivationStatus.md
-    - hasAssociatedRestriction: properties/hasAssociatedRestriction.md
-    - hasPermitType: properties/hasPermitType.md
-    - issuedTro: properties/issuedTro.md
-    - issuingAuthority: properties/issuingAuthority.md
-    - memberTrafficRegulation: properties/memberTrafficRegulation.md
-    - reasonCode: properties/reasonCode.md
-    - regulatoryScope: properties/regulatoryScope.md
-    - troStatus: properties/troStatus.md
 - Traffic Control Device Pattern:
   - Traffic Control Device Pattern Overview: classes/TrafficControlDevicePattern.md
   - Classes:
@@ -169,6 +136,39 @@ nav:
     - roadSurfaceFeatureType: properties/roadSurfaceFeatureType.md
     - simpleSignList: properties/simpleSignList.md
     - url: properties/url.md
+- Traffic Regulation Pattern:
+  - Traffic Regulation Pattern Overview: classes/TrafficRegulationPattern.md
+  - Classes:
+    - Activation Status Code: classes/ActivationStatusCode.md
+    - Coded Pair Regulation: classes/CodedPairRegulation.md
+    - Coded Regulation: classes/CodedRegulation.md
+    - Coded Regulation With Fee: classes/CodedRegulationWithFee.md
+    - Coded Regulation With Threshold: classes/CodedRegulationWithThreshold.md
+    - Code Pair Regulation Code: classes/CodePairRegulationCode.md
+    - Context Regulation Code: classes/ContextRegulationCode.md
+    - Fee Regulation Code: classes/FeeRegulationCode.md
+    - Reason Code: classes/ReasonCode.md
+    - Regulation Code: classes/RegulationCode.md
+    - Regulation Code List: classes/RegulationCodeList.md
+    - Regulatory Scope Code: classes/RegulatoryScopeCode.md
+    - Rule Maker Role: classes/RuleMakerRole.md
+    - Stand Alone Regulation Code: classes/StandAloneRegulationCode.md
+    - Textual Regulation: classes/TextualRegulation.md
+    - Threshold Regulation Code: classes/ThresholdRegulationCode.md
+    - Traffic Regulation: classes/TrafficRegulation.md
+    - Traffic Regulation Order: classes/TrafficRegulationOrder.md
+    - Tro Status Code: classes/TroStatusCode.md
+  - Properties:
+    - associatedTrafficControlDevice: properties/associatedTrafficControlDevice.md
+    - authorizingTrafficRegulation: properties/authorizingTrafficRegulation.md
+    - hasActivationStatus: properties/hasActivationStatus.md
+    - hasAssociatedRestriction: properties/hasAssociatedRestriction.md
+    - hasPermitType: properties/hasPermitType.md
+    - issuedTro: properties/issuedTro.md
+    - memberTrafficRegulation: properties/memberTrafficRegulation.md
+    - reasonCode: properties/reasonCode.md
+    - regulatoryScope: properties/regulatoryScope.md
+    - troStatus: properties/troStatus.md
 site_url: https://github.com/ISO-TC204/ontology-its-regulation
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"

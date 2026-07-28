@@ -12,11 +12,14 @@ PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
 PREFIX its-vehicle: <https://w3id.org/itsdata/vehicle/v1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX vann: <http://purl.org/vocab/vann/>
 
 :PermitSHACL a owl:Ontology ;
     dcterms:title "SHACL constraints for the Permit pattern"@en ;
     skos:definition "Validation shapes for traffic regulation permit concepts."@en ;
-    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 :PermitShape a sh:NodeShape ;
     sh:targetClass :Permit ;

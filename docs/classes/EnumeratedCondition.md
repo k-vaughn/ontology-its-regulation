@@ -89,7 +89,7 @@ A condition that is based on an enumerated value in a known code list.
 | Property | Constraint |
 |----------|------------|
 | [forEnumeratedCondition](../properties/forEnumeratedCondition.md) | exactly 1 |
-| [forEnumeratedCondition](../properties/forEnumeratedCondition.md) | only [ConditionCode](https://w3id.org/itsdata/regulation/v1/ConditionCode) |
+| [forEnumeratedCondition](../properties/forEnumeratedCondition.md) | exactly 1 [ConditionCode](https://w3id.org/itsdata/regulation/v1/ConditionCode) |
 | [otherCondition](../properties/otherCondition.md) | 0..* rdf:langString (one per language) |
 | subClassOf | [Condition](Condition.md) |
 

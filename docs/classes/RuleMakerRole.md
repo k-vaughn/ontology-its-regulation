@@ -118,8 +118,8 @@ A Role that includes the responsibility for creating and maintaining rules of th
 | Property | Constraint |
 |----------|------------|
 | [issuedTro](../properties/issuedTro.md) | only [TrafficRegulationOrder](https://w3id.org/itsdata/regulation/v1/TrafficRegulationOrder) |
-| [its-core:jurisdiction](https://w3id.org/itsdata/core/v1/jurisdiction) | only [cdm2:JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
-| [regulatoryScope](../properties/regulatoryScope.md) | only [RegulatoryScopeCode](https://w3id.org/itsdata/regulation/v1/RegulatoryScopeCode) |
+| [its-core:jurisdiction](https://w3id.org/itsdata/core/v1/jurisdiction) | min 1 [cdm2:JurisdictionalArea](https://w3id.org/citydata/part2/v1/JurisdictionalArea) |
+| [regulatoryScope](../properties/regulatoryScope.md) | min 1 [RegulatoryScopeCode](https://w3id.org/itsdata/regulation/v1/RegulatoryScopeCode) |
 | subClassOf | [RegulationThing](RegulationThing.md) |
-| subClassOf | [its-agent:Role](its-agent:Role.md) |
+| subClassOf | [its-agent:Role](https://w3id.org/itsdata/agent/v1/Role) |
 

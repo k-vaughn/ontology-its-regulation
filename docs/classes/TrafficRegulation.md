@@ -179,11 +179,11 @@ A traffic regulation is a rule having the force of law that is established by a 
 | Property | Constraint |
 |----------|------------|
 | [associatedTrafficControlDevice](../properties/associatedTrafficControlDevice.md) | only [TrafficControlDevice](https://w3id.org/itsdata/regulation/v1/TrafficControlDevice) |
-| [hasAssociatedRestriction](../properties/hasAssociatedRestriction.md) | only [TrafficRegulation](https://w3id.org/itsdata/regulation/v1/TrafficRegulation) |
-| [hasCondition](../properties/hasCondition.md) | only [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
+| [hasAssociatedRestriction](../properties/hasAssociatedRestriction.md) | max 1 [TrafficRegulation](https://w3id.org/itsdata/regulation/v1/TrafficRegulation) |
+| [hasCondition](../properties/hasCondition.md) | max 1 [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
 | [hasLegalBasis](../properties/hasLegalBasis.md) | exactly 1 |
 | [hasPermitType](../properties/hasPermitType.md) | only [PermitType](https://w3id.org/itsdata/regulation/v1/PermitType) |
-| [its-core:hasActivationStatus](https://w3id.org/itsdata/core/v1/hasActivationStatus) | only [its-core:ActivationStatusCode](https://w3id.org/itsdata/core/v1/ActivationStatusCode) |
+| [its-core:hasActivationStatus](https://w3id.org/itsdata/core/v1/hasActivationStatus) | exactly 1 [its-core:ActivationStatusCode](https://w3id.org/itsdata/core/v1/ActivationStatusCode) |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 
 ## Other annotations

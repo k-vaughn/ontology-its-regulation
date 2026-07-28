@@ -70,7 +70,7 @@ A legal basis provides references to the legal documents that authorize an entit
 | Property | Constraint |
 |----------|------------|
 | [cdm1:hasName](https://w3id.org/citydata/part1/v1/hasName) | min 1 rdf:langString |
-| [its-core:version](https://w3id.org/itsdata/core/v1/version) | datatype xsd:string |
-| [its-time:approvedOn](https://w3id.org/itsdata/time/v1/approvedOn) | datatype xsd:date |
+| [its-core:version](https://w3id.org/itsdata/core/v1/version) | max 1 xsd:string |
+| [its-time:approvedOn](https://w3id.org/itsdata/time/v1/approvedOn) | max 1 xsd:date |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

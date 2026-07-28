@@ -219,14 +219,14 @@ A category of certificate that the grantor is able to issue to designate a grant
 |----------|------------|
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | 0..* rdf:langString (one per language) |
 | [grantsDesignation](../properties/grantsDesignation.md) | exactly 1 |
-| [grantsDesignation](../properties/grantsDesignation.md) | datatype PermitDesignationCode |
-| [hasApplicationInformation](../properties/hasApplicationInformation.md) | datatype PermitApplicationInformation |
-| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | datatype its-time:Duration |
-| [hasDefaultLocation](../properties/hasDefaultLocation.md) | datatype its-location:Feature |
-| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | datatype its-time:Duration |
-| [hasDisplayType](../properties/hasDisplayType.md) | datatype PermitDisplayTypeCode |
-| [hasGranteeType](../properties/hasGranteeType.md) | datatype PermitGranteeTypeCode |
+| [grantsDesignation](../properties/grantsDesignation.md) | max 1 PermitDesignationCode |
+| [hasApplicationInformation](../properties/hasApplicationInformation.md) | max 1 PermitApplicationInformation |
+| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | max 1 its-time:Duration |
+| [hasDefaultLocation](../properties/hasDefaultLocation.md) | max 1 its-location:Feature |
+| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | max 1 its-time:Duration |
+| [hasDisplayType](../properties/hasDisplayType.md) | exactly 1 PermitDisplayTypeCode |
+| [hasGranteeType](../properties/hasGranteeType.md) | max 1 PermitGranteeTypeCode |
 | [hasGrantor](../properties/hasGrantor.md) | exactly 1 |
-| [hasGrantor](../properties/hasGrantor.md) | datatype cdm2:Organization |
+| [hasGrantor](../properties/hasGrantor.md) | max 1 cdm2:Organization |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

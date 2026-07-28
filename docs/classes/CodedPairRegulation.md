@@ -101,8 +101,8 @@ A restriction defined by a code.
 
 | Property | Constraint |
 |----------|------------|
-| [hasContext](../properties/hasContext.md) | exactly 1 |
-| [hasRegulation](../properties/hasRegulation.md) | exactly 1 |
+| hasContext | exactly 1 |
+| hasRegulation | exactly 1 |
 | subClassOf | [TrafficRegulation](TrafficRegulation.md) |
 
 ## Other annotations

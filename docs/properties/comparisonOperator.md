@@ -4,7 +4,7 @@
 
 The operator used to compare the value to the threshold value.
 
-**Range**: [its-core:ComparisonOperatorCode](../classes/its-core:ComparisonOperatorCode.md)
+**Range**: [its-core:ComparisonOperatorCode](https://w3id.org/itsdata/core/v1/ComparisonOperatorCode)
 
 ## Used in classes
 

@@ -7,7 +7,7 @@ digraph {
 		rank=source
 		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	}
-	Permit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Permit</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasIdentifier : xsd:string [1]</TD></TR><TR><TD ALIGN="LEFT">issued : xsd:dateTime [1]</TD></TR></TABLE>> URL="../Permit" margin=0]
+	Permit [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Permit</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasIdentifier : xsd:string [1]</TD></TR><TR><TD ALIGN="LEFT">hasGrantee [1]</TD></TR><TR><TD ALIGN="LEFT">issued : xsd:dateTime [1]</TD></TR></TABLE>> URL="../Permit" margin=0]
 	{
 		rank=max
 	}
@@ -17,7 +17,6 @@ digraph {
 		"its-location_Feature" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:Feature</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/Feature" margin=0]
 		"its-time_Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Duration</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Duration" margin=0]
 		"its-time_Schedule" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Schedule</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Schedule" margin=0]
-		owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
 		PermitType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitType</TD></TR></TABLE>> URL="../PermitType" margin=0]
 	}
 	Permit -> RegulationThing [arrowhead=onormal style=solid]
@@ -25,16 +24,13 @@ digraph {
 	Invis -> "its-location_Feature" [style=invis]
 	"its-location_Feature" -> "its-time_Duration" [style=invis]
 	"its-time_Duration" -> "its-time_Schedule" [style=invis]
-	"its-time_Schedule" -> owl_Thing [style=invis]
-	owl_Thing -> PermitType [style=invis]
+	"its-time_Schedule" -> PermitType [style=invis]
 	PermitType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitType</TD></TR></TABLE>> URL="../PermitType" margin=0]
 	Permit -> PermitType [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasPermitType</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	"its-location_Feature" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-location:Feature</TD></TR></TABLE>> URL="https://w3id.org/itsdata/location/v1/Feature" margin=0]
 	Permit -> "its-location_Feature" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasApplicableLocation</TD></TR></TABLE>> arrowhead=normal style=solid]
 	"its-time_Duration" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Duration</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Duration" margin=0]
 	Permit -> "its-time_Duration" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasDurationLimit</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
-	owl_Thing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">owl:Thing</TD></TR></TABLE>> URL="https://w3id.org/citydata/imported/owl/latest/Thing" margin=0]
-	Permit -> owl_Thing [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasGrantee</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	Permit -> "its-time_Duration" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasRepeatInterval</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	"its-time_Schedule" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Schedule</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Schedule" margin=0]
 	Permit -> "its-time_Schedule" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasValidityPeriod</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]

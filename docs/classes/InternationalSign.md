@@ -124,8 +124,8 @@ A traffic control device that is used to convey information to road users, such 
 
 | Property | Constraint |
 |----------|------------|
-| [nationalSignId](../properties/nationalSignId.md) | datatype xsd:string |
-| [pictogram](../properties/pictogram.md) | datatype its-core:oidstring |
+| [nationalSignId](../properties/nationalSignId.md) | max 1 xsd:string |
+| [pictogram](../properties/pictogram.md) | exactly 1 its-core:oidstring |
 | subClassOf | [TrafficControlDevice](TrafficControlDevice.md) |
 | subClassOf | [its-location:PointFeature](https://w3id.org/itsdata/location/v1/PointFeature) |
 

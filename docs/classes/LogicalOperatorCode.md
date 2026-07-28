@@ -60,5 +60,5 @@ A code that indicates how the members of a ConditionSet are combined (for exampl
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:Code](its-core:Code.md) |
+| subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 

@@ -95,9 +95,9 @@ A boolean condition that must evaluate to true for the associated regulation(s) 
 
 | Property | Constraint |
 |----------|------------|
-| [hasLegalBasis](../properties/hasLegalBasis.md) | only [LegalBasis](https://w3id.org/itsdata/regulation/v1/LegalBasis) |
-| [isActive](../properties/isActive.md) | datatype xsd:boolean |
-| [negate](../properties/negate.md) | datatype xsd:boolean |
+| [hasLegalBasis](../properties/hasLegalBasis.md) | exactly 1 [LegalBasis](https://w3id.org/itsdata/regulation/v1/LegalBasis) |
+| [isActive](../properties/isActive.md) | exactly 1 xsd:boolean |
+| [negate](../properties/negate.md) | exactly 1 xsd:boolean |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 
 ## Other annotations

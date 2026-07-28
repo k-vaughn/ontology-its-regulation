@@ -102,9 +102,9 @@ A device that is used to control traffic, such as a road sign, traffic signal, o
 | Property | Constraint |
 |----------|------------|
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | 0..* rdf:langString (one per language) |
-| [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | datatype xsd:string |
-| [image](../properties/image.md) | datatype xsd:base64Binary |
-| [url](../properties/url.md) | datatype xsd:anyURI |
+| [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | exactly 1 xsd:string |
+| [image](../properties/image.md) | max 1 xsd:base64Binary |
+| [url](../properties/url.md) | max 1 xsd:anyURI |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 | subClassOf | [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
 

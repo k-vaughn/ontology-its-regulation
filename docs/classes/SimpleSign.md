@@ -82,7 +82,7 @@ A traffic control device that consists of a single message conveyed by a single 
 
 | Property | Constraint |
 |----------|------------|
-| [hasCondition](../properties/hasCondition.md) | only [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
-| [hasDetails](../properties/hasDetails.md) | only [TypeOfRegulation](https://w3id.org/itsdata/regulation/v1/TypeOfRegulation) |
+| [hasCondition](../properties/hasCondition.md) | max 1 [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
+| hasDetails | min 1 [TypeOfRegulation](https://w3id.org/itsdata/regulation/v1/TypeOfRegulation) |
 | subClassOf | [InternationalSign](InternationalSign.md) |
 

@@ -4,6 +4,8 @@
 
 A code that indicates the type of pavement marking device.
 
+**Range**: [PavementMarkingTypeCode](../classes/PavementMarkingTypeCode.md)
+
 ## Used in classes
 
 | Class |

@@ -90,9 +90,9 @@ A condition that applies to a specific location.
 
 | Property | Constraint |
 |----------|------------|
-| [implementedValidity](../properties/implementedValidity.md) | only [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule) |
+| [implementedValidity](../properties/implementedValidity.md) | max 1 [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule) |
 | [validityByOrder](../properties/validityByOrder.md) | exactly 1 |
-| [validityByOrder](../properties/validityByOrder.md) | only [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule) |
+| [validityByOrder](../properties/validityByOrder.md) | exactly 1 [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule) |
 | subClassOf | [Condition](Condition.md) |
 
 ## Other annotations

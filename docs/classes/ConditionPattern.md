@@ -66,4 +66,4 @@ This module defines the following properties:
 - [version](../properties/version.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../condition-pattern.ttl) and the SHACL [restrictions](../condition-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../ConditionPattern.ttl) and the SHACL [restrictions](../ConditionSHACL.ttl).

@@ -52,4 +52,4 @@ This module defines the following properties:
 - [permittedEntityType](../properties/permittedEntityType.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../permit-pattern.ttl) and the SHACL [restrictions](../permit-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../PermitPattern.ttl) and the SHACL [restrictions](../PermitSHACL.ttl).

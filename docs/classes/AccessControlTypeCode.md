@@ -60,5 +60,5 @@ A code that indicates the type of access control device.
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:Code](its-core:Code.md) |
+| subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 

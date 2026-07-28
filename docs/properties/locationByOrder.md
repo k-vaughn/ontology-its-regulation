@@ -10,7 +10,7 @@ The location where the regulation is defined to apply per the traffic regulation
 
 | Class |
 |-------|
-| [LocationCondition](../classes/LocationCondition.md) |
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
+| [LocationCondition](../classes/LocationCondition.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/locationByOrder`

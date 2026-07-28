@@ -10,6 +10,7 @@
 @prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 @prefix its-location: <https://w3id.org/itsdata/location/v1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 :TrafficControlDevicePattern
     dcterms:creator               "Kenneth Vaughn"@en ;
@@ -19,7 +20,9 @@
     its-core:draft                true ;
     owl:imports                   :CorePattern ;
     rdf:type                      owl:Ontology ;
-    skos:definition               "This ontology defines concepts related to traffic control devices."@en .
+    skos:definition               "This ontology defines concepts related to traffic control devices."@en ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 :TrafficControlDevice
     rdf:type        owl:Class ;

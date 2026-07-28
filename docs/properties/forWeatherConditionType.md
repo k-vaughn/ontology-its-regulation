@@ -4,6 +4,6 @@
 
 The type of weather condition that is subject to the regulation.
 
-**Range**: [WeatherConditionCode](../properties/WeatherConditionCode.md)
+**Range**: [WeatherConditionCode](WeatherConditionCode.md)
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forWeatherConditionType`

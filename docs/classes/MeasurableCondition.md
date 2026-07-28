@@ -122,10 +122,10 @@ A condition that is based on a comparison between a measurable value and a thres
 | Property | Constraint |
 |----------|------------|
 | [comparisonOperator](../properties/comparisonOperator.md) | exactly 1 |
-| [comparisonOperator](../properties/comparisonOperator.md) | only [its-core:ComparisonOperatorCode](https://w3id.org/itsdata/core/v1/ComparisonOperatorCode) |
+| [comparisonOperator](../properties/comparisonOperator.md) | exactly 1 [its-core:ComparisonOperatorCode](https://w3id.org/itsdata/core/v1/ComparisonOperatorCode) |
 | [forMeasurableCondition](../properties/forMeasurableCondition.md) | exactly 1 |
-| [forMeasurableCondition](../properties/forMeasurableCondition.md) | only [MeasurableConditionCode](https://w3id.org/itsdata/regulation/v1/MeasurableConditionCode) |
+| [forMeasurableCondition](../properties/forMeasurableCondition.md) | exactly 1 [MeasurableConditionCode](https://w3id.org/itsdata/regulation/v1/MeasurableConditionCode) |
 | [valueToCompare](../properties/valueToCompare.md) | exactly 1 |
-| [valueToCompare](../properties/valueToCompare.md) | only [cdm1:Measure](https://w3id.org/citydata/part1/v1/Measure) |
+| [valueToCompare](../properties/valueToCompare.md) | exactly 1 [cdm1:Measure](https://w3id.org/citydata/part1/v1/Measure) |
 | subClassOf | [Condition](Condition.md) |
 

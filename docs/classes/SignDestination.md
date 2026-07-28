@@ -185,7 +185,7 @@ A destination that is indicated on the road sign.
 | Property | Constraint |
 |----------|------------|
 | [arrowDirection](../properties/arrowDirection.md) | only [OrdinalDirectionCode](https://w3id.org/itsdata/regulation/v1/OrdinalDirectionCode) |
-| [destinationHorizon](../properties/destinationHorizon.md) | only [Horizon](https://w3id.org/itsdata/regulation/v1/Horizon) |
+| [destinationHorizon](../properties/destinationHorizon.md) | max 1 [Horizon](https://w3id.org/itsdata/regulation/v1/Horizon) |
 | [destinationPlace](../properties/destinationPlace.md) | only [DestinationPlace](https://w3id.org/itsdata/regulation/v1/DestinationPlace) |
 | [destinationRoad](../properties/destinationRoad.md) | only [DestinationRoad](https://w3id.org/itsdata/regulation/v1/DestinationRoad) |
 | [divergeHorizon](../properties/divergeHorizon.md) | only [cdm1:Length](https://w3id.org/citydata/part1/v1/Length) |

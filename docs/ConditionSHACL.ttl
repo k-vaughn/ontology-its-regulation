@@ -3,6 +3,7 @@ PREFIX : <https://w3id.org/itsdata/regulation/v1/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -16,7 +17,9 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 :ConditionSHACL a owl:Ontology ;
     dcterms:title "SHACL constraints for the Condition pattern"@en ;
     skos:definition "Validation shapes for traffic regulation condition concepts."@en ;
-    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 :ConditionShape a sh:NodeShape ;
     sh:targetClass :Condition ;
