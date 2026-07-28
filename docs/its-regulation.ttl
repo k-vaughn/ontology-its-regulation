@@ -11,7 +11,7 @@
     rdf:type                      owl:Ontology ;
     dcterms:creator               "Kenneth Vaughn"@en ;
     dcterms:license               <http://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:modified              "2026-05-06T19:42:06Z"^^xsd:dateTime ;
+    dcterms:modified              "2026-07-28"^^xsd:date ;
     dcterms:title                 "ITS Ontology - Traffic Regulation Topic Area"@en ;
     its-core:draft                true ;
     owl:imports                   :CorePattern ;
@@ -19,8 +19,9 @@
     owl:imports                   :ConditionVehicleAlignment ;
     owl:imports                   :PermitPattern ;
     owl:imports                   :TrafficRegulationPattern ;
-    owl:versionIRI                <https://w3id.org/itsdata/regulation/v1/ITSRegulation/r0.2> ;
-    owl:versionInfo               "0.0.2" ;
+    owl:versionIRI                <https://w3id.org/itsdata/regulation/v1/0.0.3-alpha.2> ;
+    owl:priorVersion               <https://w3id.org/itsdata/regulation/v1/0.0.3-alpha.1> ;
+    owl:versionInfo               "0.0.3-alpha.2" ;
     skos:definition               "This ontology imports the Traffic Regulation topic area modules (core, patterns, and constraints)."@en ;
     vann:preferredNamespacePrefix "its-regulation" ;
     vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
