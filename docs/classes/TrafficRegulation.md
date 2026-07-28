@@ -46,7 +46,7 @@ A traffic regulation is a rule having the force of law that is established by a 
     <polygon fill="none" stroke="black" points="246.5,-599.08 250,-609.08 253.5,-599.08 246.5,-599.08"/>
     </g>
     <!-- TrafficRegulation&#45;&gt;TrafficRegulation -->
-    <g id="edge13" class="edge">
+    <g id="edge11" class="edge">
     <title>TrafficRegulation&#45;&gt;TrafficRegulation</title>
     <path fill="none" stroke="black" d="M297.31,-559.3C307.76,-558.61 315.38,-556.18 315.38,-552 315.38,-549.58 312.83,-547.75 308.66,-546.5"/>
     <polygon fill="black" stroke="black" points="309.23,-543.05 298.8,-544.94 308.13,-549.96 309.23,-543.05"/>
@@ -67,7 +67,7 @@ A traffic regulation is a rule having the force of law that is established by a 
     </g>
     </g>
     <!-- TrafficRegulation&#45;&gt;Condition -->
-    <g id="edge11" class="edge">
+    <g id="edge12" class="edge">
     <title>TrafficRegulation&#45;&gt;Condition</title>
     <path fill="none" stroke="black" d="M202.89,-542.84C175,-535.62 141.1,-522.29 120,-498 90.93,-464.52 84.1,-411.44 82.82,-379.06"/>
     <polygon fill="black" stroke="black" points="86.33,-379.18 82.61,-369.26 79.33,-379.33 86.33,-379.18"/>
@@ -86,7 +86,7 @@ A traffic regulation is a rule having the force of law that is established by a 
     </g>
     </g>
     <!-- TrafficRegulation&#45;&gt;its&#45;core_ActivationStatusCode -->
-    <g id="edge9" class="edge">
+    <g id="edge10" class="edge">
     <title>TrafficRegulation&#45;&gt;its&#45;core_ActivationStatusCode</title>
     <path fill="none" stroke="black" d="M244.36,-534.33C236.05,-512.18 218.45,-473.18 191,-450.5 172.55,-435.26 155.87,-450.63 140.25,-432.5 109.51,-396.82 131.46,-374.17 120,-328.5 116.06,-312.81 110.79,-295.53 106.28,-281.56"/>
     <polygon fill="black" stroke="black" points="109.64,-280.57 103.2,-272.16 102.99,-282.75 109.64,-280.57"/>
@@ -124,7 +124,7 @@ A traffic regulation is a rule having the force of law that is established by a 
     </g>
     </g>
     <!-- TrafficRegulation&#45;&gt;PermitType -->
-    <g id="edge12" class="edge">
+    <g id="edge13" class="edge">
     <title>TrafficRegulation&#45;&gt;PermitType</title>
     <path fill="none" stroke="black" d="M286.16,-534.24C308.53,-521.12 333,-500.49 333,-473 333,-473 333,-473 333,-179 333,-147.35 240.44,-125.49 183.52,-115.03"/>
     <polygon fill="black" stroke="black" points="184.25,-111.61 173.79,-113.3 183.03,-118.5 184.25,-111.61"/>
@@ -142,7 +142,7 @@ A traffic regulation is a rule having the force of law that is established by a 
     </g>
     </g>
     <!-- TrafficRegulation&#45;&gt;TrafficControlDevice -->
-    <g id="edge10" class="edge">
+    <g id="edge9" class="edge">
     <title>TrafficRegulation&#45;&gt;TrafficControlDevice</title>
     <path fill="none" stroke="black" d="M297.23,-549.89C349.97,-545.84 428,-530.19 428,-473 428,-473 428,-473 428,-106 428,-57.41 279.75,-42.06 189.62,-37.22"/>
     <polygon fill="black" stroke="black" points="189.8,-33.73 179.64,-36.72 189.45,-40.72 189.8,-33.73"/>
@@ -179,11 +179,11 @@ A traffic regulation is a rule having the force of law that is established by a 
 | Property | Constraint |
 |----------|------------|
 | [associatedTrafficControlDevice](../properties/associatedTrafficControlDevice.md) | only [TrafficControlDevice](https://w3id.org/itsdata/regulation/v1/TrafficControlDevice) |
-| [hasAssociatedRestriction](../properties/hasAssociatedRestriction.md) | only [TrafficRegulation](https://w3id.org/itsdata/regulation/v1/TrafficRegulation) |
-| [hasCondition](../properties/hasCondition.md) | only [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
+| [hasAssociatedRestriction](../properties/hasAssociatedRestriction.md) | max 1 [TrafficRegulation](https://w3id.org/itsdata/regulation/v1/TrafficRegulation) |
+| [hasCondition](../properties/hasCondition.md) | max 1 [Condition](https://w3id.org/itsdata/regulation/v1/Condition) |
 | [hasLegalBasis](../properties/hasLegalBasis.md) | exactly 1 |
 | [hasPermitType](../properties/hasPermitType.md) | only [PermitType](https://w3id.org/itsdata/regulation/v1/PermitType) |
-| [its-core:hasActivationStatus](https://w3id.org/itsdata/core/v1/hasActivationStatus) | only [its-core:ActivationStatusCode](https://w3id.org/itsdata/core/v1/ActivationStatusCode) |
+| [its-core:hasActivationStatus](https://w3id.org/itsdata/core/v1/hasActivationStatus) | exactly 1 [its-core:ActivationStatusCode](https://w3id.org/itsdata/core/v1/ActivationStatusCode) |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 
 ## Other annotations

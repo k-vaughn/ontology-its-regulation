@@ -4,6 +4,8 @@
 
 A code that indicates the type of road surface feature.
 
+**Range**: [RoadSurfaceFeatureTypeCode](../classes/RoadSurfaceFeatureTypeCode.md)
+
 ## Used in classes
 
 | Class |

@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 
@@ -16,7 +17,9 @@
     its-core:draft                true ;
     owl:imports                   its-core: ;
     rdf:type                      owl:Ontology ;
-    skos:definition               "This document defines the core concepts related to the Traffic Regulation topic area of the ITS Ontology."@en .
+    skos:definition               "This document defines the core concepts related to the Traffic Regulation topic area of the ITS Ontology."@en ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 :RegulationThing
     rdf:type        owl:Class ;

@@ -4,6 +4,8 @@
 
 A traffic control device associated with the instance of the traffic regulation.
 
+**Range**: [TrafficControlDevice](../classes/TrafficControlDevice.md)
+
 ## Used in classes
 
 | Class |

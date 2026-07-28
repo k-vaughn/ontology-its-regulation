@@ -62,7 +62,7 @@ Details about the application of the permit.
     </g>
     </g>
     <!-- PermitApplicationInformation&#45;&gt;cdm2_ContactInformation -->
-    <g id="edge8" class="edge">
+    <g id="edge7" class="edge">
     <title>PermitApplicationInformation&#45;&gt;cdm2_ContactInformation</title>
     <path fill="none" stroke="black" d="M179.67,-392.86C171.76,-382.65 164.01,-371.34 158.12,-360 142.4,-329.69 132.45,-291.52 127.03,-266.02"/>
     <polygon fill="black" stroke="black" points="130.51,-265.54 125.1,-256.43 123.64,-266.92 130.51,-265.54"/>
@@ -99,7 +99,7 @@ Details about the application of the permit.
     </g>
     </g>
     <!-- PermitApplicationInformation&#45;&gt;RegistrationMachine -->
-    <g id="edge7" class="edge">
+    <g id="edge8" class="edge">
     <title>PermitApplicationInformation&#45;&gt;RegistrationMachine</title>
     <path fill="none" stroke="black" d="M343.1,-406.61C375.26,-392.07 400.88,-369.63 400.88,-335 400.88,-335 400.88,-335 400.88,-163 400.88,-121.71 280.51,-103.88 201.11,-96.6"/>
     <polygon fill="black" stroke="black" points="201.49,-93.12 191.22,-95.74 200.88,-100.09 201.49,-93.12"/>
@@ -130,10 +130,11 @@ Details about the application of the permit.
 | Property | Constraint |
 |----------|------------|
 | [hasApplicationInstructions](../properties/hasApplicationInstructions.md) | 0..* rdf:langString (one per language) |
-| [hasApplicationUrl](../properties/hasApplicationUrl.md) | datatype xsd:anyURI |
+| [hasApplicationUrl](../properties/hasApplicationUrl.md) | max 1 xsd:anyURI |
 | [hasAssociatedFee](../properties/hasAssociatedFee.md) | only [PermitFee](https://w3id.org/itsdata/regulation/v1/PermitFee) |
-| [hasContactInformation](../properties/hasContactInformation.md) | datatype cdm2:ContactInformation |
-| [hasInformationUrl](../properties/hasInformationUrl.md) | datatype xsd:anyURI |
+| [hasContactInformation](../properties/hasContactInformation.md) | max 1 cdm2:ContactInformation |
+| [hasInformationUrl](../properties/hasInformationUrl.md) | max 1 xsd:anyURI |
 | [hasRegistrationMachine](../properties/hasRegistrationMachine.md) | only [RegistrationMachine](https://w3id.org/itsdata/regulation/v1/RegistrationMachine) |
+| [isApplicationRequired](../properties/isApplicationRequired.md) | max 1 |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

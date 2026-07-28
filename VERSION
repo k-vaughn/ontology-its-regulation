@@ -1,0 +1,11 @@
+# Ontology / documentation release version for this repository.
+# Line 1 is required. Line 2 is only for documentation-only releases.
+#
+# Ontology release (must bump SemVer vs RELEASES), do not include docs-only line:
+#   version: 1.2.3
+#   version: 1.2.3-alpha.1
+#
+# Documentation-only release (SemVer unchanged; date >= latest RELEASES date):
+#   version: 1.2.3
+#   doc-only: 2026-07-27
+version: 0.0.3-alpha.2

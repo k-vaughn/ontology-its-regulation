@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
 @prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
@@ -28,7 +29,13 @@
     owl:imports                   its-time: ;
     owl:imports                   its-vehicle: ;
     owl:imports                   :CorePattern ;
-    skos:definition               "This ontology defines concepts related to permits."@en .
+    skos:definition               "This ontology defines concepts related to permits."@en ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
+
+# ================================================
+#                 Code Classes
+# ================================================
 
 :PermitDesignationCode
     rdf:type        owl:Class ;
@@ -40,15 +47,19 @@
     rdfs:subClassOf :RegulationThing ;
     skos:definition "A code that indicates the type of display that is associated with the permit."@en .
 
+:PermitGranteeTypeCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A code that indicates the type of grantee of the permit."@en .
+
 :PermitGrantorTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
     skos:definition "A code that indicates the type of grantor of the permit."@en .
 
-:PermitGranteeTypeCode
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :RegulationThing ;
-    skos:definition "A code that indicates the type of grantee of the permit."@en .
+# ================================================
+#                 Permit Classes
+# ================================================
 
 :Permit
     rdf:type        owl:Class ;
@@ -67,6 +78,11 @@
     ] ;
     skos:definition "Certificate that indicates designations that are associated with the grantee."@en .
 
+:PermitApplicationInformation
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "Details about the application of the permit."@en .
+
 :PermitType
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
@@ -83,11 +99,6 @@
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
     ] ;
     skos:definition "A category of certificate that the grantor is able to issue to designate a grantee as a specific type of entity."@en .
-
-:PermitApplicationInformation
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :RegulationThing ;
-    skos:definition "Details about the application of the permit."@en .
 
 :RegistrationMachine
     rdf:type        owl:Class ;

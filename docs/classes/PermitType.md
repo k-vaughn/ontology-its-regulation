@@ -97,7 +97,7 @@ A category of certificate that the grantor is able to issue to designate a grant
     </g>
     </g>
     <!-- PermitType&#45;&gt;its&#45;time_Duration -->
-    <g id="edge16" class="edge">
+    <g id="edge13" class="edge">
     <title>PermitType&#45;&gt;its&#45;time_Duration</title>
     <path fill="none" stroke="black" d="M373.75,-811.45C359.46,-779.99 324.44,-711.01 275.88,-670 260.83,-657.29 247.71,-667.36 235.38,-652 188.53,-593.65 227.45,-557.32 201.88,-487 192.42,-461.01 177.05,-433.53 165.12,-414.05"/>
     <polygon fill="black" stroke="black" points="168.14,-412.29 159.87,-405.66 162.2,-416 168.14,-412.29"/>
@@ -106,7 +106,7 @@ A category of certificate that the grantor is able to issue to designate a grant
     <text xml:space="preserve" text-anchor="start" x="288.12" y="-616" font-family="Arial" font-size="11.00">0..1</text>
     </g>
     <!-- PermitType&#45;&gt;its&#45;time_Duration -->
-    <g id="edge17" class="edge">
+    <g id="edge15" class="edge">
     <title>PermitType&#45;&gt;its&#45;time_Duration</title>
     <path fill="none" stroke="black" d="M380.88,-811.13C380.88,-796.03 380.88,-773.29 380.88,-753.5 380.88,-753.5 380.88,-753.5 380.88,-507.5 380.88,-428.41 273.45,-401.4 204.49,-392.21"/>
     <polygon fill="black" stroke="black" points="205.21,-388.77 194.85,-391.02 204.35,-395.72 205.21,-388.77"/>
@@ -163,7 +163,7 @@ A category of certificate that the grantor is able to issue to designate a grant
     </g>
     </g>
     <!-- PermitType&#45;&gt;PermitDisplayTypeCode -->
-    <g id="edge15" class="edge">
+    <g id="edge16" class="edge">
     <title>PermitType&#45;&gt;PermitDisplayTypeCode</title>
     <path fill="none" stroke="black" d="M494.11,-811.97C553.83,-800.21 614.88,-781.37 614.88,-753.5 614.88,-753.5 614.88,-753.5 614.88,-236 614.88,-195.79 348.47,-176.11 212.19,-168.67"/>
     <polygon fill="black" stroke="black" points="212.69,-165.19 202.52,-168.15 212.32,-172.18 212.69,-165.19"/>
@@ -182,7 +182,7 @@ A category of certificate that the grantor is able to issue to designate a grant
     </g>
     </g>
     <!-- PermitType&#45;&gt;PermitGranteeTypeCode -->
-    <g id="edge13" class="edge">
+    <g id="edge17" class="edge">
     <title>PermitType&#45;&gt;PermitGranteeTypeCode</title>
     <path fill="none" stroke="black" d="M494.08,-823.9C590.62,-817.21 713.88,-799.63 713.88,-753.5 713.88,-753.5 713.88,-753.5 713.88,-163 713.88,-113.07 371.45,-97.96 212.36,-93.63"/>
     <polygon fill="black" stroke="black" points="212.83,-90.14 202.74,-93.38 212.65,-97.14 212.83,-90.14"/>
@@ -219,14 +219,14 @@ A category of certificate that the grantor is able to issue to designate a grant
 |----------|------------|
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | 0..* rdf:langString (one per language) |
 | [grantsDesignation](../properties/grantsDesignation.md) | exactly 1 |
-| [grantsDesignation](../properties/grantsDesignation.md) | datatype PermitDesignationCode |
-| [hasApplicationInformation](../properties/hasApplicationInformation.md) | datatype PermitApplicationInformation |
-| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | datatype its-time:Duration |
-| [hasDefaultLocation](../properties/hasDefaultLocation.md) | datatype its-location:Feature |
-| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | datatype its-time:Duration |
-| [hasDisplayType](../properties/hasDisplayType.md) | datatype PermitDisplayTypeCode |
-| [hasGranteeType](../properties/hasGranteeType.md) | datatype PermitGranteeTypeCode |
+| [grantsDesignation](../properties/grantsDesignation.md) | max 1 PermitDesignationCode |
+| [hasApplicationInformation](../properties/hasApplicationInformation.md) | max 1 PermitApplicationInformation |
+| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | max 1 its-time:Duration |
+| [hasDefaultLocation](../properties/hasDefaultLocation.md) | max 1 its-location:Feature |
+| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | max 1 its-time:Duration |
+| [hasDisplayType](../properties/hasDisplayType.md) | exactly 1 PermitDisplayTypeCode |
+| [hasGranteeType](../properties/hasGranteeType.md) | max 1 PermitGranteeTypeCode |
 | [hasGrantor](../properties/hasGrantor.md) | exactly 1 |
-| [hasGrantor](../properties/hasGrantor.md) | datatype cdm2:Organization |
+| [hasGrantor](../properties/hasGrantor.md) | max 1 cdm2:Organization |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

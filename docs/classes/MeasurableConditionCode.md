@@ -62,7 +62,7 @@ EXAMPLE: vehicle gross weight, vehicle height, vehicle speed, wind speed, number
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:Code](its-core:Code.md) |
+| subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 
 ## Other annotations
 

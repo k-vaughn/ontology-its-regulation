@@ -142,11 +142,11 @@ A condition that is based on the possession of a permit.
 
 | Property | Constraint |
 |----------|------------|
-| [requiredDesignation](../properties/requiredDesignation.md) | only [PermitDesignationCode](https://w3id.org/itsdata/regulation/v1/PermitDesignationCode) |
-| [requiredDisplayType](../properties/requiredDisplayType.md) | only [PermitDisplayTypeCode](https://w3id.org/itsdata/regulation/v1/PermitDisplayTypeCode) |
-| [requiredGrantor](../properties/requiredGrantor.md) | only [cdm2:Organization](https://w3id.org/citydata/part2/v1/Organization) |
-| [requiredGrantorType](../properties/requiredGrantorType.md) | only [PermitGrantorTypeCode](https://w3id.org/itsdata/regulation/v1/PermitGrantorTypeCode) |
-| [requiredPermitIdentifier](../properties/requiredPermitIdentifier.md) | datatype xsd:string |
+| [requiredDesignation](../properties/requiredDesignation.md) | exactly 1 [PermitDesignationCode](https://w3id.org/itsdata/regulation/v1/PermitDesignationCode) |
+| [requiredDisplayType](../properties/requiredDisplayType.md) | max 1 [PermitDisplayTypeCode](https://w3id.org/itsdata/regulation/v1/PermitDisplayTypeCode) |
+| [requiredGrantor](../properties/requiredGrantor.md) | max 1 [cdm2:Organization](https://w3id.org/citydata/part2/v1/Organization) |
+| [requiredGrantorType](../properties/requiredGrantorType.md) | max 1 [PermitGrantorTypeCode](https://w3id.org/itsdata/regulation/v1/PermitGrantorTypeCode) |
+| [requiredPermitIdentifier](../properties/requiredPermitIdentifier.md) | exactly 1 xsd:string |
 | subClassOf | [Condition](Condition.md) |
 
 ## Other annotations

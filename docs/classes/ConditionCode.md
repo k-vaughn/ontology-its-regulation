@@ -68,7 +68,7 @@ A code that indicates the enumerated types of conditions that affect the applica
 | [Load Type Code](https://w3id.org/itsdata/vehicle/v1/LoadTypeCode)[^alignment] |  |
 | [Non Vehicular Road User Code](NonVehicularRoadUserCode.md) | A code that indicates categories of non-vehicular road users that can affect the applicability of a regulation. |
 | [Road Type Code](RoadTypeCode.md) | A code that indicates categories of roads that can affect the applicability of a regulation. |
-| [Road Weather Condition Code](RoadWeatherConditionCode.md) | A code that indicates the types of road weather conditions that can affect the applicability of a regulation. |
+| [Road Weather Condition Code](https://w3id.org/itsdata/weather/v1/RoadWeatherConditionCode)[^alignment] |  |
 | [Standing Or Parking Category Code](StandingOrParkingCategoryCode.md) | A code that indicates categories of standing or parking that can affect the applicability of a regulation. |
 | [Tunnel Category Code](TunnelCategoryCode.md) | A code that indicates categories of tunnels that can affect the applicability of a regulation. |
 | [Vehicle Equipment Code](https://w3id.org/itsdata/vehicle/v1/VehicleEquipmentCode)[^alignment] |  |
@@ -81,7 +81,7 @@ A code that indicates the enumerated types of conditions that affect the applica
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:Code](its-core:Code.md) |
+| subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 
 ## Other annotations
 

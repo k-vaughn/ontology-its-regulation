@@ -4,6 +4,8 @@
 
 A code that indicates the type of access control device.
 
+**Range**: [AccessControlTypeCode](../classes/AccessControlTypeCode.md)
+
 ## Used in classes
 
 | Class |

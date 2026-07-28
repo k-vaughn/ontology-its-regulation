@@ -7,7 +7,7 @@ digraph {
 		rank=source
 		TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
 	}
-	TextualRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TextualRegulation</TD></TR></TABLE>> URL="../TextualRegulation" margin=0]
+	TextualRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TextualRegulation</TD></TR><TR><TD ALIGN="LEFT">cdm1:hasDescription</TD></TR></TABLE>> URL="../TextualRegulation" margin=0]
 	{
 		rank=max
 	}

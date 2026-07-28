@@ -10,7 +10,7 @@ The validity period for the condition as implemented.
 
 | Class |
 |-------|
-| [TimeValidityCondition](../classes/TimeValidityCondition.md) |
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
+| [TimeValidityCondition](../classes/TimeValidityCondition.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/implementedValidity`

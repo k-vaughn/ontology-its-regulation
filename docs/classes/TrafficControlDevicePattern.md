@@ -33,6 +33,7 @@ This module defines the following properties:
 - [accessControlType](../properties/accessControlType.md)
 - [arrowDirection](../properties/arrowDirection.md)
 - [channelizationType](../properties/channelizationType.md)
+- [compositeText](../properties/compositeText.md)
 - [destinationHorizon](../properties/destinationHorizon.md)
 - [destinationPlace](../properties/destinationPlace.md)
 - [destinationRoad](../properties/destinationRoad.md)
@@ -48,4 +49,4 @@ This module defines the following properties:
 - [url](../properties/url.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../traffic-control-device-pattern.ttl) and the SHACL [restrictions](../traffic-control-device-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TrafficControlDevicePattern.ttl) and the SHACL [restrictions](../TrafficControlDeviceSHACL.ttl).

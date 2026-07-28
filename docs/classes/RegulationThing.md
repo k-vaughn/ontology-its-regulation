@@ -89,7 +89,8 @@ A class to organize all classes defined in the Traffic Regulation topic area of 
 | [Permit Type](PermitType.md) | A category of certificate that the grantor is able to issue to designate a grantee as a specific type of entity. |
 | [Reason Code](ReasonCode.md) | A code indicating the reason for the traffic regulation order. |
 | [Registration Machine](RegistrationMachine.md) | A machine that is used to register the permit. |
-| [Regulation Code](RegulationCode.md) |  |
+| [Regulation Code](RegulationCode.md) | A code used to identify a category of regulation. |
+| [Regulation Code List](RegulationCodeList.md) | A list of rule categories that are defined by an authority. |
 | [Regulatory Scope Code](RegulatoryScopeCode.md) | A code indicating the regulatory scope of a rule maker role. |
 | [Road Surface Feature](RoadSurfaceFeature.md) | A traffic control device that changes the nature of the road surface, such as rumble strips or speed bumps. |
 | [Rule Maker Role](RuleMakerRole.md) | A Role that includes the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity. |
@@ -112,7 +113,7 @@ A class to organize all classes defined in the Traffic Regulation topic area of 
 
 | Property | Constraint |
 |----------|------------|
-| subClassOf | [its-core:ITSThing](its-core:ITSThing.md) |
+| subClassOf | [its-core:ITSThing](https://w3id.org/itsdata/core/v1/ITSThing) |
 
 ## Other annotations
 

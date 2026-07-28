@@ -1,0 +1,24 @@
+name: Apply VERSION and publish release
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  release:
+    if: ${{ !github.event.repository.fork }}
+    uses: ISO-TC204/ontology-shared-scripts/.github/workflows/release-on-merge.yml@main
+    secrets: inherit
+
+  deploy:
+    needs: release
+    if: needs.release.outputs.publish == 'true' && needs.release.outputs.tag != ''
+    uses: ISO-TC204/ontology-shared-scripts/.github/workflows/update_release.yml@main
+    with:
+      release_tag: ${{ needs.release.outputs.tag }}
+    secrets: inherit

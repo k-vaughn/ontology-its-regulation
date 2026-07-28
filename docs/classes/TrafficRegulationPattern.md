@@ -21,6 +21,7 @@ This pattern consists of the following classes:
 - [Fee Regulation Code](FeeRegulationCode.md)
 - [Reason Code](ReasonCode.md)
 - [Regulation Code](RegulationCode.md)
+- [Regulation Code List](RegulationCodeList.md)
 - [Regulatory Scope Code](RegulatoryScopeCode.md)
 - [Rule Maker Role](RuleMakerRole.md)
 - [Stand Alone Regulation Code](StandAloneRegulationCode.md)
@@ -37,11 +38,10 @@ This module defines the following properties:
 - [hasAssociatedRestriction](../properties/hasAssociatedRestriction.md)
 - [hasPermitType](../properties/hasPermitType.md)
 - [issuedTro](../properties/issuedTro.md)
-- [issuingAuthority](../properties/issuingAuthority.md)
 - [memberTrafficRegulation](../properties/memberTrafficRegulation.md)
 - [reasonCode](../properties/reasonCode.md)
 - [regulatoryScope](../properties/regulatoryScope.md)
 - [troStatus](../properties/troStatus.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../regulation-pattern.ttl) and the SHACL [restrictions](../regulation-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../TrafficRegulationPattern.ttl) and the SHACL [restrictions](../TrafficRegulationSHACL.ttl).

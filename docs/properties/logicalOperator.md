@@ -4,4 +4,8 @@
 
 The logical operator used to combine the Conditions in a ConditionSet.
 
+**Domain**: [ConditionSet](../classes/ConditionSet.md)
+
+**Range**: [LogicalOperatorCode](../classes/LogicalOperatorCode.md)
+
 **IRI**: `https://w3id.org/itsdata/regulation/v1/logicalOperator`

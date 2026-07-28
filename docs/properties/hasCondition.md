@@ -10,7 +10,7 @@ A condition associated with the instance (for example a traffic regulation); not
 
 | Class |
 |-------|
-| [SimpleSign](../classes/SimpleSign.md) |
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
+| [SimpleSign](../classes/SimpleSign.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasCondition`

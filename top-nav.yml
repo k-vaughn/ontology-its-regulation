@@ -1,0 +1,9 @@
+# Optional top-level MkDocs nav links for the repository being processed.
+# Copy to `top-nav.yml` (next to mkdocs.yml). When present, ttl2md / owl2md /
+# ofn2md prepend these entries and nest the generated site nav under site_name.
+#
+# Without this file, navigation stays flat (Home / Classes / Properties / Patterns).
+
+- TC204 on ISO.org: https://www.iso.org/committee/54706.html
+- TC 204 Home: https://isotc204.org/
+- RITSO Home:  https://isotc204.org/ritso/

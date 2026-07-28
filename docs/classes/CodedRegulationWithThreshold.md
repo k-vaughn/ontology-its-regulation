@@ -101,8 +101,8 @@ A restriction defined by a code coupled with a threshold value.
 
 | Property | Constraint |
 |----------|------------|
-| [hasRegulation](../properties/hasRegulation.md) | exactly 1 |
-| [hasThreshold](../properties/hasThreshold.md) | exactly 1 |
+| hasRegulation | exactly 1 |
+| hasThreshold | exactly 1 |
 | subClassOf | [TrafficRegulation](TrafficRegulation.md) |
 
 ## Other annotations

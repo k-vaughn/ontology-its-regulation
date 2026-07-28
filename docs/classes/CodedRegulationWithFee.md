@@ -101,8 +101,8 @@ A condition defined by a code.
 
 | Property | Constraint |
 |----------|------------|
-| [hasFeeSchedule](../properties/hasFeeSchedule.md) | exactly 1 |
-| [hasRegulation](../properties/hasRegulation.md) | exactly 1 |
+| hasFeeSchedule | exactly 1 |
+| hasRegulation | exactly 1 |
 | subClassOf | [TrafficRegulation](TrafficRegulation.md) |
 
 ## Other annotations

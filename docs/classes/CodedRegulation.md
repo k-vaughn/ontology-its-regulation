@@ -81,7 +81,7 @@ A restriction defined by a code.
 
 | Property | Constraint |
 |----------|------------|
-| [hasRegulation](../properties/hasRegulation.md) | exactly 1 |
+| hasRegulation | exactly 1 |
 | subClassOf | [TrafficRegulation](TrafficRegulation.md) |
 
 ## Other annotations

@@ -29,7 +29,6 @@ This pattern consists of the following classes:
 - [Non Vehicular Road User Code](NonVehicularRoadUserCode.md)
 - [Permit Required Condition](PermitRequiredCondition.md)
 - [Road Type Code](RoadTypeCode.md)
-- [Road Weather Condition Code](RoadWeatherConditionCode.md)
 - [Standing Or Parking Category Code](StandingOrParkingCategoryCode.md)
 - [Time Validity Condition](TimeValidityCondition.md)
 - [Tunnel Category Code](TunnelCategoryCode.md)
@@ -43,9 +42,9 @@ This module defines the following properties:
 - [forMeasurableCondition](../properties/forMeasurableCondition.md)
 - [forNonVehicularRoadUserType](../properties/forNonVehicularRoadUserType.md)
 - [forRoadType](../properties/forRoadType.md)
+- [forRoadWeatherConditionType](../properties/forRoadWeatherConditionType.md)
 - [forStandingOrParkingCategory](../properties/forStandingOrParkingCategory.md)
 - [forTunnelCategory](../properties/forTunnelCategory.md)
-- [forWeatherConditionType](../properties/forWeatherConditionType.md)
 - [hasCondition](../properties/hasCondition.md)
 - [hasLegalBasis](../properties/hasLegalBasis.md)
 - [implementedLocation](../properties/implementedLocation.md)
@@ -66,4 +65,4 @@ This module defines the following properties:
 - [version](../properties/version.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../condition-pattern.ttl) and the SHACL [restrictions](../condition-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../ConditionPattern.ttl) and the SHACL [restrictions](../ConditionSHACL.ttl).

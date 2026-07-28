@@ -99,10 +99,10 @@ A condition that applies to a specific location.
 
 | Property | Constraint |
 |----------|------------|
-| [implementedLocation](../properties/implementedLocation.md) | only [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
+| [implementedLocation](../properties/implementedLocation.md) | max 1 [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
 | [locationByOrder](../properties/locationByOrder.md) | exactly 1 |
-| [locationByOrder](../properties/locationByOrder.md) | only [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
-| [trafficImpactLocation](../properties/trafficImpactLocation.md) | only [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
+| [locationByOrder](../properties/locationByOrder.md) | exactly 1 [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
+| [trafficImpactLocation](../properties/trafficImpactLocation.md) | max 1 [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
 | subClassOf | [Condition](Condition.md) |
 
 ## Other annotations

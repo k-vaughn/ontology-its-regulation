@@ -4,6 +4,8 @@
 
 A code that indicates the type of channelization device.
 
+**Range**: [ChannelizationTypeCode](../classes/ChannelizationTypeCode.md)
+
 ## Used in classes
 
 | Class |

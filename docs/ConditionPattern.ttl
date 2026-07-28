@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix cdm1: <https://w3id.org/citydata/part1/v1/> .
 @prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
@@ -13,6 +14,7 @@
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 @prefix its-location: <https://w3id.org/itsdata/location/v1/> .
 @prefix its-time: <https://w3id.org/itsdata/time/v1/> .
+@prefix its-weather: <https://w3id.org/itsdata/weather/v1/> .
 
 :ConditionPattern
     rdf:type                      owl:Ontology ;
@@ -27,7 +29,9 @@
     owl:imports                   its-time: ;
     owl:imports                   :CorePattern ;
     owl:imports                   :PermitPattern ;
-    skos:definition               "This ontology defines concepts related to traffic regulations."@en .
+    skos:definition               "This ontology defines concepts related to traffic regulations."@en ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 # ================================================
 #                 Condition Code classes
@@ -68,13 +72,6 @@
     skos:definition "A code that indicates categories of roads that can affect the applicability of a regulation."@en ;
     skos:example "gravel, paved, urban, rural, motorway, etc."@en ;
     rdfs:seeAlso "DATEX-II RoadTypeEnum".
-
-:RoadWeatherConditionCode
-    rdf:type        owl:Class ;
-    rdfs:subClassOf :ConditionCode ;
-    skos:definition "A code that indicates the types of road weather conditions that can affect the applicability of a regulation."@en ;
-    skos:example "rain, snow, fog, black ice, etc."@en ;
-    rdfs:seeAlso "DATEX-II WeatherRelatedRoadConditionTypeEnum".
 
 :StandingOrParkingCategoryCode
     rdf:type        owl:Class ;
@@ -286,10 +283,10 @@
     rdfs:range          :TunnelCategoryCode ;
     skos:definition "The category of tunnel within which travel is taking place."@en .
 
-:forWeatherConditionType
+:forRoadWeatherConditionType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :WeatherConditionCode ;
+    rdfs:range          its-weather:RoadWeatherConditionCode ;
     skos:definition "The type of weather condition that is subject to the regulation."@en .
 
 :hasCondition
@@ -377,30 +374,30 @@
 
 :isActive
     rdf:type        owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     rdfs:range xsd:boolean ;
     skos:definition "Indicates whether the condition is currently active."@en .
 
 :negate
     rdf:type        owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     rdfs:range xsd:boolean ;
     skos:definition "Indicates whether the condition is negated."@en .
 
 :otherCondition
     rdf:type        owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     rdfs:range         rdf:langString;
     skos:definition "A separate condition that determines the applicability of the regulation."@en .
 
 :requiredPermitIdentifier
     rdf:type            owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     rdfs:range          xsd:string ;
     skos:definition "The identifier of the permit that is required for the instance of the traffic regulation."@en .
 
 :version
     rdf:type        owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     rdfs:range xsd:string ;
     skos:definition "The version of the object."@en .

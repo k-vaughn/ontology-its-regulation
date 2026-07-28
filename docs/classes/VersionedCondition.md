@@ -77,7 +77,7 @@ A specific version of a condition that can be referenced by a ConditionReference
 | Property | Constraint |
 |----------|------------|
 | subClassOf | [Condition](Condition.md) |
-| subClassOf | [VersionedThing](../properties/VersionedThing.md) |
+| subClassOf | VersionedThing |
 
 ## Other annotations
 

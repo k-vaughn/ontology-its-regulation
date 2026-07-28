@@ -6,16 +6,4 @@ on:
 
 jobs:
   triage:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Label new issue with "triage needed"
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const issue_number = context.payload.issue.number;
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issue_number,
-              labels: ['triage needed']
-            });
+    uses: ISO-TC204/ontology-shared-scripts/.github/workflows/triage_label.yml@main

@@ -2,7 +2,7 @@
 
 # hasPermitType
 
-The type of permit.
+A type of permit associated with the traffic regulation.
 
 **Domain**: [TrafficRegulation](../classes/TrafficRegulation.md)
 
@@ -12,7 +12,7 @@ The type of permit.
 
 | Class |
 |-------|
-| [Permit](../classes/Permit.md) |
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
+| [Permit](../classes/Permit.md) |
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasPermitType`
