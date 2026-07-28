@@ -11,8 +11,8 @@
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/location/v1/LinearPattern" uri="file:/Users/kvaughn/GitHub/ontology-its-location/docs/linear-pattern.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/location/v1/AreaPattern" uri="file:/Users/kvaughn/GitHub/ontology-its-location/docs/area-pattern.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/location/v1/ItineraryPattern" uri="file:/Users/kvaughn/GitHub/ontology-its-location/docs/itinerary-pattern.ttl"/>
-    <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/core/v1/CoreSHACL" uri="file:/Users/kvaughn/GitHub/ontology-its-core/docs/core-shacl.ttl"/>
-    <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/regulation/v1/ConditionVehicleAlignment" uri="condition-vehicle-alignment.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/core/v1/CoreSHACL" uri="file:/Users/kvaughn/GitHub/ontology-its-core/docs/CoreSHACL.ttl"/>
+    <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/regulation/v1/ConditionVehicleAlignment" uri="ConditionVehicleAlignment.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/vehicle/v1/" uri="file:/Users/kvaughn/GitHub/ontology-its-vehicle/docs/its-vehicle.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/vehicle/v1/VehicleCharacteristicsPattern" uri="file:/Users/kvaughn/GitHub/ontology-its-vehicle/docs/vehicle-characteristics-pattern.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/itsdata/core/v1/" uri="file:/Users/kvaughn/GitHub/ontology-its-core/docs/its-core.ttl"/>

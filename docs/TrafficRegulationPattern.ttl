@@ -12,6 +12,7 @@
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 @prefix its-location: <https://w3id.org/itsdata/location/v1/> .
 @prefix its-time: <https://w3id.org/itsdata/time/v1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 :TrafficRegulationPattern
     dcterms:creator               "Kenneth Vaughn"@en ;
@@ -22,7 +23,9 @@
     owl:imports                   :CorePattern ;
     owl:imports                   :ConditionPattern ;
     rdf:type                      owl:Ontology ;
-    skos:definition               "This ontology defines concepts related to traffic regulations."@en .
+    skos:definition               "This ontology defines concepts related to traffic regulations."@en ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 # ================================================
 #                Code Classes
@@ -73,7 +76,18 @@
 :RegulationCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
-    rdfs:subClassOf cdm2:Code .
+    rdfs:subClassOf its-core:Code ;
+    skos:definition "A code used to identify a category of regulation." .
+
+:RegulationCodeList
+    rdf:type        owl:Class;
+    rdfs:subClassOf :RegulationThing;
+    rdfs:subClassOf [
+        rdf:type                    owl:Restriction;
+        owl:onProperty              cdm1:hasComponent;
+        owl:onClass                 :RegulationCode;
+    ] ;
+    skos:definition "A list of rule categories that are defined by an authority." .
 
 :StandAloneRegulationCode
     rdf:type        owl:Class ;
@@ -102,6 +116,8 @@
 :TrafficRegulationOrder
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:OfficialThing ;
+    rdfs:subClassOf its-core:VersionedThing ;
     rdfs:subClassOf [
         rdf:type                    owl:Restriction ;
         owl:onProperty              :memberTrafficRegulation ;
@@ -260,11 +276,6 @@
     dcterms:description "A traffic regulation order issued by the entity."@en ;
     rdf:type            owl:ObjectProperty ;
     rdfs:range          :TrafficRegulationOrder ;
-    rdfs:subPropertyOf  :RegulationObjectProperty .
-
-:issuingAuthority
-    dcterms:description "The entity that issued the instance of the traffic regulation order"@en ;
-    rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
 :memberTrafficRegulation

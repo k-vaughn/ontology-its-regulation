@@ -3,6 +3,7 @@ PREFIX : <https://w3id.org/itsdata/regulation/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
@@ -12,10 +13,12 @@ PREFIX its-location: <https://w3id.org/itsdata/location/v1/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 
-:RegulationSHACL a owl:Ontology ;
+:TrafficRegulationSHACL a owl:Ontology ;
     dcterms:title "SHACL constraints for the Traffic Regulation pattern"@en ;
     skos:definition "Validation shapes for traffic regulation concepts."@en ;
-    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> .
+    owl:imports <https://w3id.org/itsdata/core/v1/CoreSHACL> ;
+    vann:preferredNamespacePrefix "its-regulation" ;
+    vann:preferredNamespaceUri    "https://w3id.org/itsdata/regulation/v1/" .
 
 :RuleMakerRoleShape a sh:NodeShape ;
     sh:targetClass :RuleMakerRole ;
@@ -67,12 +70,6 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
     sh:property [
         sh:path cdm1:hasDescription ;
         sh:node its-core:MaxOneMultilingualShape ;
-    ] ;
-    sh:property [
-        sh:path :issuingAuthority ;
-        sh:node its-core:ExactlyOneShape ;
-        sh:class :RuleMakerRole ;
-        skos:editorsNote "Changed from a simple string to a pointer to a RuleMakerRole (i.e., a Role that a Agent (person, organization, software agent, or group) can assume)."@en ;
     ] ;
     sh:property [
         sh:path :reasonCode ;

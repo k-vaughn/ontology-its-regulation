@@ -9,24 +9,19 @@ if ($topic === '' || $version === '' || $component === '') {
     exit;
 }
 
-// Convert UpperCamelCase to lower-kebab-case
-$kebab = preg_replace_callback('/([a-z0-9])([A-Z])/', function ($matches) {
-    return $matches[1] . '-' . strtolower($matches[2]);
-}, $component);
-$kebab = strtolower($kebab);
-
 $base = "https://isotc204.org/ontology-its-{$topic}-v{$version}/{$release}";
 
 $wantsHtml = stripos($_SERVER['HTTP_ACCEPT'] ?? '', 'text/html') !== false;
 
-if (stripos($component, 'SHACL') !== false) {
-    // SHACL modules → always .ttl (no HTML docs page)
-    $target = "{$base}/{$kebab}.ttl";
+// Item names are copied through as given (no CamelCase→kebab conversion).
+if (stripos($component, 'SHACL') !== false || stripos($component, 'Alignment') !== false) {
+    // SHACL / Alignment modules → always .ttl (no HTML docs page)
+    $target = "{$base}/{$component}.ttl";
 } elseif (stripos($component, 'Pattern') !== false) {
     // Pattern modules: HTML → class docs; RDF → module .ttl
     $target = $wantsHtml
         ? "{$base}/classes/{$component}/"
-        : "{$base}/{$kebab}.ttl";
+        : "{$base}/{$component}.ttl";
 } elseif (preg_match('/^[A-Z]/', $component)) {
     // Class (UpperCamelCase)
     $target = $wantsHtml
@@ -38,7 +33,7 @@ if (stripos($component, 'SHACL') !== false) {
         ? "{$base}/properties/{$component}/"
         : "{$base}/its-{$topic}.ttl";
 } else {
-    $target = "{$base}/{$kebab}.ttl";
+    $target = "{$base}/{$component}.ttl";
 }
 
 header("Location: {$target}", true, 303);

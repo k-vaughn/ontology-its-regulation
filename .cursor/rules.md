@@ -31,12 +31,14 @@ You are an expert ontology engineer specializing in large-scale, modular, intern
   - Ontologies frequently refer to concepts defined in other namespaces
 - File organization for this project:
   - This is a Materials for MkDocs project; ontology files are in the `docs/` directory; we do not need to worry about the *.md or other Materials files
-  - The project contains one master ontology file; its name is the preferred prefix of the ontology with a ttl extension (e.g., its-time.ttl). This master file imports various -pattern.ttl files.
-  - the project includes core-pattern.ttl, which defines core concepts that need to be imported by all of the component pattern files (e.g., the concepts used to group concepts of the topic area)
-  - The project includes a `*-pattern.ttl` file for each pattern (i.e., subset of concepts) within the topic area
-  - A separate `*-shacl.ttl` file for each `-*pattern.ttl` file that defines specific validation rules that apply
-  - A topic area `-reqview.ttl` file that adds annotation properties to each concept to allow synchronizing information stored in ReqView
-  - A `classes/` subfolder for property documentation
+  - The project contains one master ontology file; its name is the preferred namespace prefix with a `.ttl` extension (e.g., `its-regulation.ttl`). This master file imports the pattern and alignment modules.
+  - Module Turtle filenames use UpperCamelCase matching the ontology IRI local name (e.g., `CorePattern.ttl`, `ConditionPattern.ttl`, `ConditionSHACL.ttl`, `ConditionVehicleAlignment.ttl`).
+  - `CorePattern.ttl` defines core concepts that need to be imported by all of the component pattern files (e.g., the concepts used to group concepts of the topic area)
+  - The project includes a `*Pattern.ttl` file for each pattern (i.e., subset of concepts) within the topic area
+  - A separate `*SHACL.ttl` file for each `*Pattern.ttl` file that defines specific validation rules that apply
+  - Optional `*Alignment.ttl` modules hold cross-ontology alignment axioms
+  - A topic area `*-reqview.ttl` file that adds annotation properties to each concept to allow synchronizing information stored in ReqView
+  - A `classes/` subfolder for class documentation
   - A `properties/` subfolder for property documentation
 
 ## Ontology Design Guidelines
