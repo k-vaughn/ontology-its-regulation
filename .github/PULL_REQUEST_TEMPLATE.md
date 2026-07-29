@@ -29,6 +29,7 @@ Select the type of documentation update you are submitting:
 ### **Checklist**
 Before submitting, please ensure the following items are checked:
 
+- [ ] I have updated the root `VERSION` file (SemVer bump for ontology changes, or `doc-only: YYYY-MM-DD` for documentation-only changes).
 - [ ] I have verified that the changes are accurate and reflect the current state of the project.
 - [ ] The documentation follows the existing style guidelines and structure.
 - [ ] I have included all necessary references, links, and examples (if applicable).
