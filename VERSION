@@ -8,4 +8,5 @@
 # Documentation-only release (SemVer unchanged; date >= latest RELEASES date):
 #   version: 1.2.3
 #   doc-only: 2026-07-27
-version: 0.0.3-alpha.2
+version: 0.0.3-alpha.3
+doc-only: 2026-07-29
