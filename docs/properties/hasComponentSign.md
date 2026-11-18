@@ -30,9 +30,3 @@ An ordered supplemental sign of the international sign; the first is the main si
 |-------|
 | [InternationalSign](../classes/InternationalSign.md) |
 
-## Other annotations
-
-| Property | Value |
-|----------|-------|
-| ReqView ID | its-regulation-139 |
-

@@ -14,7 +14,7 @@
     dcterms:title                  "ReqView annotations for the ITS Traffic Regulations ontology.";
     skos:definition                "This ontology defines the identifiers used by ReqView to manage traceability and use of ontology concepts within ITS.";
     dcterms:license                "http://creativecommons.org/licenses/by/4.0/";
-    dcterms:modified               "2026-08-13T16:17:57"^^xsd:dateTime .
+    dcterms:modified               "2026-11-18T17:42:28"^^xsd:dateTime .
 
 
 # AccessCategoryCode
@@ -60,6 +60,10 @@
 # CodedRegulationWithThreshold
 :CodedRegulationWithThreshold a owl:Class ;
     its-core:reqviewId "its-regulation-11" .
+
+# CompositeSign
+:CompositeSign a owl:Class ;
+    its-core:reqviewId "its-regulation-12" .
 
 # Condition
 :Condition a owl:Class ;
@@ -208,6 +212,10 @@
 # SignDestination
 :SignDestination a owl:Class ;
     its-core:reqviewId "its-regulation-50" .
+
+# SimpleSign
+:SimpleSign a owl:Class ;
+    its-core:reqviewId "its-regulation-51" .
 
 # StandAloneRegulationCode
 :StandAloneRegulationCode a owl:Class ;
@@ -498,7 +506,7 @@
     its-core:reqviewId "its-regulation-123" .
 
 # nationalSignId
-:nationalSignId a owl:DatatypeProperty ;
+:nationalSignId a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-124" .
 
 # negate
@@ -522,7 +530,7 @@
     its-core:reqviewId "its-regulation-129" .
 
 # pictogram
-:pictogram a owl:DatatypeProperty ;
+:pictogram a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-130" .
 
 # reasonCode
@@ -557,8 +565,8 @@
 :roadSurfaceFeatureType a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-138" .
 
-# hasComponentSign
-:hasComponentSign a owl:ObjectProperty ;
+# simpleSignList
+:simpleSignList a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-139" .
 
 # trafficImpactLocation
@@ -600,4 +608,12 @@
 # RegulationCategoryCode
 :RegulationCategoryCode a owl:Class ;
     its-core:reqviewId "its-regulation-149" .
+
+# hasRegulationCategory
+:hasRegulationCategory a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-150" .
+
+# hasRegulation
+:hasRegulation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-151" .
 

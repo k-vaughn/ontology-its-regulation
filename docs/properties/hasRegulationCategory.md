@@ -34,5 +34,6 @@ A category of regulation associated with the traffic regulation.
 
 | Property | Value |
 |----------|-------|
+| ReqView ID | its-regulation-150 |
 | [skos:editorsNote](https://w3id.org/citydata/imported/skos/editorsNote) | DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1. |
 

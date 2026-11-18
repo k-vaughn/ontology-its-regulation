@@ -23,6 +23,7 @@ The validity period for the condition as implemented.
 | Class |
 |-------|
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
+| [TimeValidityCondition](../classes/TimeValidityCondition.md) |
 
 ## Other annotations
 

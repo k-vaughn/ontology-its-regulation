@@ -18,6 +18,12 @@ The identifier of the permit that is required for the instance of the traffic re
 |-------|
 | [RegulationDataProperty](RegulationDataProperty.md) |
 
+## Used in classes
+
+| Class |
+|-------|
+| [PermitRequiredCondition](../classes/PermitRequiredCondition.md) |
+
 ## Other annotations
 
 | Property | Value |

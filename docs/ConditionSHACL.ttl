@@ -6,6 +6,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
+PREFIX i72: <https://w3id.org/citydata/21972/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX cdm2: <https://w3id.org/citydata/part2/v1/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>

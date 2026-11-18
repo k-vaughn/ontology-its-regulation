@@ -21,4 +21,5 @@ digraph {
 	Invis -> "its-time_Schedule" [style=invis]
 	"its-time_Schedule" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-time:Schedule</TD></TR></TABLE>> URL="https://w3id.org/itsdata/time/v1/Schedule" margin=0]
 	TimeValidityCondition -> "its-time_Schedule" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">validityByOrder</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	TimeValidityCondition -> "its-time_Schedule" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">implementedValidity</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

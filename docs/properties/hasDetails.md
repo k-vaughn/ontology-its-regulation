@@ -10,7 +10,7 @@ The details of the composite sign.
 
 | Class |
 |-------|
-| CompositeSign |
+| [CompositeSign](../classes/CompositeSign.md) |
 
 ## Range includes
 

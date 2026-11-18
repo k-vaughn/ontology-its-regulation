@@ -18,6 +18,12 @@ The threshold value to compare against the current value to determine the applic
 |-------|
 | [RegulationObjectProperty](RegulationObjectProperty.md) |
 
+## Used in classes
+
+| Class |
+|-------|
+| [MeasurableCondition](../classes/MeasurableCondition.md) |
+
 ## Other annotations
 
 | Property | Value |

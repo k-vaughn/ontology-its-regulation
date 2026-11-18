@@ -128,6 +128,7 @@ A condition that is based on a comparison between a measurable value and a thres
 | [forMeasurableCondition](../properties/forMeasurableCondition.md) | exactly 1 |
 | [forMeasurableCondition](../properties/forMeasurableCondition.md) | exactly 1 [MeasurableConditionCode](https://w3id.org/itsdata/regulation/v1/MeasurableConditionCode) |
 | [valueToCompare](../properties/valueToCompare.md) | exactly 1 |
+| [valueToCompare](../properties/valueToCompare.md) | exactly 1 [i72:Measure](https://w3id.org/citydata/21972/v1/Measure) |
 | subClassOf | [Condition](Condition.md) |
 
 ## Other annotations

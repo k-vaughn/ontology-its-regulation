@@ -18,6 +18,12 @@ The grantor of the permit that is required for the instance of the traffic regul
 |-------|
 | [RegulationObjectProperty](RegulationObjectProperty.md) |
 
+## Used in classes
+
+| Class |
+|-------|
+| [PermitRequiredCondition](../classes/PermitRequiredCondition.md) |
+
 ## Other annotations
 
 | Property | Value |

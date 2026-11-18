@@ -4,3 +4,9 @@
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasRegulation`
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-151 |
+
