@@ -86,12 +86,12 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
     sh:property [
         sh:path :hasInceptionDate ;
         sh:node its-core:MaxOneShape ;
-        sh:class xsd:date;
+        sh:datatype xsd:date;
     ] ;
     sh:property [
         sh:path :hasTerminationDate ;
         sh:node its-core:MaxOneShape ;
-        sh:class xsd:date;
+        sh:datatype xsd:date;
     ] ;
     sh:property [
         sh:path :isSuspect ;

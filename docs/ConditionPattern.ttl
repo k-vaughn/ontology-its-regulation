@@ -208,7 +208,7 @@
     rdf:type        owl:Class ;
     dash:abstract   true ;
     rdfs:subClassOf :Condition ;
-    rdfs:subClassOf :VersionedThing ;
+    rdfs:subClassOf its-core:VersionedThing ;
     skos:definition "A specific version of a condition that can be referenced by a ConditionReference."@en ;
     skos:editorialNote "DATEX-II defines a ConditionReference class, but it seems incomplete as it references a non-existent PredefinedCondition class."@en .
 

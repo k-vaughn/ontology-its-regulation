@@ -93,6 +93,7 @@ A class to organize all classes defined in the Traffic Regulation topic area of 
 | [Regulation Category Code List](RegulationCategoryCodeList.md) | A list of rule categories that are defined by an authority. |
 | [Regulation Context Code](RegulationContextCode.md) | A code indicating the context of a regulation that is associated with a code pair. |
 | [Regulatory Scope Code](RegulatoryScopeCode.md) | A code indicating the regulatory scope of a rule maker role. |
+| [Required Supplemental Data](RequiredSupplementalData.md) | Data that a METR user system needs from a supplemental data provider to determine the current applicability of a regulation. |
 | [Restriction Code](RestrictionCode.md) | A code indicating the specific type of restriction or requirements imposed by the regulation. |
 | [Road Surface Feature](RoadSurfaceFeature.md) | A traffic control device that changes the nature of the road surface, such as rumble strips or speed bumps. |
 | [Rule Maker Role](RuleMakerRole.md) | A Role that includes the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity. |

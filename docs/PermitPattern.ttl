@@ -40,21 +40,25 @@
 :PermitDesignationCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:Code ;
     skos:definition "A code that indicates the designation of the permit."@en .
 
 :PermitDisplayTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:Code ;
     skos:definition "A code that indicates the type of display that is associated with the permit."@en .
 
 :PermitGranteeTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:Code ;
     skos:definition "A code that indicates the type of grantee of the permit."@en .
 
 :PermitGrantorTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
+    rdfs:subClassOf its-core:Code ;
     skos:definition "A code that indicates the type of grantor of the permit."@en .
 
 # ================================================

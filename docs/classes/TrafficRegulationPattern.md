@@ -58,6 +58,7 @@ This module defines the following properties:
 - [memberTrafficRegulation](../properties/memberTrafficRegulation.md)
 - [reasonCode](../properties/reasonCode.md)
 - [regulatoryScope](../properties/regulatoryScope.md)
+- [requiresSupplementalData](../properties/requiresSupplementalData.md)
 - [troStatus](../properties/troStatus.md)
 
 

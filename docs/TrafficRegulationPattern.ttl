@@ -277,12 +277,12 @@
     rdfs:subClassOf its-agent:Role ;
     skos:definition "A Role that includes the responsibility for creating and maintaining rules of the road or regulations for a geographic and operational scope as defined by the parent jurisdictional entity."@en .
 
-:RequiredSupplementalData a owl:Class;
+:RequiredSupplementalData
     rdf:type owl:Class;
-    rdfs:subClassOf :MetrThing;
+    rdfs:subClassOf :RegulationThing;
     rdfs:subClassOf [
         rdf:type                    owl:Restriction;
-        owl:onProperty              :type;
+        owl:onProperty              :hasSupplementalDataType;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
         owl:onClass                 :SupplementalDataTypeCode;
     ] ;
@@ -375,6 +375,14 @@
     rdfs:range          :TrafficRegulationOrder ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
+:isSuspect
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :SuspectStatusCode ;
+    skos:definition    "A code indicating if the traffic regulation is suspect."@en ;
+    skos:note          "A suspect regulation is a regulation that is not yet fully implemented or is not yet in effect."@en .
+    
 :memberTrafficRegulation
     rdf:type           owl:ObjectProperty ;
     rdfs:domain        :TrafficRegulationOrder ;
@@ -394,6 +402,13 @@
     rdfs:range          :RegulatoryScopeCode ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
+:requiresSupplementalData
+    rdf:type           owl:ObjectProperty ;
+    rdfs:domain        :TrafficRegulation ;
+    rdfs:range         :RequiredSupplementalData ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "Supplemental data that a METR user system needs to determine the current applicability of the traffic regulation."@en .
+
 :troStatus
     dcterms:description "The current lifecycle status of the instance of the containing class"@en ;
     rdf:type            owl:ObjectProperty ;
@@ -404,17 +419,17 @@
 
 :hasInceptionDate
     rdf:type           owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         xsd:date;
+    rdfs:subPropertyOf :RegulationDataProperty ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         xsd:date;
     skos:definition    "The date on which the traffic regulation can first became applicable whenever all defined conditions are met."@en ;
     skos:note          "A missing inception indicates a future regulation (i.e., a regulation that is not yet in effect)."@en .
 
 :hasTerminationDate
     rdf:type           owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         xsd:date;
+    rdfs:subPropertyOf :RegulationDataProperty ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         xsd:date;
     skos:definition    "The date after which the traffic regulation became or is expected to become no longer applicable regardless of the current validity of the defined conditions."@en ;
     skos:note          "A missing termination implies a permanent regulation (i.e., a regulation that has no known end date). "@en , 
                        "The date indicates the last date on which the traffic regulation is still applicable."@en .
@@ -423,13 +438,5 @@
     rdf:type           owl:DatatypeProperty ;
     rdfs:domain        :TrafficRegulation ;
     rdfs:range         rdf:langString ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
+    rdfs:subPropertyOf :RegulationDataProperty ;
     skos:definition    "A textual restriction associated with the traffic regulation."@en .
-
-:isSuspect
-    rdf:type           owl:DatatypeProperty ;
-    rdfs:subPropertyOf :RegulationDatatypeProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :SuspectStatusCode ;
-    skos:definition    "A code indicating if the traffic regulation is suspect."@en ;
-    skos:note          "A suspect regulation is a regulation that is not yet fully implemented or is not yet in effect."@en .

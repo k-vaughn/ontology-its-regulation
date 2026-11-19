@@ -22,7 +22,7 @@ A textual restriction associated with the traffic regulation.
 
 | Property |
 |-------|
-| RegulationDatatypeProperty |
+| [RegulationDataProperty](RegulationDataProperty.md) |
 
 ## Used in classes
 

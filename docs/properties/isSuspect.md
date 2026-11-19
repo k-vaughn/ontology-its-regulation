@@ -6,13 +6,13 @@ A code indicating if the traffic regulation is suspect.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/isSuspect`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|
@@ -22,7 +22,7 @@ A code indicating if the traffic regulation is suspect.
 
 | Property |
 |-------|
-| RegulationDatatypeProperty |
+| [RegulationObjectProperty](RegulationObjectProperty.md) |
 
 ## Used in classes
 

@@ -6,13 +6,13 @@ The date after which the traffic regulation became or is expected to become no l
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasTerminationDate`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|
@@ -22,7 +22,7 @@ The date after which the traffic regulation became or is expected to become no l
 
 | Property |
 |-------|
-| RegulationDatatypeProperty |
+| [RegulationDataProperty](RegulationDataProperty.md) |
 
 ## Used in classes
 

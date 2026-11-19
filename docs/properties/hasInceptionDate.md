@@ -6,13 +6,13 @@ The date on which the traffic regulation can first became applicable whenever al
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasInceptionDate`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|
@@ -22,7 +22,7 @@ The date on which the traffic regulation can first became applicable whenever al
 
 | Property |
 |-------|
-| RegulationDatatypeProperty |
+| [RegulationDataProperty](RegulationDataProperty.md) |
 
 ## Used in classes
 
