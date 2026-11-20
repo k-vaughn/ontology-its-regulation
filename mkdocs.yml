@@ -82,6 +82,7 @@ nav:
       - Permit Application Information: classes/PermitApplicationInformation.md
       - Permit Designation Code: classes/PermitDesignationCode.md
       - Permit Display Type Code: classes/PermitDisplayTypeCode.md
+      - Permit Fee: classes/PermitFee.md
       - Permit Grantee Type Code: classes/PermitGranteeTypeCode.md
       - Permit Grantor Type Code: classes/PermitGrantorTypeCode.md
       - Permit Type: classes/PermitType.md
@@ -120,7 +121,11 @@ nav:
       - Channelization Device: classes/ChannelizationDevice.md
       - Channelization Type Code: classes/ChannelizationTypeCode.md
       - Destination Info: classes/DestinationInfo.md
+      - Destination Place: classes/DestinationPlace.md
+      - Destination Road: classes/DestinationRoad.md
+      - Horizon: classes/Horizon.md
       - International Sign: classes/InternationalSign.md
+      - Ordinal Direction Code: classes/OrdinalDirectionCode.md
       - Pavement Marking: classes/PavementMarking.md
       - Pavement Marking Type Code: classes/PavementMarkingTypeCode.md
       - Road Surface Feature: classes/RoadSurfaceFeature.md
@@ -144,7 +149,6 @@ nav:
       - divergeName: properties/divergeName.md
       - divergeRoute: properties/divergeRoute.md
       - hasComponentSign: properties/hasComponentSign.md
-      - hasDetails: properties/hasDetails.md
       - image: properties/image.md
       - nationalSignId: properties/nationalSignId.md
       - pavementMarkingType: properties/pavementMarkingType.md
@@ -160,6 +164,7 @@ nav:
       - Coded Regulation With Fee: classes/CodedRegulationWithFee.md
       - Coded Regulation With Threshold: classes/CodedRegulationWithThreshold.md
       - Fee Restriction Code: classes/FeeRestrictionCode.md
+      - Fee Schedule: classes/FeeSchedule.md
       - Reason Code: classes/ReasonCode.md
       - Regulation Category Code: classes/RegulationCategoryCode.md
       - Regulation Category Code List: classes/RegulationCategoryCodeList.md
@@ -184,12 +189,17 @@ nav:
       - hasActivationStatus: properties/hasActivationStatus.md
       - hasAssociatedRestriction: properties/hasAssociatedRestriction.md
       - hasContext: properties/hasContext.md
+      - hasEnforcementMethod: properties/hasEnforcementMethod.md
       - hasFeeSchedule: properties/hasFeeSchedule.md
       - hasInceptionDate: properties/hasInceptionDate.md
+      - hasLegalStatus: properties/hasLegalStatus.md
       - hasOverallTrustworthiness: properties/hasOverallTrustworthiness.md
       - hasPermitType: properties/hasPermitType.md
+      - hasRegulation: properties/hasRegulation.md
       - hasRegulationCategory: properties/hasRegulationCategory.md
       - hasRestriction: properties/hasRestriction.md
+      - hasSupplementalDataSource: properties/hasSupplementalDataSource.md
+      - hasSupplementalDataType: properties/hasSupplementalDataType.md
       - hasTerminationDate: properties/hasTerminationDate.md
       - hasTextualRestriction: properties/hasTextualRestriction.md
       - hasThreshold: properties/hasThreshold.md

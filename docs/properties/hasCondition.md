@@ -6,7 +6,7 @@ A condition associated with the instance (for example a traffic regulation); not
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasCondition`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

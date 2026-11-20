@@ -6,7 +6,7 @@ The operator used to compare the value to the threshold value.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/comparisonOperator`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

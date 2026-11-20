@@ -6,7 +6,7 @@ The date and time the permit was issued.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/issued`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

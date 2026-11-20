@@ -6,7 +6,7 @@ The identifier of the permit that is required for the instance of the traffic re
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiredPermitIdentifier`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

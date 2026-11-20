@@ -233,92 +233,92 @@
 
 :applicableLocation
     rdf:type           owl:ObjectProperty ;
-    rdfs:range         its-location:Feature ;
+    schema:rangeIncludes         its-location:Feature ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "The location associated with the condition."@en .
 
 :comparisonOperator
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          its-core:ComparisonOperatorCode ;
+    schema:rangeIncludes          its-core:ComparisonOperatorCode ;
     skos:definition "The operator used to compare the value to the threshold value."@en .
 
 :forAccessCategory
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :AccessCategoryCode ;
+    schema:rangeIncludes          :AccessCategoryCode ;
     skos:definition "The type of restriction that regulates access to a facility."@en .
 
 :forEnumeratedCondition
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :ConditionCode ;
+    schema:rangeIncludes          :ConditionCode ;
     skos:definition "The enumerated condition that affects the applicability of the regulation."@en .
 
 :forMeasurableCondition
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :MeasurableConditionCode ;
+    schema:rangeIncludes          :MeasurableConditionCode ;
     skos:definition "The measurable condition that affects the applicability of the regulation."@en .
     
 :forNonVehicularRoadUserType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          its-t-user:NonVehicularRoadUserCode ;
+    schema:rangeIncludes          its-t-user:NonVehicularRoadUserCode ;
     skos:definition "The type of non-vehicular road user that is subject to the regulation."@en .
 
 :forRoadType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :RoadTypeCode ;
+    schema:rangeIncludes          :RoadTypeCode ;
     skos:definition "The type of road upon which travel is taking place."@en .
 
 :forStandingOrParkingCategory
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :StandingOrParkingCategoryCode ;
+    schema:rangeIncludes          :StandingOrParkingCategoryCode ;
     skos:definition "The category of standing or parking within which travel is taking place."@en .
 
 :forTunnelCategory
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :TunnelCategoryCode ;
+    schema:rangeIncludes          :TunnelCategoryCode ;
     skos:definition "The category of tunnel within which travel is taking place."@en .
 
 :forRoadWeatherConditionType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          its-weather:RoadWeatherConditionCode ;
+    schema:rangeIncludes          its-weather:RoadWeatherConditionCode ;
     skos:definition "The type of weather condition that is subject to the regulation."@en .
 
 :hasCondition
     rdf:type           owl:ObjectProperty ;
-    rdfs:range         :Condition ;
+    schema:rangeIncludes         :Condition ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A condition associated with the instance (for example a traffic regulation); not used for the part-whole composition of a ConditionSet, which uses cdm1:hasComponent."@en .
 
 :hasLegalBasis
     rdf:type            owl:ObjectProperty ;
-    rdfs:range          :LegalBasis ;
+    schema:rangeIncludes          :LegalBasis ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
     skos:definition "formal authority within the law (e.g., statute, ordinance, administrative rule, constitutional provision) that empowers an entity to create, adopt, or enforce a regulation"@en .
 
 :implementedLocation
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
-    rdfs:range          its-location:Feature ;
+    schema:rangeIncludes          its-location:Feature ;
     skos:definition "The location where the regulation was implemented (e.g., with traffic control devices)."@en .
 
 :implementedValidity
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
-    rdfs:range          its-time:Schedule ;
+    schema:rangeIncludes          its-time:Schedule ;
     skos:definition "The validity period for the condition as implemented."@en .
 
 :locationByOrder
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
-    rdfs:range          its-location:Feature ;
+    schema:rangeIncludes          its-location:Feature ;
     skos:definition "The location where the regulation is defined to apply per the traffic regulation order."@en .
 
 :logicalOperator
@@ -331,43 +331,43 @@
 :requiredDesignation
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :PermitDesignationCode ;
+    schema:rangeIncludes          :PermitDesignationCode ;
     skos:definition "The designation of the permit that is required for the instance of the traffic regulation."@en .
 
 :requiredDisplayType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :PermitDisplayTypeCode ;
+    schema:rangeIncludes          :PermitDisplayTypeCode ;
     skos:definition "The display type of the permit that is required for the instance of the traffic regulation."@en .
 
 :requiredGrantor
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          cdm2:Organization ;
+    schema:rangeIncludes          cdm2:Organization ;
     skos:definition "The grantor of the permit that is required for the instance of the traffic regulation."@en .
 
 :requiredGrantorType
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          :PermitGrantorTypeCode ;
+    schema:rangeIncludes          :PermitGrantorTypeCode ;
     skos:definition "The type of grantor of the permit that is required for the instance of the traffic regulation."@en .
 
 :trafficImpactLocation
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
-    rdfs:range          its-location:Feature ;
+    schema:rangeIncludes          its-location:Feature ;
     skos:definition "The location where traffic is impacted due to the existence of the regulation."@en .
 
 :validityByOrder
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
-    rdfs:range          its-time:Schedule ;
+    schema:rangeIncludes          its-time:Schedule ;
     skos:definition "The validity period for the condition."@en .
 
 :valueToCompare
     rdf:type            owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range          i72:Measure ;
+    schema:rangeIncludes          i72:Measure ;
     skos:definition "The threshold value to compare against the current value to determine the applicability of the regulation."@en .
 
 # ================================================
@@ -377,29 +377,29 @@
 :isActive
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:boolean ;
+    schema:rangeIncludes xsd:boolean ;
     skos:definition "Indicates whether the condition is currently active."@en .
 
 :negate
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:boolean ;
+    schema:rangeIncludes xsd:boolean ;
     skos:definition "Indicates whether the condition is negated."@en .
 
 :otherCondition
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         rdf:langString;
+    schema:rangeIncludes         rdf:langString;
     skos:definition "A separate condition that determines the applicability of the regulation."@en .
 
 :requiredPermitIdentifier
     rdf:type            owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range          xsd:string ;
+    schema:rangeIncludes          xsd:string ;
     skos:definition "The identifier of the permit that is required for the instance of the traffic regulation."@en .
 
 :version
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:string ;
+    schema:rangeIncludes xsd:string ;
     skos:definition "The version of the object."@en .

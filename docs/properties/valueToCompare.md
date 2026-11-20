@@ -6,7 +6,7 @@ The threshold value to compare against the current value to determine the applic
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/valueToCompare`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -6,7 +6,7 @@ A reason justifying the existence of the instance of the traffic regulation orde
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/reasonCode`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

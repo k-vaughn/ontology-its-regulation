@@ -6,13 +6,13 @@ A traffic regulation enacted by the traffic regulation order.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/memberTrafficRegulation`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|

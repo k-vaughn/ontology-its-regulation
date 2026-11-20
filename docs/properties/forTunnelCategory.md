@@ -6,7 +6,7 @@ The category of tunnel within which travel is taking place.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forTunnelCategory`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

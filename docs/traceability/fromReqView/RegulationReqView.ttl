@@ -1,0 +1,719 @@
+# =====================================================
+# ReqView Annotations
+# =====================================================
+
+@prefix : <https://w3id.org/itsdata/regulation/v1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix its-core: <https://w3id.org/itsdata/core/v1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+		
+:ReqView a owl:Ontology;
+    # Ontology metadata
+    dcterms:title                  "ReqView annotations for the ITS Traffic Regulations ontology.";
+    skos:definition                "This ontology defines the identifiers used by ReqView to manage traceability and use of ontology concepts within ITS.";
+    dcterms:license                "http://creativecommons.org/licenses/by/4.0/";
+    dcterms:modified               "2026-11-19T19:29:39"^^xsd:dateTime .
+
+
+# AccessCategoryCode
+:AccessCategoryCode a owl:Class ;
+    its-core:reqviewId "its-regulation-1" .
+
+# AccessControlDevice
+:AccessControlDevice a owl:Class ;
+    its-core:reqviewId "its-regulation-2" .
+
+# AccessControlTypeCode
+:AccessControlTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-3" .
+
+# ActivationStatusCode
+:ActivationStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-4" .
+
+# ChannelizationDevice
+:ChannelizationDevice a owl:Class ;
+    its-core:reqviewId "its-regulation-5" .
+
+# ChannelizationTypeCode
+:ChannelizationTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-6" .
+
+# RestrictionCode
+:RestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-7" .
+
+# CodedPairRegulation
+:CodedPairRegulation a owl:Class ;
+    its-core:reqviewId "its-regulation-8" .
+
+# CodedRegulation
+:CodedRegulation a owl:Class ;
+    its-core:reqviewId "its-regulation-9" .
+
+# CodedRegulationWithFee
+:CodedRegulationWithFee a owl:Class ;
+    its-core:reqviewId "its-regulation-10" .
+
+# CodedRegulationWithThreshold
+:CodedRegulationWithThreshold a owl:Class ;
+    its-core:reqviewId "its-regulation-11" .
+
+# Condition
+:Condition a owl:Class ;
+    its-core:reqviewId "its-regulation-13" .
+
+# ConditionCode
+:ConditionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-14" .
+
+# ConditionSet
+:ConditionSet a owl:Class ;
+    its-core:reqviewId "its-regulation-15" .
+
+# ContextRegulationCode
+:ContextRegulationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-16" .
+
+# DestinationInfo
+:DestinationInfo a owl:Class ;
+    its-core:reqviewId "its-regulation-17" .
+
+# DriverCategoryCode
+:DriverCategoryCode a owl:Class ;
+    its-core:reqviewId "its-regulation-18" .
+
+# EnumeratedCondition
+:EnumeratedCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-19" .
+
+# FeeRegulationCode
+:FeeRegulationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-20" .
+
+# InternationalSign
+:InternationalSign a owl:Class ;
+    its-core:reqviewId "its-regulation-21" .
+
+# LegalBasis
+:LegalBasis a owl:Class ;
+    its-core:reqviewId "its-regulation-22" .
+
+# LocationCondition
+:LocationCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-23" .
+
+# LogicalOperatorCode
+:LogicalOperatorCode a owl:Class ;
+    its-core:reqviewId "its-regulation-24" .
+
+# MeasurableCondition
+:MeasurableCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-25" .
+
+# MeasurableConditionCode
+:MeasurableConditionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-26" .
+
+# PavementMarking
+:PavementMarking a owl:Class ;
+    its-core:reqviewId "its-regulation-28" .
+
+# PavementMarkingTypeCode
+:PavementMarkingTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-29" .
+
+# Permit
+:Permit a owl:Class ;
+    its-core:reqviewId "its-regulation-30" .
+
+# PermitApplicationInformation
+:PermitApplicationInformation a owl:Class ;
+    its-core:reqviewId "its-regulation-31" .
+
+# PermitDesignationCode
+:PermitDesignationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-32" .
+
+# PermitDisplayTypeCode
+:PermitDisplayTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-33" .
+
+# PermitGranteeTypeCode
+:PermitGranteeTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-34" .
+
+# PermitGrantorTypeCode
+:PermitGrantorTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-35" .
+
+# PermitRequiredCondition
+:PermitRequiredCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-36" .
+
+# PermitType
+:PermitType a owl:Class ;
+    its-core:reqviewId "its-regulation-37" .
+
+# ReasonCode
+:ReasonCode a owl:Class ;
+    its-core:reqviewId "its-regulation-38" .
+
+# RegistrationMachine
+:RegistrationMachine a owl:Class ;
+    its-core:reqviewId "its-regulation-39" .
+
+# RegulationCode
+:RegulationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-40" .
+
+# RegulationDataProperty
+:RegulationDataProperty a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-41" .
+
+# RegulationObjectProperty
+:RegulationObjectProperty a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-42" .
+
+# RegulationThing
+:RegulationThing a owl:Class ;
+    its-core:reqviewId "its-regulation-43" .
+
+# RegulatoryScopeCode
+:RegulatoryScopeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-44" .
+
+# RoadSurfaceFeature
+:RoadSurfaceFeature a owl:Class ;
+    its-core:reqviewId "its-regulation-45" .
+
+# RoadSurfaceFeatureTypeCode
+:RoadSurfaceFeatureTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-46" .
+
+# RoadTypeCode
+:RoadTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-47" .
+
+# RoadWeatherConditionCode
+:RoadWeatherConditionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-48" .
+
+# RuleMakerRole
+:RuleMakerRole a owl:Class ;
+    its-core:reqviewId "its-regulation-49" .
+
+# SignDestination
+:SignDestination a owl:Class ;
+    its-core:reqviewId "its-regulation-50" .
+
+# StandAloneRegulationCode
+:StandAloneRegulationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-52" .
+
+# StandingOrParkingCategoryCode
+:StandingOrParkingCategoryCode a owl:Class ;
+    its-core:reqviewId "its-regulation-53" .
+
+# TextComposite
+:TextComposite a owl:Class ;
+    its-core:reqviewId "its-regulation-54" .
+
+# TextualRegulation
+:TextualRegulation a owl:Class ;
+    its-core:reqviewId "its-regulation-55" .
+
+# ThresholdRegulationCode
+:ThresholdRegulationCode a owl:Class ;
+    its-core:reqviewId "its-regulation-56" .
+
+# TimeValidityCondition
+:TimeValidityCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-57" .
+
+# TrafficControlDevice
+:TrafficControlDevice a owl:Class ;
+    its-core:reqviewId "its-regulation-58" .
+
+# TrafficRegulation
+:TrafficRegulation a owl:Class ;
+    its-core:reqviewId "its-regulation-59" .
+
+# TrafficRegulationOrder
+:TrafficRegulationOrder a owl:Class ;
+    its-core:reqviewId "its-regulation-60" .
+
+# TrafficSignal
+:TrafficSignal a owl:Class ;
+    its-core:reqviewId "its-regulation-61" .
+
+# TrafficSignalDevice
+:TrafficSignalDevice a owl:Class ;
+    its-core:reqviewId "its-regulation-62" .
+
+# TroStatusCode
+:TroStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-63" .
+
+# TunnelCategoryCode
+:TunnelCategoryCode a owl:Class ;
+    its-core:reqviewId "its-regulation-64" .
+
+# VersionedCondition
+:VersionedCondition a owl:Class ;
+    its-core:reqviewId "its-regulation-65" .
+
+# WarningBeacon
+:WarningBeacon a owl:Class ;
+    its-core:reqviewId "its-regulation-66" .
+
+# accessControlType
+:accessControlType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-67" .
+
+# applicableLocation
+:applicableLocation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-68" .
+
+# arrowDirection
+:arrowDirection a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-69" .
+
+# associatedTrafficControlDevice
+:associatedTrafficControlDevice a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-70" .
+
+# authorizingTrafficRegulation
+:authorizingTrafficRegulation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-71" .
+
+# channelizationType
+:channelizationType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-72" .
+
+# comparisonOperator
+:comparisonOperator a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-73" .
+
+# destinationHorizon
+:destinationHorizon a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-74" .
+
+# destinationPlace
+:destinationPlace a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-75" .
+
+# destinationRoad
+:destinationRoad a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-76" .
+
+# divergeHorizon
+:divergeHorizon a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-77" .
+
+# divergeName
+:divergeName a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-78" .
+
+# divergeRoute
+:divergeRoute a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-79" .
+
+# forAccessCategory
+:forAccessCategory a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-80" .
+
+# forEnumeratedCondition
+:forEnumeratedCondition a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-81" .
+
+# forMeasurableCondition
+:forMeasurableCondition a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-82" .
+
+# forNonVehicularRoadUserType
+:forNonVehicularRoadUserType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-83" .
+
+# forRoadType
+:forRoadType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-84" .
+
+# forStandingOrParkingCategory
+:forStandingOrParkingCategory a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-85" .
+
+# forTunnelCategory
+:forTunnelCategory a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-86" .
+
+# forWeatherConditionType
+:forWeatherConditionType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-87" .
+
+# grantsDesignation
+:grantsDesignation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-88" .
+
+# hasActivationStatus
+:hasActivationStatus a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-89" .
+
+# hasApplicableLocation
+:hasApplicableLocation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-90" .
+
+# hasApplicationInformation
+:hasApplicationInformation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-91" .
+
+# hasApplicationInstructions
+:hasApplicationInstructions a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-92" .
+
+# hasApplicationUrl
+:hasApplicationUrl a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-93" .
+
+# hasAssociatedFee
+:hasAssociatedFee a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-94" .
+
+# hasAssociatedRestriction
+:hasAssociatedRestriction a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-95" .
+
+# hasCondition
+:hasCondition a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-96" .
+
+# hasContactInformation
+:hasContactInformation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-97" .
+
+# hasDefaultDurationLimit
+:hasDefaultDurationLimit a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-98" .
+
+# hasDefaultLocation
+:hasDefaultLocation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-99" .
+
+# hasDefaultRepeatInterval
+:hasDefaultRepeatInterval a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-100" .
+
+# hasDisplayType
+:hasDisplayType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-101" .
+
+# hasDurationLimit
+:hasDurationLimit a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-102" .
+
+# hasGrantee
+:hasGrantee a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-103" .
+
+# hasGranteeType
+:hasGranteeType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-104" .
+
+# hasGrantor
+:hasGrantor a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-105" .
+
+# hasInformationUrl
+:hasInformationUrl a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-106" .
+
+# hasLegalBasis
+:hasLegalBasis a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-107" .
+
+# hasPermitType
+:hasPermitType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-108" .
+
+# hasRegistrationMachine
+:hasRegistrationMachine a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-109" .
+
+# hasRepeatInterval
+:hasRepeatInterval a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-110" .
+
+# hasValidityPeriod
+:hasValidityPeriod a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-111" .
+
+# image
+:image a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-112" .
+
+# implementedLocation
+:implementedLocation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-113" .
+
+# implementedValidity
+:implementedValidity a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-114" .
+
+# isActive
+:isActive a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-115" .
+
+# isApplicationRequired
+:isApplicationRequired a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-116" .
+
+# isLocationSpecific
+:isLocationSpecific a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-117" .
+
+# issued
+:issued a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-118" .
+
+# issuedTro
+:issuedTro a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-119" .
+
+# issuingAuthority
+:issuingAuthority a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-120" .
+
+# locationByOrder
+:locationByOrder a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-121" .
+
+# logicalOperator
+:logicalOperator a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-122" .
+
+# memberTrafficRegulation
+:memberTrafficRegulation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-123" .
+
+# nationalSignId
+:nationalSignId a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-124" .
+
+# negate
+:negate a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-125" .
+
+# otherCondition
+:otherCondition a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-126" .
+
+# pavementMarkingType
+:pavementMarkingType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-127" .
+
+# permitInformation
+:permitInformation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-128" .
+
+# permittedEntityType
+:permittedEntityType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-129" .
+
+# pictogram
+:pictogram a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-130" .
+
+# reasonCode
+:reasonCode a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-131" .
+
+# regulatoryScope
+:regulatoryScope a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-132" .
+
+# requiredDesignation
+:requiredDesignation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-133" .
+
+# requiredDisplayType
+:requiredDisplayType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-134" .
+
+# requiredGrantor
+:requiredGrantor a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-135" .
+
+# requiredGrantorType
+:requiredGrantorType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-136" .
+
+# requiredPermitIdentifier
+:requiredPermitIdentifier a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-137" .
+
+# roadSurfaceFeatureType
+:roadSurfaceFeatureType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-138" .
+
+# trafficImpactLocation
+:trafficImpactLocation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-140" .
+
+# troStatus
+:troStatus a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-141" .
+
+# url
+:url a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-142" .
+
+# validityByOrder
+:validityByOrder a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-143" .
+
+# valueToCompare
+:valueToCompare a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-144" .
+
+# version
+:version a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-145" .
+
+# RegulationCategoryCodeList
+:RegulationCategoryCodeList a owl:Class ;
+    its-core:reqviewId "its-regulation-146" .
+
+# forRoadWeatherConditionType
+:forRoadWeatherConditionType a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-147" .
+
+# compositeText
+:compositeText a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-148" .
+
+# RegulationCategoryCode
+:RegulationCategoryCode a owl:Class ;
+    its-core:reqviewId "its-regulation-149" .
+
+# hasRegulationCategory
+:hasRegulationCategory a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-150" .
+
+# hasRegulation
+:hasRegulation a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-151" .
+
+# ThresholdRestrictionCode
+:ThresholdRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-152" .
+
+# CompositeEnforcementMethod
+:CompositeEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-153" .
+
+# EnforcementMethod
+:EnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-154" .
+
+# SuspectStatusCode
+:SuspectStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-155" .
+
+# StandAloneRestrictionCode
+:StandAloneRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-156" .
+
+# RequiredSupplementalData
+:RequiredSupplementalData a owl:Class ;
+    its-core:reqviewId "its-regulation-157" .
+
+# FinancialEnforcementMethod
+:FinancialEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-158" .
+
+# SignAttribute
+:SignAttribute a owl:Class ;
+    its-core:reqviewId "its-regulation-159" .
+
+# LegalStatusCode
+:LegalStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-160" .
+
+# TowingEnforcementMethod
+:TowingEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-161" .
+
+# RegulationContextCode
+:RegulationContextCode a owl:Class ;
+    its-core:reqviewId "its-regulation-162" .
+
+# FeeRestrictionCode
+:FeeRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-163" .
+
+# TrustworthinessCode
+:TrustworthinessCode a owl:Class ;
+    its-core:reqviewId "its-regulation-164" .
+
+# ImmobilizationEnforcementMethod
+:ImmobilizationEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-165" .
+
+# Trustworthiness
+:Trustworthiness a owl:Class ;
+    its-core:reqviewId "its-regulation-166" .
+
+# SupplementalDataTypeCode
+:SupplementalDataTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-167" .
+
+# DrivingRecordEnforcementMethod
+:DrivingRecordEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-168" .
+
+# hasTrustworthiness
+:hasTrustworthiness a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-169" .
+
+# hasOverallTrustworthiness
+:hasOverallTrustworthiness a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-170" .
+
+# hasContext
+:hasContext a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-171" .
+
+# hasFeeSchedule
+:hasFeeSchedule a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-172" .
+
+# hasThreshold
+:hasThreshold a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-173" .
+
+# hasRestriction
+:hasRestriction a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-174" .
+
+# hasComponentSign
+:hasComponentSign a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-176" .
+
+# hasInceptionDate
+:hasInceptionDate a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-177" .
+
+# hasTerminationDate
+:hasTerminationDate a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-178" .
+
+# hasTextualRestriction
+:hasTextualRestriction a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-179" .
+
+# isSuspect
+:isSuspect a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-180" .
+

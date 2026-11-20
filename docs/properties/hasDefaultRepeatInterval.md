@@ -6,7 +6,7 @@ The default repeat interval of the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasDefaultRepeatInterval`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -40,7 +40,7 @@ Details about the application of the permit.
     <text xml:space="preserve" text-anchor="start" x="90.62" y="-446.25" font-family="Arial" font-size="12.00">hasApplicationInstructions : rdf:langString [0..&#42;]¹</text>
     <text xml:space="preserve" text-anchor="start" x="90.62" y="-430" font-family="Arial" font-size="12.00">hasApplicationUrl : xsd:anyURI [0..1]</text>
     <text xml:space="preserve" text-anchor="start" x="90.62" y="-413.75" font-family="Arial" font-size="12.00">hasInformationUrl : xsd:anyURI [0..1]</text>
-    <text xml:space="preserve" text-anchor="start" x="90.62" y="-397.5" font-family="Arial" font-size="12.00">isApplicationRequired [0..1]</text>
+    <text xml:space="preserve" text-anchor="start" x="90.62" y="-397.5" font-family="Arial" font-size="12.00">isApplicationRequired : xsd:boolean [0..1]</text>
     <polygon fill="none" stroke="black" points="88.62,-392.5 88.62,-475.75 343.12,-475.75 343.12,-392.5 88.62,-392.5"/>
     </a>
     </g>
@@ -134,10 +134,10 @@ Details about the application of the permit.
 | [hasApplicationInstructions](../properties/hasApplicationInstructions.md) | 0..* rdf:langString (one per language) |
 | [hasApplicationUrl](../properties/hasApplicationUrl.md) | max 1 xsd:anyURI |
 | [hasAssociatedFee](../properties/hasAssociatedFee.md) | only [PermitFee](https://w3id.org/itsdata/regulation/v1/PermitFee) |
-| [hasContactInformation](../properties/hasContactInformation.md) | max 1 cdm2:ContactInformation |
+| [hasContactInformation](../properties/hasContactInformation.md) | max 1 [cdm2:ContactInformation](https://w3id.org/citydata/part2/v1/ContactInformation) |
 | [hasInformationUrl](../properties/hasInformationUrl.md) | max 1 xsd:anyURI |
 | [hasRegistrationMachine](../properties/hasRegistrationMachine.md) | only [RegistrationMachine](https://w3id.org/itsdata/regulation/v1/RegistrationMachine) |
-| [isApplicationRequired](../properties/isApplicationRequired.md) | max 1 |
+| [isApplicationRequired](../properties/isApplicationRequired.md) | max 1 xsd:boolean |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 
 ## Other annotations

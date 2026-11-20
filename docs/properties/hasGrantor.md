@@ -6,7 +6,7 @@ The authority that is responsible for issuing the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasGrantor`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

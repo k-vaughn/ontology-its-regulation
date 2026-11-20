@@ -6,7 +6,7 @@ A traffic regulation order issued by the entity.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/issuedTro`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

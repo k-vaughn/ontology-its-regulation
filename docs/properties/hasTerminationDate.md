@@ -30,3 +30,9 @@ The date after which the traffic regulation became or is expected to become no l
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-178 |
+

@@ -14,7 +14,7 @@
     dcterms:title                  "ReqView annotations for the ITS Traffic Regulations ontology.";
     skos:definition                "This ontology defines the identifiers used by ReqView to manage traceability and use of ontology concepts within ITS.";
     dcterms:license                "http://creativecommons.org/licenses/by/4.0/";
-    dcterms:modified               "2026-11-18T17:42:28"^^xsd:dateTime .
+    dcterms:modified               "2026-11-19T19:29:39"^^xsd:dateTime .
 
 
 # AccessCategoryCode
@@ -60,10 +60,6 @@
 # CodedRegulationWithThreshold
 :CodedRegulationWithThreshold a owl:Class ;
     its-core:reqviewId "its-regulation-11" .
-
-# CompositeSign
-:CompositeSign a owl:Class ;
-    its-core:reqviewId "its-regulation-12" .
 
 # Condition
 :Condition a owl:Class ;
@@ -212,10 +208,6 @@
 # SignDestination
 :SignDestination a owl:Class ;
     its-core:reqviewId "its-regulation-50" .
-
-# SimpleSign
-:SimpleSign a owl:Class ;
-    its-core:reqviewId "its-regulation-51" .
 
 # StandAloneRegulationCode
 :StandAloneRegulationCode a owl:Class ;
@@ -506,7 +498,7 @@
     its-core:reqviewId "its-regulation-123" .
 
 # nationalSignId
-:nationalSignId a owl:ObjectProperty ;
+:nationalSignId a owl:DatatypeProperty ;
     its-core:reqviewId "its-regulation-124" .
 
 # negate
@@ -530,7 +522,7 @@
     its-core:reqviewId "its-regulation-129" .
 
 # pictogram
-:pictogram a owl:ObjectProperty ;
+:pictogram a owl:DatatypeProperty ;
     its-core:reqviewId "its-regulation-130" .
 
 # reasonCode
@@ -564,10 +556,6 @@
 # roadSurfaceFeatureType
 :roadSurfaceFeatureType a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-138" .
-
-# simpleSignList
-:simpleSignList a owl:ObjectProperty ;
-    its-core:reqviewId "its-regulation-139" .
 
 # trafficImpactLocation
 :trafficImpactLocation a owl:ObjectProperty ;
@@ -616,4 +604,116 @@
 # hasRegulation
 :hasRegulation a owl:ObjectProperty ;
     its-core:reqviewId "its-regulation-151" .
+
+# ThresholdRestrictionCode
+:ThresholdRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-152" .
+
+# CompositeEnforcementMethod
+:CompositeEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-153" .
+
+# EnforcementMethod
+:EnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-154" .
+
+# SuspectStatusCode
+:SuspectStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-155" .
+
+# StandAloneRestrictionCode
+:StandAloneRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-156" .
+
+# RequiredSupplementalData
+:RequiredSupplementalData a owl:Class ;
+    its-core:reqviewId "its-regulation-157" .
+
+# FinancialEnforcementMethod
+:FinancialEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-158" .
+
+# SignAttribute
+:SignAttribute a owl:Class ;
+    its-core:reqviewId "its-regulation-159" .
+
+# LegalStatusCode
+:LegalStatusCode a owl:Class ;
+    its-core:reqviewId "its-regulation-160" .
+
+# TowingEnforcementMethod
+:TowingEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-161" .
+
+# RegulationContextCode
+:RegulationContextCode a owl:Class ;
+    its-core:reqviewId "its-regulation-162" .
+
+# FeeRestrictionCode
+:FeeRestrictionCode a owl:Class ;
+    its-core:reqviewId "its-regulation-163" .
+
+# TrustworthinessCode
+:TrustworthinessCode a owl:Class ;
+    its-core:reqviewId "its-regulation-164" .
+
+# ImmobilizationEnforcementMethod
+:ImmobilizationEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-165" .
+
+# Trustworthiness
+:Trustworthiness a owl:Class ;
+    its-core:reqviewId "its-regulation-166" .
+
+# SupplementalDataTypeCode
+:SupplementalDataTypeCode a owl:Class ;
+    its-core:reqviewId "its-regulation-167" .
+
+# DrivingRecordEnforcementMethod
+:DrivingRecordEnforcementMethod a owl:Class ;
+    its-core:reqviewId "its-regulation-168" .
+
+# hasTrustworthiness
+:hasTrustworthiness a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-169" .
+
+# hasOverallTrustworthiness
+:hasOverallTrustworthiness a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-170" .
+
+# hasContext
+:hasContext a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-171" .
+
+# hasFeeSchedule
+:hasFeeSchedule a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-172" .
+
+# hasThreshold
+:hasThreshold a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-173" .
+
+# hasRestriction
+:hasRestriction a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-174" .
+
+# hasComponentSign
+:hasComponentSign a owl:ObjectProperty ;
+    its-core:reqviewId "its-regulation-176" .
+
+# hasInceptionDate
+:hasInceptionDate a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-177" .
+
+# hasTerminationDate
+:hasTerminationDate a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-178" .
+
+# hasTextualRestriction
+:hasTextualRestriction a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-179" .
+
+# isSuspect
+:isSuspect a owl:DatatypeProperty ;
+    its-core:reqviewId "its-regulation-180" .
 

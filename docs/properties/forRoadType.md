@@ -6,7 +6,7 @@ The type of road upon which travel is taking place.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forRoadType`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

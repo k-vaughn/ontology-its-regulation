@@ -66,3 +66,9 @@ EXAMPLE: fine
 |----------|------------|
 | subClassOf | [EnforcementMethod](EnforcementMethod.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-158 |
+

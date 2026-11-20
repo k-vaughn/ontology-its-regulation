@@ -19,6 +19,7 @@ This pattern consists of the following classes:
 - [Permit Application Information](PermitApplicationInformation.md)
 - [Permit Designation Code](PermitDesignationCode.md)
 - [Permit Display Type Code](PermitDisplayTypeCode.md)
+- [Permit Fee](PermitFee.md)
 - [Permit Grantee Type Code](PermitGranteeTypeCode.md)
 - [Permit Grantor Type Code](PermitGrantorTypeCode.md)
 - [Permit Type](PermitType.md)

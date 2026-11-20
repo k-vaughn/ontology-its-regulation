@@ -6,7 +6,7 @@ A separate condition that determines the applicability of the regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/otherCondition`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

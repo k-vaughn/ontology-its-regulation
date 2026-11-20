@@ -71,8 +71,12 @@ A class to organize all classes defined in the Traffic Regulation topic area of 
 | [Coded Regulation With Threshold](CodedRegulationWithThreshold.md) | A restriction defined by a code coupled with a threshold value. |
 | [Condition](Condition.md) | A boolean condition that must evaluate to true for the associated regulation(s) to currently apply. Even if the condition is true, it is not active if it is currently overridden. The condition may be multi-part. |
 | [Condition Set](ConditionSet.md) | A composite condition that consists of two or more Conditions combined by a logical operator; the set must evaluate to true for the associated regulation(s) to currently apply. |
+| [Destination Place](DestinationPlace.md) | A place indicated as a destination on a road sign. |
+| [Destination Road](DestinationRoad.md) | A road indicated as a destination on a road sign. |
 | [Enumerated Condition](EnumeratedCondition.md) | A condition that is based on an enumerated value in a known code list. |
 | [Fee Restriction Code](FeeRestrictionCode.md) | A code indicating the type of regulation that is associated with a fee schedule. |
+| [Fee Schedule](FeeSchedule.md) | A schedule of fees associated with a traffic regulation. |
+| [Horizon](Horizon.md) | A distance or time horizon associated with a destination indicated on a road sign. |
 | [International Sign](InternationalSign.md) | A traffic control device that is used to convey information to road users, such as regulatory, warning, or guide signs. |
 | [Legal Basis](LegalBasis.md) | A legal basis provides references to the legal documents that authorize an entity to issue the types of regulations covered by a traffic regulation order. |
 | [Legal Status Code](LegalStatusCode.md) | A code that indicates the legal status of a traffic regulation. |
@@ -83,6 +87,7 @@ A class to organize all classes defined in the Traffic Regulation topic area of 
 | [Permit Application Information](PermitApplicationInformation.md) | Details about the application of the permit. |
 | [Permit Designation Code](PermitDesignationCode.md) | A code that indicates the designation of the permit. |
 | [Permit Display Type Code](PermitDisplayTypeCode.md) | A code that indicates the type of display that is associated with the permit. |
+| [Permit Fee](PermitFee.md) | A fee associated with a permit application or permit type. |
 | [Permit Grantee Type Code](PermitGranteeTypeCode.md) | A code that indicates the type of grantee of the permit. |
 | [Permit Grantor Type Code](PermitGrantorTypeCode.md) | A code that indicates the type of grantor of the permit. |
 | [Permit Required Condition](PermitRequiredCondition.md) | A condition that is based on the possession of a permit. |

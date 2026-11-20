@@ -6,7 +6,7 @@ Indication of the types of regulations that can be enacted by the rule maker.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/regulatoryScope`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

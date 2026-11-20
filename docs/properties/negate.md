@@ -6,7 +6,7 @@ Indicates whether the condition is negated.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/negate`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

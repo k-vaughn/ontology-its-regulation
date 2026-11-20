@@ -80,5 +80,6 @@ EXAMPLE: enforcement officer, camera, sensor, etc.
 
 | Property | Value |
 |----------|-------|
+| ReqView ID | its-regulation-154 |
 | [dash:abstract](https://w3id.org/citydata/imported/dash/abstract) | true |
 

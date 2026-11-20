@@ -6,7 +6,7 @@ formal authority within the law (e.g., statute, ordinance, administrative rule, 
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasLegalBasis`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

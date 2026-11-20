@@ -6,7 +6,7 @@ The category of standing or parking within which travel is taking place.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forStandingOrParkingCategory`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

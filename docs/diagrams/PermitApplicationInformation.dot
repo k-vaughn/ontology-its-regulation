@@ -7,7 +7,7 @@ digraph {
 		rank=source
 		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	}
-	PermitApplicationInformation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitApplicationInformation</TD></TR><TR><TD ALIGN="LEFT">hasApplicationInstructions : rdf:langString [0..*]¹</TD></TR><TR><TD ALIGN="LEFT">hasApplicationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">hasInformationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">isApplicationRequired [0..1]</TD></TR></TABLE>> URL="../PermitApplicationInformation" margin=0]
+	PermitApplicationInformation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitApplicationInformation</TD></TR><TR><TD ALIGN="LEFT">hasApplicationInstructions : rdf:langString [0..*]¹</TD></TR><TR><TD ALIGN="LEFT">hasApplicationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">hasInformationUrl : xsd:anyURI [0..1]</TD></TR><TR><TD ALIGN="LEFT">isApplicationRequired : xsd:boolean [0..1]</TD></TR></TABLE>> URL="../PermitApplicationInformation" margin=0]
 	{
 		rank=max
 	}

@@ -118,7 +118,7 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     sh:property [
         sh:path :hasTextualRestriction ;
         sh:node its-core:MaxOneShape ;
-        sh:class rdf:langString ;
+        sh:datatype rdf:langString ;
     ] ;
 
     sh:property [

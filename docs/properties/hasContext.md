@@ -6,13 +6,13 @@ A context associated with the traffic regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasContext`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|
@@ -29,4 +29,10 @@ A context associated with the traffic regulation.
 | Class |
 |-------|
 | [InternationalSign](../classes/InternationalSign.md) |
+
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-171 |
 

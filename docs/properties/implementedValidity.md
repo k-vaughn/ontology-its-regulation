@@ -6,7 +6,7 @@ The validity period for the condition as implemented.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/implementedValidity`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

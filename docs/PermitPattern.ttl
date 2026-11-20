@@ -87,6 +87,12 @@
     rdfs:subClassOf :RegulationThing ;
     skos:definition "Details about the application of the permit."@en .
 
+:PermitFee
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A fee associated with a permit application or permit type."@en ;
+    skos:editorsNote "PLACEHOLDER — needs review; fee structure and relationship to FeeSchedule are not yet finalized."@en .
+
 :PermitType
     rdf:type        owl:Class ;
     rdfs:subClassOf :RegulationThing ;
@@ -135,7 +141,8 @@
 :hasAssociatedFee
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    skos:definition    "A fee that is associated with the instance of the traffic regulation."@en .
+    schema:rangeIncludes :PermitFee ;
+    skos:definition    "A fee that is associated with the permit application information."@en .
 
 :hasContactInformation
     rdf:type           owl:ObjectProperty ;
@@ -146,7 +153,7 @@
 :hasDefaultDurationLimit
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range         its-time:Duration ;
+    schema:rangeIncludes         its-time:Duration ;
     skos:definition    "The default duration of the permit."@en ;
     rdfs:seeAlso       "DATEX-II defaultDuration" .
 
@@ -159,7 +166,7 @@
 :hasDefaultRepeatInterval
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range         its-time:Duration ;
+    schema:rangeIncludes         its-time:Duration ;
     skos:definition    "The default repeat interval of the permit."@en ;
     rdfs:seeAlso       "DATEX-II defaultRepeatInterval" .
 
@@ -172,7 +179,7 @@
 :hasDurationLimit
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range         its-time:Duration ;
+    schema:rangeIncludes         its-time:Duration ;
     skos:definition    "The maximum duration of the permit."@en ;
     rdfs:seeAlso       "DATEX-II maximumDurationOfPermit" .
 
@@ -191,7 +198,7 @@
 :hasGrantor
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range         cdm2:Organization ;
+    schema:rangeIncludes         cdm2:Organization ;
     skos:definition    "The authority that is responsible for issuing the permit."@en ;
     rdfs:seeAlso       "DATEX-II hasIssuingAuthority" .
 
@@ -209,7 +216,7 @@
 :hasRepeatInterval
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:range         its-time:Duration ;
+    schema:rangeIncludes         its-time:Duration ;
     skos:definition    "The minimum time to the next entry."@en ;
     rdfs:seeAlso       "DATEX-II minimumTimeToNextEntry" .
 
@@ -236,41 +243,41 @@
 :hasApplicationInstructions
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         rdf:langString ;
+    schema:rangeIncludes         rdf:langString ;
     skos:definition    "The method by which the permit can be obtained."@en ;
     rdfs:seeAlso       "DATEX-II howToObtainPermit" .
 
 :hasApplicationUrl
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         xsd:anyURI ;
+    schema:rangeIncludes         xsd:anyURI ;
     skos:definition    "The URL for the application of the permit."@en ;
     rdfs:seeAlso       "DATEX-II whereToApplyForPermit" .
 
 :hasInformationUrl
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         xsd:anyURI ;
+    schema:rangeIncludes         xsd:anyURI ;
     skos:definition    "The URL for the information about the permit."@en ;
     rdfs:seeAlso       "DATEX-II urlForFurtherInformation" .
 
 :isApplicationRequired
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         xsd:boolean ;
+    schema:rangeIncludes         xsd:boolean ;
     skos:definition    "Indicates whether an application is required for the permit."@en ;
     rdfs:seeAlso       "DATEX-II isApplicationRequired" .
 
 :isLocationSpecific
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         xsd:boolean ;
+    schema:rangeIncludes         xsd:boolean ;
     skos:definition    "Indicates whether the permit is location specific."@en ;
     rdfs:seeAlso       "DATEX-II locationRelatedPermit" .
 
 :issued
     rdf:type           owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         xsd:dateTime ;
+    schema:rangeIncludes         xsd:dateTime ;
     skos:definition    "The date and time the permit was issued."@en ;
     rdfs:seeAlso       "DATEX-II issued" .

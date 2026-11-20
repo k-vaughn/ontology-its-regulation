@@ -6,7 +6,7 @@ The type of grantor of the permit that is required for the instance of the traff
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiredGrantorType`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -6,7 +6,7 @@ The pictogram that is associated with the traffic control device.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/pictogram`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

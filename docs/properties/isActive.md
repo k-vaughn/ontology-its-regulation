@@ -6,7 +6,7 @@ Indicates whether the condition is currently active.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/isActive`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

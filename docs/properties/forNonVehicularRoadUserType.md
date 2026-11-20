@@ -6,7 +6,7 @@ The type of non-vehicular road user that is subject to the regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forNonVehicularRoadUserType`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

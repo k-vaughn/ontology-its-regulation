@@ -30,13 +30,13 @@ PREFIX vann: <http://purl.org/vocab/vann/>
 
     sh:property [
         sh:path :hasApplicableLocation ;
-        sh:datatype its-location:Feature ;
+        sh:class its-location:Feature ;
     ] ;
 
     sh:property [
         sh:path :hasDurationLimit ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
+        sh:class its-time:Duration ;
     ] ;
 
     sh:property [
@@ -58,19 +58,19 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     sh:property [
         sh:path :hasPermitType ;
         sh:node its-core:MaxOneShape;
-        sh:datatype :PermitType ;
+        sh:class :PermitType ;
     ] ;
 
     sh:property [
         sh:path :hasRepeatInterval ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
+        sh:class its-time:Duration ;
     ] ;
 
     sh:property [
         sh:path :hasValidityPeriod ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Schedule ;
+        sh:class its-time:Schedule ;
     ] ;
 
     sh:property [
@@ -97,12 +97,13 @@ PREFIX vann: <http://purl.org/vocab/vann/>
         sh:path :hasAssociatedFee ;
         sh:class :PermitFee ;
         skos:editorialNote "DATEX II indicates max 1; but it seems as if there could be different fees for different durations."@en ;
+        skos:editorsNote "PLACEHOLDER range PermitFee — needs review."@en ;
     ] ;
 
     sh:property [
         sh:path :hasContactInformation ;
         sh:node its-core:MaxOneShape;
-        sh:datatype cdm2:ContactInformation ;
+        sh:class cdm2:ContactInformation ;
     ] ;
 
     sh:property [
@@ -119,7 +120,7 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     sh:property [
         sh:path :isApplicationRequired ;
         sh:node its-core:MaxOneShape;
-        sh:nodeKind :LegalBasis ;
+        sh:datatype xsd:boolean ;
         skos:editorialNote "DATEX II indicates this is optional; does this really describe the TRO or just the regulation? Recommend deletion for TRO?"@en ;
     ] .
 
@@ -129,32 +130,32 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     sh:property [
         sh:path :grantsDesignation ;
         sh:node its-core:MaxOneShape;
-        sh:datatype :PermitDesignationCode ;
+        sh:class :PermitDesignationCode ;
         skos:editorialNote "DATEX II has a boolean for disabledParkingPermit; this allows a broader set of general permits."@en ;
     ] ;
 
     sh:property [
         sh:path :hasApplicationInformation ;
         sh:node its-core:MaxOneShape;
-        sh:datatype :PermitApplicationInformation ;
+        sh:class :PermitApplicationInformation ;
     ] ;
 
     sh:property [
         sh:path :hasDefaultDurationLimit ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
+        sh:class its-time:Duration ;
     ] ;
 
     sh:property [
         sh:path :hasDefaultLocation ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-location:Feature ;
+        sh:class its-location:Feature ;
     ] ;
 
     sh:property [
         sh:path :hasDefaultRepeatInterval ;
         sh:node its-core:MaxOneShape;
-        sh:datatype its-time:Duration ;
+        sh:class its-time:Duration ;
     ] ;
 
     sh:property [
@@ -165,17 +166,17 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     sh:property [
         sh:path :hasDisplayType ;
         sh:node its-core:ExactlyOneShape;
-        sh:datatype :PermitDisplayTypeCode ;
+        sh:class :PermitDisplayTypeCode ;
     ] ;
 
     sh:property [
         sh:path :hasGranteeType ;
         sh:node its-core:MaxOneShape;
-        sh:datatype :PermitGranteeTypeCode ;
+        sh:class :PermitGranteeTypeCode ;
     ] ;
 
     sh:property [
         sh:path :hasGrantor ;
         sh:node its-core:MaxOneShape;
-        sh:datatype cdm2:Organization ;
+        sh:class cdm2:Organization ;
     ] .

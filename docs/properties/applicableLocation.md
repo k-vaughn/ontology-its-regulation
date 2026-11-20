@@ -6,7 +6,7 @@ The location associated with the condition.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/applicableLocation`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

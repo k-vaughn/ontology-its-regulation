@@ -6,13 +6,13 @@ The current lifecycle status of the instance of the containing class
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/troStatus`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulationOrder](../classes/TrafficRegulationOrder.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|

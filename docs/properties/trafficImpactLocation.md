@@ -6,7 +6,7 @@ The location where traffic is impacted due to the existence of the regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/trafficImpactLocation`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

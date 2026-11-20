@@ -6,7 +6,7 @@ The location where the regulation is defined to apply per the traffic regulation
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/locationByOrder`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

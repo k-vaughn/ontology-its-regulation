@@ -6,7 +6,7 @@ The type of weather condition that is subject to the regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forRoadWeatherConditionType`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -6,7 +6,7 @@ The maximum duration of the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasDurationLimit`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

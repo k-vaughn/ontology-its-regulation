@@ -77,6 +77,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         sh:path :hasEnforcementMethod ;
         sh:node its-core:UnlimitedShape ;
         sh:class :EnforcementMethod ;
+        skos:editorsNote "PLACEHOLDER — needs review."@en ;
     ] ;
     sh:property [
         sh:path :hasLegalStatus ;
@@ -194,12 +195,12 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
     sh:targetClass :RequiredSupplementalData ;
 
     sh:property [
-        sh:path :type ;
+        sh:path :hasSupplementalDataType ;
         sh:node its-core:MinOneShape ;
         sh:class :SupplementalDataTypeCode ;
     ] ;
     sh:property [
-        sh:path :source ;
+        sh:path :hasSupplementalDataSource ;
         sh:node its-core:UnlimitedShape ;
         sh:class its-communications:TrustedCyberLocation ;
     ] .

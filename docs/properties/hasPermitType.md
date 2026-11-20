@@ -6,13 +6,13 @@ A type of permit associated with the traffic regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasPermitType`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|

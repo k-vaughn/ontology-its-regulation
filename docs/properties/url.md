@@ -6,7 +6,7 @@ The URL that is associated with the traffic control device.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/url`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

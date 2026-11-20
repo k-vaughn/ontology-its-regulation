@@ -30,7 +30,7 @@
 <text xml:space="preserve" text-anchor="start" x="90.62" y="-446.25" font-family="Arial" font-size="12.00">hasApplicationInstructions : rdf:langString [0..*]¹</text>
 <text xml:space="preserve" text-anchor="start" x="90.62" y="-430" font-family="Arial" font-size="12.00">hasApplicationUrl : xsd:anyURI [0..1]</text>
 <text xml:space="preserve" text-anchor="start" x="90.62" y="-413.75" font-family="Arial" font-size="12.00">hasInformationUrl : xsd:anyURI [0..1]</text>
-<text xml:space="preserve" text-anchor="start" x="90.62" y="-397.5" font-family="Arial" font-size="12.00">isApplicationRequired [0..1]</text>
+<text xml:space="preserve" text-anchor="start" x="90.62" y="-397.5" font-family="Arial" font-size="12.00">isApplicationRequired : xsd:boolean [0..1]</text>
 <polygon fill="none" stroke="black" points="88.62,-392.5 88.62,-475.75 343.12,-475.75 343.12,-392.5 88.62,-392.5"/>
 </a>
 </g>

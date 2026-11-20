@@ -6,7 +6,7 @@ The text that is displayed with the traffic control device.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/compositeText`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -30,3 +30,9 @@ A code indicating if the traffic regulation is suspect.
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-180 |
+

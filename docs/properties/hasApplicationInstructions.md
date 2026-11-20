@@ -6,7 +6,7 @@ The method by which the permit can be obtained.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasApplicationInstructions`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

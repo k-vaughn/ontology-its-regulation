@@ -6,13 +6,13 @@ Supplemental data that a METR user system needs to determine the current applica
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiresSupplementalData`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|

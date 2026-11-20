@@ -6,7 +6,7 @@ The default duration of the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasDefaultDurationLimit`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

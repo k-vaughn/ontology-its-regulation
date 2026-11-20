@@ -6,7 +6,7 @@ The display type of the permit that is required for the instance of the traffic 
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiredDisplayType`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

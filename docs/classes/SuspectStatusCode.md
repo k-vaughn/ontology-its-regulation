@@ -83,3 +83,9 @@ EXAMPLE: valid, missing traffic control device - still in effect, missing traffi
 | subClassOf | [RegulationThing](RegulationThing.md) |
 | subClassOf | [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-155 |
+

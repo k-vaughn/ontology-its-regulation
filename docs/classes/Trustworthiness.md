@@ -91,5 +91,6 @@ NOTE: Trustworthiness can be defined by a summary code or through a set of detai
 
 | Property | Value |
 |----------|-------|
+| ReqView ID | its-regulation-166 |
 | [skos:editorialNote](https://w3id.org/citydata/imported/skos/editorialNote) | The trustworthiness of the supplemental data source is not part of the DATEX-II model. |
 

@@ -30,3 +30,9 @@ The trustworthiness of the object.
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-169 |
+

@@ -83,3 +83,9 @@ EXAMPLE: date, time, location, weather, construction status
 | subClassOf | [RegulationThing](RegulationThing.md) |
 | subClassOf | [cdm2:Code](https://w3id.org/citydata/part2/v1/Code) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-167 |
+

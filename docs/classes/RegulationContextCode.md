@@ -83,3 +83,9 @@ EXAMPLE: lane, carriageway, road
 | subClassOf | [RegulationThing](RegulationThing.md) |
 | subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-162 |
+

@@ -30,3 +30,9 @@ The date on which the traffic regulation can first became applicable whenever al
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-177 |
+

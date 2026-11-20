@@ -38,6 +38,12 @@
     rdfs:subClassOf its-core:Code ;
     skos:definition "A code that indicates the type of channelization device."@en .
 
+:OrdinalDirectionCode
+    rdf:type        owl:Class ;
+    rdfs:subClassOf its-core:Code ;
+    skos:definition "A code that indicates an ordinal direction as depicted on a road sign."@en ;
+    skos:example    "north, northeast, east, southeast, south, southwest, west, northwest"@en .
+
 :PavementMarkingTypeCode
     rdf:type        owl:Class ;
     rdfs:subClassOf its-core:Code ;
@@ -116,6 +122,21 @@
     rdf:type        owl:Class ;
     skos:definition "An attribute that indicates destination information, such as distance to destination or direction to destination."@en .
 
+:DestinationPlace
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A place indicated as a destination on a road sign."@en .
+
+:DestinationRoad
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A road indicated as a destination on a road sign."@en .
+
+:Horizon
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A distance or time horizon associated with a destination indicated on a road sign."@en .
+
 :SignAttribute
     rdf:type        owl:Class ;
     skos:definition "An attribute that is associated with the traffic control device."@en .
@@ -180,13 +201,6 @@
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition "The route to which the road sign is pointing."@en .
 
-:hasDetails
-    rdf:type        owl:ObjectProperty ;
-    rdfs:subPropertyOf :RegulationObjectProperty ;
-    schema:domainIncludes        :CompositeSign ;
-    schema:rangeIncludes         :TypeOfRegulation ;
-    skos:definition    "The details of the composite sign."@en .
-
 :pavementMarkingType
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
@@ -213,29 +227,29 @@
 :compositeText
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range rdf:langString;
+    schema:rangeIncludes rdf:langString;
     skos:definition "The text that is displayed with the traffic control device."@en .
 
 :image
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:base64Binary ;
+    schema:rangeIncludes xsd:base64Binary ;
     skos:definition "An image that is associated with the traffic control device."@en .
 
 :nationalSignId
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:string ;
+    schema:rangeIncludes xsd:string ;
     skos:definition "The national sign identifier for the traffic control device."@en .
 
 :pictogram
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range         its-core:oidstring ;
+    schema:rangeIncludes         its-core:oidstring ;
     skos:definition "The pictogram that is associated with the traffic control device."@en .
 
 :url
     rdf:type        owl:DatatypeProperty ;
     rdfs:subPropertyOf :RegulationDataProperty ;
-    rdfs:range xsd:anyURI ;
+    schema:rangeIncludes xsd:anyURI ;
     skos:definition "The URL that is associated with the traffic control device."@en .

@@ -6,7 +6,7 @@ Indicates whether an application is required for the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/isApplicationRequired`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

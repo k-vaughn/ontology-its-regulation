@@ -42,3 +42,9 @@ An attribute that is associated with the traffic control device.
 
 
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-159 |
+

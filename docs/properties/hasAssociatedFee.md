@@ -2,9 +2,15 @@
 
 # hasAssociatedFee
 
-A fee that is associated with the instance of the traffic regulation.
+A fee that is associated with the permit application information.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasAssociatedFee`
+
+## Range includes
+
+| Class |
+|-------|
+| [PermitFee](../classes/PermitFee.md) |
 
 ## Superordinate property
 

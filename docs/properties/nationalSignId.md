@@ -6,7 +6,7 @@ The national sign identifier for the traffic control device.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/nationalSignId`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

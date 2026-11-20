@@ -6,7 +6,7 @@ Indicates whether the permit is location specific.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/isLocationSpecific`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

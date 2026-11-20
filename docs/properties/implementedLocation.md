@@ -6,7 +6,7 @@ The location where the regulation was implemented (e.g., with traffic control de
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/implementedLocation`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

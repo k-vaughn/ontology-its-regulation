@@ -6,7 +6,7 @@ An image that is associated with the traffic control device.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/image`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

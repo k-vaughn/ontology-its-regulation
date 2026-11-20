@@ -6,7 +6,7 @@ The grantor of the permit that is required for the instance of the traffic regul
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiredGrantor`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

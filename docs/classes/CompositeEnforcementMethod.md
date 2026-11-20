@@ -66,3 +66,9 @@ EXAMPLE: fine and towing
 |----------|------------|
 | subClassOf | [EnforcementMethod](EnforcementMethod.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-153 |
+

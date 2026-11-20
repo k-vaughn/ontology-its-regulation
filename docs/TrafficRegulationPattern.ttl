@@ -11,6 +11,7 @@
 @prefix cdm2: <https://w3id.org/citydata/part2/v1/> .
 @prefix i72: <https://w3id.org/citydata/21972/v1/> .
 @prefix its-agent: <https://w3id.org/itsdata/agent/v1/> .
+@prefix its-communications: <https://w3id.org/itsdata/communications/v1/> .
 @prefix its-core: <https://w3id.org/itsdata/core/v1/> .
 @prefix its-location: <https://w3id.org/itsdata/location/v1/> .
 @prefix its-time: <https://w3id.org/itsdata/time/v1/> .
@@ -248,7 +249,7 @@
     rdfs:subClassOf [
         rdf:type                    owl:Restriction ;
         owl:onProperty              cdm1:hasDescription ;
-        owl:datatypeProperty        rdf:langString ;
+        owl:onDataRange             rdf:langString ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
     ] ;
     skos:definition "A textual regulation is a rule having the force of law that is established by a regulator through a traffic regulation order."@en ;
@@ -289,6 +290,12 @@
     skos:definition "Data that a METR user system needs from a supplemental data provider to determine the current applicability of a regulation."@en ;
     skos:example "To determine if a time-based parking restriction is currently active, a METR user system needs to know the current date and time."@en .
 
+:FeeSchedule
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :RegulationThing ;
+    skos:definition "A schedule of fees associated with a traffic regulation."@en ;
+    skos:editorsNote "PLACEHOLDER — needs review; structure and alignment with DATEX-II fee concepts are not yet finalized."@en .
+
 # ================================================
 #                 Object properties
 # ================================================
@@ -310,69 +317,105 @@
 :hasActivationStatus
     rdf:type           owl:ObjectProperty ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :ActivationStatusCode ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :ActivationStatusCode ;
     skos:definition    "A code indicating the activation status of the traffic regulation."@en ;
     rdfs:seeAlso "DATEX II TrafficRegulation.status"@en ;
     skos:editorsNote "DATEX II indicates max 1 rather than exactly 1; the ontology proposes that the value always conceptually exists but realizations may omit in a message or database."@en .
 
 :hasAssociatedRestriction
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :TrafficRegulation ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :TrafficRegulation ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A restriction associated with the traffic regulation."@en .
 
 :hasContext
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :RegulationContextCode ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :RegulationContextCode ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A context associated with the traffic regulation."@en .
 
+:hasEnforcementMethod
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :EnforcementMethod ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "An enforcement method associated with the traffic regulation."@en ;
+    skos:editorsNote "PLACEHOLDER — needs review; cardinality and relationship to EnforcementPattern details are not yet finalized."@en .
+
 :hasFeeSchedule
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :FeeSchedule ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :FeeSchedule ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A fee schedule associated with the traffic regulation."@en .
 
+:hasLegalStatus
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :LegalStatusCode ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "A legal status associated with the traffic regulation."@en .
+
 :hasThreshold
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         i72:Measure ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         i72:Measure ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A threshold associated with the traffic regulation."@en .
 
 :hasPermitType
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :PermitType ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :PermitType ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A type of permit associated with the traffic regulation."@en ;
     rdfs:seeAlso "DATEX II TrafficRegulation.permitInformation"@en ;
     skos:editorsNote "It is unclear if this is needed; it seems as if the PermitCondition addresses permits in a more complete way."@en .
 
+:hasRegulation
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :CodedRegulation ;
+    schema:rangeIncludes         :StandAloneRestrictionCode ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The stand-alone restriction code that defines the coded regulation."@en .
+
 :hasRegulationCategory
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :RegulationCategoryCode ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :RegulationCategoryCode ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A category of regulation associated with the traffic regulation."@en ;
     skos:editorsNote "DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1."@en .
 
 :hasRestriction
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :RestrictionCode ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :RestrictionCode ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A restriction associated with the traffic regulation."@en ;
     skos:editorsNote "DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1."@en .
 
+:hasSupplementalDataSource
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :RequiredSupplementalData ;
+    schema:rangeIncludes         its-communications:TrustedCyberLocation ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "A trusted source from which the required supplemental data can be obtained."@en .
+
+:hasSupplementalDataType
+    rdf:type           owl:ObjectProperty ;
+    schema:domainIncludes        :RequiredSupplementalData ;
+    schema:rangeIncludes         :SupplementalDataTypeCode ;
+    rdfs:subPropertyOf :RegulationObjectProperty ;
+    skos:definition    "The type of supplemental data required to interpret the current applicability of a regulation."@en .
+
 :issuedTro
     dcterms:description "A traffic regulation order issued by the entity."@en ;
     rdf:type            owl:ObjectProperty ;
-    rdfs:range          :TrafficRegulationOrder ;
+    schema:rangeIncludes          :TrafficRegulationOrder ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
 :isSuspect
@@ -385,35 +428,35 @@
     
 :memberTrafficRegulation
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulationOrder ;
-    rdfs:range         :TrafficRegulation ;
+    schema:domainIncludes        :TrafficRegulationOrder ;
+    schema:rangeIncludes         :TrafficRegulation ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "A traffic regulation enacted by the traffic regulation order."@en .
 
 :reasonCode
     dcterms:description "A reason justifying the existence of the instance of the traffic regulation order"@en ;
     rdf:type            owl:ObjectProperty ;
-    rdfs:range          :ReasonCode ;
+    schema:rangeIncludes          :ReasonCode ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
 :regulatoryScope
     dcterms:description "Indication of the types of regulations that can be enacted by the rule maker."@en ;
     rdf:type            owl:ObjectProperty ;
-    rdfs:range          :RegulatoryScopeCode ;
+    schema:rangeIncludes          :RegulatoryScopeCode ;
     rdfs:subPropertyOf  :RegulationObjectProperty .
 
 :requiresSupplementalData
     rdf:type           owl:ObjectProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         :RequiredSupplementalData ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         :RequiredSupplementalData ;
     rdfs:subPropertyOf :RegulationObjectProperty ;
     skos:definition    "Supplemental data that a METR user system needs to determine the current applicability of the traffic regulation."@en .
 
 :troStatus
     dcterms:description "The current lifecycle status of the instance of the containing class"@en ;
     rdf:type            owl:ObjectProperty ;
-    rdfs:domain         :TrafficRegulationOrder ;
-    rdfs:range          :TroStatusCode ;
+    schema:domainIncludes         :TrafficRegulationOrder ;
+    schema:rangeIncludes          :TroStatusCode ;
     rdfs:subPropertyOf  :RegulationObjectProperty ;
     rdfs:seeAlso        "DATEX-II TrafficRegulationOrder.status" .
 
@@ -436,7 +479,7 @@
 
 :hasTextualRestriction
     rdf:type           owl:DatatypeProperty ;
-    rdfs:domain        :TrafficRegulation ;
-    rdfs:range         rdf:langString ;
+    schema:domainIncludes        :TrafficRegulation ;
+    schema:rangeIncludes         rdf:langString ;
     rdfs:subPropertyOf :RegulationDataProperty ;
     skos:definition    "A textual restriction associated with the traffic regulation."@en .

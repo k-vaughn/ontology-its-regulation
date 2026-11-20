@@ -7,18 +7,22 @@ digraph {
 		rank=source
 		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	}
-	RequiredSupplementalData [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RequiredSupplementalData</TD></TR><TR><TD ALIGN="LEFT">source</TD></TR><TR><TD ALIGN="LEFT">type [1..*]</TD></TR></TABLE>> URL="../RequiredSupplementalData" margin=0]
+	RequiredSupplementalData [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RequiredSupplementalData</TD></TR></TABLE>> URL="../RequiredSupplementalData" margin=0]
 	{
 		rank=max
 	}
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		"its-communications_TrustedCyberLocation" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-communications:TrustedCyberLocation</TD></TR></TABLE>> URL="https://w3id.org/itsdata/communications/v1/TrustedCyberLocation" margin=0]
 		SupplementalDataTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SupplementalDataTypeCode</TD></TR></TABLE>> URL="../SupplementalDataTypeCode" margin=0]
 	}
 	RequiredSupplementalData -> RegulationThing [arrowhead=onormal style=solid]
 	RequiredSupplementalData -> Invis [style=invis]
-	Invis -> SupplementalDataTypeCode [style=invis]
+	Invis -> "its-communications_TrustedCyberLocation" [style=invis]
+	"its-communications_TrustedCyberLocation" -> SupplementalDataTypeCode [style=invis]
 	SupplementalDataTypeCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SupplementalDataTypeCode</TD></TR></TABLE>> URL="../SupplementalDataTypeCode" margin=0]
 	RequiredSupplementalData -> SupplementalDataTypeCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasSupplementalDataType</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	"its-communications_TrustedCyberLocation" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-communications:TrustedCyberLocation</TD></TR></TABLE>> URL="https://w3id.org/itsdata/communications/v1/TrustedCyberLocation" margin=0]
+	RequiredSupplementalData -> "its-communications_TrustedCyberLocation" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasSupplementalDataSource</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

@@ -6,7 +6,7 @@ The measurable condition that affects the applicability of the regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forMeasurableCondition`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

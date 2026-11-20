@@ -6,7 +6,7 @@ The type of restriction that regulates access to a facility.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/forAccessCategory`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

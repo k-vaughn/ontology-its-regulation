@@ -64,3 +64,9 @@ A method of enforcing a traffic regulation that involves assigning demerits to a
 |----------|------------|
 | subClassOf | [EnforcementMethod](EnforcementMethod.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-168 |
+

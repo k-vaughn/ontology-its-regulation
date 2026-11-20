@@ -6,13 +6,13 @@ A restriction associated with the traffic regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasRestriction`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|
@@ -28,5 +28,6 @@ A restriction associated with the traffic regulation.
 
 | Property | Value |
 |----------|-------|
+| ReqView ID | its-regulation-174 |
 | [skos:editorsNote](https://w3id.org/citydata/imported/skos/editorsNote) | DATEX II indicates this is optional, but if we decide location or validity is required as a part of the TR, this should become exactly 1. |
 

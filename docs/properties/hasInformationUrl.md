@@ -6,7 +6,7 @@ The URL for the information about the permit.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasInformationUrl`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

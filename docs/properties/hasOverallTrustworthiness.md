@@ -30,3 +30,9 @@ A code indicating the overall trustworthiness of the object.
 |-------|
 | [Trustworthiness](../classes/Trustworthiness.md) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-170 |
+

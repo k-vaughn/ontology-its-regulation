@@ -175,13 +175,13 @@ Certificate that indicates designations that are associated with the grantee.
 |----------|------------|
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | exactly 1 |
 | [cdm1:hasIdentifier](https://w3id.org/citydata/part1/v1/hasIdentifier) | exactly 1 xsd:string |
-| [hasApplicableLocation](../properties/hasApplicableLocation.md) | datatype its-location:Feature |
-| [hasDurationLimit](../properties/hasDurationLimit.md) | max 1 its-time:Duration |
+| [hasApplicableLocation](../properties/hasApplicableLocation.md) | only [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
+| [hasDurationLimit](../properties/hasDurationLimit.md) | max 1 [its-time:Duration](https://w3id.org/itsdata/time/v1/Duration) |
 | [hasGrantee](../properties/hasGrantee.md) | exactly 1 |
 | [hasPermitType](../properties/hasPermitType.md) | exactly 1 |
-| [hasPermitType](../properties/hasPermitType.md) | max 1 PermitType |
-| [hasRepeatInterval](../properties/hasRepeatInterval.md) | max 1 its-time:Duration |
-| [hasValidityPeriod](../properties/hasValidityPeriod.md) | max 1 its-time:Schedule |
+| [hasPermitType](../properties/hasPermitType.md) | max 1 [PermitType](https://w3id.org/itsdata/regulation/v1/PermitType) |
+| [hasRepeatInterval](../properties/hasRepeatInterval.md) | max 1 [its-time:Duration](https://w3id.org/itsdata/time/v1/Duration) |
+| [hasValidityPeriod](../properties/hasValidityPeriod.md) | max 1 [its-time:Schedule](https://w3id.org/itsdata/time/v1/Schedule) |
 | [issued](../properties/issued.md) | exactly 1 xsd:dateTime |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 

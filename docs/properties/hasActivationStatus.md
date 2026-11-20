@@ -6,13 +6,13 @@ A code indicating the activation status of the traffic regulation.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasActivationStatus`
 
-## Domain
+## Domain includes
 
 | Class |
 |-------|
 | [TrafficRegulation](../classes/TrafficRegulation.md) |
 
-## Range
+## Range includes
 
 | Class |
 |-------|

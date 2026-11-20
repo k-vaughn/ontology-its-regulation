@@ -6,7 +6,7 @@ The minimum time to the next entry.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/hasRepeatInterval`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

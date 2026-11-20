@@ -6,7 +6,7 @@ The designation of the permit that is required for the instance of the traffic r
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/requiredDesignation`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

@@ -221,15 +221,15 @@ A category of certificate that the grantor is able to issue to designate a grant
 |----------|------------|
 | [cdm1:hasDescription](https://w3id.org/citydata/part1/v1/hasDescription) | 0..* rdf:langString (one per language) |
 | [grantsDesignation](../properties/grantsDesignation.md) | exactly 1 |
-| [grantsDesignation](../properties/grantsDesignation.md) | max 1 PermitDesignationCode |
-| [hasApplicationInformation](../properties/hasApplicationInformation.md) | max 1 PermitApplicationInformation |
-| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | max 1 its-time:Duration |
-| [hasDefaultLocation](../properties/hasDefaultLocation.md) | max 1 its-location:Feature |
-| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | max 1 its-time:Duration |
-| [hasDisplayType](../properties/hasDisplayType.md) | exactly 1 PermitDisplayTypeCode |
-| [hasGranteeType](../properties/hasGranteeType.md) | max 1 PermitGranteeTypeCode |
+| [grantsDesignation](../properties/grantsDesignation.md) | max 1 [PermitDesignationCode](https://w3id.org/itsdata/regulation/v1/PermitDesignationCode) |
+| [hasApplicationInformation](../properties/hasApplicationInformation.md) | max 1 [PermitApplicationInformation](https://w3id.org/itsdata/regulation/v1/PermitApplicationInformation) |
+| [hasDefaultDurationLimit](../properties/hasDefaultDurationLimit.md) | max 1 [its-time:Duration](https://w3id.org/itsdata/time/v1/Duration) |
+| [hasDefaultLocation](../properties/hasDefaultLocation.md) | max 1 [its-location:Feature](https://w3id.org/itsdata/location/v1/Feature) |
+| [hasDefaultRepeatInterval](../properties/hasDefaultRepeatInterval.md) | max 1 [its-time:Duration](https://w3id.org/itsdata/time/v1/Duration) |
+| [hasDisplayType](../properties/hasDisplayType.md) | exactly 1 [PermitDisplayTypeCode](https://w3id.org/itsdata/regulation/v1/PermitDisplayTypeCode) |
+| [hasGranteeType](../properties/hasGranteeType.md) | max 1 [PermitGranteeTypeCode](https://w3id.org/itsdata/regulation/v1/PermitGranteeTypeCode) |
 | [hasGrantor](../properties/hasGrantor.md) | exactly 1 |
-| [hasGrantor](../properties/hasGrantor.md) | max 1 cdm2:Organization |
+| [hasGrantor](../properties/hasGrantor.md) | max 1 [cdm2:Organization](https://w3id.org/citydata/part2/v1/Organization) |
 | subClassOf | [RegulationThing](RegulationThing.md) |
 
 ## Other annotations

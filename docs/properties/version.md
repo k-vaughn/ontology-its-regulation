@@ -6,7 +6,7 @@ The version of the object.
 
 **IRI**: `https://w3id.org/itsdata/regulation/v1/version`
 
-## Range
+## Range includes
 
 | Class |
 |-------|

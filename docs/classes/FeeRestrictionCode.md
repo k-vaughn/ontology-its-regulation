@@ -83,3 +83,9 @@ EXAMPLE: StandingOrParkingControl (for fees)
 | subClassOf | [RestrictionCode](RestrictionCode.md) |
 | subClassOf | [its-core:Code](https://w3id.org/itsdata/core/v1/Code) |
 
+## Other annotations
+
+| Property | Value |
+|----------|-------|
+| ReqView ID | its-regulation-163 |
+

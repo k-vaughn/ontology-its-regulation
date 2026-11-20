@@ -8,7 +8,7 @@ digraph {
 		"its-core_OfficialThing" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core:OfficialThing</TD></TR></TABLE>> URL="https://w3id.org/itsdata/core/v1/OfficialThing" margin=0]
 		RegulationThing [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationThing</TD></TR></TABLE>> URL="../RegulationThing" margin=0]
 	}
-	TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR><TR><TD ALIGN="LEFT">hasEnforcementMethod</TD></TR><TR><TD ALIGN="LEFT">hasInceptionDate : xsd:date [0..1]</TD></TR><TR><TD ALIGN="LEFT">hasLegalStatus [1..*]</TD></TR><TR><TD ALIGN="LEFT">hasTerminationDate : xsd:date [0..1]</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
+	TrafficRegulation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficRegulation</TD></TR><TR><TD ALIGN="LEFT">hasInceptionDate : xsd:date [0..1]</TD></TR><TR><TD ALIGN="LEFT">hasTerminationDate : xsd:date [0..1]</TD></TR><TR><TD ALIGN="LEFT">isSuspect [0..1]</TD></TR></TABLE>> URL="../TrafficRegulation" margin=0]
 	{
 		rank=max
 	}
@@ -16,12 +16,13 @@ digraph {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
 		Condition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Condition</TD></TR></TABLE>> URL="../Condition" margin=0]
+		EnforcementMethod [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">EnforcementMethod</TD></TR></TABLE>> URL="../EnforcementMethod" margin=0]
 		"its-core_ActivationStatusCode" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core:ActivationStatusCode</TD></TR></TABLE>> URL="https://w3id.org/itsdata/core/v1/ActivationStatusCode" margin=0]
 		LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../LegalBasis" margin=0]
+		LegalStatusCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalStatusCode</TD></TR></TABLE>> URL="../LegalStatusCode" margin=0]
 		PermitType [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PermitType</TD></TR></TABLE>> URL="../PermitType" margin=0]
 		RegulationCategoryCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RegulationCategoryCode</TD></TR></TABLE>> URL="../RegulationCategoryCode" margin=0]
 		RequiredSupplementalData [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">RequiredSupplementalData</TD></TR></TABLE>> URL="../RequiredSupplementalData" margin=0]
-		SuspectStatusCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SuspectStatusCode</TD></TR></TABLE>> URL="../SuspectStatusCode" margin=0]
 		TrafficControlDevice [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">TrafficControlDevice</TD></TR></TABLE>> URL="../TrafficControlDevice" margin=0]
 		Trustworthiness [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Trustworthiness</TD></TR></TABLE>> URL="../Trustworthiness" margin=0]
 	}
@@ -29,13 +30,14 @@ digraph {
 	TrafficRegulation -> RegulationThing [arrowhead=onormal style=solid]
 	TrafficRegulation -> Invis [style=invis]
 	Invis -> Condition [style=invis]
-	Condition -> "its-core_ActivationStatusCode" [style=invis]
+	Condition -> EnforcementMethod [style=invis]
+	EnforcementMethod -> "its-core_ActivationStatusCode" [style=invis]
 	"its-core_ActivationStatusCode" -> LegalBasis [style=invis]
-	LegalBasis -> PermitType [style=invis]
+	LegalBasis -> LegalStatusCode [style=invis]
+	LegalStatusCode -> PermitType [style=invis]
 	PermitType -> RegulationCategoryCode [style=invis]
 	RegulationCategoryCode -> RequiredSupplementalData [style=invis]
-	RequiredSupplementalData -> SuspectStatusCode [style=invis]
-	SuspectStatusCode -> TrafficControlDevice [style=invis]
+	RequiredSupplementalData -> TrafficControlDevice [style=invis]
 	TrafficControlDevice -> Trustworthiness [style=invis]
 	LegalBasis [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalBasis</TD></TR></TABLE>> URL="../LegalBasis" margin=0]
 	TrafficRegulation -> LegalBasis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasLegalBasis</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
@@ -54,6 +56,8 @@ digraph {
 	TrafficRegulation -> RequiredSupplementalData [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">requiresSupplementalData</TD></TR></TABLE>> arrowhead=normal style=solid]
 	Trustworthiness [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Trustworthiness</TD></TR></TABLE>> URL="../Trustworthiness" margin=0]
 	TrafficRegulation -> Trustworthiness [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasTrustworthiness</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
-	SuspectStatusCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">SuspectStatusCode</TD></TR></TABLE>> URL="../SuspectStatusCode" margin=0]
-	TrafficRegulation -> SuspectStatusCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">isSuspect</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
+	EnforcementMethod [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">EnforcementMethod</TD></TR></TABLE>> URL="../EnforcementMethod" margin=0]
+	TrafficRegulation -> EnforcementMethod [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasEnforcementMethod</TD></TR></TABLE>> arrowhead=normal style=solid]
+	LegalStatusCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LegalStatusCode</TD></TR></TABLE>> URL="../LegalStatusCode" margin=0]
+	TrafficRegulation -> LegalStatusCode [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasLegalStatus</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
 }
